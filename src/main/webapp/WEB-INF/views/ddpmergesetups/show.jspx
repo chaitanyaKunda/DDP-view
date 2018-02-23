@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpMergeSetup" object="${ddpmergesetup}" path="/ddpmergesetups" z="Kd4V46zMtRvjOzqklk8UU1OqYEk=">
+        <field:display field="ddpAedReqDocs" id="s_com_agility_ddp_data_domain_DdpMergeSetup_ddpAedReqDocs" object="${ddpmergesetup}" z="vkZvkRj43tD4pbxPHFInPKHrGSI="/>
+        <field:display field="mtsPdfFormat" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsPdfFormat" object="${ddpmergesetup}" z="8lokLSFvMZ5RJBDcOYzxpHrLpoE="/>
+        <field:display field="mtsTocEnable" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsTocEnable" object="${ddpmergesetup}" z="h/vUrsRUVEmPnSjuUK7oP3KgcDo="/>
+        <field:display field="mtsWatermarkText" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsWatermarkText" object="${ddpmergesetup}" z="MgOas/HRz6AvAZD82cAi3RS1Bmk="/>
+        <field:display field="mtsPagenumEnable" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsPagenumEnable" object="${ddpmergesetup}" z="i7ObudL7TPccXMb9bcohVUPFe2o="/>
+        <field:display field="mtsHyperlinksEnable" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsHyperlinksEnable" object="${ddpmergesetup}" z="Uf/Cr8It5pfoALdY7ErqYHS0mO0="/>
+        <field:display field="mtsBookmarksEnable" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsBookmarksEnable" object="${ddpmergesetup}" z="55pavck0mUNH8InVQZ+b3AbkzJU="/>
+        <field:display field="mtsOptimizeForWeb" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsOptimizeForWeb" object="${ddpmergesetup}" z="mOqonIAYioXcWCZrfyPoz9Rnrmc="/>
+        <field:display field="mtsStatus" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsStatus" object="${ddpmergesetup}" z="Iiyt3ITTunOEPpThBKF8PRBeGTQ="/>
+        <field:display field="mtsCreatedBy" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsCreatedBy" object="${ddpmergesetup}" z="broeWmfWy2G4+pc5bd3EHXxXWXE="/>
+        <field:display calendar="true" dateTimePattern="${ddpMergeSetup_mtscreateddate_date_format}" field="mtsCreatedDate" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsCreatedDate" object="${ddpmergesetup}" z="EkJR1+8Y19I5cUAYVwmLPQjPaLQ="/>
+        <field:display field="mtsModifiedBy" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsModifiedBy" object="${ddpmergesetup}" z="TiHOiwZ+6BD7HgJFOCub15xxDDg="/>
+        <field:display calendar="true" dateTimePattern="${ddpMergeSetup_mtsmodifieddate_date_format}" field="mtsModifiedDate" id="s_com_agility_ddp_data_domain_DdpMergeSetup_mtsModifiedDate" object="${ddpmergesetup}" z="kvMkcuOOR607q7jlRSSscd3jKo0="/>
+    </page:show>
+</div>

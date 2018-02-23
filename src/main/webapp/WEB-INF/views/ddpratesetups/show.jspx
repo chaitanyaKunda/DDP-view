@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpRateSetup" object="${ddpratesetup}" path="/ddpratesetups" z="5JlNGyWULn9rHwne7krK7XMdDD8=">
+        <field:display field="rtsRdtId" id="s_com_agility_ddp_data_domain_DdpRateSetup_rtsRdtId" object="${ddpratesetup}" z="cfu25CatuasoT7QMlhXUkrFuLhQ="/>
+        <field:display field="rtsOption" id="s_com_agility_ddp_data_domain_DdpRateSetup_rtsOption" object="${ddpratesetup}" z="otSn+9CYTiouG5yzE5jTCTmPmIc="/>
+        <field:display field="rtsCreatedBy" id="s_com_agility_ddp_data_domain_DdpRateSetup_rtsCreatedBy" object="${ddpratesetup}" z="xHOpcltmq04pHWUus9qVrEZxncE="/>
+        <field:display calendar="true" dateTimePattern="${ddpRateSetup_rtscreateddate_date_format}" field="rtsCreatedDate" id="s_com_agility_ddp_data_domain_DdpRateSetup_rtsCreatedDate" object="${ddpratesetup}" z="mFjF9PuHqHy9S160VYha+37ihuk="/>
+        <field:display field="rtsModifiedBy" id="s_com_agility_ddp_data_domain_DdpRateSetup_rtsModifiedBy" object="${ddpratesetup}" z="gtO48/e//Ilv8GcCvCguQJh+AkM="/>
+        <field:display calendar="true" dateTimePattern="${ddpRateSetup_rtsmodifieddate_date_format}" field="rtsModifiedDate" id="s_com_agility_ddp_data_domain_DdpRateSetup_rtsModifiedDate" object="${ddpratesetup}" z="SaK8vfd3eipQyFn+lUdtUhhdr2s="/>
+    </page:show>
+</div>

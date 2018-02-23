@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+<jsp:directive.page contentType="text/html;charset=UTF-8"/>
+<jsp:output omit-xml-declaration="yes"/>
+<form:custom_update id="fu_com_agility_ddp_data_domain_DdpGroupSetup" idField="grsId" modelAttribute="ddpGroupSetup" path="/ddpgroupsetups" versionField="none" z="gwHIoljclJGoXGEdvkidok7Mne0=">
+	<div style="display: none;">
+	<field:input field="grsUserId.usrId" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsUserId" render="true" required="false" validationMessageCode="field_invalid_integer" z="kwU/N51+18XhQ0Eg5/lBK/KusKI="/>
+	</div>
+	<table class="tab"  border="0" cellspacing="0" cellpadding="0">  
+		<tr style="background-color: #FFFFFF;">
+		<td class="first" style="background-color: #FFFFFF;">  
+			<field:select field="grsGroupId"
+				id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsGroupId"
+				itemValue="grpId" items="${ddpgroups}" path="/ddpgroups"
+				z="vaH8PDuvo8gPQfLwRpi0L5aJgZE=" />
+		</td>
+		<td class="second" style="background-color: #FFFFFF;"> <span>
+							<button class="switch" id="left" title="Move Items to First list">&lt;</button>
+							<button class="switch" id="right" title="Move Items to Second list">&gt;</button>
+							</span></td>
+		<td class="third" style="background-color: #FFFFFF;">
+			<field:select id="c_selectgroupid"
+				field="grsUserId"
+				itemValue="grpId" items="${ddpgroupselectedlist}" path="/ddpgroups"
+				z="vaH8PDuvo8gPQfLwRpi0L5aJgZE=" />
+		</td>
+		</tr>
+	</table>
+	</form:custom_update>
+	<SCRIPT type="text/javascript">
+	dojo.addOnLoad(function() {
+			var listGroupLength = document.getElementById("_grsGroupId_id");
+			var listSelectLength = document.getElementById("_grsUserId_id");
+			
+			if(listGroupLength.options.length == listSelectLength.options.length){
+				for(var i=listGroupLength.options.length-1;i>=0;i--){
+					document.getElementById("_grsGroupId_id").options.remove(i);
+				}
+			}else{
+				for(var i=0; i &lt; listGroupLength.options.length; i++){
+					for(var  j=0; j&lt;listSelectLength.options.length; j++){
+						if(listGroupLength.options[i].text == listSelectLength.options[j].text){
+							document.getElementById("_grsGroupId_id").options.remove(i);
+						}
+					}
+				}
+			}
+			
+			dojo.query("button.switch")
+			.connect("onclick",function(e){
+				switch(e.target.id.toString()){
+					case "left" : 
+					{
+						var listLength = document.getElementById("_grsUserId_id");
+						if(listLength != null){
+							for(var i=0; i &lt; listLength.options.length;i++){
+								var selectedtext=dijit.byId("_grsUserId_id").containerNode.options[i].text;
+								var selectedvalue=dijit.byId("_grsUserId_id").containerNode.options[i].value;
+							    if(listLength.options[i].selected){
+							    	document.getElementById("_grsGroupId_id").add(new Option(selectedtext, selectedvalue));
+							    }
+						    }  
+							removeItem(document.getElementById("_grsUserId_id"));
+						}
+						else{
+							alert("Please select atleast one group to move");
+						}
+						break;
+					}
+					case "right" : 
+					{
+						var listLength = document.getElementById("_grsGroupId_id");
+						if(listLength != null){
+							for(var i=0; i &lt; listLength.options.length;i++){
+								var selectedtext=dijit.byId("_grsGroupId_id").containerNode.options[i].text;
+								var selectedvalue=dijit.byId("_grsGroupId_id").containerNode.options[i].value;
+							    if(listLength.options[i].selected){
+							    	document.getElementById("_grsUserId_id").add(new Option(selectedtext, selectedvalue));
+							    }
+						    }  
+							removeItem(document.getElementById("_grsGroupId_id"));
+							addtolist(document.getElementById("_grsUserId_id"));
+						}
+						else{
+							alert("Please select atleast one group to move");
+						}
+						break;
+					}
+					e.preventDefault();
+				}
+				e.preventDefault();
+		});
+	});
+	function addtolist(listitem){
+		var i;
+		for(i=0;i &lt; listitem.options.length;i++) 
+		{
+			listitem[i].selected=true;
+		}
+	}
+	function removeItem(selectbox)
+	{
+		var i;
+		for(i=selectbox.options.length-1;i>=0;i--)
+		{
+		if(selectbox.options[i].selected)
+		selectbox.remove(i);
+		}
+	}
+	function selectGroup(){
+		var listGroupLength = document.getElementById("_grsGroupId_id");
+		var i;
+		for(i=0;i &lt; listGroupLength.options.length; i++) 
+		{
+			listGroupLength[i].selected=true;
+		}
+	}
+	
+	$("#proceed").click(function(event)
+			{
+				var listGroupLength = document.getElementById("_grsUserId_id");
+				var i;
+				for(i=0;i &lt; listGroupLength.options.length; i++) 
+				{
+					listGroupLength[i].selected=true;
+				}
+			});
+			function myFunction(){
+				//Group
+				var blngrpflage = false;
+				var listGroupLength = document.getElementById("_grsUserId_id");
+				var i;
+				for(i=0;i &lt; listGroupLength.options.length; i++) 
+				{
+					blngrpflage =true;
+				    listGroupLength[i].selected=true;
+				}
+				if(blngrpflage==false){
+					alert("Please select atleast one group");
+					return false;
+				}
+			}
+		
+	
+	</SCRIPT>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCategorizedDetail" object="${ddpcategorizeddetail}" path="/ddpcategorizeddetails" z="DGydN+AnszDA4Nk3yo7GXvFMlPY=">
+        <field:display field="cadDtxId" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadDtxId" object="${ddpcategorizeddetail}" z="p51nMvZvVJ2aeIQSDb//8Fbt+Tc="/>
+        <field:display field="cadRObjectId" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadRObjectId" object="${ddpcategorizeddetail}" z="xCkznMItLJeNyjbZ6c+OMLYkJsA="/>
+        <field:display field="cadOriginSysId" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadOriginSysId" object="${ddpcategorizeddetail}" z="E7r3QvLQIAPc9UtzbcwCGi34v+g="/>
+        <field:display field="cadServiceType" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadServiceType" object="${ddpcategorizeddetail}" z="sphuugAB8ECyzKqTWJ9inUQ1Htw="/>
+        <field:display field="cadTotalRulesReqCount" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadTotalRulesReqCount" object="${ddpcategorizeddetail}" z="m4GKH0bpyT9oScLfxgStnQ3v2I0="/>
+        <field:display field="cadRulesInProgressCount" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadRulesInProgressCount" object="${ddpcategorizeddetail}" z="ERWxXbS7pNs+CoOseGhzKpT9SZY="/>
+        <field:display field="cadRulesCompletedCount" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadRulesCompletedCount" object="${ddpcategorizeddetail}" z="wU0YKZhb9yFF7jCuz7GTADKk+0I="/>
+        <field:display field="cadRulesFailedCount" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadRulesFailedCount" object="${ddpcategorizeddetail}" z="ewiu2bQsyRbNIG+Z83ModDaynt4="/>
+        <field:display field="cadTransMessage" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadTransMessage" object="${ddpcategorizeddetail}" z="sDSXVlcZ3tVG7pFOeaVdg1Sgzvc="/>
+        <field:display field="cadStatus" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadStatus" object="${ddpcategorizeddetail}" z="k4GRdLh7cBvNpIYsdbcGoYUEelw="/>
+        <field:display field="cadCreatedBy" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadCreatedBy" object="${ddpcategorizeddetail}" z="PsPu9igBj0tIAPwq0dHLnDl8mbg="/>
+        <field:display calendar="true" dateTimePattern="${ddpCategorizedDetail_cadcreateddate_date_format}" field="cadCreatedDate" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadCreatedDate" object="${ddpcategorizeddetail}" z="kPEYYw1GdHZe2pTbytcwYNo9gf0="/>
+        <field:display field="cadModifiedBy" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadModifiedBy" object="${ddpcategorizeddetail}" z="x2HKr1tPy/980nFcPqakCuwQobs="/>
+        <field:display calendar="true" dateTimePattern="${ddpCategorizedDetail_cadmodifieddate_date_format}" field="cadModifiedDate" id="s_com_agility_ddp_data_domain_DdpCategorizedDetail_cadModifiedDate" object="${ddpcategorizeddetail}" z="pAnWN8kiIIZwGekPuyOX89CUZag="/>
+    </page:show>
+</div>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpDoctype" modelAttribute="ddpDoctype" path="/ddpdoctypes" render="${empty dependencies}" z="qTL9FqLlFad9AJ4D3z2LYOXdozY=">
+        <!--         <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpDoctype_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="pKLMvUvKwXwELQBKhNSDPuwhqYc="/> -->
+        <field:input field="dtyDocTypeName" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyDocTypeName" required="true" z="JD3JQdWxXAjzhn/8fFq9AOFTnf0="/>
+        <field:input field="dtySource" id="c_com_agility_ddp_data_domain_DdpDoctype_dtySource" z="Ad6+XG0NCDeHD25s4624N0jlFMw="/>
+        <field:input field="dtyCompanyCode" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCompanyCode" z="gbVhm7HriZvBEifxzd1XOQqlN6w="/>
+        <field:input disableFormBinding="true" disabled="true" field="dtyStatus" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyStatus" render="false" required="true" validationMessageCode="field_invalid_integer" z="user-managed"/>
+        <field:input field="dtyCreatedBy" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCreatedBy" render="false" required="true" z="user-managed"/>
+        <field:datetime dateTimePattern="${ddpDoctype_dtycreateddate_date_format}" field="dtyCreatedDate" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCreatedDate" render="false" required="true" z="user-managed"/>
+        <field:input field="dtyModifiedBy" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyModifiedBy" render="false" required="true" z="user-managed"/>
+        <field:datetime dateTimePattern="${ddpDoctype_dtymodifieddate_date_format}" field="dtyModifiedDate" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyModifiedDate" render="false" required="true" z="user-managed"/>
+        <field:input field="dtyDocTypeCode" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyDocTypeCode" required="true" z="AYTFv+ZoR2fg4w7RjJNm2s3/7Hk="/>
+    </form:create>
+</div>

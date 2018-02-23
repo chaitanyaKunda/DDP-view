@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpMultiEmails" object="${ddpmultiemails}" path="/ddpmultiemailses" z="+BIhssRPUvM3Ns5hlvF65Fk590Q=">
+        <field:display field="mesCmsId" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesCmsId" object="${ddpmultiemails}" z="QcBJSwr+2Agyq41ubEcL6u6v8UQ="/>
+        <field:display field="mesEmailFrom" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailFrom" object="${ddpmultiemails}" z="RMj9O4TQNgHlpCXvRGv57mpTY6A="/>
+        <field:display field="mesEmailTo" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailTo" object="${ddpmultiemails}" z="SSyY1ylQpbLZLUK3tvN0LtObZ1I="/>
+        <field:display field="mesEmailCc" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailCc" object="${ddpmultiemails}" z="VJwRAb7nHzelfFDcMdaDhTTLGwQ="/>
+        <field:display field="mesEmailSubject" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailSubject" object="${ddpmultiemails}" z="1wLahsPL+el5/7HAWigQDQIeKVc="/>
+        <field:display field="mesEmailBody" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailBody" object="${ddpmultiemails}" z="0rbHNBgOqUU5rjN0Tl6yD9/j+ys="/>
+        <field:display field="mesEmailAttachmentLimit" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailAttachmentLimit" object="${ddpmultiemails}" z="39ehCcc9tiaAQWswYvbEfCPPd7c="/>
+        <field:display field="mesFtpLocation" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesFtpLocation" object="${ddpmultiemails}" z="PVBZwu3mVn5qlNhsxKKhOWi7xo4="/>
+        <field:display field="mesUncPath" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesUncPath" object="${ddpmultiemails}" z="cjOPS+4t0VUOa3yIuz4QbiMvPao="/>
+        <field:display field="mesEmailBcc" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailBcc" object="${ddpmultiemails}" z="/5kqfntGif9H20ZxQJmhvBF739o="/>
+        <field:display field="mesEmailReply" id="s_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailReply" object="${ddpmultiemails}" z="1515/c46iazN9umJFAWzG4R6co0="/>
+    </page:show>
+</div>

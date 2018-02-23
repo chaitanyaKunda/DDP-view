@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpMergeSetup" idField="mtsMergeId" modelAttribute="ddpMergeSetup" path="/ddpmergesetups" versionField="none" z="ZMWonaqRLaLvnOQIdL2RZIWgAXU=">
+        <field:select field="ddpAedReqDocs" id="c_com_agility_ddp_data_domain_DdpMergeSetup_ddpAedReqDocs" itemValue="ardMergeId" items="${ddpaedreqdocses}" path="/ddpaedreqdocses" z="3jWpxObJVxiZkYYHp4d9ftpcIFU="/>
+        <field:simple field="ddpAedRules" id="c_com_agility_ddp_data_domain_DdpMergeSetup_ddpAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Aed Rule" z="2zU9NM8umcNo+a353y+nOhxi7p4="/>
+        <field:simple field="ddpExportRules" id="c_com_agility_ddp_data_domain_DdpMergeSetup_ddpExportRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Export Rule" z="Dyakj2UnXTg/Bszsho2lNTucoAY="/>
+        <field:input field="mtsPdfFormat" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsPdfFormat" z="bQXh86Kch2RLZ6cf2EV+P+ji6Qo="/>
+        <field:input field="mtsTocEnable" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsTocEnable" validationMessageCode="field_invalid_integer" z="fmgh9QPYYPxhuNoC2Mj2kCilLpA="/>
+        <field:input field="mtsWatermarkText" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsWatermarkText" z="Y4IKIY0fdN/FKxsS7m943jlhthY="/>
+        <field:input field="mtsPagenumEnable" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsPagenumEnable" validationMessageCode="field_invalid_integer" z="uvymairGhQpM0W1AT/LyRLn9e7U="/>
+        <field:input field="mtsHyperlinksEnable" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsHyperlinksEnable" validationMessageCode="field_invalid_integer" z="QZjHqgaQ3GnI1RRSy5/+muABaO4="/>
+        <field:input field="mtsBookmarksEnable" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsBookmarksEnable" validationMessageCode="field_invalid_integer" z="PNodiwvR+MfAordW6JNd9U2FLiI="/>
+        <field:input field="mtsOptimizeForWeb" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsOptimizeForWeb" validationMessageCode="field_invalid_integer" z="zaNuN1Irv77sUkcTATPsLHr+Upw="/>
+        <field:input field="mtsStatus" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsStatus" required="true" validationMessageCode="field_invalid_integer" z="Iu4/F5FAcoCXlqehSb/XH+6LPw4="/>
+        <field:input field="mtsCreatedBy" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsCreatedBy" required="true" z="xQHt4+SnS4XSuSicy3hK5UC6d4E="/>
+        <field:datetime dateTimePattern="${ddpMergeSetup_mtscreateddate_date_format}" field="mtsCreatedDate" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsCreatedDate" required="true" z="pWOzV7yM80hGZRkqhx7RKWHPQo8="/>
+        <field:input field="mtsModifiedBy" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsModifiedBy" required="true" z="DQnkTRqT6lacOxgHihfaLcGzCXI="/>
+        <field:datetime dateTimePattern="${ddpMergeSetup_mtsmodifieddate_date_format}" field="mtsModifiedDate" id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsModifiedDate" required="true" z="JQ/5YTyhvxj4m9k1wlTbYCQmIeo="/>
+    </form:update>
+</div>

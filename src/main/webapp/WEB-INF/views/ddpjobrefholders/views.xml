@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpjobrefholders/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpjobrefholders/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpjobrefholders/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpjobrefholders/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpjobrefholders/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpjobrefholders/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpjobrefholders/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpjobrefholders/update.jspx"/>
+    </definition>
+</tiles-definitions>

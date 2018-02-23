@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0"  style="width: 100%">
+	
+	<div style="display: inline-block; width: 50%">
+		<jsp:directive.page contentType="text/html;charset=UTF-8" />
+		<jsp:output omit-xml-declaration="yes" />
+		<page:show id="ps_com_agility_ddp_data_domain_DdpUser" 
+			object="${ddpuser}" path="/ddpusers" z="lNT1p2QLy+fU6ywILPh6cLNDTkE=">
+			<field:display field="usrLoginId"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrLoginId"
+				object="${ddpuser}" z="hpTay65qmpyey8E8If16T9vEYOs=" />
+			<field:display field="usrFirstName"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrFirstName"
+				object="${ddpuser}" z="mzMpqsufeomvhA22WC853mfFSrc=" />
+			<field:display field="usrMiddleName"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrMiddleName"
+				object="${ddpuser}" z="jnwDLezz9pON+phHwpqNFFiy0gE=" />
+			<field:display field="usrLastName"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrLastName"
+				object="${ddpuser}" z="XEteFGR9RFXjOKuks0eXgCFvBoo=" />
+			<field:display field="usrDisplayName"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrDisplayName"
+				object="${ddpuser}" z="wM7x4jriUmgaZeKueSGNLneb6eU=" />
+			<field:display field="usrEmailAddress"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrEmailAddress"
+				object="${ddpuser}" z="/jMP2AZ3vw6mYh/7KFemkX6Elgw=" />
+			<field:display field="usrDomain"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrDomain"
+				object="${ddpuser}" z="iE/wVlhCPpoxkWU47OxR9csS4BA=" />
+			<field:display field="usrPassword"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrPassword"
+				object="${ddpuser}" z="i81lo3fc0F7w//aj8LmZD0PI3Fo=" />
+			<field:display field="usrStatus"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrStatus"
+				object="${ddpuser}" z="+nvVxmT58KUs42ihZPBJgYAC0uc=" />
+			<field:display field="usrRegion"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrRegion"
+				object="${ddpuser}" z="L7rQBB2W8tmW17k+YhGBj0PH7Gs=" />
+			<field:display field="usrCountry"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrCountry"
+				object="${ddpuser}" z="lmoiuEYQRRNdqesjhBgWPmIeoyg=" />
+			<field:display field="usrCompanyCode"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrCompanyCode"
+				object="${ddpuser}" z="A8FUStqa44/zExTZHHSBsMoXryo=" />
+			<field:display field="usrBranchCode"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrBranchCode"
+				object="${ddpuser}" z="LS+vdXzFUX/FN4nFPyHeRKPJfcA=" />
+			<field:display field="usrHintQuestion"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrHintQuestion"
+				object="${ddpuser}" z="QP4hUe263i5MusuHge1d/DaQMz8=" />
+			<field:display field="usrHintAnswer"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrHintAnswer"
+				object="${ddpuser}" z="wGvzQBDJKaD8KiShy9BPHOeiX+I=" />
+			<field:display field="usrCreatedBy"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrCreatedBy"
+				object="${ddpuser}" z="pr2cwBU3El7UH4kONOuDz6I9q48=" />
+			<field:display calendar="true"
+				dateTimePattern="${ddpUser_usrcreateddate_date_format}"
+				field="usrCreatedDate"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrCreatedDate"
+				object="${ddpuser}" z="J1xBtOeQf5MJKLjNNmB9LhJ8CP0=" />
+			<field:display field="usrModifiedBy"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrModifiedBy"
+				object="${ddpuser}" z="5odsL0WkPx6fXwa96ZF08BS1vFM=" />
+			<field:display calendar="true"
+				dateTimePattern="${ddpUser_usrmodifieddate_date_format}"
+				field="usrModifiedDate"
+				id="s_com_agility_ddp_data_domain_DdpUser_usrModifiedDate"
+				object="${ddpuser}" z="ju5W4gb6VeezzKslKZe3oTJqpD0=" />
+		</page:show>
+	</div>
+	
+	<div style="display: inline-block; width: 38%;padding-left: 9px;padding-bottom: 58px; position: absolute;height: auto;top: 150px;">
+		<page:custom_show id="ps_com_agility_ddp_data_domain_DdpGroup"
+			object="${ddpusergropusetup}" path="/ddpgroups"
+			z="neFBBmHdOGAiFxOQ4tbkCfzCM4s=">
+			<table>
+			   <c:forEach items="${ddpusergropusetup}" var="element" varStatus="loop"> 
+			  	 <tr style="background-color: #FFFFFF;">
+			  	 	<td>Group  <c:out value="${loop.count}"/> :</td>
+			  	 	<Td><c:out value="${element.grpDisplayName}"/></Td>
+			  	 </tr>
+			   </c:forEach>
+			 </table>  
+		</page:custom_show>
+
+		<page:custom_show id="ps_com_agility_ddp_data_domain_DdpRole" 
+			object="${ddpuserrolesetup}" path="/ddproles"
+			z="ZzaVwzHJUXsL1t5PKC8xVdxQyBM=">
+			<TABLE>
+  			<c:forEach items="${ddpuserrolesetup}" var="element" varStatus="loop"> 
+			  <tr style="background-color: #FFFFFF;">
+			  	<td>Role <c:out value="${loop.count}"/> :</td>
+			  	<Td><c:out value="${element.rolDisplayName}"/></Td>
+			  </tr>
+			</c:forEach>
+			</TABLE>
+		</page:custom_show>
+	</div>
+	<script>
+	dojo.addOnLoad(function(){
+			var t = $('#_s_com_agility_ddp_data_domain_DdpUser_usrStatus_id').text(); 
+			var userstatus = document.getElementById("_s_com_agility_ddp_data_domain_DdpUser_usrStatus_usrStatus_id").innerText;
+// 			var j = t.replace(':','').trim();
+// 			var n = j.replace("Usr Status","").trim();
+// 			var k = n.replace(':','').trim();
+// 			var status = k;
+			if(userstatus == '0'){
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpUser_usrStatus_usrStatus_id").innerHTML  = 'Active';
+			}else{
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpUser_usrStatus_usrStatus_id").innerHTML  = 'InActive';
+			}
+	});	
+	
+	</script>
+</div>

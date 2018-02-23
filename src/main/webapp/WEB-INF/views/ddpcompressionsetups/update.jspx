@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpCompressionSetup" idField="ctsCompressionId" modelAttribute="ddpCompressionSetup" path="/ddpcompressionsetups" versionField="none" z="Lul4sr6cOHb7ejInMROD9yzooxc=">
+        <field:simple field="ddpAedRules" id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ddpAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Aed Rule" z="6TrFVuag2Ow5EApwtswM9OMq8Jc="/>
+        <field:simple field="ddpExportRules" id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ddpExportRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Export Rule" z="axGFWW1ywU0R+GYMv1g51foo1LA="/>
+        <field:input field="ctsCompressionLevel" id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ctsCompressionLevel" z="35Jl5pGVX8brRwWhm9QDnt745rk="/>
+        <field:input field="ctsCompressionSize" id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ctsCompressionSize" validationMessageCode="field_invalid_integer" z="n6GWB0iPMGTBC3a1adHwm8sxIT0="/>
+        <field:simple field="ddpMultiAedRules" id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ddpMultiAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Multi Aed Rule" z="Ugz3F+Du7tUE1Go/ylbslxwo31E="/>
+        <field:input field="ctsEmailAttachmentLimit" id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ctsEmailAttachmentLimit" validationMessageCode="field_invalid_integer" z="fq6S5dbouQ70hOCOUFDHlJAtYqo="/>
+        <field:input field="ctsNoOfFilesAttached" id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ctsNoOfFilesAttached" validationMessageCode="field_invalid_integer" z="aWvhtQyZZ+nnl22M6vJ2MOUIq4Y="/>
+    </form:update>
+</div>

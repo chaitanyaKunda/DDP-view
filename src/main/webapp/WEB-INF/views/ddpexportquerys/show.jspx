@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpExportQuery" object="${ddpexportquery}" path="/ddpexportquerys" z="YRUy6LqTjHtJyE21Mhj6XbXqnhM=">
+        <field:display field="exqExpRuleId" id="s_com_agility_ddp_data_domain_DdpExportQuery_exqExpRuleId" object="${ddpexportquery}" z="hYYEt7hgRqbkYn+r95IZB2QHidI="/>
+        <field:display field="exqSchId" id="s_com_agility_ddp_data_domain_DdpExportQuery_exqSchId" object="${ddpexportquery}" z="6TKsXIzEXazLqWJtiSF+6xYAIxs="/>
+        <field:display field="exqQuery" id="s_com_agility_ddp_data_domain_DdpExportQuery_exqQuery" object="${ddpexportquery}" z="Zwt4lWIM/8ku3dAlek5GPwyVhpg="/>
+        <field:display field="exqStatus" id="s_com_agility_ddp_data_domain_DdpExportQuery_exqStatus" object="${ddpexportquery}" z="hq2UPsMMCE+wkNzwV2m5f3MNfxk="/>
+    </page:show>
+</div>

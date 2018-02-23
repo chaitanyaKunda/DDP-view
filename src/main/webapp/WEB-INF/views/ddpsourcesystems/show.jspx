@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpSourceSystem" object="${ddpsourcesystem}" path="/ddpsourcesystems" z="I9L6DAxdCLNGNyfpKt0G4iCxi+4=">
+        <field:display field="souCompanyCode" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souCompanyCode" object="${ddpsourcesystem}" z="w7fN60hQkTB6WaaP0XFLDvxrxeo="/>
+        <field:display field="souServerIp" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souServerIp" object="${ddpsourcesystem}" z="L56GFA7ouSuNPcf/FxCIucKjS58="/>
+        <field:display field="souServerName" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souServerName" object="${ddpsourcesystem}" z="iK+bT69jZLoE5hWHAn+qYkCtyxo="/>
+        <field:display field="souDomain" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souDomain" object="${ddpsourcesystem}" z="jZWjoC28wTGZTc+6+Oa8UEgLEEY="/>
+        <field:display field="souServiceAccount" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souServiceAccount" object="${ddpsourcesystem}" z="PrYp71ShZGurDQFJmjwq/KP+AaU="/>
+        <field:display field="souSaPassword" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souSaPassword" object="${ddpsourcesystem}" z="I15zRBB/dl6k4mBPcNvyl8M39cw="/>
+        <field:display field="souFilePath" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souFilePath" object="${ddpsourcesystem}" z="Mkx8WS5VsRU1ExL+qevb8LVBtZg="/>
+        <field:display field="souStatus" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souStatus" object="${ddpsourcesystem}" z="A7cj4ZTLlhnlqm+mr9B+s6ZxI6o="/>
+        <field:display field="souCreatedBy" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souCreatedBy" object="${ddpsourcesystem}" z="/xn485cAeCQ5jMue6zFK2CdVhss="/>
+        <field:display calendar="true" dateTimePattern="${ddpSourceSystem_soucreateddate_date_format}" field="souCreatedDate" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souCreatedDate" object="${ddpsourcesystem}" z="LLNR/Ncl2HYNfsi3jSdCIyEhwP8="/>
+        <field:display field="souModifiedBy" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souModifiedBy" object="${ddpsourcesystem}" z="g0F1NVuZPxMQIyf7y5Wg4K/hbOE="/>
+        <field:display calendar="true" dateTimePattern="${ddpSourceSystem_soumodifieddate_date_format}" field="souModifiedDate" id="s_com_agility_ddp_data_domain_DdpSourceSystem_souModifiedDate" object="${ddpsourcesystem}" z="7ViTWzxOkbwgBmbtrDvsxBB1T9M="/>
+    </page:show>
+</div>

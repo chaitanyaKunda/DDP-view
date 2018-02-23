@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" class="graphite demo-container" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <menu:category id="c_ddpcategorizeddocs" z="wZOt02Ux4GL9wdEW+s2+2IZ6q4I=">
+            <menu:item id="i_ddpcategorizeddocs_new" messageCode="global_menu_new" url="/ddpcategorizeddocses?form" z="cMZTO4ACD6Emx8AljLW/fuJOK9E="/>
+            <menu:item id="i_ddpcategorizeddocs_list" messageCode="global_menu_list" url="/ddpcategorizeddocses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="sQ/nS1hf4cbF2Of/cPytEX8Tyf4="/>
+        </menu:category>
+        <menu:category id="c_ddprule" z="8N4cnCMrHk4o6wUo32xLLeWYIHY=">
+            <menu:item id="i_ddprule_new" messageCode="global_menu_new" url="/ddprules?form" z="QZ9O2UOhcSNj9VGHHCZzVAgbg3Q="/>
+            <menu:item id="i_ddprule_list" messageCode="global_menu_list" url="/ddprules?page=1&amp;size=${empty param.size ? 10 : param.size}" z="7LeeAjsD5FMSI9uLvWm6xBiyEwI="/>
+        </menu:category>
+        <menu:category id="c_ddpdoctype" z="SArR6y5UoHxNzH6RZsPCTlyXf7Q=">
+            <menu:item id="i_ddpdoctype_new" messageCode="global_menu_new" url="/ddpdoctypes?form" z="EwIyvD+soGXxz4JyqPy/pdOrKko="/>
+            <menu:item id="i_ddpdoctype_list" messageCode="global_menu_list" url="/ddpdoctypes?page=1&amp;size=${empty param.size ? 10 : param.size}" z="z4rN6UxeDF0T6EUZgpyJE7IJHQ8="/>
+        </menu:category>
+        <menu:category id="c_ddpaudittxn" z="TyOz6L6uPBVy4T3deOc0omk60jg=">
+            <menu:item id="i_ddpaudittxn_new" messageCode="global_menu_new" url="/ddpaudittxns?form" z="9d1FXD52uS0P8gM0Ii0QNQyLm58="/>
+            <menu:item id="i_ddpaudittxn_list" messageCode="global_menu_list" url="/ddpaudittxns?page=1&amp;size=${empty param.size ? 10 : param.size}" z="RD3CwW7tdo4SBwcT/USdVN1dJ9Q="/>
+        </menu:category>
+        <menu:category id="c_ddpparty" z="z01scHt9wHONpODNPQ2MLYwrQkc=">
+            <menu:item id="i_ddpparty_new" messageCode="global_menu_new" url="/ddppartys?form" z="QTODW/qE27GowA0e5x6LtPMrsxQ="/>
+            <menu:item id="i_ddpparty_list" messageCode="global_menu_list" url="/ddppartys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4vHZiHgUkCNIjEJTmyE+LclHBMM="/>
+        </menu:category>
+        <menu:category id="c_ddpcommunicationlkp" z="2B5eMLJGL8yest0xaSF22wQV3g4=">
+            <menu:item id="i_ddpcommunicationlkp_new" messageCode="global_menu_new" url="/ddpcommunicationlkps?form" z="5XWtFqyzETbTELl/AwSNLlTyjtQ="/>
+            <menu:item id="i_ddpcommunicationlkp_list" messageCode="global_menu_list" url="/ddpcommunicationlkps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="wkOGQ2DKwHjMbZwDE0WqvJQ6GDo="/>
+        </menu:category>
+        <menu:category id="c_ddpaedrule" z="+SnO2pt3SJWoYpW36marp+rPKPI=">
+            <menu:item id="i_ddpaedrule_new" messageCode="global_menu_new" url="/ddpaedrules?form" z="Mc0Sj46Yxs+iU+AxLJwcOR0Zc0E="/>
+            <menu:item id="i_ddpaedrule_list" messageCode="global_menu_list" url="/ddpaedrules?page=1&amp;size=${empty param.size ? 10 : param.size}" z="4wKngKazS0R/jiFPBNcfSlrVM8E="/>
+        </menu:category>
+        <menu:category id="c_ddprulepmsvc" z="tjrxNG1h7d06RuJ8IcvVKfUwIoQ=">
+            <menu:item id="i_ddprulepmsvc_new" messageCode="global_menu_new" url="/ddprulepmsvcs?form" z="kpIP+Oo6TirnDHWF6yr/isl8q4c="/>
+            <menu:item id="i_ddprulepmsvc_list" messageCode="global_menu_list" url="/ddprulepmsvcs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="c7L4hO37FoL6a2UMr2lYpAswNuk="/>
+        </menu:category>
+        <menu:category id="c_ddpmergesetup" z="RPSeDuqso6Lza9LLQfDe9Tad8EU=">
+            <menu:item id="i_ddpmergesetup_new" messageCode="global_menu_new" url="/ddpmergesetups?form" z="dvGLScaSLtUhMCJpuVOTDxoSnUM="/>
+            <menu:item id="i_ddpmergesetup_list" messageCode="global_menu_list" url="/ddpmergesetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="kdqE75f6tu9DJIxIZ1ObVRQtb0U="/>
+        </menu:category>
+        <menu:category id="c_ddpcategorizeddetail" z="Lyl2OJjWj5XmYWqRiPLB7MXHAy8=">
+            <menu:item id="i_ddpcategorizeddetail_new" messageCode="global_menu_new" url="/ddpcategorizeddetails?form" z="WZ/AW194am4bXDTGXIHddbMe60w="/>
+            <menu:item id="i_ddpcategorizeddetail_list" messageCode="global_menu_list" url="/ddpcategorizeddetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ny6G93tUN9L9LKuuXF/g4MdkCZI="/>
+        </menu:category>
+        <menu:category id="c_ddpcommunc" z="2Lvgf80JTEfOz8pF8SVKGDpNDZs=">
+            <menu:item id="i_ddpcommunc_new" messageCode="global_menu_new" url="/ddpcommuncs?form" z="AQaChWI13GvO+iF+NJWJqKJ+U6U="/>
+            <menu:item id="i_ddpcommunc_list" messageCode="global_menu_list" url="/ddpcommuncs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="gcfobSAREZRUL9J6CfA8bI9Ov2M="/>
+        </menu:category>
+        <menu:category id="c_ddpnotification" z="QwCbmBdUXdnICfry/xanHg4wJos=">
+            <menu:item id="i_ddpnotification_new" messageCode="global_menu_new" url="/ddpnotifications?form" z="tL2vlNuFMjYg0RErc6Gox9ike2g="/>
+            <menu:item id="i_ddpnotification_list" messageCode="global_menu_list" url="/ddpnotifications?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ILFMXfPwYsNYzvM5/3/8xWAo35Q="/>
+        </menu:category>
+        <menu:category id="c_ddpcommemail" z="Nq/dIxFKdNQ/iv507xvZeReooNI=">
+            <menu:item id="i_ddpcommemail_new" messageCode="global_menu_new" url="/ddpcommemails?form" z="hjqLabjWqdw3h2Ip/EoADheHQ0E="/>
+            <menu:item id="i_ddpcommemail_list" messageCode="global_menu_list" url="/ddpcommemails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="frThGyVwGnsIGm2ZsmUgJRXpQd8="/>
+        </menu:category>
+        <menu:category id="c_ddpcommunicationsetup" z="Vi6FnK6CJnw+tmlwJaXBq8ZZDtQ=">
+            <menu:item id="i_ddpcommunicationsetup_new" messageCode="global_menu_new" url="/ddpcommunicationsetups?form" z="ZrVrCrhz+HUpvDWd0hhFeYg0r6M="/>
+            <menu:item id="i_ddpcommunicationsetup_list" messageCode="global_menu_list" url="/ddpcommunicationsetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="BX/b8X3a+genYR9yOWdNBgyn77c="/>
+        </menu:category>
+        <menu:category id="c_ddpcompany" z="A73R27uzT2Vu9lrjE+wfn+KA6Sc=">
+            <menu:item id="i_ddpcompany_new" messageCode="global_menu_new" url="/ddpcompanys?form" z="XFnifyw2NWAO/IP9QCMxQhMoZLQ="/>
+            <menu:item id="i_ddpcompany_list" messageCode="global_menu_list" url="/ddpcompanys?page=1&amp;size=${empty param.size ? 10 : param.size}" z="RLR/5cx4gpmNH2As4U24auNAH9I="/>
+        </menu:category>
+        <menu:category id="c_ddppmservice" z="rE7PAQjFsQAxSZMf2DXJqEpeMbs=">
+            <menu:item id="i_ddppmservice_new" messageCode="global_menu_new" url="/ddppmservices?form" z="DKyoqjgyBoQKlHAxeDAc4y4Zc+4="/>
+            <menu:item id="i_ddppmservice_list" messageCode="global_menu_list" url="/ddppmservices?page=1&amp;size=${empty param.size ? 10 : param.size}" z="SQeYCY/amxK/gB8MGbY8K3Xlla4="/>
+        </menu:category>
+        <menu:category id="c_ddpcommftp" z="jNByCuXw2lGevfxxTVJp5eit4Fc=">
+            <menu:item id="i_ddpcommftp_new" messageCode="global_menu_new" url="/ddpcommftps?form" z="Y6WFgzdC7AaPlIwAyrAW2EtzjaI="/>
+            <menu:item id="i_ddpcommftp_list" messageCode="global_menu_list" url="/ddpcommftps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="PFKmk6j3DMRYN56Bd7Smj7l5KIs="/>
+        </menu:category>
+        <menu:category id="c_ddpscheduler" z="4xWXg/dSyUcHS3NC+LEymHEtmCI=">
+            <menu:item id="i_ddpscheduler_new" messageCode="global_menu_new" url="/ddpschedulers?form" z="JvraTJHEA29kW3ye77KPPYghalI="/>
+            <menu:item id="i_ddpscheduler_list" messageCode="global_menu_list" url="/ddpschedulers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="X6pZW11pxTpV7Cr3Nfniuc3Ij5M="/>
+        </menu:category>
+        <menu:category id="c_ddpexportrule" z="mvCWMIxJH8g4o6Vxs7QfP2nlEeQ=">
+            <menu:item id="i_ddpexportrule_new" messageCode="global_menu_new" url="/ddpexportrules?form" z="tWlv26J6DadRMPF1OI8gJuIzWEc="/>
+            <menu:item id="i_ddpexportrule_list" messageCode="global_menu_list" url="/ddpexportrules?page=1&amp;size=${empty param.size ? 10 : param.size}" z="M+LYcE72QhXQ9Fe3ANFktRLANPQ="/>
+        </menu:category>
+        <menu:category id="c_ddpsourcesystemdetail" z="XAy3pgS3DAHL3UF1Cs+pMFEWMLw=">
+            <menu:item id="i_ddpsourcesystemdetail_new" messageCode="global_menu_new" url="/ddpsourcesystemdetails?form" z="CHoiI5OmRDHzNmFQkCX0qxI9Wrw="/>
+            <menu:item id="i_ddpsourcesystemdetail_list" messageCode="global_menu_list" url="/ddpsourcesystemdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ZRAfvkef6BjuNMeKdqG9nv00r/Q="/>
+        </menu:category>
+        <menu:category id="c_ddpproperties" z="aDb5vhyqKg82DuRVYB3SZSzR6oo=">
+            <menu:item id="i_ddpproperties_new" messageCode="global_menu_new" url="/ddppropertieses?form" z="bLDaKB3kLuL4Uw1HgbURAEtmqT0="/>
+            <menu:item id="i_ddpproperties_list" messageCode="global_menu_list" url="/ddppropertieses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2hBA/7ASdwX/an55qAKZnsa4Qi4="/>
+        </menu:category>
+        <menu:category id="c_ddpaedreqdocs" z="0XXDZMuUMGwsQeLdlx3EKS5JcGE=">
+            <menu:item id="i_ddpaedreqdocs_new" messageCode="global_menu_new" url="/ddpaedreqdocses?form" z="xdwzLckjIddekzbsUW4Y4T7hwqI="/>
+            <menu:item id="i_ddpaedreqdocs_list" messageCode="global_menu_list" url="/ddpaedreqdocses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="167vZlWcWKe6773kDmzaBzOusOY="/>
+        </menu:category>
+        <menu:category id="c_ddpintegsystem" z="N8CUuK4Unscan/T7mLcVb5Aq1UU=">
+            <menu:item id="i_ddpintegsystem_new" messageCode="global_menu_new" url="/ddpintegsystems?form" z="z/fSThVAykWZuFOqR4jjPXaoejM="/>
+            <menu:item id="i_ddpintegsystem_list" messageCode="global_menu_list" url="/ddpintegsystems?page=1&amp;size=${empty param.size ? 10 : param.size}" z="8kjIxnf0SqfqISYYP4HPMYu8UvQ="/>
+        </menu:category>
+        <menu:category id="c_ddpgensystem" z="jWx0xyqTa+JQ6gFvTEJINGAZx14=">
+            <menu:item id="i_ddpgensystem_new" messageCode="global_menu_new" url="/ddpgensystems?form" z="BJ+XxYRACETRDYqR/hS7y6gx3vo="/>
+            <menu:item id="i_ddpgensystem_list" messageCode="global_menu_list" url="/ddpgensystems?page=1&amp;size=${empty param.size ? 10 : param.size}" z="W/mS677srWVX/yCx5k/3QnTlktk="/>
+        </menu:category>
+        <menu:category id="c_ddpcompressionsetup" z="fnp+du4b/KaQreFIttgK+g4sO7o=">
+            <menu:item id="i_ddpcompressionsetup_new" messageCode="global_menu_new" url="/ddpcompressionsetups?form" z="hkjN7gUrth7m863j/+7ZijZjpWM="/>
+            <menu:item id="i_ddpcompressionsetup_list" messageCode="global_menu_list" url="/ddpcompressionsetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="U5hMmBRXhQfeZO+ig/P6tFplnfg="/>
+        </menu:category>
+        <menu:category id="c_ddpbranch" z="pLKdhfzQhkk7EUz5L9PahmluIB0=">
+            <menu:item id="i_ddpbranch_new" messageCode="global_menu_new" url="/ddpbranches?form" z="6+vIEvaGrQ3H6WW0gLBwzKK1NzA="/>
+            <menu:item id="i_ddpbranch_list" messageCode="global_menu_list" url="/ddpbranches?page=1&amp;size=${empty param.size ? 10 : param.size}" z="MC4egNo3RD0HFCgnaO6z3FdvFd4="/>
+        </menu:category>
+        <menu:category id="c_ddpdmsdocstxn" z="2zaqwGAQvO/DyKl16jwG0F7Y0wI=">
+            <menu:item id="i_ddpdmsdocstxn_new" messageCode="global_menu_new" url="/ddpdmsdocstxns?form" z="c5qq3b85VuZnIUYUICasu4mAPts="/>
+            <menu:item id="i_ddpdmsdocstxn_list" messageCode="global_menu_list" url="/ddpdmsdocstxns?page=1&amp;size=${empty param.size ? 10 : param.size}" z="A9aj5SiZKKQEpKKYbc5SVltvQ+8="/>
+        </menu:category>
+        <menu:category id="c_ddpdocnameconv" z="mGm2y7Rnzr633WeI89S/Cx+8xxQ=">
+            <menu:item id="i_ddpdocnameconv_new" messageCode="global_menu_new" url="/ddpdocnameconvs?form" z="swlOI5ftvBH2sBDrTKPbi6xTlVU="/>
+            <menu:item id="i_ddpdocnameconv_list" messageCode="global_menu_list" url="/ddpdocnameconvs?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2Y7RHnCbRTuP8s37Z1YsZVBqXVQ="/>
+        </menu:category>
+        <menu:category id="c_ddpsourcesystem" z="sCiGBrb9fsGUEyPDozn9BrJt5Ko=">
+            <menu:item id="i_ddpsourcesystem_new" messageCode="global_menu_new" url="/ddpsourcesystems?form" z="ZOrRwgI1tD0QzB6uXmqV1tLZRM0="/>
+            <menu:item id="i_ddpsourcesystem_list" messageCode="global_menu_list" url="/ddpsourcesystems?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Dik2d6ebeBd0OJNrLXCmMRxOUcs="/>
+        </menu:category>
+        <menu:category id="c_ddpvalueasst" z="bC8LeSDqZCa2nNFDRTtdY0oQV1Q=">
+            <menu:item id="i_ddpvalueasst_new" messageCode="global_menu_new" url="/ddpvalueassts?form" z="YRuZenOfdOZbFLfw7WU00gb86Qw="/>
+            <menu:item id="i_ddpvalueasst_list" messageCode="global_menu_list" url="/ddpvalueassts?page=1&amp;size=${empty param.size ? 10 : param.size}" z="VdM9rel0DhL+m+CRSFr/+3zFCng="/>
+        </menu:category>
+        <menu:category id="c_sysdiagrams" z="t3JwHwtiSha5DR/cYF6PkXWd1eQ=">
+            <menu:item id="i_sysdiagrams_new" messageCode="global_menu_new" url="/sysdiagramses?form" z="+F6f6T9crffSLYn+Z5Q+A5aBj9o="/>
+            <menu:item id="i_sysdiagrams_list" messageCode="global_menu_list" url="/sysdiagramses?page=1&amp;size=${empty param.size ? 10 : param.size}" z="ajJgpYIQILGwSysusz7VJJFCRNM="/>
+        </menu:category>
+        <menu:category id="c_ddpdmsdocprop" z="Rlt/xw+FTpL4GzE85ePmoCbZ2Do=">
+            <menu:item id="i_ddpdmsdocprop_new" messageCode="global_menu_new" url="/ddpdmsdocprops?form" z="k98pzQBsIGApLE+82+TRjpwKxmo="/>
+            <menu:item id="i_ddpdmsdocprop_list" messageCode="global_menu_list" url="/ddpdmsdocprops?page=1&amp;size=${empty param.size ? 10 : param.size}" z="vQWJX0J72WGfbPSA0xEw/eh8FkA="/>
+        </menu:category>
+        <menu:category id="c_ddpruledetail" z="AHXormoKopmXSH67JbnJkhLE/Z0=">
+            <menu:item id="i_ddpruledetail_new" messageCode="global_menu_new" url="/ddpruledetails?form" z="ZzpLoDcE0xkXcyPaGqLWYbyXaGs="/>
+            <menu:item id="i_ddpruledetail_list" messageCode="global_menu_list" url="/ddpruledetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lkKCLUixZDaY71UARQVxBCKVUB0="/>
+        </menu:category>
+        <menu:category id="c_ddprolesetup" z="UhxnoN9A0Jahm+z2eGNlR7GIZ8c=">
+            <menu:item id="i_ddprolesetup_new" messageCode="global_menu_new" url="/ddprolesetups?form" z="qjERuInT2CZdZfOohL0AJXixBl0="/>
+            <menu:item id="i_ddprolesetup_list" messageCode="global_menu_list" url="/ddprolesetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="hiFV6xgnWg1PwsDyc6Xh0i+LyOI="/>
+        </menu:category>
+        <menu:category id="c_ddpgroup" z="071MkBQCuPuvoFFMdPmMI7ZeP80=">
+            <menu:item id="i_ddpgroup_new" messageCode="global_menu_new" url="/ddpgroups?form" z="UB0T6Lh7rWu8CB1mUwqRY73D/us="/>
+            <menu:item id="i_ddpgroup_list" messageCode="global_menu_list" url="/ddpgroups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="uF+uov2uCAhztbKteLc9KHwvn+0="/>
+        </menu:category>
+        <menu:category id="c_ddpuser" z="ZQUQGwFcrT5AL6QHgU4+KszD7j8=">
+            <menu:item id="i_ddpuser_new" messageCode="global_menu_new" url="/ddpusers?form" z="l8myuoKFDRCr3JGRYJ1kCHgC4p8="/>
+            <menu:item id="i_ddpuser_list" messageCode="global_menu_list" url="/ddpusers?page=1&amp;size=${empty param.size ? 10 : param.size}" z="55VvIjM3muDWrm5VvSaOaZZaWD8="/>
+        </menu:category>
+        <menu:category id="c_ddpcategorizedaudittxn" z="s4uKC4R52KohOcnQ6RBFCwFp8Ss=">
+            <menu:item id="i_ddpcategorizedaudittxn_new" messageCode="global_menu_new" url="/ddpcategorizedaudittxns?form" z="DrMbcZKnkdxMay84JCTX0mmWCcc="/>
+            <menu:item id="i_ddpcategorizedaudittxn_list" messageCode="global_menu_list" url="/ddpcategorizedaudittxns?page=1&amp;size=${empty param.size ? 10 : param.size}" z="2Z5F4U6jjrxW7+rAGOH4bzwmzoY="/>
+        </menu:category>
+        <menu:category id="c_ddpemailattachment" z="yXNcddBTNLjvL7y22kOcyyoFsao=">
+            <menu:item id="i_ddpemailattachment_new" messageCode="global_menu_new" url="/ddpemailattachments?form" z="RKN5AFnclojVqV4MFazK5P8OK3g="/>
+            <menu:item id="i_ddpemailattachment_list" messageCode="global_menu_list" url="/ddpemailattachments?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fCss6EvasO482kIh49xxQfCxsFo="/>
+        </menu:category>
+        <menu:category id="c_ddpdmsdocsdetail" z="7EdD75xetQw1kPtSM9i1e/gWbTA=">
+            <menu:item id="i_ddpdmsdocsdetail_new" messageCode="global_menu_new" url="/ddpdmsdocsdetails?form" z="6to3zI5reeNVk665+u6Vz472/tE="/>
+            <menu:item id="i_ddpdmsdocsdetail_list" messageCode="global_menu_list" url="/ddpdmsdocsdetails?page=1&amp;size=${empty param.size ? 10 : param.size}" z="q3c5Y+phwpd4i/LyN6oEHufPuk0="/>
+        </menu:category>
+        <menu:category id="c_ddprole" z="xQ4iATsyWMlUjMTyu7CYXELXBj0=">
+            <menu:item id="i_ddprole_new" messageCode="global_menu_new" url="/ddproles?form" z="2T3IavI3yv+wWw2H3wxMabm80eQ="/>
+            <menu:item id="i_ddprole_list" messageCode="global_menu_list" url="/ddproles?page=1&amp;size=${empty param.size ? 10 : param.size}" z="lLJ9npCMxKIMp8Zp9po7Gv3o5Zs="/>
+        </menu:category>
+        <menu:category id="c_ddpgroupsetup" z="C6Fk4KHCtEYaMddqjrTAnr0z5f0=">
+            <menu:item id="i_ddpgroupsetup_new" messageCode="global_menu_new" url="/ddpgroupsetups?form" z="Kdi/uwZQ9Yr6XIladSH2jd7x8Mo="/>
+            <menu:item id="i_ddpgroupsetup_list" messageCode="global_menu_list" url="/ddpgroupsetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="CEcHk8pVaixw41NGkiOv7VT90gU="/>
+        </menu:category>
+        <menu:category id="c_ddpcompressionlkp" z="S6u1SOC568oYAklvdjzHnL9H/pA=">
+            <menu:item id="i_ddpcompressionlkp_new" messageCode="global_menu_new" url="/ddpcompressionlkps?form" z="vEFyL+JK6i2L+UO3ufOybkNPeCc="/>
+            <menu:item id="i_ddpcompressionlkp_list" messageCode="global_menu_list" url="/ddpcompressionlkps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="t2oMRAbW3d7C1D61KlQx+j6hTJk="/>
+        </menu:category>
+        <menu:category id="c_ddpcommoptionslkp" z="DjnPRx7sFZNohkuqGpx3fO7Zkzw=">
+            <menu:item id="i_ddpcommoptionslkp_new" messageCode="global_menu_new" url="/ddpcommoptionslkps?form" z="XHoIBIsBDlFrai3I64f9GGOsEzY="/>
+            <menu:item id="i_ddpcommoptionslkp_list" messageCode="global_menu_list" url="/ddpcommoptionslkps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="NFpqTKubEjPOB7uuSZ670hEpJwA="/>
+        </menu:category>
+        <menu:category id="c_ddpcommoptionssetup" z="I38xufPfcvIIEbXm23rnuZcE8+M=">
+            <menu:item id="i_ddpcommoptionssetup_new" messageCode="global_menu_new" url="/ddpcommoptionssetups?form" z="6juGgU1K38Vysv2UEo2cObPDGOc="/>
+            <menu:item id="i_ddpcommoptionssetup_list" messageCode="global_menu_list" url="/ddpcommoptionssetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="fSPruJaQH1D5exeJpqEcKTpLnMM="/>
+        </menu:category>
+        <menu:category id="c_dmsddpsyn" z="W0CoOcLdTUJf18NF1uKA2aQcBdU=">
+            <menu:item id="i_dmsddpsyn_new" messageCode="global_menu_new" url="/dmsddpsyns?form" z="+22HSUhU6y/Bh1T4Keb4VgbDtmk="/>
+            <menu:item id="i_dmsddpsyn_list" messageCode="global_menu_list" url="/dmsddpsyns?page=1&amp;size=${empty param.size ? 10 : param.size}" z="p4sOPbSbpB03Kcfh/2dDdOKx/2Y="/>
+        </menu:category>
+        <menu:category id="c_ddpdmsdocsholder" z="G1P42j8wRc1bf1gNJoYUN0cpu9g=">
+            <menu:item id="i_ddpdmsdocsholder_new" messageCode="global_menu_new" url="/ddpdmsdocsholders?form" z="gd25Mj38tYaAOWl+nlwrqIY4tvA="/>
+            <menu:item id="i_ddpdmsdocsholder_list" messageCode="global_menu_list" url="/ddpdmsdocsholders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="sRlP0OSQ6i5ipXl/ifpV1QOLSfM="/>
+        </menu:category>
+        <menu:category id="c_ddpjobrefholder" z="o8sfR/kUd62nqupzBDc02JUQCe0=">
+            <menu:item id="i_ddpjobrefholder_new" messageCode="global_menu_new" url="/ddpjobrefholders?form" z="BdUyrSGL2k3gKT2m9fVnbWhJuRM="/>
+            <menu:item id="i_ddpjobrefholder_list" messageCode="global_menu_list" url="/ddpjobrefholders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="azvPT0+eSOFSJr+jXJkKCOW/cuc="/>
+        </menu:category>
+        <menu:category id="c_ddpcategorizationholder" z="EFXJsFPJ1o8EFkO9gPrNX2vsIzw=">
+            <menu:item id="i_ddpcategorizationholder_new" messageCode="global_menu_new" url="/ddpcategorizationholders?form" z="Q/ksNUf86EBetm7sM8idZj4qh7E="/>
+            <menu:item id="i_ddpcategorizationholder_list" messageCode="global_menu_list" url="/ddpcategorizationholders?page=1&amp;size=${empty param.size ? 10 : param.size}" z="rMi82lJ6w7GqhfaQDV+drLjFY9o="/>
+        </menu:category>
+        <menu:category id="c_ddpgensourcelkp" z="opy1pqetb1lV0+lh0LNKrpu393M=">
+            <menu:item id="i_ddpgensourcelkp_new" messageCode="global_menu_new" url="/ddpgensourcelkps?form" z="v0IyKeKDNqTIgbybof3z4D/o5ms="/>
+            <menu:item id="i_ddpgensourcelkp_list" messageCode="global_menu_list" url="/ddpgensourcelkps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Oa/KrKZby6qlfsYR+rWoB/kpeXs="/>
+        </menu:category>
+        <menu:category id="c_ddpratelkp" z="X3t4EoX90mLZ6p5WHDfRyPCM2cs=">
+            <menu:item id="i_ddpratelkp_new" messageCode="global_menu_new" url="/ddpratelkps?form" z="vkWABW4ONpq5yRXQhNK1tB/OUlY="/>
+            <menu:item id="i_ddpratelkp_list" messageCode="global_menu_list" url="/ddpratelkps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="mGuxnWAU0Pe4ngmWlxxxWVI/N/M="/>
+        </menu:category>
+        <menu:category id="c_ddpgensourcesetup" z="GAx0to46aNNQTYpCIu2bGpggAP8=">
+            <menu:item id="i_ddpgensourcesetup_new" messageCode="global_menu_new" url="/ddpgensourcesetups?form" z="8cLA6153Mm+eLtKNR2zOV9tp0GA="/>
+            <menu:item id="i_ddpgensourcesetup_list" messageCode="global_menu_list" url="/ddpgensourcesetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="E5tt6mi3BVhDznxIkX6odJ7u+SM="/>
+        </menu:category>
+        <menu:category id="c_ddprate" z="3s3qe4d3DxsGi6y1CICOQjOmRk0=">
+            <menu:item id="i_ddprate_new" messageCode="global_menu_new" url="/ddprates?form" z="51LqzXdKjdYrHMxrSJVd2qfCT34="/>
+            <menu:item id="i_ddprate_list" messageCode="global_menu_list" url="/ddprates?page=1&amp;size=${empty param.size ? 10 : param.size}" z="nUD+zqRiOojdDQTkndYgiAFpuTw="/>
+        </menu:category>
+        <menu:category id="c_ddpratesetup" z="MCyPFstaS3MT372l8wq/Mb/Twh4=">
+            <menu:item id="i_ddpratesetup_new" messageCode="global_menu_new" url="/ddpratesetups?form" z="WDgWnOALDv9BqY48k5+mfI1i2mo="/>
+            <menu:item id="i_ddpratesetup_list" messageCode="global_menu_list" url="/ddpratesetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="Uh4fXIC5ptxnDLlQhuJASpSe6A8="/>
+        </menu:category>
+        <menu:category id="c_ddpexportversionsetup" z="A4FvI7MAOmEOv78T7iMFSrrp4CI=">
+            <menu:item id="i_ddpexportversionsetup_new" messageCode="global_menu_new" url="/ddpexportversionsetups?form" z="Z2eQ7DKg8Y622ZCK6o5Mm+3mZuk="/>
+            <menu:item id="i_ddpexportversionsetup_list" messageCode="global_menu_list" url="/ddpexportversionsetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="9a0LAWI1Nzk3bzuX7vUMDxPfQ34="/>
+        </menu:category>
+        <menu:category id="c_ddpexportversionlkp" z="/pFFeSBxR1BBo8b+AAvxzjLxbRg=">
+            <menu:item id="i_ddpexportversionlkp_new" messageCode="global_menu_new" url="/ddpexportversionlkps?form" z="uD42kyiSCH4Yq+Pr3N059HFtRls="/>
+            <menu:item id="i_ddpexportversionlkp_list" messageCode="global_menu_list" url="/ddpexportversionlkps?page=1&amp;size=${empty param.size ? 10 : param.size}" z="peQ3SvnNbbbA4ptFLzKxzi8afHs="/>
+        </menu:category>
+        <menu:category id="c_ddpmultiaedrule" z="C21gCrWSe4alLSxPIrzwUEy4X+s=">
+            <menu:item id="i_ddpmultiaedrule_new" messageCode="global_menu_new" url="/ddpmultiaedrules?form" z="pB0aaCsUEDY++wzCEMIGISTe+Fs="/>
+            <menu:item id="i_ddpmultiaedrule_list" messageCode="global_menu_list" url="/ddpmultiaedrules?page=1&amp;size=${empty param.size ? 10 : param.size}" z="mDf+Kq8b4YVPtgxD1xHbpa2C2nw="/>
+        </menu:category>
+        <menu:category id="c_ddpemailtriggersetup" z="JKMTZmzwGwa3J8PnsNfFzpbG6CQ=">
+            <menu:item id="i_ddpemailtriggersetup_new" messageCode="global_menu_new" url="/ddpemailtriggersetups?form" z="5P9xr8chTIpG/IDbUcFMnJ0nXYA="/>
+            <menu:item id="i_ddpemailtriggersetup_list" messageCode="global_menu_list" url="/ddpemailtriggersetups?page=1&amp;size=${empty param.size ? 10 : param.size}" z="EmIwWslRQmf58DhhUcguSQbRC1k="/>
+        </menu:category>
+    </menu:menu>
+</div>

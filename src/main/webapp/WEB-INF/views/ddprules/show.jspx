@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpRule" object="${ddprule}" path="/ddprules" z="ONVHLLuDVf5Acu8WrPYm8iKlQu4=">
+        <field:display field="ddpAedRule" id="s_com_agility_ddp_data_domain_DdpRule_ddpAedRule" object="${ddprule}" z="XDSMriLT2EgP+m3cVMHPlQ6R2jQ="/>
+        <field:display field="ddpExportRule" id="s_com_agility_ddp_data_domain_DdpRule_ddpExportRule" object="${ddprule}" z="hlItloAfEmO5TvLLBXTR8AQwMIw="/>
+        <field:display field="rulName" id="s_com_agility_ddp_data_domain_DdpRule_rulName" object="${ddprule}" z="+Ukm0W4lA6SClnnPmy/IKijg7cc="/>
+        <field:display field="rulDescription" id="s_com_agility_ddp_data_domain_DdpRule_rulDescription" object="${ddprule}" z="CvGsWgB3QLqlKdXZsvmXqs1gB7I="/>
+        <field:display field="rulStatus" id="s_com_agility_ddp_data_domain_DdpRule_rulStatus" object="${ddprule}" z="j/m2wTA/5fQdpHyNcAWWcASkU1E="/>
+        <field:display field="rulCreatedBy" id="s_com_agility_ddp_data_domain_DdpRule_rulCreatedBy" object="${ddprule}" z="SGtzBhNr7IdfC3k8Ss/X0Ti2Ohw="/>
+        <field:display calendar="true" dateTimePattern="${ddpRule_rulcreateddate_date_format}" field="rulCreatedDate" id="s_com_agility_ddp_data_domain_DdpRule_rulCreatedDate" object="${ddprule}" z="BEwMoxM9efiCDxlfxwI/OPeNO3Q="/>
+        <field:display field="rulModifiedBy" id="s_com_agility_ddp_data_domain_DdpRule_rulModifiedBy" object="${ddprule}" z="ZDyKd1b6TXaxE6ZVdmkvNofneL0="/>
+        <field:display calendar="true" dateTimePattern="${ddpRule_rulmodifieddate_date_format}" field="rulModifiedDate" id="s_com_agility_ddp_data_domain_DdpRule_rulModifiedDate" object="${ddprule}" z="kqdAAsx9kGm2auntePnYLb8Lmfw="/>
+        <field:display field="ddpMultiAedRule" id="s_com_agility_ddp_data_domain_DdpRule_ddpMultiAedRule" object="${ddprule}" z="wNmbGhQMjd30D4VwY/cLcovnTvQ="/>
+    </page:show>
+</div>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCommunicationLkp" items="${ddpcommunicationlkps}" z="Tl/ZfBSDQzaaSZZZg1v3XTgPw20=">
+        <table:table data="${ddpcommunicationlkps}" id="l_com_agility_ddp_data_domain_DdpCommunicationLkp" path="/ddpcommunicationlkps" typeIdFieldName="colCommunicationLkpId" z="dbEreqa1laTBCw3IfklAyFpaYvw=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommunicationLkp_colCommunicationProtocol" property="colCommunicationProtocol" z="OziWnBE0AyDOGsfxlh0b89iqeuU="/>
+        </table:table>
+    </page:list>
+</div>

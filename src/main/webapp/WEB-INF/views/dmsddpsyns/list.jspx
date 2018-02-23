@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DmsDdpSyn" items="${dmsddpsyns}" z="XeGCZ1mlO90d4iZVWtSZlKnVJSw=">
+        <table:table data="${dmsddpsyns}" id="l_com_agility_ddp_data_domain_DmsDdpSyn" path="/dmsddpsyns" typeIdFieldName="synId" z="tgP2/FnT3R0Cnis0LD1pyl8Vuzw=">
+            <table:column id="c_com_agility_ddp_data_domain_DmsDdpSyn_synRObjectId" property="synRObjectId" z="ERQu2ywihVjVYYFUbCAxp3SPl7Y="/>
+            <table:column id="c_com_agility_ddp_data_domain_DmsDdpSyn_synGenSystem" property="synGenSystem" z="TES1sLnXB3FQLRXtrY+gwZVaFoE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DmsDdpSyn_synCompanySource" property="synCompanySource" z="fZpNusWIrVFmUZYyZJhP5ejfknU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DmsDdpSyn_synBranchSource" property="synBranchSource" z="wvwW3QZS/MTiTBI+5oct4zZmYPI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DmsDdpSyn_synDeptSource" property="synDeptSource" z="rrJvDbY0Sk/R9jUXEk5oHwPvycg="/>
+            <table:column id="c_com_agility_ddp_data_domain_DmsDdpSyn_synDocType" property="synDocType" z="o9Mt73i6n7hGrDdQ9HZGJUjSvN0="/>
+        </table:table>
+    </page:list>
+</div>

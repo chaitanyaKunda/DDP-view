@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpScheduler" object="${ddpscheduler}" path="/ddpschedulers" z="bgLccMl4LhvLkhH5A53pw8NhMhk=">
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schstartdate_date_format}" field="schStartDate" id="s_com_agility_ddp_data_domain_DdpScheduler_schStartDate" object="${ddpscheduler}" z="NlnlUITJHBJN4rvVE/xk1f4k+XE="/>
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schenddate_date_format}" field="schEndDate" id="s_com_agility_ddp_data_domain_DdpScheduler_schEndDate" object="${ddpscheduler}" z="6pKuQIgAmLG2Dz0HiQ4ESXQlH/s="/>
+        <field:display field="schNotificationId" id="s_com_agility_ddp_data_domain_DdpScheduler_schNotificationId" object="${ddpscheduler}" z="yRN5HwybLTODbVHBHhfjGrle6y0="/>
+        <field:display field="schStatus" id="s_com_agility_ddp_data_domain_DdpScheduler_schStatus" object="${ddpscheduler}" z="QkbYDge0NWwxSE6KYB8sHZGVGMc="/>
+        <field:display field="schCreatedBy" id="s_com_agility_ddp_data_domain_DdpScheduler_schCreatedBy" object="${ddpscheduler}" z="Tve5ICHrSs6QWtxsg/hCu5LpT9I="/>
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schcreateddate_date_format}" field="schCreatedDate" id="s_com_agility_ddp_data_domain_DdpScheduler_schCreatedDate" object="${ddpscheduler}" z="teS8KNRV94BEOMNQvSIJvbiRtfs="/>
+        <field:display field="schModifiedBy" id="s_com_agility_ddp_data_domain_DdpScheduler_schModifiedBy" object="${ddpscheduler}" z="ibR/LhzYzUrFaJdGjR89QzD2Fvg="/>
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schmodifieddate_date_format}" field="schModifiedDate" id="s_com_agility_ddp_data_domain_DdpScheduler_schModifiedDate" object="${ddpscheduler}" z="19z0kZwpS+vAM5do5tKxa2GX3nY="/>
+        <field:display field="schTimeInterval" id="s_com_agility_ddp_data_domain_DdpScheduler_schTimeInterval" object="${ddpscheduler}" z="kzWNNHnXooE3CcnObHMtSq7aubc="/>
+        <field:display field="schRepeatCount" id="s_com_agility_ddp_data_domain_DdpScheduler_schRepeatCount" object="${ddpscheduler}" z="bmBqips8wBgTG5M3qUNQyD7P7dI="/>
+        <field:display field="schIsRunning" id="s_com_agility_ddp_data_domain_DdpScheduler_schIsRunning" object="${ddpscheduler}" z="zbusdUuKX1JcCNdHF4fAgruRfrI="/>
+        <field:display field="schType" id="s_com_agility_ddp_data_domain_DdpScheduler_schType" object="${ddpscheduler}" z="b+XFb8j+RqYxM2JODDuIJABS4sg="/>
+        <field:display field="schCronExpressions" id="s_com_agility_ddp_data_domain_DdpScheduler_schCronExpressions" object="${ddpscheduler}" z="x3SG5A6Or6G4SObpXAYQqLJC1ac="/>
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schlastrun_date_format}" field="schLastRun" id="s_com_agility_ddp_data_domain_DdpScheduler_schLastRun" object="${ddpscheduler}" z="WOZ99QyYhdxOS6XkCjZZIlMwB1U="/>
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schnextrun_date_format}" field="schNextRun" id="s_com_agility_ddp_data_domain_DdpScheduler_schNextRun" object="${ddpscheduler}" z="xBSsX5NvyemnWOS27/xqIimjtMk="/>
+        <field:display field="schLastRunStatus" id="s_com_agility_ddp_data_domain_DdpScheduler_schLastRunStatus" object="${ddpscheduler}" z="nWMpxEjhzOXJgtsgCdc+MwMKAtE="/>
+        <field:display field="schSuccessCount" id="s_com_agility_ddp_data_domain_DdpScheduler_schSuccessCount" object="${ddpscheduler}" z="t7rF+YizrRnSa3i9koseKqIt6pU="/>
+        <field:display field="schFailedCount" id="s_com_agility_ddp_data_domain_DdpScheduler_schFailedCount" object="${ddpscheduler}" z="4xncI+dbYXhvuJ6LDwyA5dm/ol8="/>
+        <field:display field="schProcessingStatus" id="s_com_agility_ddp_data_domain_DdpScheduler_schProcessingStatus" object="${ddpscheduler}" z="ZwB0cRajUMRXEWksicoVRU2J4zY="/>
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schlastsuccessrun_date_format}" field="schLastSuccessRun" id="s_com_agility_ddp_data_domain_DdpScheduler_schLastSuccessRun" object="${ddpscheduler}" z="9RJCvAyTFPnrocdLWanH9JVY9Ys="/>
+        <field:display calendar="true" dateTimePattern="${ddpScheduler_schlastfailedrun_date_format}" field="schLastFailedRun" id="s_com_agility_ddp_data_domain_DdpScheduler_schLastFailedRun" object="${ddpscheduler}" z="LztCrhcxFQGQgHl+PGCuSlC6Djk="/>
+        <field:display field="schRuleType" id="s_com_agility_ddp_data_domain_DdpScheduler_schRuleType" object="${ddpscheduler}" z="LliHgra3lFMNesKeP+KV3dCtd1c="/>
+        <field:display field="schRuleCategory" id="s_com_agility_ddp_data_domain_DdpScheduler_schRuleCategory" object="${ddpscheduler}" z="xap9TG1d7nMjBjBgFnZ8PMl+36k="/>
+        <field:display field="schChoosenType" id="s_com_agility_ddp_data_domain_DdpScheduler_schChoosenType" object="${ddpscheduler}" z="b+1Sf++qKPxRrlMIANR5RVsRrfE="/>
+        <field:display field="schBatchingCriteria" id="s_com_agility_ddp_data_domain_DdpScheduler_schBatchingCriteria" object="${ddpscheduler}" z="MvOcYiNaswDcYtJKiLIe+vR6qXk="/>
+        <field:display field="schDelayIn" id="s_com_agility_ddp_data_domain_DdpScheduler_schDelayIn" object="${ddpscheduler}" z="vQqFr+I7ACvIK+M/MEEZH69Wvuo="/>
+        <field:display field="schDelayCount" id="s_com_agility_ddp_data_domain_DdpScheduler_schDelayCount" object="${ddpscheduler}" z="qHJ1yNtG2gBeMc75v15DxsLWBCY="/>
+        <field:display field="schReportFrequency" id="s_com_agility_ddp_data_domain_DdpScheduler_schReportFrequency" object="${ddpscheduler}" z="h3lEwsrYaYBgH1c07k4+zweHwtY="/>
+        <field:display field="schReportEmailTo" id="s_com_agility_ddp_data_domain_DdpScheduler_schReportEmailTo" object="${ddpscheduler}" z="2/qXwFw7QlXaw+4fML9b/zIAigE="/>
+        <field:display field="schReportEmailCc" id="s_com_agility_ddp_data_domain_DdpScheduler_schReportEmailCc" object="${ddpscheduler}" z="QcLHdGwm4FQTFrszHUolz1Ynt1s="/>
+        <field:display field="schQuerySource" id="s_com_agility_ddp_data_domain_DdpScheduler_schQuerySource" object="${ddpscheduler}" z="bwRnWAhLMXefn0JxOm0vqEKYJJw="/>
+    </page:show>
+</div>

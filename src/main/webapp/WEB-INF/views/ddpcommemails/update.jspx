@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpCommEmail" idField="cemEmailId" modelAttribute="ddpCommEmail" path="/ddpcommemails" versionField="none" z="8lA1IeVL6yt3DxZUWr5TVTT9rNg=">
+        <field:input field="cemEmailFrom" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailFrom" z="AemQpy9byieKKeZq+zK41tVGueA="/>
+        <field:input field="cemEmailTo" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailTo" z="F1ZxvZHXZ9TDyU2/hDrctmqJMVI="/>
+        <field:input field="cemEmailCc" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailCc" z="l8BWslrw8yPVX1a1oxueqBoNypI="/>
+        <field:input field="cemEmailSubject" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailSubject" z="QekQ67Tz9iorh8Cv3elRXaFod4A="/>
+        <field:input field="cemEmailBody" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBody" z="J+KPWDP22/a4NxtUJfEF2jj0cJQ="/>
+        <field:input field="cemEmailAttachmentLimit" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailAttachmentLimit" validationMessageCode="field_invalid_integer" z="qViGQ3Ue8pnLrWOpItI2CLywDIM="/>
+        <field:input field="cemFtpLocation" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemFtpLocation" z="ptXVKx8DGkcLpexPEHg6gVvv//E="/>
+        <field:input field="cemUncPath" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemUncPath" z="FGOh+VvqZw/1tCHmgAanClvipCQ="/>
+        <field:input field="cemEmailBcc" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBcc" z="WuFlfxTtOtc0DKG8SZ5K8BBVar0="/>
+        <field:input field="cemEmailReplyTo" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailReplyTo" z="IKpdhJ7hhjoHZ327auCNEuTvOsE="/>
+    </form:update>
+</div>

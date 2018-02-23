@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:custom_list id="pl_com_agility_ddp_data_domain_DdpRoleSetup" path="/ddprolesetups" items="${ddprolesetups}" z="ZrFHtFH+bt9h5Ors1GkpU5ELGmg=">
+        <table:custom_table_1 data="${ddprolesetups}" id="l_com_agility_ddp_data_domain_DdpRoleSetup" path="/ddprolesetups" typeIdFieldName="usr_id" z="d74TC9gswKbw+l15g8FbNJ1ZFY0=">
+            <table:column id="c_com_agility_ddp_view_util_userrole_userid" property="usr_id" z="b1v/l2pk2SD1438lpDYlCn+4JNk=" render="false"/>
+            <table:column id="c_com_agility_ddp_view_util_userrole_userloginid" property="usr_login_id" z="Kb3LBrLYhlpI10il5wDc+N3J4oc="/>
+            <table:column id="c_com_agility_ddp_view_util_userrole_rlsid" property="rol_id" z="d+NYRBFDAVwFacuu6jlLJP8nLjM=" render="false"/>
+            <table:column id="c_com_agility_ddp_view_util_userrole_rlsname" property="rol_name" z="YHpbwNwNPddZG56N3kgIX2z4qV8="/>
+        </table:custom_table_1>
+    </page:custom_list>
+</div>

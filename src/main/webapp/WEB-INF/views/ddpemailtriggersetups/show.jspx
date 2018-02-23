@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpEmailTriggerSetup" object="${ddpemailtriggersetup}" path="/ddpemailtriggersetups" z="Wp1l8OVr1qf6w1pn3pHaEMQ+gNw=">
+        <field:display field="etrRuleId" id="s_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrRuleId" object="${ddpemailtriggersetup}" z="pVbuN6GGRGbyLwgHLuMaWS9hxE4="/>
+        <field:display field="etrTriggerName" id="s_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrTriggerName" object="${ddpemailtriggersetup}" z="lkqB90ZYVBuYM3Cfmf8UnUBndhg="/>
+        <field:display field="etrDocTypes" id="s_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrDocTypes" object="${ddpemailtriggersetup}" z="CWWSkQBByAuwiwmiR0ji+tYsedc="/>
+        <field:display field="etrDocSelection" id="s_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrDocSelection" object="${ddpemailtriggersetup}" z="xph6W9sFnqLC2SLw8AVwdAknxTY="/>
+        <field:display field="etrCronExpression" id="s_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrCronExpression" object="${ddpemailtriggersetup}" z="eSVHz1Zq7n7FmGFExObnQOteam0="/>
+        <field:display field="etrRetries" id="s_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrRetries" object="${ddpemailtriggersetup}" z="qbe4pqVjPO831a0Oa34ZUjWspTU="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpRateSetup" items="${ddpratesetups}" z="ilGxH4A7YapAEiJr9EVuvSkIhuI=">
+        <table:table data="${ddpratesetups}" id="l_com_agility_ddp_data_domain_DdpRateSetup" path="/ddpratesetups" typeIdFieldName="rtsId" z="luaApSzwBONG+zclhHwS6ONAHQI=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpRateSetup_rtsRdtId" property="rtsRdtId" z="Xfe4p/0ArYDsZgIDo5gl3sNj+TI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRateSetup_rtsOption" property="rtsOption" z="oQS3dOOYH2A8/GRz9l8A/3EAxlI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRateSetup_rtsCreatedBy" property="rtsCreatedBy" z="/ZupJ/Qu5ApL/wsCbGjw55URwHg="/>
+            <table:column calendar="true" dateTimePattern="${ddpRateSetup_rtscreateddate_date_format}" id="c_com_agility_ddp_data_domain_DdpRateSetup_rtsCreatedDate" property="rtsCreatedDate" z="nQbz6YOoNM6LT5idiCUj9VKMH4I="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRateSetup_rtsModifiedBy" property="rtsModifiedBy" z="YECZhiKTCUkDSDE1Y0KR/zUveBc="/>
+            <table:column calendar="true" dateTimePattern="${ddpRateSetup_rtsmodifieddate_date_format}" id="c_com_agility_ddp_data_domain_DdpRateSetup_rtsModifiedDate" property="rtsModifiedDate" z="ZQJTdQ1k7ApO6QiEbcTFGPCw+YQ="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpEmailTriggerSetup" items="${ddpemailtriggersetups}" z="t+OrRBJRZOx0YHQ9bfCclrun3ok=">
+        <table:table data="${ddpemailtriggersetups}" id="l_com_agility_ddp_data_domain_DdpEmailTriggerSetup" path="/ddpemailtriggersetups" typeIdFieldName="etrId" z="ZuROtLSHM0WHXqjBGTy7IZWctgw=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrRuleId" property="etrRuleId" z="p+z63LBrIU/EriwIcpsgaZqXuVg="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrTriggerName" property="etrTriggerName" z="fCJNu8ZL5jUeY1bc2WUNc2v01sQ="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrDocTypes" property="etrDocTypes" z="4r7jxzQ/ZB7LofhbUj1b3Jx1OUY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrDocSelection" property="etrDocSelection" z="FV4bPe5Ug/r3TPjoA/B9XuwM9qE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrCronExpression" property="etrCronExpression" z="rpPgCT21GrRMUqXxNpc1/+d6NE0="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpEmailTriggerSetup_etrRetries" property="etrRetries" z="zWk5Sl2N82TAGdBfDkASs7iAqxE="/>
+        </table:table>
+    </page:list>
+</div>

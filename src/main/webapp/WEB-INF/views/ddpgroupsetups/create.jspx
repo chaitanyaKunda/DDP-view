@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:custom_create id="fc_com_agility_ddp_data_domain_DdpGroupSetup" modelAttribute="ddpGroupSetup" path="/ddpgroupsetups" render="${empty dependencies}" z="Juw3cOLjPCAywKEuI9ULgh/Z7Xk=">
+        <field:select field="grsGroupId" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsGroupId" itemValue="grpId" items="${ddpgroups}" path="/ddpgroups" z="vaH8PDuvo8gPQfLwRpi0L5aJgZE="/>
+        <field:select field="grsUserId" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsUserId" itemValue="usrId" items="${ddpusers}" path="/ddpusers" z="NiRCUDau4/TTHRabDBJCk8XC3Dc="/>
+        <field:input field="grsStatus" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsStatus" required="true" validationMessageCode="field_invalid_integer" z="Dr4GbmRWtIcItdl+jr0wu7Jx4T8="  render="false"/>
+        <field:input field="grsCreatedBy" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsCreatedBy" required="true" z="kluPh9pev47Ez1i7KllWmo4+7jQ=" render="false"/>
+        <field:datetime dateTimePattern="${ddpGroupSetup_grscreateddate_date_format}" field="grsCreatedDate" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsCreatedDate" required="true" z="l37WnT0Z6DB/A9ddHvwhZOGVDWs=" render="false"/>
+        <field:input field="grsModifiedBy" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsModifiedBy" required="true" z="GLb/m9Gljs5VZpQI9b1AKmnyKOo=" render="false"/>
+        <field:datetime dateTimePattern="${ddpGroupSetup_grsmodifieddate_date_format}" field="grsModifiedDate" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsModifiedDate" required="true" z="7ta3+igzwpYueTnCDlmGg+IWnvc=" render="false"/>
+        <!--         <field:input field="grsId" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsId" required="true" validationMessageCode="field_invalid_integer" z="P0eyaSZ6zOnfHEQ/xKtsuNed03c="/> -->
+    </form:custom_create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpGroupSetup" render="${not empty dependencies}" z="pMG/ncp4IVFfVAIqYCBRL8DYe0k="/>
+</div>

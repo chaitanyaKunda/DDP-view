@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpExportQueryUi" object="${ddpexportqueryui}" path="/ddpexportqueryuis" z="qbonnnTe1VrDnZoBf7ORszIXzYg=">
+        <field:display field="eqiExpRuleId" id="s_com_agility_ddp_data_domain_DdpExportQueryUi_eqiExpRuleId" object="${ddpexportqueryui}" z="AMQjjsUrFT0njsNxpujGeFOuIQE="/>
+        <field:display field="eqiSchId" id="s_com_agility_ddp_data_domain_DdpExportQueryUi_eqiSchId" object="${ddpexportqueryui}" z="p63h0SIuXXRYtjXEFvQAIlAA4OI="/>
+        <field:display field="eqiLineSeq" id="s_com_agility_ddp_data_domain_DdpExportQueryUi_eqiLineSeq" object="${ddpexportqueryui}" z="zPM7e2Rkb6daMyuxWD4av+TA+tQ="/>
+        <field:display field="eqiPartyCode" id="s_com_agility_ddp_data_domain_DdpExportQueryUi_eqiPartyCode" object="${ddpexportqueryui}" z="zIeplriGWeiXPDiKg5p5cknijUA="/>
+        <field:display field="eqiPartyValue" id="s_com_agility_ddp_data_domain_DdpExportQueryUi_eqiPartyValue" object="${ddpexportqueryui}" z="XcI39LHPX8rI3h9vDxOdWjsmHWQ="/>
+        <field:display field="eqiOperator" id="s_com_agility_ddp_data_domain_DdpExportQueryUi_eqiOperator" object="${ddpexportqueryui}" z="/6tHU8ylodMaZGJU0JXo71D1gqU="/>
+        <field:display field="eqiStatus" id="s_com_agility_ddp_data_domain_DdpExportQueryUi_eqiStatus" object="${ddpexportqueryui}" z="NjJc37Nax3S2S+8yhoeQQgRsOxo="/>
+    </page:show>
+</div>

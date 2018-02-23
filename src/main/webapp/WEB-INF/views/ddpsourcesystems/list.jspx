@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpSourceSystem" items="${ddpsourcesystems}" z="8Z0r0eFMRYtcT1R9OfTFPZEJpVg=">
+        <table:table data="${ddpsourcesystems}" id="l_com_agility_ddp_data_domain_DdpSourceSystem" path="/ddpsourcesystems" typeIdFieldName="souApplicationCode" z="SFyXJSKzbU4hvj1cSB8eq3E703I=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystem_souCompanyCode" property="souCompanyCode" z="+T7s4Rob95id3/DIyUEaua8UhBQ="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystem_souServerIp" property="souServerIp" z="oe1gqcIFNg236HK6bsDkQLHkYz0="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystem_souServerName" property="souServerName" z="kXQOkHuigkLG3tp0WvW45IENUoQ="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystem_souDomain" property="souDomain" z="g1hCTlQbFUeCb7tqN1roWJ731tk="/>
+        </table:table>
+    </page:list>
+</div>

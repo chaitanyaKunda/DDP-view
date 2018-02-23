@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpParty" idField="ptyPartyCode" idFieldValue="${ptyPartyCode}" modelAttribute="ddpParty" path="/ddppartys" versionField="none" z="eAzXgCsHWJQc+MS+SOoHVEjDqh8=">
+<!--         <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpParty_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="mUA6h4zwgFxmREgDhcJ3Jygnj4s="/> -->
+        <field:input field="ptyPartyName" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyName" required="true" z="P50nvE+BRQwwkfbcVX8d6kAmmzE="/>
+        <field:input field="ptyCompanyCode" id="c_com_agility_ddp_data_domain_DdpParty_ptyCompanyCode" required="true" z="Dc/mSiXVkqnNis9hyOAVgkVSQlw="/>
+        <field:input field="ptyApplicationCode" id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" required="true" z="GFTkusGBaB2vK6t8/zrOSqOafbA="/>
+        <div style="display: none;">
+        <field:input field="ptyStatus" id="c_com_agility_ddp_data_domain_DdpParty_ptyStatus" required="true" validationMessageCode="field_invalid_integer" z="sfHBUt/Fi4V07WvtRLb9sfpFyZY="/>
+        </div>
+       	<table class="tab" border="0" cellspacing="0" cellpadding="0"  style="width:0px; font-family: Open Sans', sans-serif;">
+		<tr style="background-color: #FFFFFF;">
+			<td class="first">
+			<label>Rule Status</label>
+			</td>
+			<td class="first">
+				<select id="status" name="status" >
+				  <option value="0">Active</option>
+				  <option value="1">InActive</option>
+				</select>
+			</td>
+		</tr>
+		</table>
+        <field:input field="ptyCreatedBy" id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" required="true" z="DZVtsJfvoS9chirUD47h41Vgryc=" render="false"/>
+        <field:datetime dateTimePattern="${ddpParty_ptycreateddate_date_format}" field="ptyCreatedDate" id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" required="true" z="6joZeLcccTdykxL/IOEF1IE2vqM=" render="false"/>
+        <field:input field="ptyModifiedBy" id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" required="true" z="VeYHB6/xfxmmHxuo8kkl/HzRDcI=" render="false"/>
+        <field:datetime dateTimePattern="${ddpParty_ptymodifieddate_date_format}" field="ptyModifiedDate" id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" required="true" z="8Ob0ihWX3Q+oF1k7gsmxPqGYKM0=" render="false"/>
+    </form:update>
+    <script type="text/javascript">
+    	dojo.addOnLoad(function(){
+    		var status = document.getElementById("_ptyStatus_id").value;
+    		var objStatus = document.getElementById("status");
+    		if(status=='0')
+    			objStatus.options[0].selected=true;
+    		else
+    			objStatus.options[1].selected=true;
+    	});
+    </script>
+</div>

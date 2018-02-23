@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpDocnameConv" object="${ddpdocnameconv}" path="/ddpdocnameconvs" z="bwuoUFs+lPevzeKVg9KFdLb/Mzw=">
+        <field:display field="dcvCompanyCode" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvCompanyCode" object="${ddpdocnameconv}" z="GdwN/YQg+ngzMlVBmtIHQ44n+3E="/>
+        <field:display field="dcvBranchCode" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvBranchCode" object="${ddpdocnameconv}" z="PD+WvRT0oRsSDPmOHBxx8QLD+Bw="/>
+        <field:display field="dcvDoctypeCode" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvDoctypeCode" object="${ddpdocnameconv}" z="Ft4aQ0/wOlvIQrEdN+pe1tWJzBU="/>
+        <field:display field="dcvGenNamingConv" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvGenNamingConv" object="${ddpdocnameconv}" z="PZJzQyUJU3LbumZKF0hUzDszPSs="/>
+        <field:display field="dcvSaveType" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvSaveType" object="${ddpdocnameconv}" z="F81eXyHd18ap2zsmggRB0OsVKPs="/>
+        <field:display field="dcvStatus" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvStatus" object="${ddpdocnameconv}" z="9pah7PTeoIjq2Xw3KIUKdVdSlLk="/>
+        <field:display field="dcvCreatedBy" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvCreatedBy" object="${ddpdocnameconv}" z="IbYZaBUqNixn4XdCQiCK++NNXJg="/>
+        <field:display calendar="true" dateTimePattern="${ddpDocnameConv_dcvcreateddate_date_format}" field="dcvCreatedDate" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvCreatedDate" object="${ddpdocnameconv}" z="/cOFLOiR70S1uu6IDEQbbjrGgSc="/>
+        <field:display field="dcvModifiedBy" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvModifiedBy" object="${ddpdocnameconv}" z="612Is1wulQwvF5y/By8q9nk8Xfw="/>
+        <field:display calendar="true" dateTimePattern="${ddpDocnameConv_dcvmodifieddate_date_format}" field="dcvModifiedDate" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvModifiedDate" object="${ddpdocnameconv}" z="z5J8QnTDMqEs+hPIKvnL+h/Tjug="/>
+        <field:display field="dcvDupDocNamingConv" id="s_com_agility_ddp_data_domain_DdpDocnameConv_dcvDupDocNamingConv" object="${ddpdocnameconv}" z="NtkPlGzRppa9MymeOtKwSmO3x3U="/>
+    </page:show>
+</div>

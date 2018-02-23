@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpCommOptionsSetup" modelAttribute="ddpCommOptionsSetup" path="/ddpcommoptionssetups" render="${empty dependencies}" z="1trWMOAizdBngkDtnbK6XmcU/Zk=">
+        <field:select field="copRdtId" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copRdtId" itemValue="rdtId" items="${ddpruledetails}" path="/ddpruledetails" z="wUiOMlnMR0XkGCMKbITTozbTjTs="/>
+        <field:input field="copOption" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copOption" z="30Qogs1v6ZkQzqLbi/DCc92Dfs4="/>
+        <field:input field="copCreatedBy" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copCreatedBy" required="true" z="cc4j/z08IjKI35+JzFIuHRk5Lfs="/>
+        <field:datetime dateTimePattern="${ddpCommOptionsSetup_copcreateddate_date_format}" field="copCreatedDate" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copCreatedDate" required="true" z="i9pojeCI8pBjTjwCdWw2HVIQHr4="/>
+        <field:input field="copModifiedBy" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copModifiedBy" required="true" z="VMECIiam4mpuSCBsg4qWhn6ZD0Q="/>
+        <field:datetime dateTimePattern="${ddpCommOptionsSetup_copmodifieddate_date_format}" field="copModifiedDate" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copModifiedDate" required="true" z="j+0t+zeBBM3nE21RGIpGV8iwitA="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpCommOptionsSetup" render="${not empty dependencies}" z="Ms22NQ1xcaE9EcT8oalBkVQ2btI="/>
+</div>

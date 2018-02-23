@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpNotification" items="${ddpnotifications}" z="9IFxEWCzeUKcOS8EzKBrMW0CSTg=">
+        <table:table data="${ddpnotifications}" id="l_com_agility_ddp_data_domain_DdpNotification" path="/ddpnotifications" typeIdFieldName="notId" z="EzfFrxavcUr2bbEls9c3WBLS63k=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpNotification_notSuccessEmailAddress" property="notSuccessEmailAddress" z="MgzB3Wy9Vk/n1j/zdAbd1cJuJjw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpNotification_notFailureEmailAddress" property="notFailureEmailAddress" z="eDNoXhgZeZG4CDxkeHvA0GT+EGg="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpNotification_notStatus" property="notStatus" z="0dFGOuiwy1jC8w35pZmzZ7EuR6Y="/>
+        </table:table>
+    </page:list>
+</div>

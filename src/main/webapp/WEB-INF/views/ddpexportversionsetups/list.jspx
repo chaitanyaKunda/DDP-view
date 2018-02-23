@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpExportVersionSetup" items="${ddpexportversionsetups}" z="Ap805YpP5ApLRvnbC8JXuPqKwQA=">
+        <table:table data="${ddpexportversionsetups}" id="l_com_agility_ddp_data_domain_DdpExportVersionSetup" path="/ddpexportversionsetups" typeIdFieldName="evsId" z="1NYP0Y6+R3PzW0EiTM633I/OJPk=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportVersionSetup_evsRdtId" property="evsRdtId" z="1plqZ42SY/Jn69WjiEwFLPDOl44="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportVersionSetup_evsOption" property="evsOption" z="4D+mdRFZwlI++1SiqjIYrvA/CD8="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportVersionSetup_evsCreatedBy" property="evsCreatedBy" z="kiSAGDNWC71NRsj3hl+vDKAzXu4="/>
+            <table:column calendar="true" dateTimePattern="${ddpExportVersionSetup_evscreateddate_date_format}" id="c_com_agility_ddp_data_domain_DdpExportVersionSetup_evsCreatedDate" property="evsCreatedDate" z="A/RvB1AFxXF7zSJl5bBpAIfzY3o="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportVersionSetup_evsModifiedBy" property="evsModifiedBy" z="YkrawkHFIuALY/7BczFABJl+mNc="/>
+            <table:column calendar="true" dateTimePattern="${ddpExportVersionSetup_evsmodifieddate_date_format}" id="c_com_agility_ddp_data_domain_DdpExportVersionSetup_evsModifiedDate" property="evsModifiedDate" z="q1ghz2o+kIZOJw2esUnI9J9YR6c="/>
+        </table:table>
+    </page:list>
+</div>

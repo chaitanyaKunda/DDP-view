@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCategorizationHolder" items="${ddpcategorizationholders}" z="o51HN7X4MLqyOJQYqR5JS5nDbrM=">
+        <table:table data="${ddpcategorizationholders}" id="l_com_agility_ddp_data_domain_DdpCategorizationHolder" path="/ddpcategorizationholders" typeIdFieldName="chlId" z="mawtPNiHX37YaC9k/eUvxt9Rvrg=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizationHolder_chlSynId" property="chlSynId" z="ImLzbaIg7ciPMc8NHPx1zoVAslI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizationHolder_chlDtxId" property="chlDtxId" z="V9bydLbBfqT/OdBUnm6LaNcVFFA="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizationHolder_chlRulId" property="chlRulId" z="crPSNpY/k2OQZt3rs0ZlIt73e3o="/>
+        </table:table>
+    </page:list>
+</div>

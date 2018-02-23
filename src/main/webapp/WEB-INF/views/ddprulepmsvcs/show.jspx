@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpRulePmSvc" object="${ddprulepmsvc}" path="/ddprulepmsvcs" z="nC6zjqey8HhnOvwv5jqyecdDDGw=">
+        <field:display field="rpsPsrId" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsPsrId" object="${ddprulepmsvc}" z="0tZrNdyMD9A8BTZrM3K03G60yeQ="/>
+        <field:display field="rpsRuleId" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsRuleId" object="${ddprulepmsvc}" z="0BgCYtK95IxVrr6tVylgfhvWPrA="/>
+        <field:display field="rpsSeq" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsSeq" object="${ddprulepmsvc}" z="1n+zpn7T3UvnRWlz+tz1UK09M7E="/>
+        <field:display field="rpsNotificationId" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsNotificationId" object="${ddprulepmsvc}" z="XR1o5YRFzFJTNhjOTb+wylnrZY0="/>
+        <field:display field="rpsStatus" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsStatus" object="${ddprulepmsvc}" z="l8xg796A7oixN/VRsgR/EglUBl8="/>
+        <field:display field="rpsCreatedBy" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsCreatedBy" object="${ddprulepmsvc}" z="WXRnuJEM93qa08611+K0NpgcJdU="/>
+        <field:display calendar="true" dateTimePattern="${ddpRulePmSvc_rpscreateddate_date_format}" field="rpsCreatedDate" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsCreatedDate" object="${ddprulepmsvc}" z="I7nqLshtNnsaaQH6A2y5kPw5AxY="/>
+        <field:display field="rpsModifiedBy" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsModifiedBy" object="${ddprulepmsvc}" z="FiIZIGuKKv0lqdfObTCLwxPSuow="/>
+        <field:display calendar="true" dateTimePattern="${ddpRulePmSvc_rpsmodifieddate_date_format}" field="rpsModifiedDate" id="s_com_agility_ddp_data_domain_DdpRulePmSvc_rpsModifiedDate" object="${ddprulepmsvc}" z="cu+cT/4APgjFaDOAJj/9w+TY3tE="/>
+    </page:show>
+</div>

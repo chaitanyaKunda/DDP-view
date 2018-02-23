@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpGroup" items="${ddpgroups}" z="aTdkJbvFeVnixAUcxJNAbiKTgbM=" path="/ddpgroups">
+        <table:table data="${ddpgroups}" id="l_com_agility_ddp_data_domain_DdpGroup" path="/ddpgroups" typeIdFieldName="grpId" z="R3fYxkvJU1H0wOb4ye/jpKElBvE=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroup_grpName" property="grpName" z="05gPkoo/d07+4QTYnh5gJgULeuM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroup_grpDisplayName" property="grpDisplayName" z="D7LavC68IjeKMp0nk8HKHqPHZ5Y="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroup_grpDescription" property="grpDescription" z="rhGZ0SpgtNXF549CxQkay3idgko="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroup_grpStatus" property="grpStatus" z="85SuXmECzt6BzKzu/4oSl8vbJtM=" render="false"/>
+        </table:table>
+    </page:list>
+</div>

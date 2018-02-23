@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpcommftps/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommftps/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcommftps/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommftps/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcommftps/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommftps/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcommftps/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommftps/update.jspx"/>
+    </definition>
+</tiles-definitions>

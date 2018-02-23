@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCompany" object="${ddpcompany}" path="/ddpcompanys" z="ksRJShmR9807IHmPS79V5eNc1Jw=">
+        <field:display field="comCompanyName" id="s_com_agility_ddp_data_domain_DdpCompany_comCompanyName" object="${ddpcompany}" z="LyGF7m4ebYnRuUUlojEJ3PzBKhs="/>
+        <field:display field="comCompanyCode" id="s_com_agility_ddp_data_domain_DdpCompany_comCompanyCode" object="${ddpcompany}" z=""/>
+        <field:display field="comCountryCode" id="s_com_agility_ddp_data_domain_DdpCompany_comCountryCode" object="${ddpcompany}" z="zzlsY//uOuw2fDJ4nRgJ2u1CL38="/>
+        <field:display field="comCountryName" id="s_com_agility_ddp_data_domain_DdpCompany_comCountryName" object="${ddpcompany}" z="75muTSq6wvQHUL+LIziYW1rwryE="/>
+        <field:display field="comRegion" id="s_com_agility_ddp_data_domain_DdpCompany_comRegion" object="${ddpcompany}" z="ZUCYqknDGonMS5XTCISYmbvNuHc="/>
+        <field:display field="comStatus" id="s_com_agility_ddp_data_domain_DdpCompany_comStatus" object="${ddpcompany}" z="BniY2NC3aAkvMaHf6BgnjHjdsyI="/>
+    </page:show>
+    
+    <script>
+	dojo.addOnLoad(function(){
+			var t = $('#_s_com_agility_ddp_data_domain_DdpCompany_comStatus_id').text(); 
+			var j = t.replace(':','').trim();
+			var n = j.replace("Status","").trim();
+			var k = n.replace(':','').trim();
+			var status = k;
+			if(status=='0'){
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpCompany_comStatus_comStatus_id").innerHTML  = 'Active';
+			}else{
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpCompany_comStatus_comStatus_id").innerHTML  = 'InActive';
+			}
+	});	
+	
+	</script>
+    
+    
+</div>

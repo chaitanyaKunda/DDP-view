@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpGenSystem" object="${ddpgensystem}" path="/ddpgensystems" z="dm+Bu+/n2rfPcswRGK5xRyMe1N0=">
+        <field:display field="genCompanyCode" id="s_com_agility_ddp_data_domain_DdpGenSystem_genCompanyCode" object="${ddpgensystem}" z="U/duj7K/FA7e7KLl7n5hmhTVjt0="/>
+        <field:display field="genServerIp" id="s_com_agility_ddp_data_domain_DdpGenSystem_genServerIp" object="${ddpgensystem}" z="GagMSyOwl/cvjBXroo+/RKlTGlc="/>
+        <field:display field="genServerName" id="s_com_agility_ddp_data_domain_DdpGenSystem_genServerName" object="${ddpgensystem}" z="M3kvLnKSIM6FZ3Wmuzyg685Cx5s="/>
+        <field:display field="genDomain" id="s_com_agility_ddp_data_domain_DdpGenSystem_genDomain" object="${ddpgensystem}" z="rtZDt1/Fk+KFTOiPS9BdzkiSc+g="/>
+        <field:display field="genServiceAccount" id="s_com_agility_ddp_data_domain_DdpGenSystem_genServiceAccount" object="${ddpgensystem}" z="B+VXG3PFeB6nuSUBm9iyH27YHzY="/>
+        <field:display field="genSaPassword" id="s_com_agility_ddp_data_domain_DdpGenSystem_genSaPassword" object="${ddpgensystem}" z="Qp9A/jdCRM+PNWsQDClYlEa3hyQ="/>
+        <field:display field="genFilePath" id="s_com_agility_ddp_data_domain_DdpGenSystem_genFilePath" object="${ddpgensystem}" z="wxT2Sbln74X6ZBGjr+0vV1m9as0="/>
+        <field:display field="genStatus" id="s_com_agility_ddp_data_domain_DdpGenSystem_genStatus" object="${ddpgensystem}" z="H8Yv0O0FY1XmaPehBRZ49PCBMgc="/>
+        <field:display field="genCreatedBy" id="s_com_agility_ddp_data_domain_DdpGenSystem_genCreatedBy" object="${ddpgensystem}" z="0qlFB9KcoTPisBDYl2UiHphOwu8="/>
+        <field:display calendar="true" dateTimePattern="${ddpGenSystem_gencreateddate_date_format}" field="genCreatedDate" id="s_com_agility_ddp_data_domain_DdpGenSystem_genCreatedDate" object="${ddpgensystem}" z="hsp8i9J3440OS2jRIWNV+DhHiIg="/>
+        <field:display field="genModifiedBy" id="s_com_agility_ddp_data_domain_DdpGenSystem_genModifiedBy" object="${ddpgensystem}" z="lm6GNqubYyTElVo0GQp1qlYQl88="/>
+        <field:display calendar="true" dateTimePattern="${ddpGenSystem_genmodifieddate_date_format}" field="genModifiedDate" id="s_com_agility_ddp_data_domain_DdpGenSystem_genModifiedDate" object="${ddpgensystem}" z="hEIyFVmzSLzhagK+pf0Jlx6iw2o="/>
+    </page:show>
+</div>

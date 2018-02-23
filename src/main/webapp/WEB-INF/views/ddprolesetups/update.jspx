@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:custom_update id="fu_com_agility_ddp_data_domain_DdpRoleSetup" idField="rlsId" modelAttribute="ddpRoleSetup" path="/ddprolesetups" versionField="none" z="iHmJUYC8EUSjGaIWfEC2TFke2XI=">
+        <field:select field="rlsParentGrpId" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsParentGrpId" itemValue="grpId" items="${ddpgroups}" path="/ddpgroups" z="7lB9B9fGsq3mitzVPL10HyCdhfE=" render="false"  />
+        <field:select field="rlsRoleId" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsRoleId" itemValue="rolId" items="${ddproles}" path="/ddproles" z="dd3u4LN0eXTnlZWAb7GJuEyxrw0=" render="false"  />
+        <field:select field="rlsChildUsrId" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsChildUsrId" itemValue="usrId" items="${ddpusers}" path="/ddpusers" z="HzGf6GoJHPOlqHU3KBs/guX1m2M=" render="false"  />
+        <field:input field="rlsClass" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsClass" required="true" validationMessageCode="field_invalid_integer" z="Tp8+l2agiv73cflvkRAz44bX97I=" render="false" />
+        <field:input field="rlsStatus" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsStatus" required="true" validationMessageCode="field_invalid_integer" z="MpcNhW/03LK8aQRyYe8r+dcrsRs=" render="false" />
+        <field:input field="rlsCreatedBy" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsCreatedBy" required="true" z="d3wvEXejOgD3jKJ1mdHjPuEQPKk=" render="false" />
+        <field:datetime dateTimePattern="${ddpRoleSetup_rlscreateddate_date_format}" field="rlsCreatedDate" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsCreatedDate" required="true" z="O79AIQXfjr5hwD9lAmyiOJFDTlI=" render="false" />
+        <field:input field="rlsModifiedBy" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsModifiedBy" required="true" z="XZzWNDhGoq7iYPgbSXOe6j7iW3c=" render="false" />
+        <field:datetime dateTimePattern="${ddpRoleSetup_rlsmodifieddate_date_format}" field="rlsModifiedDate" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsModifiedDate" required="true" z="w0rRftyGybkBtMit7a4O9AcDdzU=" render="false" />
+     
+     	<div style="display: none;">
+     	<field:input field="rlsChildUsrId.usrId" id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsChildUsrId" z="HzGf6GoJHPOlqHU3KBs/guX1m2M=" render="true"  />
+     	</div>   
+       	<table class="tab"  border="0" cellspacing="0" cellpadding="0">  
+		<tr style="background-color: #FFFFFF;">
+		<td class="first">  
+			<field:select field="rlsRoleId"
+				id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsRoleId"
+				itemValue="rolId" items="${ddproles}" path="/ddproles"
+				z="dd3u4LN0eXTnlZWAb7GJuEyxrw0=" />
+		</td>
+		<td class="second"> <span>
+							<button class="switch" id="left" title="Move Items to First list">&lt;</button>
+							<button class="switch" id="right" title="Move Items to Second list">&gt;</button>
+							</span></td>
+		<td class="third">
+			<field:select id="c_selectroleid"
+				field="rlsChildUsrId"
+				itemValue="rolId" items="${ddproleselectedlist}" path="/ddproles"
+				z="HzGf6GoJHPOlqHU3KBs/guX1m2M=" />
+		</td>
+		</tr>
+	</table>
+    <!-- add the content pane decoration (all tabs must live in content panes) -->
+		<script type="text/javascript">
+			
+			dojo.addOnLoad(function(){
+				// listen to the "move items" buttons
+				removeItemrole();
+				
+				selectRole();
+				dojo.query("button.switch")
+					.connect("onclick",function(e){
+						switch(e.target.id.toString()){
+							case "left" : 
+							{
+								var listLength = document.getElementById("_rlsChildUsrId_id");
+								if(listLength != null){
+									for(var i=0; i &lt; listLength.options.length;i++){
+										var selectedtext=dijit.byId("_rlsChildUsrId_id").containerNode.options[i].text;
+										var selectedvalue=dijit.byId("_rlsChildUsrId_id").containerNode.options[i].value;
+									    if(listLength.options[i].selected){
+									    	document.getElementById("_rlsRoleId_id").add(new Option(selectedtext, selectedvalue));
+									    }
+								    }  
+									removeItem(document.getElementById("_rlsChildUsrId_id"));
+								}
+								else{
+									alert("Please select atleast one role to move");
+								}
+								break;
+							}
+							case "right" : 
+							{
+								var listLength = document.getElementById("_rlsRoleId_id");
+								if(listLength != null){
+									for(var i=0; i &lt; listLength.options.length;i++){
+										var selectedtext=dijit.byId("_rlsRoleId_id").containerNode.options[i].text;
+										var selectedvalue=dijit.byId("_rlsRoleId_id").containerNode.options[i].value;
+									    if(listLength.options[i].selected){
+									    	document.getElementById("_rlsChildUsrId_id").add(new Option(selectedtext, selectedvalue));
+									    }
+								    }  
+									removeItem(document.getElementById("_rlsRoleId_id"));
+									addtolist(document.getElementById("_rlsChildUsrId_id"));
+								}
+								else{
+									alert("Please select atleast one role to move");
+								}
+								break;
+							}
+							e.preventDefault();
+						}
+						e.preventDefault();
+				});
+			});
+			function addtolist(listitem){
+				var i;
+				for(i=0;i &lt; listitem.options.length;i++) 
+				{
+					listitem[i].selected=true;
+				}
+			}
+			function removeItem(selectbox)
+			{
+				var i;
+				for(i=selectbox.options.length-1;i>=0;i--)
+				{
+				if(selectbox.options[i].selected)
+				selectbox.remove(i);
+				}
+			}
+			function removeItemrole(){
+				var listRoleLength = document.getElementById("_rlsRoleId_id");
+				var listSelectRoleLength = document.getElementById("_rlsChildUsrId_id");
+				
+				if(listRoleLength.options.length == listSelectRoleLength.options.length){
+					for(var i=listRoleLength.options.length-1;i>=0;i--){
+						document.getElementById("_rlsRoleId_id").options.remove(i);
+					}
+				}else{
+					for(var i=0; i &lt; listRoleLength.options.length; i++){
+						for(var j=0; j&lt;listSelectRoleLength.options.length; j++){
+							if(listRoleLength.options[i].text == listSelectRoleLength.options[j].text){
+								document.getElementById("_rlsRoleId_id").remove(i);
+							}
+						}
+					}	
+				}
+			}
+			function selectRole(){
+				var listRoleLength = document.getElementById("_rlsChildUsrId_id");
+				var i;
+				for(i=0;i &lt; listRoleLength.options.length; i++) 
+				{
+					listRoleLength[i].selected=true;
+				}
+			}
+			$("#proceed").click(function(event)
+			{
+				var listRoleLength = document.getElementById("_rlsChildUsrId_id");
+				var i;
+				for(i=0;i &lt; listRoleLength.options.length; i++) 
+				{
+					listRoleLength[i].selected=true;
+				}
+				
+			});
+			function myFunction(){
+				//Role
+				var blnrlsflage = false;
+				var listRoleLength = document.getElementById("_rlsChildUsrId_id");
+				var i;
+				for(i=0;i &lt; listRoleLength.options.length; i++) 
+				{
+					blnrlsflage =true;
+					listRoleLength[i].selected=true;
+				}
+				if(blnrlsflage==false){
+					alert("Select atleast one role");
+					return false;
+				}
+			}
+		</script>
+    </form:custom_update>
+</div>

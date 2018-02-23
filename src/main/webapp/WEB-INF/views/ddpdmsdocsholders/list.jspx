@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpDmsDocsHolder" items="${ddpdmsdocsholders}" z="LzHGl52QKWy0ng8Wz7h1kXLQBVc=">
+        <table:table data="${ddpdmsdocsholders}" id="l_com_agility_ddp_data_domain_DdpDmsDocsHolder" path="/ddpdmsdocsholders" typeIdFieldName="thlSynId" z="RSGn7u+Iw/9jy1hc0ePPXNQS6M0=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlRObjectId" property="thlRObjectId" z="MdKfJUZrTTxUJ77UXAPaJgfapQY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlIsProcessReq" property="thlIsProcessReq" z="nDw61Knnj3VpLc9A3cXlgiQwJvo="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlTboName" property="thlTboName" z="0Gp2d8K69hAHDI4yS0eugtEDCKo="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCategorizedDocs" object="${ddpcategorizeddocs}" path="/ddpcategorizeddocses" z="LWHVBe+REoX2BQLVrLpmMk/HwI0=">
+        <field:display field="catDtxId" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catDtxId" object="${ddpcategorizeddocs}" z="ctWdSgrhvtu9gwFJMn9V/P3KxZQ="/>
+        <field:display field="catRulId" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catRulId" object="${ddpcategorizeddocs}" z="CwufEGZ2ZDGAV+3mjSNPtquXxog="/>
+        <field:display field="catTotalPmReq" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catTotalPmReq" object="${ddpcategorizeddocs}" z="vbOBJGg9qbr74Xd5xJxVQIbfQYI="/>
+        <field:display field="catCurrentPmSeq" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catCurrentPmSeq" object="${ddpcategorizeddocs}" z="qTTOapMMEx717isP/l2Y/4Yiawc="/>
+        <field:display field="catCurrentPm" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catCurrentPm" object="${ddpcategorizeddocs}" z="IkEv/0k1F36HqLquhW504Vg0yJE="/>
+        <field:display calendar="true" dateTimePattern="${ddpCategorizedDocs_catcurrentpmstarttime_date_format}" field="catCurrentPmStartTime" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catCurrentPmStartTime" object="${ddpcategorizeddocs}" z="twQJfi28QGQLsgmcH6tZKskbMA0="/>
+        <field:display field="catCurrentPmFailedCount" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catCurrentPmFailedCount" object="${ddpcategorizeddocs}" z="uYZBVhxu730FFcITfvVfnXkTP+Y="/>
+        <field:display field="catCurrentPmStatus" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catCurrentPmStatus" object="${ddpcategorizeddocs}" z="Gmbx7Yxv0iQ3nu21ISSUCVvhLis="/>
+        <field:display field="catPrevPm" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catPrevPm" object="${ddpcategorizeddocs}" z="iuZECTfrI8dAoX4yswO+XT8S/RU="/>
+        <field:display field="catNextPm" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catNextPm" object="${ddpcategorizeddocs}" z="kMNs7InLpH16nOyYRlHbyy0+BJk="/>
+        <field:display field="catStatus" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catStatus" object="${ddpcategorizeddocs}" z="ag3WH+Sb5n2oKI4kQb+h+5rPZi8="/>
+        <field:display field="catCreatedBy" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catCreatedBy" object="${ddpcategorizeddocs}" z="Gza2sxK4RAcnnFpJJMW8jEGUerg="/>
+        <field:display calendar="true" dateTimePattern="${ddpCategorizedDocs_catcreateddate_date_format}" field="catCreatedDate" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catCreatedDate" object="${ddpcategorizeddocs}" z="25GD3p4Nloa2jycb5zvMtuuMwbU="/>
+        <field:display field="catModifiedBy" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catModifiedBy" object="${ddpcategorizeddocs}" z="OVz2/qn70I/EUHh/Md1WsxZE+S0="/>
+        <field:display calendar="true" dateTimePattern="${ddpCategorizedDocs_catmodifieddate_date_format}" field="catModifiedDate" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catModifiedDate" object="${ddpcategorizeddocs}" z="09Glx0rP5k7FLAAfbPmlciJQ4J8="/>
+        <field:display field="catRuleType" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catRuleType" object="${ddpcategorizeddocs}" z="5O3Ci9T50JIChlnIJyW1FfJ6xh8="/>
+        <field:display field="catSynId" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catSynId" object="${ddpcategorizeddocs}" z="nikha+fjyPs0yJ20YWJHcN0iB1o="/>
+        <field:display field="catRdtId" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catRdtId" object="${ddpcategorizeddocs}" z="4gnOeUecCZb4km9K2s42XbPyiJ0="/>
+        <field:display field="catRetries" id="s_com_agility_ddp_data_domain_DdpCategorizedDocs_catRetries" object="${ddpcategorizeddocs}" z="LCBNbaG5KGWQmerc8mPPUfXcRuE="/>
+    </page:show>
+</div>

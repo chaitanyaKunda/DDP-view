@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpExportQueryUi" items="${ddpexportqueryuis}" z="ZUwZf4hWy6YaM/itdfDasLrD8cM=">
+        <table:table data="${ddpexportqueryuis}" id="l_com_agility_ddp_data_domain_DdpExportQueryUi" path="/ddpexportqueryuis" typeIdFieldName="eqiId" z="kVMOtrobVcBq/T0GRWkAYINSOPc=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQueryUi_eqiExpRuleId" property="eqiExpRuleId" z="Mdwxt7OEgnuBqfG55Fq0Nr+4D08="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQueryUi_eqiSchId" property="eqiSchId" z="ExhBoUmB6rG4NJc1A7EFqlGbBmA="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQueryUi_eqiLineSeq" property="eqiLineSeq" z="3QU2zlMIZ49PWq5+GCj8hZ6Vm9g="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQueryUi_eqiPartyCode" property="eqiPartyCode" z="QiXTaq50OPcTA/n6mD3TMDm02M4="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQueryUi_eqiPartyValue" property="eqiPartyValue" z="uPEBtdaJe1KnxPbSRH9pAKobgDY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQueryUi_eqiOperator" property="eqiOperator" z="TX/Zwpw2Jw8kiXvh30qLwjtQrBo="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpDocnameConv" modelAttribute="ddpDocnameConv" path="/ddpdocnameconvs" render="${empty dependencies}" z="1a1qbOuPRwEnziRb9MmZnuG13Jk=">
+        <field:simple field="ddpAedRules" id="c_com_agility_ddp_data_domain_DdpDocnameConv_ddpAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Aed Rule" z="uyQwlChdabr9F6mMvNqGhEXNTac="/>
+        <field:simple field="ddpExportRules" id="c_com_agility_ddp_data_domain_DdpDocnameConv_ddpExportRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Export Rule" z="D8wVF/uO8amgLUhyMkhLeV+pxGE="/>
+        <field:input field="dcvCompanyCode" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvCompanyCode" required="true" z="uAm4G/Cn0gkPbg6sJKKR7hAAGoQ="/>
+        <field:input field="dcvBranchCode" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvBranchCode" required="true" z="3ltf1zMUMo2ws4kQqgWxoDsPdvo="/>
+        <field:input field="dcvDoctypeCode" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvDoctypeCode" required="true" z="DWcBRfeihiH7JZqvzKZc6f95Esg="/>
+        <field:input field="dcvGenNamingConv" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvGenNamingConv" required="true" z="Xfz7tPt8uwzm5+v5dTOKasbEZ3Y="/>
+        <field:input field="dcvSaveType" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvSaveType" required="true" z="Ag7vjvoRGIRkk5DuW3k1O5WbV58="/>
+        <field:input field="dcvStatus" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvStatus" required="true" validationMessageCode="field_invalid_integer" z="6mlp9PdSweMOrI0hYeyLHXgib7s="/>
+        <field:input field="dcvCreatedBy" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvCreatedBy" required="true" z="4tOpuusqK8KIEsF822pFuEO8ZIE="/>
+        <field:datetime dateTimePattern="${ddpDocnameConv_dcvcreateddate_date_format}" field="dcvCreatedDate" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvCreatedDate" required="true" z="tdfgbRPuvTTqftBinTWy4P0c3BQ="/>
+        <field:input field="dcvModifiedBy" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvModifiedBy" required="true" z="UnWU2cvf4Hvc4/3EquDX5KkhPEs="/>
+        <field:datetime dateTimePattern="${ddpDocnameConv_dcvmodifieddate_date_format}" field="dcvModifiedDate" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvModifiedDate" required="true" z="0MY4GHOSYCr+MzZqnafIMpBkUQA="/>
+        <field:input field="dcvDupDocNamingConv" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvDupDocNamingConv" z="pG2TXGr49zlT4tCeXKM7xr7zWcM="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpDocnameConv" render="${not empty dependencies}" z="ZSHmfEMSQiYNfwGMCV+LyOnpMTo="/>
+</div>

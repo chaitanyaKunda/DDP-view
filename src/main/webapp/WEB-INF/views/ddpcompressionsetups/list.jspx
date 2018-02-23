@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCompressionSetup" items="${ddpcompressionsetups}" z="O6e3YThiMn8cye61+cBzfiS/dYY=">
+        <table:table data="${ddpcompressionsetups}" id="l_com_agility_ddp_data_domain_DdpCompressionSetup" path="/ddpcompressionsetups" typeIdFieldName="ctsCompressionId" z="ku6q62e/epp0uMz707rN/mVabSU=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ctsCompressionLevel" property="ctsCompressionLevel" z="XUktoDFYB2VyDhnBFN//M1dcfyE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ctsCompressionSize" property="ctsCompressionSize" z="wiUly/9yQSCs5AMTzyuNw5+6+ik="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompressionSetup_ctsEmailAttachmentLimit" property="ctsEmailAttachmentLimit" z="Sip8+nVIWcwQYnatO1dZOEDwc1c="/>
+        </table:table>
+    </page:list>
+</div>

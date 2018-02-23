@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpParty" object="${ddpparty}" path="/ddppartys" z="oyHe0jBbNS9yKfHrse6HZkfKZhI=">
+        <field:display field="ptyPartyName" id="s_com_agility_ddp_data_domain_DdpParty_ptyPartyName" object="${ddpparty}" z="woVy2WqdjxF7O7SF/M2tcabeYuE="/>
+        <field:display field="ptyPartyCode" id="s_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" object="${ddpparty}" z="woVy2WqdjxF7O7SF/M2tcabeYuE="/>
+        <field:display field="ptyCompanyCode" id="s_com_agility_ddp_data_domain_DdpParty_ptyCompanyCode" object="${ddpparty}" z="LBuwegjDOlADJCAEA9It4pbpuWw="/>
+        <field:display field="ptyApplicationCode" id="s_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" object="${ddpparty}" z="0U8rj5TUdAiScOkO6sfqHZIBsKg="/>
+        <field:display field="ptyStatus" id="s_com_agility_ddp_data_domain_ddpparty_ptystatus" object="${ddpparty}" z="w94ugrPsYQMj6ewKe2XVXQNY6AI="/>
+        <field:display field="ptyCreatedBy" id="s_com_agility_ddp_data_domain_ddpparty_ptycreatedby" object="${ddpparty}" z="izCsq4E1sSIJWog3D212UbTZQc0="/>
+        <field:display calendar="true" dateTimePattern="${ddpParty_ptycreateddate_date_format}" field="ptyCreatedDate" id="s_com_agility_ddp_data_domain_ddpparty_ptycreateddate" object="${ddpparty}" z="47sbGyyI6il6a2NNiv+q6cgNay8="/>
+        <field:display field="ptyModifiedBy" id="s_com_agility_ddp_data_domain_ddpparty_ptymodifiedby" object="${ddpparty}" z="5hMtUERnV3PK/l3gkQ6B8dzoABg="/>
+        <field:display calendar="true" dateTimePattern="${ddpParty_ptymodifieddate_date_format}" field="ptyModifiedDate" id="s_com_agility_ddp_data_domain_ddpparty_ptymodifieddate" object="${ddpparty}" z="R01x+w5HHHPbcsjTCDHH15vRvNI="/>
+    </page:show>
+    
+  	<script>
+		dojo.addOnLoad(function(){
+			var t = $('#_s_com_agility_ddp_data_domain_ddpparty_ptystatus_ptyStatus_id').text(); 
+			var j = t.replace(':','').trim();
+			var n = j.replace("Party Status","").trim();
+			var status = n.replace(':','').trim();
+			if(status=='0'){
+				document.getElementById("_s_com_agility_ddp_data_domain_ddpparty_ptystatus_ptyStatus_id").innerHTML  = 'Active';
+			}else{
+				document.getElementById("_s_com_agility_ddp_data_domain_ddpparty_ptystatus_ptyStatus_id").innerHTML  = 'InActive';
+			}
+		});	
+	
+	</script>
+    
+</div>

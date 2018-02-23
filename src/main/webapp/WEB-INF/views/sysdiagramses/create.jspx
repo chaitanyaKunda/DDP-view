@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_Sysdiagrams" modelAttribute="sysdiagrams" path="/sysdiagramses" render="${empty dependencies}" z="+KQ+UDARtLZGicdLY65LMloUiSg=">
+        <field:input field="name" id="c_com_agility_ddp_data_domain_Sysdiagrams_name" required="true" z="nOPkqtHoLO3qyPcsK/mH+YdZpuY="/>
+        <field:input field="principalId" id="c_com_agility_ddp_data_domain_Sysdiagrams_principalId" required="true" validationMessageCode="field_invalid_integer" z="juUOgVdIyk7boWalOhRhWzUU1J8="/>
+        <field:input field="definition" id="c_com_agility_ddp_data_domain_Sysdiagrams_definition" z="+ayUWZ4JHIPjUq2mPVNbSNutQP8="/>
+        <field:input field="diagramId" id="c_com_agility_ddp_data_domain_Sysdiagrams_diagramId" required="true" validationMessageCode="field_invalid_integer" z="D6O+VnhRYjlhl8TufgqS6ZRzRTE="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_Sysdiagrams" render="${not empty dependencies}" z="pkt5tsmfj3S78CCdNeJffqdQYn8="/>
+</div>

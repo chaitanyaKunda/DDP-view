@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpExportVersionSetup" object="${ddpexportversionsetup}" path="/ddpexportversionsetups" z="VXb2KD5EszWW0YlD3E2kFNSN1WA=">
+        <field:display field="evsRdtId" id="s_com_agility_ddp_data_domain_DdpExportVersionSetup_evsRdtId" object="${ddpexportversionsetup}" z="9bQqpAnsLOQ43U3y/GriqNUMZ6Y="/>
+        <field:display field="evsOption" id="s_com_agility_ddp_data_domain_DdpExportVersionSetup_evsOption" object="${ddpexportversionsetup}" z="2LNn1/qtSELks2vLWmGxHF4FmB8="/>
+        <field:display field="evsCreatedBy" id="s_com_agility_ddp_data_domain_DdpExportVersionSetup_evsCreatedBy" object="${ddpexportversionsetup}" z="wYgnfZlus0RUraHVz4Xtm3KMtWE="/>
+        <field:display calendar="true" dateTimePattern="${ddpExportVersionSetup_evscreateddate_date_format}" field="evsCreatedDate" id="s_com_agility_ddp_data_domain_DdpExportVersionSetup_evsCreatedDate" object="${ddpexportversionsetup}" z="EsO8ay9qvOhunKFqeAZkTeg2p1s="/>
+        <field:display field="evsModifiedBy" id="s_com_agility_ddp_data_domain_DdpExportVersionSetup_evsModifiedBy" object="${ddpexportversionsetup}" z="TCXZc7lNyWp++/ZgJJ3MHhoEoKU="/>
+        <field:display calendar="true" dateTimePattern="${ddpExportVersionSetup_evsmodifieddate_date_format}" field="evsModifiedDate" id="s_com_agility_ddp_data_domain_DdpExportVersionSetup_evsModifiedDate" object="${ddpexportversionsetup}" z="ovCg5+Ml8pVImU9LqRduwhXoqMk="/>
+    </page:show>
+</div>

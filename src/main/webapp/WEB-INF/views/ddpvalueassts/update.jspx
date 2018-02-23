@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpValueAsst" idField="vlaId" modelAttribute="ddpValueAsst" path="/ddpvalueassts" versionField="none" z="+9l5+SNMOUf/PoMMc52D/qQ+7SA=">
+        <field:input field="vlaOperationName" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaOperationName" required="true" z="3b/Xw5Dch6Hfv2tHtrxyZ4y9C0w="/>
+        <field:input field="vlaPropName" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaPropName" required="true" z="bFrTEjE5IJ3FzfzHsmHFDEqzleA="/>
+        <field:input field="vlaPropVale" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaPropVale" required="true" z="sRRNNqDXhHOPPZRNplJzYLaaSKQ="/>
+        <field:input field="vlaStatus" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaStatus" required="true" validationMessageCode="field_invalid_integer" z="KPxgtQp7SgZ7GKPjzM6NTG17INo="/>
+        <field:input field="vlaCreatedBy" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaCreatedBy" required="true" z="OubEGleirtcgTCQ0Now97JMCr5A="/>
+        <field:datetime dateTimePattern="${ddpValueAsst_vlacreateddate_date_format}" field="vlaCreatedDate" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaCreatedDate" required="true" z="b34j8bf3JUxuMnTK6FKeR/Z4Tic="/>
+        <field:input field="vlaModifiedBy" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaModifiedBy" required="true" z="fVrSfXTMp54uEO3RlYBIh5G/0Z4="/>
+        <field:datetime dateTimePattern="${ddpValueAsst_vlamodifieddate_date_format}" field="vlaModifiedDate" id="c_com_agility_ddp_data_domain_DdpValueAsst_vlaModifiedDate" required="true" z="OzpmF9pfifMDPjyfr+DF57vxK0M="/>
+    </form:update>
+</div>

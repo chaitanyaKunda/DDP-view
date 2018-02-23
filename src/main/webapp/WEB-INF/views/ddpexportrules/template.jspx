@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	 xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" 
+	 xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" 
+	 xmlns:spring="http://www.springframework.org/tags" 
+	 xmlns:jsp="http://java.sun.com/JSP/Page" 
+	 xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="checkbox_enable_generic_naming_convention" var="enableGenNamField"></spring:message>
+    <spring:message code="checkbox_disable_generic_naming_convention" var="disableGenNamField"></spring:message>
+    <spring:message code="checkbox_enable_dup_naming_convention" var="enableDupNamField"></spring:message>
+    <spring:message code="checkbox_disable_dup_naming_convention" var="disableDupNamField"></spring:message>
+    <spring:message code="export.ruleByQry.clientID" var="clientIDs"></spring:message>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpExportRule" modelAttribute="rulewrapper" path="/ddpexportrules" render="${empty dependencies}" z="YuMqpvz6FtUJ2wan1YeVlKJ8a8w=" label="DMS AND RTMS INTEGRATION">
+    
+		<c:if test="${not empty duplicateCustID}">	
+			<div align="center" style="color:red;"><spring:message code="lable_duplicate_customer_id" arguments="${duplicateCustID}"/><br />
+			<spring:message code="lable_customer_id_change"/><br />
+			</div>
+		</c:if>
+    	<field:textarea field="ddpRule.rulDescription" id="c_com_agility_ddp_data_domain_DdpRule_rulDescription" z="X5Zp1m3NXtx8grhkwRwIBofhiaU=" label="Rule Description" required="true"/>
+    	
+    	<field:input field="ddpRuleDetail.rdtDocType" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyId" label="Control Document Type" z="tIo4WlRonY5XIphh7X4sIUo8pms=" required="true" validationRegex="^[a-zA-Z0-9#][a-zA-Z0-9#,/]*$" />
+    	<div id="ruleByPartyId">
+			<!-- company and branch fields -->
+			<field:combo_select field="ddpRuleDetail.rdtCompany" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtCompany" itemValue="comCompanyCode" items="${ddpcompanys}" path="/ddpcompanys" z="YlC0mvaIyYCKEw4mtyPrfLjkqHs=" label="Company" itemLabel="comCompanyCode"/>
+		    
+			
+			<table class="tab"  border="0" cellspacing="0" cellpadding="0" >
+				<tr style="background-color: #FFFFFF;">
+			    <td class="first">
+			    	<field:select field="ddpRuleDetail.rdtBranch" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch" itemValue="brnBranchCode" itemLabel="brnBranchCode"
+			    	  items="${ddpbranches}" path="/ddpbranches" z="fZrPJOO9YNRi3HDQu/rW+Hsi4Z0="/>
+		    	</td>
+		    	<td class="second">
+		    		 <span>
+						<button class="switch" id="left" title="Move Items to First list">&lt;</button>
+						<button class="switch" id="right" title="Move Items to Second list">&gt;</button>
+					</span>
+				</td>
+				<td class="third">
+					<field:select field="lstBranch" id="c_com_agility_ddp_data_domain_DdpRuleDetail_selectbranch" itemValue="brnBranchCode" label="Selected Branch"
+			    	  items="${selectedBranchList}" path="/ddpbranches" z="fZrPJOO9YNRi3HDQu/rW+Hsi4Z0=" required="true"/>
+				</td>	
+				</tr>
+			</table>	
+			<field:input field="ddpRuleDetail.rdtDepartment" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtDepartment" label="Department" z="z4VNWDdF2VPa3ZlR+nk/dZ36bYA=" required="false" validationRegex="^[a-zA-Z0-9][a-zA-Z0-9,]*$"/>
+			<field:input field="ddpRuleDetail.rdtPartyId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyId" label="Shipper" z="tIo4WlRonY5XIphh7X4sIUo8pms=" required="true" validationRegex="^[a-zA-Z0-9#][a-zA-Z0-9#,/]*$"/>    	
+		</div><!-- close div for ruleByPartyId -->
+    	
+    	
+    	
+    	<select name="divDdpDocType" id="divDdpDocType" style="display:none;">
+    		<c:forEach items="${ddpdoctypes}" var="element" varStatus="loop">
+    			<option value="${element.dtyDocTypeCode}"> ${element.dtyDocTypeCode} </option>
+    		</c:forEach>
+    	</select>	
+    	<select name="divDdpGenSource" id="divDdpGenSource" style="display:none;">
+    		<c:forEach items="${ddpGenSourceLkp}" var="element" varStatus="loop">
+    			<option value="${element.id.gslOption}"> ${element.id.gslDescription} </option>
+    		</c:forEach>
+    	</select>
+    	<select name="divVersion" id="divVersion" style="display:none;">
+			<c:forEach items="${ddpExpVersionLkp}" var="element" varStatus="loop">
+				<option value="${element.id.evlOption}">${element.id.evlOption}</option>
+			</c:forEach>
+		</select>
+<!--     	<select name="divVersion" id="divVersion" style="display:none;"> -->
+<!--     		<option value="ALL"> All</option> -->
+<!--     		<option value="LATEST">Latest</option> -->
+<!--     	</select> -->
+		<select name="divReqFlag" id="divReqFlag" style="display: none;">
+        	<option value='1'>Manditory</option>
+        	<option value='0'>Optional</option>
+        	<option value='2'>Atleast One</option>
+        </select>
+        <select name="divRelType" id="divRelType" style="display: none;"> 
+        	<option value='1'>Primary</option>
+        	<option value='2'>Secondary</option>
+        </select>
+    	 <script language="javascript">
+    	 var totalRowCount = 0;
+    	 
+			/******************* onLoad Function Starts *********************/
+    		dojo.addOnLoad(function(){
+    			
+			document.getElementById("_ddpRuleDetail.rdtDocType_id").value="POD";
+    			
+    			
+    			/******************choose FTP/UNC***********************/
+    			var tempUnc = "";
+    				var tempUncUsr = "";
+    				var tempUncPas = "";
+    				var tempFtpLoc = "";
+    				var tempFtpFolder = "";
+    				var tempFtpUsr = "";
+    				var tempFtpPas = "";
+    				var tempFtpPort = "";
+    			$(".clsRB").change(function(){
+    				
+    				value = $(this).attr("value");
+    				if(value=='ftpConfig')
+    				{
+    					dijit.byId("_ddpCommUnc.cunUncPath_id").attr("required",false);
+    					dojo.byId("_ddpCommFtp.cftFtpLocation_id").value=tempFtpLoc;
+//     					dojo.byId("_ftpFolder_id").value=tempFtpFolder;
+    					dojo.byId("_ddpCommFtp.cftFtpUserName_id").value=tempFtpUsr;
+    					dojo.byId("_ddpCommFtp.cftFtpPassword_id").value=tempFtpPas;
+    					dojo.byId("_ddpCommFtp.cftFtpPort_id").value=tempFtpPort;
+    					
+    					dojo.style(dojo.byId("uncDiv"),{display:'none'});
+    					dojo.style(dojo.byId("ftpDiv"),{display:'inline'});
+    					
+    					tempUnc = dojo.byId("_ddpCommUnc.cunUncPath_id").value;
+    					tempUncUsr = dojo.byId("_ddpCommUnc.cunUncUserName_id").value;
+    					tempUncPas  = dojo.byId("_ddpCommUnc.cunUncPassword_id").value;
+    					dojo.byId("_ddpCommUnc.cunUncPath_id").value="";
+    					dojo.byId("_ddpCommUnc.cunUncUserName_id").value="";
+    					dojo.byId("_ddpCommUnc.cunUncPassword_id").value="";
+    					 dijit.byId("_ddpCommFtp.cftFtpLocation_id").attr("required",true);
+    					 dijit.byId("_ddpCommFtp.cftFtpUserName_id").attr("required",true);
+    					 dijit.byId("_ddpCommFtp.cftFtpPassword_id").attr("required",true);
+    				}
+    				else if(value=='uncConfig')
+    				{
+    					 dijit.byId("_ddpCommFtp.cftFtpLocation_id").attr("required",false);
+    					 dijit.byId("_ddpCommFtp.cftFtpUserName_id").attr("required",false);
+    					 dijit.byId("_ddpCommFtp.cftFtpPassword_id").attr("required",false);
+    					dojo.byId("_ddpCommUnc.cunUncPath_id").value=tempUnc;
+    					dojo.byId("_ddpCommUnc.cunUncUserName_id").value=tempUncUsr;
+    					dojo.byId("_ddpCommUnc.cunUncPassword_id").value=tempUncPas;
+    					
+    					dojo.style(dojo.byId("ftpDiv"),{display:'none'});
+    					dojo.style(dojo.byId("uncDiv"),{display:'inline'});
+    					
+    					tempFtpLoc = dojo.byId("_ddpCommFtp.cftFtpLocation_id").value;
+//     					tempFtpFolder = dojo.byId("_ftpFolder_id").value;
+    					tempFtpUsr = dojo.byId("_ddpCommFtp.cftFtpUserName_id").value;
+    					tempFtpPas = dojo.byId("_ddpCommFtp.cftFtpPassword_id").value;
+    					tempFtpPort = dojo.byId("_ddpCommFtp.cftFtpPort_id").value;
+    					dojo.byId("_ddpCommFtp.cftFtpLocation_id").value="";
+//     					dojo.byId("_ftpFolder_id").value="";
+    					dojo.byId("_ddpCommFtp.cftFtpUserName_id").value="";
+    					dojo.byId("_ddpCommFtp.cftFtpPassword_id").value="";
+    					dojo.byId("_ddpCommFtp.cftFtpPort_id").value="";
+    					dijit.byId("_ddpCommUnc.cunUncPath_id").attr("required",true);
+    				}
+    				
+    			});
+    			
+    			/******************choose FTP/UNC Ends***********************/
+    			
+    			/*****************************************************/
+    			
+    			dojo.connect(dojo.byId("frequency"),"change",function(){
+					var frequency = dojo.byId("frequency").value;
+					
+					if(frequency=='minute')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'inline'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						$("#minutespan").val("1");
+						$("#hourspan").val("0");
+						$("#weekflag").val("0");
+						$("#monthflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+					}
+					if(frequency=='hour')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'inline'});
+						dojo.style(dojo.byId("timespan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						$("#minutespan").val("0");
+						$("#hourspan").val("1");
+						$("#weekflag").val("0");
+						$("#monthflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+					}
+					if(frequency=='day')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'inline'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						$("#weekflag").val("0");
+						$("#monthflag").val("0");
+						$("#minutespan").val("0");
+						$("#hourspan").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+					}
+					if(frequency=='week')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'inline'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'inline'});
+						$("#minutespan").val("0");
+						$("#hourspan").val("0");
+						$("#weekflag").val("1");
+						$("#monthflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+					}
+					if(frequency=='month')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'inline'});	
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'inline'});
+						$("#minutespan").val("0");
+						$("#hourspan").val("0");
+						$("#monthflag").val("1");
+						$("#weekflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+					}
+				});
+    			/*****************************************************/
+     	     /********************************************************************************************************************/
+    			// listen to the "move items" buttons
+    			dojo.query("button.switch")
+    				.connect("onclick",function(e){
+    					switch(e.target.id.toString()){
+    						case "left" : 
+    						{
+    							var listLength = document.getElementById("_lstBranch_id");
+    							if(listLength != null){
+    								for(var i=0; i &lt; listLength.options.length;i++){
+    									var selectedtext=dijit.byId("_lstBranch_id").containerNode.options[i].text;
+    									var selectedvalue=dijit.byId("_lstBranch_id").containerNode.options[i].value;
+    								    if(listLength.options[i].selected){
+    								    	document.getElementById("_ddpRuleDetail.rdtBranch_id").add(new Option(selectedtext, selectedvalue));
+    								    }
+    							    }  
+    								removeItem(document.getElementById("_lstBranch_id"));
+    							}
+    							else{
+    								alert("Please select atleast one branch to move");
+    							}
+    							break;
+    						}
+    						case "right" : 
+    						{
+    							var listLength = document.getElementById("_ddpRuleDetail.rdtBranch_id");
+    							if(listLength != null){
+    								for(var i=0; i &lt; listLength.options.length;i++){
+    									var selectedtext=dijit.byId("_ddpRuleDetail.rdtBranch_id").containerNode.options[i].text;
+    									var selectedvalue=dijit.byId("_ddpRuleDetail.rdtBranch_id").containerNode.options[i].value;
+    								    if(listLength.options[i].selected){
+    								    	document.getElementById("_lstBranch_id").add(new Option(selectedtext, selectedvalue));
+    								    }
+    							    }  
+    								removeItem(document.getElementById("_ddpRuleDetail.rdtBranch_id"));
+    								addtolist(document.getElementById("_lstBranch_id"));
+    							}
+    							else{
+    								alert("Please select atleast one branch to move");
+    							}
+    							break;
+    						}
+    						e.preventDefault();
+    					}
+    					e.preventDefault();
+    			 });
+    			 function addtolist(listitem){
+    				
+    				var i;
+    				for(i=0;i &lt; listitem.options.length;i++) 
+    				{
+    					listitem[i].selected=true;
+    				}
+    			 }
+    			 function removeItem(selectbox)
+    			 {
+    				var i;
+    				for(i=selectbox.options.length-1;i>=0;i--)
+    				{
+    				if(selectbox.options[i].selected)
+    				selectbox.remove(i);
+    				}
+    			  }
+    			  /********************************************************************************************************************/   
+    			
+		        
+    			  
+    		});
+    		/******************************* onLoad Function Ends*****************************************/		
+    		
+    		
+		</script>
+    <input type="hidden" id="rowscount" name="rowscount"  />
+    </form:create>
+    
+</div>

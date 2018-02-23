@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpRulePmSvc" idField="rpsId" modelAttribute="ddpRulePmSvc" path="/ddprulepmsvcs" versionField="none" z="NYvKF9eUqSc7eOqRpPH5OWElxVA=">
+        <field:select field="rpsPsrId" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsPsrId" itemValue="psrId" items="${ddppmservices}" path="/ddppmservices" z="2Spml+n2y8yR+EbT+bQkupFycP0="/>
+        <field:select field="rpsRuleId" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsRuleId" itemValue="rulId" items="${ddprules}" path="/ddprules" z="tuJcwvLv5TLRUMKyaiuOVHqI2g4="/>
+        <field:input field="rpsSeq" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsSeq" required="true" validationMessageCode="field_invalid_integer" z="cOg7O/h5D3V8+sEna7kswqJ97YU="/>
+        <field:input field="rpsNotificationId" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsNotificationId" validationMessageCode="field_invalid_integer" z="l/393HoSXEvlapiLkRtud9N/KvQ="/>
+        <field:input field="rpsStatus" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsStatus" required="true" validationMessageCode="field_invalid_integer" z="TjsOeMqY4oCEAbA6gNd62CYmljM="/>
+        <field:input field="rpsCreatedBy" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsCreatedBy" required="true" z="J6q+C8L5M0To9TgB1z+OCE9S5pg="/>
+        <field:datetime dateTimePattern="${ddpRulePmSvc_rpscreateddate_date_format}" field="rpsCreatedDate" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsCreatedDate" required="true" z="8CzT3yBKFJvff3TQ/vFcdqJ5lV4="/>
+        <field:input field="rpsModifiedBy" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsModifiedBy" required="true" z="HY96TPcUwAC3h0svfJmKgsKjDoQ="/>
+        <field:datetime dateTimePattern="${ddpRulePmSvc_rpsmodifieddate_date_format}" field="rpsModifiedDate" id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsModifiedDate" required="true" z="vFL77jZV/hxn6TmNWpxBNbr33TI="/>
+    </form:update>
+</div>

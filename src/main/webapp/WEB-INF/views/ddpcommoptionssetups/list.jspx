@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCommOptionsSetup" items="${ddpcommoptionssetups}" z="ZdnDlJErSfORKyB8n47tFgXOCIo=">
+        <table:table data="${ddpcommoptionssetups}" id="l_com_agility_ddp_data_domain_DdpCommOptionsSetup" path="/ddpcommoptionssetups" typeIdFieldName="copId" z="QOBTyagA+iY/Lbgx0R/zkFM4j+k=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copRdtId" property="copRdtId" z="szQAcLa5+wZGHvqtnN7TtzNHusQ="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copOption" property="copOption" z="Fipgg4p97sP2cfuwvAlqNraGizA="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copCreatedBy" property="copCreatedBy" z="DJmAna/vbVUWUmu4euSOKIXy450="/>
+            <table:column calendar="true" dateTimePattern="${ddpCommOptionsSetup_copcreateddate_date_format}" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copCreatedDate" property="copCreatedDate" z="9aB040o+diJltRabkM+1BGFl4Jw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copModifiedBy" property="copModifiedBy" z="nI5S1WaqPp30TpvGiUe/GuLBtLk="/>
+            <table:column calendar="true" dateTimePattern="${ddpCommOptionsSetup_copmodifieddate_date_format}" id="c_com_agility_ddp_data_domain_DdpCommOptionsSetup_copModifiedDate" property="copModifiedDate" z="cKsVVYSF/LQUso4JIFcaB7Iq2eY="/>
+        </table:table>
+    </page:list>
+</div>

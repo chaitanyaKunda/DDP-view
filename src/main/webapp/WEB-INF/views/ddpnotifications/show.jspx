@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpNotification" object="${ddpnotification}" path="/ddpnotifications" z="V1+w3XtoJPiyng72F1HwPDvUn0w=">
+        <field:display field="notSuccessEmailAddress" id="s_com_agility_ddp_data_domain_DdpNotification_notSuccessEmailAddress" object="${ddpnotification}" z="Yf6nNNF+xaxtVaN0Uu/3mKo8bV0="/>
+        <field:display field="notFailureEmailAddress" id="s_com_agility_ddp_data_domain_DdpNotification_notFailureEmailAddress" object="${ddpnotification}" z="qbLIdoMdy5+6hL0TGVIQpSKRjvA="/>
+        <field:display field="notStatus" id="s_com_agility_ddp_data_domain_DdpNotification_notStatus" object="${ddpnotification}" z="BTt+uD7HnUBB4aPTkhDzZZ2A+Ms="/>
+        <field:display field="notCreatedBy" id="s_com_agility_ddp_data_domain_DdpNotification_notCreatedBy" object="${ddpnotification}" z="W5IuRZ84rXriivZpk+eMh+GLZpI="/>
+        <field:display calendar="true" dateTimePattern="${ddpNotification_notcreateddate_date_format}" field="notCreatedDate" id="s_com_agility_ddp_data_domain_DdpNotification_notCreatedDate" object="${ddpnotification}" z="0Ljl51N2w/YVkRTxPbvZazxoiQQ="/>
+        <field:display field="notModifiedBy" id="s_com_agility_ddp_data_domain_DdpNotification_notModifiedBy" object="${ddpnotification}" z="xTrsS/1HWmnv8EF1+Qy58HLQ/cU="/>
+        <field:display calendar="true" dateTimePattern="${ddpNotification_notmodifieddate_date_format}" field="notModifiedDate" id="s_com_agility_ddp_data_domain_DdpNotification_notModifiedDate" object="${ddpnotification}" z="SFhALOIv2jq7iIPT2HMv39M4x5A="/>
+    </page:show>
+</div>

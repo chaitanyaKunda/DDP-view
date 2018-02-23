@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpDmsDocsTxn" modelAttribute="ddpDmsDocsTxn" path="/ddpdmsdocstxns" render="${empty dependencies}" z="LTatqJCKhPwJyuDFFt8LddWM3pk=">
+        <field:simple field="ddpCategorizedDetails" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_ddpCategorizedDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Categorized Detail" z="mdYTxn+Cw+BlX8cK1bUSNecPCvM="/>
+        <field:simple field="ddpCategorizedDocss" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_ddpCategorizedDocss" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Categorized Docs" z="/2dtK0NawTBi50XhRhZu2s1B2L4="/>
+        <field:simple field="ddpDmsDocsDetails" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_ddpDmsDocsDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Dms Docs Detail" z="aAnjRuQh/cJFdX6Kc576JDsuepM="/>
+        <field:input field="dtxGenSystem" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxGenSystem" z="on2IpIvKnH0HHXeS4XDFFlwWd30="/>
+        <field:input field="dtxRObjectId" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxRObjectId" z="qk80UDnP1qBtGrKZiXrOqJQyIhQ="/>
+        <field:input field="dtxIsProcessReq" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxIsProcessReq" required="true" z="cqZZEOLRX7KZD79pkXUFMfJwjwg="/>
+        <field:input field="dtxTransLogs" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxTransLogs" z="6ey0igJ2GQaXzz68NZIblfyxaQc="/>
+        <field:input field="dtxStatus" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxStatus" required="true" z="kmNgERLBQShbbo1MsZJJhn4DqGg="/>
+        <field:input field="dtxArchive" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxArchive" z="yOfKH6NAVCJFvc8VkG3HGoAEjjI="/>
+        <field:input field="dtxRetentionId" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxRetentionId" validationMessageCode="field_invalid_integer" z="MzFy3u+0ZL+iSB35Alt3899AC/0="/>
+        <field:input field="dtxRetentionDate" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxRetentionDate" z="oESU0OeFqaHRikL0bqylRoSVP3o="/>
+        <field:input field="dtxCreatedBy" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxCreatedBy" required="true" z="9INGZne92MLZfsQvgc3SgrlvPyo="/>
+        <field:datetime dateTimePattern="${ddpDmsDocsTxn_dtxcreateddate_date_format}" field="dtxCreatedDate" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxCreatedDate" required="true" z="GwM3dYs3ypGhKG3AAtqoHovWA/o="/>
+        <field:input field="dtxModifiedBy" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxModifiedBy" required="true" z="EkPYkSNlnEHXgssHzoRr9cajSLs="/>
+        <field:datetime dateTimePattern="${ddpDmsDocsTxn_dtxmodifieddate_date_format}" field="dtxModifiedDate" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxModifiedDate" required="true" z="6gz+b0YNwE2s8H3fma8BVqq/rE4="/>
+        <field:input field="dtxSynId" id="c_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxSynId" validationMessageCode="field_invalid_integer" z="O1IXTQMPxZW0XpLvAkwxTfnvWjs="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpDmsDocsTxn" render="${not empty dependencies}" z="g/HOY9WO+l9G8o5LFOkbqg9l8iA="/>
+</div>

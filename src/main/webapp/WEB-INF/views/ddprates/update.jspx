@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpRate" idField="rtsId" modelAttribute="ddpRate" path="/ddprates" versionField="none" z="QmIHzQypxAatYCfPG8XCVRqjdMk=">
+        <field:select field="rtsRdtId" id="c_com_agility_ddp_data_domain_DdpRate_rtsRdtId" itemValue="rdtId" items="${ddpruledetails}" path="/ddpruledetails" z="eds4vbQb18oU7y5U6FJ7uagilZ4="/>
+        <field:input field="rtsOption" id="c_com_agility_ddp_data_domain_DdpRate_rtsOption" z="sLeoTDIlYxNhIRt7LN1F42Ve+TE="/>
+        <field:input field="rtsCreatedBy" id="c_com_agility_ddp_data_domain_DdpRate_rtsCreatedBy" required="true" z="MfJENTpVmD+lQcbYNR0aw8N3hP4="/>
+        <field:input field="rtsCreatedDate" id="c_com_agility_ddp_data_domain_DdpRate_rtsCreatedDate" required="true" z="fB+2zMlkHMKsMZ2LYZWFdKH4z7U="/>
+        <field:input field="rtsModifiedBy" id="c_com_agility_ddp_data_domain_DdpRate_rtsModifiedBy" required="true" z="PJvzjoYdRtXEZUndbFhKe+M8oX4="/>
+        <field:input field="rtsModifiedDate" id="c_com_agility_ddp_data_domain_DdpRate_rtsModifiedDate" required="true" z="ok/WIIh9sOLXQd34e2vsk4PjK7I="/>
+    </form:update>
+</div>

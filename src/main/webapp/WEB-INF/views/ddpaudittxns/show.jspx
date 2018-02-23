@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpAuditTxn" object="${ddpaudittxn}" path="/ddpaudittxns" z="IOcNf3NdY1PZZySb1S5NPt8kM6M=">
+        <field:display field="atxTxnId" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxTxnId" object="${ddpaudittxn}" z="/c3mFlNV/OazCcBmhq2QdA5JRt0="/>
+        <field:display field="atxEventName" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxEventName" object="${ddpaudittxn}" z="EtHLDhdY00/sMn66ZLeiILX1ZZA="/>
+        <field:display field="atxEventSource" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxEventSource" object="${ddpaudittxn}" z="uove0BETUWWr4/pYZIoqdYx6NU8="/>
+        <field:display field="atxObjectName" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxObjectName" object="${ddpaudittxn}" z="ZFOc9C2JupKUkyrG18LaBrtzZcI="/>
+        <field:display field="atxApplicationName" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxApplicationName" object="${ddpaudittxn}" z="DzRw0cyczpk89qvCYSIM6odlp10="/>
+        <field:display field="atxDetail" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxDetail" object="${ddpaudittxn}" z="LVSq1iCnW1LZD8rbkMSV/scyvh0="/>
+        <field:display field="atxCreatedBy" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxCreatedBy" object="${ddpaudittxn}" z="QQ1BTjILM1SKy+rrqH3Uw/eblqg="/>
+        <field:display calendar="true" dateTimePattern="${ddpAuditTxn_atxcreateddate_date_format}" field="atxCreatedDate" id="s_com_agility_ddp_data_domain_DdpAuditTxn_atxCreatedDate" object="${ddpaudittxn}" z="J5+MJAuFblQRtGLCXV3GD2Rqp8o="/>
+    </page:show>
+</div>

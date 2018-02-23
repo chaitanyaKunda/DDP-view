@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpParty" modelAttribute="ddpParty" path="/ddppartys" render="${empty dependencies}" z="+wHYwzB+xcGiqsUSFIR6YU8W644=">
+<!--         <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpParty_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="mUA6h4zwgFxmREgDhcJ3Jygnj4s="/> -->
+        <field:input field="ptyPartyName" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyName" required="true" z="P50nvE+BRQwwkfbcVX8d6kAmmzE="/>
+        <field:input field="ptyCompanyCode" id="c_com_agility_ddp_data_domain_DdpParty_ptyCompanyCode" required="true" z="Dc/mSiXVkqnNis9hyOAVgkVSQlw="/>
+        <field:input field="ptyApplicationCode" id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" required="true" z="GFTkusGBaB2vK6t8/zrOSqOafbA="/>
+        <field:input field="ptyPartyCode" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" required="true" z="JEk/crVi60pGYnuj3meFrcgmzjk="/>
+        <field:input field="ptyStatus" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" required="true" validationMessageCode="field_invalid_integer" z="sfHBUt/Fi4V07WvtRLb9sfpFyZY=" label="status" disabled="true" disableFormBinding="true" render="false" />
+        <field:input field="ptyCreatedBy" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" required="true" z="DZVtsJfvoS9chirUD47h41Vgryc=" render="false"/>
+        <field:datetime dateTimePattern="${ddpParty_ptycreateddate_date_format}" field="ptyCreatedDate" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" required="true" z="6joZeLcccTdykxL/IOEF1IE2vqM=" render="false"/>
+        <field:input field="ptyModifiedBy" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" required="true" z="VeYHB6/xfxmmHxuo8kkl/HzRDcI=" render="false"/>
+        <field:datetime dateTimePattern="${ddpParty_ptymodifieddate_date_format}" field="ptyModifiedDate" id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" required="true" z="8Ob0ihWX3Q+oF1k7gsmxPqGYKM0=" render="false"/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpParty" render="${not empty dependencies}" z="sYAoplUQQAC8jeWdRzjf+t7FlZM="/>
+</div>

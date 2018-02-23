@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpDmsDocsTxn" object="${ddpdmsdocstxn}" path="/ddpdmsdocstxns" z="rS5fSWcyzTLCFUn0c5659OPhigo=">
+        <field:display field="dtxGenSystem" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxGenSystem" object="${ddpdmsdocstxn}" z="ldKOULV5XZV/GsSySZGt1VOlfVo="/>
+        <field:display field="dtxRObjectId" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxRObjectId" object="${ddpdmsdocstxn}" z="JoSVmeFNcrbBx/0czfbDMBb2i6s="/>
+        <field:display field="dtxIsProcessReq" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxIsProcessReq" object="${ddpdmsdocstxn}" z="8R3ssJzggbO+taFcuBirEG9Y8Lw="/>
+        <field:display field="dtxTransLogs" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxTransLogs" object="${ddpdmsdocstxn}" z="/PvESU7m0xhzi+Hlqz7uErFXSR0="/>
+        <field:display field="dtxStatus" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxStatus" object="${ddpdmsdocstxn}" z="on+H7JiYtCp8ie9aVtM2rxZ1+7E="/>
+        <field:display field="dtxArchive" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxArchive" object="${ddpdmsdocstxn}" z="Lpz30xZGe3oGRjnMJKDNmWMjeTg="/>
+        <field:display field="dtxRetentionId" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxRetentionId" object="${ddpdmsdocstxn}" z="VhOiFeIfxcccMX1JZu/rpTQ8ad4="/>
+        <field:display field="dtxRetentionDate" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxRetentionDate" object="${ddpdmsdocstxn}" z="I07NfRdImRKaXtz1w/DddVW2D98="/>
+        <field:display field="dtxCreatedBy" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxCreatedBy" object="${ddpdmsdocstxn}" z="t3yJAMYHaq4xv8+1RKZ9Lw2boJo="/>
+        <field:display calendar="true" dateTimePattern="${ddpDmsDocsTxn_dtxcreateddate_date_format}" field="dtxCreatedDate" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxCreatedDate" object="${ddpdmsdocstxn}" z="WnyFUN2sOf1/EFaLvIjEN84hBdg="/>
+        <field:display field="dtxModifiedBy" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxModifiedBy" object="${ddpdmsdocstxn}" z="RsqSt9J/ajd2cz8sY3bZpEEpEic="/>
+        <field:display calendar="true" dateTimePattern="${ddpDmsDocsTxn_dtxmodifieddate_date_format}" field="dtxModifiedDate" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxModifiedDate" object="${ddpdmsdocstxn}" z="rfZTD/O2E4RPA+/Mfjij0VP7cVw="/>
+        <field:display field="dtxSynId" id="s_com_agility_ddp_data_domain_DdpDmsDocsTxn_dtxSynId" object="${ddpdmsdocstxn}" z="t0Fm4XvwJCwE32CT/IM9x2R3tfA="/>
+    </page:show>
+</div>

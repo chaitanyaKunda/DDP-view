@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCategorizationHolder" object="${ddpcategorizationholder}" path="/ddpcategorizationholders" z="sd6QDF/CiEsganqxzl57fUPS8GA=">
+        <field:display field="chlSynId" id="s_com_agility_ddp_data_domain_DdpCategorizationHolder_chlSynId" object="${ddpcategorizationholder}" z="sdNPzBCLikFk+nVNdbucIaKLMyM="/>
+        <field:display field="chlDtxId" id="s_com_agility_ddp_data_domain_DdpCategorizationHolder_chlDtxId" object="${ddpcategorizationholder}" z="skK1mgTiIv6x3vlj9HHryWfOjP0="/>
+        <field:display field="chlRulId" id="s_com_agility_ddp_data_domain_DdpCategorizationHolder_chlRulId" object="${ddpcategorizationholder}" z="O+Cuqi0Uu0AIu0lz1b7nUUhmBLw="/>
+    </page:show>
+</div>

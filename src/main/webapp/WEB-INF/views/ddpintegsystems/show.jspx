@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpIntegSystem" object="${ddpintegsystem}" path="/ddpintegsystems" z="m2w63YEyIyESVXTcuns7kxUrgTg=">
+        <field:display field="insCompanyCode" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insCompanyCode" object="${ddpintegsystem}" z="mVNdzng+AMQ8n40FVs6fWHAhDro="/>
+        <field:display field="insServerIp" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insServerIp" object="${ddpintegsystem}" z="kow0bcxFq9KMbsIvDn0lDWTs4Lc="/>
+        <field:display field="insServerName" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insServerName" object="${ddpintegsystem}" z="AqTon23gFsCVhdG5YSRwz2BVSG4="/>
+        <field:display field="insDomain" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insDomain" object="${ddpintegsystem}" z="8Hpv1TWf4t/KUyB99EK0iqUneAY="/>
+        <field:display field="insServiceAccount" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insServiceAccount" object="${ddpintegsystem}" z="2slf4QytIA2hVpbmUM1tLvqGxaA="/>
+        <field:display field="insSaPassword" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insSaPassword" object="${ddpintegsystem}" z="Iikn3Mq6WcqG4zzhOF8tBFg/RBc="/>
+        <field:display field="insFilePath" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insFilePath" object="${ddpintegsystem}" z="YNxvLzHkbRcamFvFrF5m/dsg6ig="/>
+        <field:display field="insStatus" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insStatus" object="${ddpintegsystem}" z="7T+N5Ad4b9rO+DPu7sDwng0MFoE="/>
+        <field:display field="insCreatedBy" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insCreatedBy" object="${ddpintegsystem}" z="a7RldD8q0zv8zwKb5crIXH5fQVE="/>
+        <field:display calendar="true" dateTimePattern="${ddpIntegSystem_inscreateddate_date_format}" field="insCreatedDate" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insCreatedDate" object="${ddpintegsystem}" z="AwVQ8KdGpIFON1f0zJyb/WYU01s="/>
+        <field:display field="insModifiedBy" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insModifiedBy" object="${ddpintegsystem}" z="XrKwRA3corSopNnQi+lMYlNVzx0="/>
+        <field:display calendar="true" dateTimePattern="${ddpIntegSystem_insmodifieddate_date_format}" field="insModifiedDate" id="s_com_agility_ddp_data_domain_DdpIntegSystem_insModifiedDate" object="${ddpintegsystem}" z="5KaKsqD3mJtZeBqxp+0luMeD7OI="/>
+    </page:show>
+</div>

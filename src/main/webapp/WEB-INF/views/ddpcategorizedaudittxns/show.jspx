@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCategorizedAuditTxn" object="${ddpcategorizedaudittxn}" path="/ddpcategorizedaudittxns" z="Llo+RzUO9NBrQNJCXRsj4ZmYhtc=">
+        <field:display field="caxDcdId" id="s_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxDcdId" object="${ddpcategorizedaudittxn}" z="BztqcQbnqwhPqSCavNfx+eOiz0o="/>
+        <field:display field="caxPmSeq" id="s_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmSeq" object="${ddpcategorizedaudittxn}" z="XRk5KAKtgBrIjE+2RB36u90GnGc="/>
+        <field:display field="caxPmName" id="s_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmName" object="${ddpcategorizedaudittxn}" z="2Ow+vcTgE4QMcsDMQSru0BvceHE="/>
+        <field:display field="caxPmLogs" id="s_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmLogs" object="${ddpcategorizedaudittxn}" z="dn2qn3ZiqEu6CDG9vr3ikB/W9TM="/>
+        <field:display calendar="true" dateTimePattern="${ddpCategorizedAuditTxn_caxpminitiateddate_date_format}" field="caxPmInitiatedDate" id="s_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmInitiatedDate" object="${ddpcategorizedaudittxn}" z="0dgWKo7mZfaCB0fZPT24W3EZlyI="/>
+    </page:show>
+</div>

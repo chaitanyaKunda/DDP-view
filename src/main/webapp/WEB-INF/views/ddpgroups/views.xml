@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpgroups/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpgroups/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpgroups/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpgroups/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpgroups/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpgroups/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpgroups/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpgroups/update.jspx"/>
+    </definition>
+</tiles-definitions>

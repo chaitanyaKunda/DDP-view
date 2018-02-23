@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpRole" items="${ddproles}" z="1QqvVNOxzNA/RUsdGA15GBRjdhQ=" path="/ddproles">
+        <table:table data="${ddproles}" id="l_com_agility_ddp_data_domain_DdpRole" path="/ddproles" typeIdFieldName="rolId" z="l2kBP9AUWibm2SJXTLDcHupQfkw=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpRole_rolName" property="rolName" z="ih3BtFKDKxcfs9zYC0f04qELIZs="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRole_rolDisplayName" property="rolDisplayName" z="lxTouTfC/YGBVFg6Pok7s24Xopc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRole_rolDescription" property="rolDescription" z="jkfcsrXZxCTfQOg6mfSxvTq9xSU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRole_rolStatus" property="rolStatus" z="vR7I+xYqDk1yzPAWJ0ZyZKvhQJk=" render="false"/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRole_rolCreatedBy" property="rolCreatedBy" z="7rVJWskTRtZA8H2AOzXBwdHN9XQ="/>
+        </table:table>
+    </page:list>
+</div>

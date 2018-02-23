@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCompressionSetup" object="${ddpcompressionsetup}" path="/ddpcompressionsetups" z="cPxGCyif+OIJ0VCmQGfK9+CWodg=">
+        <field:display field="ctsCompressionLevel" id="s_com_agility_ddp_data_domain_DdpCompressionSetup_ctsCompressionLevel" object="${ddpcompressionsetup}" z="yG+XNDEn/2ex+tccjPON9gTWdMc="/>
+        <field:display field="ctsCompressionSize" id="s_com_agility_ddp_data_domain_DdpCompressionSetup_ctsCompressionSize" object="${ddpcompressionsetup}" z="kBqwJzDkfTwpaRkg9XrzLEOrVxM="/>
+        <field:display field="ctsEmailAttachmentLimit" id="s_com_agility_ddp_data_domain_DdpCompressionSetup_ctsEmailAttachmentLimit" object="${ddpcompressionsetup}" z="1oF76vb8VeaMD8ujl2OEzj5uAeI="/>
+        <field:display field="ctsNoOfFilesAttached" id="s_com_agility_ddp_data_domain_DdpCompressionSetup_ctsNoOfFilesAttached" object="${ddpcompressionsetup}" z="X/ldBFW5muCkosgw6MxaBoiWb8Y="/>
+    </page:show>
+</div>

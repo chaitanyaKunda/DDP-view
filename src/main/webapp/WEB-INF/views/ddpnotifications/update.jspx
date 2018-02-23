@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpNotification" idField="notId" modelAttribute="ddpNotification" path="/ddpnotifications" versionField="none" z="0ozFb6lGPC4ImPUNqcRVl0r5AF0=">
+        <field:simple field="ddpAedRules" id="c_com_agility_ddp_data_domain_DdpNotification_ddpAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Aed Rule" z="c1b4Kj/xEuyH5rIcoVPDRbePPYc="/>
+        <field:simple field="ddpExportRules" id="c_com_agility_ddp_data_domain_DdpNotification_ddpExportRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Export Rule" z="VKhA3kOiD4KnGLuFAVBOLD1J770="/>
+        <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpNotification_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="501iX1dho/vKc3I6Jg+3f4hVG8I="/>
+        <field:input field="notSuccessEmailAddress" id="c_com_agility_ddp_data_domain_DdpNotification_notSuccessEmailAddress" required="true" z="ERveL3838KEe73z6mAcYUuKgMTU="/>
+        <field:input field="notFailureEmailAddress" id="c_com_agility_ddp_data_domain_DdpNotification_notFailureEmailAddress" required="true" z="b8GtFOWyMCXYYbYwJb8m+iN0Itg="/>
+        <field:input field="notStatus" id="c_com_agility_ddp_data_domain_DdpNotification_notStatus" required="true" validationMessageCode="field_invalid_integer" z="CK7sgdXfgEhVFhgBJOz0k0olvy0="/>
+        <field:input field="notCreatedBy" id="c_com_agility_ddp_data_domain_DdpNotification_notCreatedBy" required="true" z="7vTmlbIfj/plhbgQx6IMLGVpnNA="/>
+        <field:datetime dateTimePattern="${ddpNotification_notcreateddate_date_format}" field="notCreatedDate" id="c_com_agility_ddp_data_domain_DdpNotification_notCreatedDate" required="true" z="beBiIobKhdI7yq9WJv44P9Ecv+c="/>
+        <field:input field="notModifiedBy" id="c_com_agility_ddp_data_domain_DdpNotification_notModifiedBy" required="true" z="6RN7CwHWgjN3eSz/VFHqvob1qrA="/>
+        <field:datetime dateTimePattern="${ddpNotification_notmodifieddate_date_format}" field="notModifiedDate" id="c_com_agility_ddp_data_domain_DdpNotification_notModifiedDate" required="true" z="xrPDiNtf1oHgZVL42jHWIwz0MD4="/>
+    </form:update>
+</div>

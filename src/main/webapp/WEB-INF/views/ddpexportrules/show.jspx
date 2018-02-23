@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" 
+	 xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	 xmlns:spring="http://www.springframework.org/tags" 
+	 xmlns:c="http://java.sun.com/jsp/jstl/core"
+	 xmlns:fn="http://java.sun.com/jsp/jstl/functions"	 version="2.0">
+	 
+	 <spring:message code="label_rule_name" var="label_rule_name" htmlEscape="false"></spring:message>
+	 <spring:message code="label_party_id" var="label_party_id" htmlEscape="false"></spring:message>
+	 <spring:message code="label_party_code" var="label_party_code" htmlEscape="false"></spring:message>
+	 <spring:message code="label_company" var="label_company" htmlEscape="false"></spring:message>
+	 <spring:message code="label_branch" var="label_branch" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rule_status" var="label_rule_status" htmlEscape="false"></spring:message>
+	 <spring:message code="label_activate_status_active" var="label_activate_status_active" htmlEscape="false"></spring:message>
+	 <spring:message code="label_activate_status_inactive" var="label_activate_status_inactive" htmlEscape="false"></spring:message>
+	 <spring:message code="label_docname_generic" var="label_docname_generic" htmlEscape="false"></spring:message>
+	 <spring:message code="label_docname_dup" var="label_docname_dup" htmlEscape="false"></spring:message>
+	 <spring:message code="label_frequency" var="label_frequency" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_to" var="label_email_to" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_cc" var="label_email_cc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_frequency" var="label_frequency" htmlEscape="false"></spring:message>
+	 <spring:message code="label_ftp_full_location" var="label_ftp_full_location" htmlEscape="false"></spring:message>
+	 <spring:message code="label_full_unc_path" var="label_full_unc_path" htmlEscape="false"></spring:message>
+	 <spring:message code="label_not_success_email_address" var="label_not_success_email_address" htmlEscape="false"></spring:message>
+	 <spring:message code="label_not_failure_email_address" var="label_not_failure_email_address" htmlEscape="false"></spring:message>
+	 <spring:message code="label_report_frequency" var="label_report_frequency" htmlEscape="false"></spring:message>
+	 <spring:message code="label_report_recipient_to" var="label_report_recipient_to" htmlEscape="false"></spring:message>
+	 <spring:message code="label_report_recipient_cc" var="label_report_recipient_cc" htmlEscape="false"></spring:message>
+	 
+	 <spring:message code="label_text_communication_detail" var="label_text_communication_detail" htmlEscape="false"></spring:message>
+	 <spring:message code="label_document_type" var="label_document_type" htmlEscape="false"></spring:message>
+	 <spring:message code="label_generation_source" var="label_generation_source" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_ratedornonrated" var="label_text_ratedornonrated" htmlEscape="false"></spring:message>
+	 <spring:message code="lable_text_version" var="lable_text_version" htmlEscape="false"></spring:message>
+	 <spring:message code="lable_text_relavanttype" var="lable_text_relavanttype" htmlEscape="false"></spring:message>
+	 	 <spring:message code="lable_text_relavanttype" var="lable_text_relavanttype" htmlEscape="false"></spring:message>
+	 	 
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <style>
+    	label{ width : 400px !important ;}
+    </style>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpExportRule" object="${ddpexportrule}" path="/ddpexportrules" z="mzJ07CgeBPniW0zBQcI2OaPXJvE=">
+    	<c:set value="${expRule.expSchedulerId.schRuleCategory}" var="ruleCategory"></c:set>
+    	<div style="padding-left: 1px; top: 3px;"><label><c:out value="${ label_rule_name }" /> :</label><c:out  value="${itemName}"/></div>
+    	<div style="padding-left: 1px; padding-top: 0px;">
+    		<label><c:out value="${ label_party_id }" /> :</label>
+    		<c:choose>
+    			<c:when test="${not empty expRule.expSchedulerId.schRuleCategory}"><c:out value="${expRule.expSchedulerId.schRuleCategory}"/></c:when>
+    			<c:otherwise><c:out value="${ddpexportrule[0].rdtPartyId}"/></c:otherwise>
+    		</c:choose>
+    		<br />
+    		<c:if test="${empty ruleCategory}">
+    			<label><c:out value="${ label_party_code }" /> :</label><c:out  value="${ddpexportrule[0].rdtPartyName}"/><br />
+    			<label><c:out value="${ label_company }" /> :</label><c:out  value="${ddpexportrule[0].rdtCompanyCode}"/><br />
+    			<label><c:out value="${ label_branch }" /> :</label><c:out  value="${ddpexportrule[0].rdtBranch}"/><br />
+    			<c:set value="${ddpexportrule[0].rdtPartyId}" var="clientID"></c:set>
+     		</c:if>
+     		<label><c:out value="${label_docname_generic }" /> :</label>
+     		<c:choose>
+     			<c:when test="${expRule.expDocnameConvId.dcvGenNamingConv == ''}">
+     				<c:out value="%%DATE_DDMMYY%%_%%DOC_TYPE%%_%%CONS_ID%%_%%JOB_NUM%%"></c:out><br />
+     			</c:when>
+     			<c:otherwise>
+     				<c:out value="${expRule.expDocnameConvId.dcvGenNamingConv}"></c:out><br />
+     			</c:otherwise>
+     		</c:choose>
+     		<label><c:out value="${ label_docname_dup }" /> :</label>
+     		<c:choose>
+     			<c:when test="${expRule.expDocnameConvId.dcvDupDocNamingConv == ''}">
+     				<c:out value="Copy%%SEQ%%_%%DATE_DDMMYY%%_%%DOC_TYPE%%_%%CONS_ID%%_%%JOB_NUM%%"></c:out><br />
+     			</c:when>
+     			<c:otherwise>
+     				<c:out value="${expRule.expDocnameConvId.dcvDupDocNamingConv}"></c:out><br />
+     			</c:otherwise>
+     		</c:choose>
+     		<label><c:out value="${ label_frequency }" /> :</label><c:out  value="${scheduler}"/><br />
+     		<label><c:out value="${ label_text_communication_detail }"></c:out></label><br />
+     		<c:choose>
+     			<c:when test="${communicationDetails[0].commProtocol == ''}"><br /></c:when>
+     			<c:otherwise>
+     				<c:choose>
+     					<c:when test="${communicationDetails[0].commProtocol == 'FTP'}">
+     						<label><c:out value="${ label_ftp_full_location }" /> :</label><c:out  value="${communicationDetails[0].ftpLocation}"/><br />
+     					</c:when>
+     					<c:when test="${communicationDetails[0].commProtocol == 'UNC'}">
+     						<label><c:out value="${ label_full_unc_path }" /> :</label><c:out  value="${communicationDetails[0].uncPath}"/><br />	
+     					</c:when>
+     					<c:when test="${communicationDetails[0].commProtocol == 'SMTP'}">
+     						<label><c:out value="${ label_email_to }" /> :</label><c:out value="${communicationDetails[0].cemEmailTo}"/><br />
+	    					<c:if test="${not empty communicationDetails[0].cemEmailCc}"><label><c:out value="${ label_email_cc }" /> :</label><c:out value="${communicationDetails[0].cemEmailCc}"/><br /></c:if>
+     					</c:when>
+     				</c:choose>
+     			</c:otherwise>
+     		</c:choose>
+     		<c:choose>
+     			<c:when test="${communicationDetails[1].commProtocol == ''}"><br /></c:when>
+     			<c:otherwise>
+     				<c:choose>
+     					<c:when test="${communicationDetails[1].commProtocol == 'FTP'}">
+     						<label><c:out value="${ label_ftp_full_location }" /> :</label><c:out  value="${communicationDetails[1].ftpLocation}"/><br />
+     					</c:when>
+     					<c:when test="${communicationDetails[1].commProtocol == 'UNC'}">
+     						<label><c:out value="${ label_full_unc_path }" /> :</label><c:out  value="${communicationDetails[1].uncPath}"/><br />	
+     					</c:when>
+     					<c:when test="${communicationDetails[1].commProtocol == 'SMTP'}">
+     						<label><c:out value="${ label_email_to }" /> :</label><c:out value="${communicationDetails[1].cemEmailTo}"/><br />
+	    					<c:if test="${not empty communicationDetails[1].cemEmailCc}"><label><c:out value="${ label_email_cc }" /> :</label><c:out value="${communicationDetails[1].cemEmailCc}"/><br /></c:if>
+     					</c:when>
+     				</c:choose>
+     			</c:otherwise>
+     		</c:choose>
+     		<c:choose>
+     			<c:when test="${communicationDetails[2].commProtocol == ''}"><br /></c:when>
+     			<c:otherwise>
+     				<c:choose>
+     					<c:when test="${communicationDetails[2].commProtocol == 'FTP'}">
+     						<label><c:out value="${ label_ftp_full_location }" /> :</label><c:out  value="${communicationDetails[2].ftpLocation}"/><br />
+     					</c:when>
+     					<c:when test="${communicationDetails[2].commProtocol == 'UNC'}">
+     						<label><c:out value="${ label_full_unc_path }" /> :</label><c:out  value="${communicationDetails[2].uncPath}"/><br />	
+     					</c:when>
+     					<c:when test="${communicationDetails[2].commProtocol == 'SMTP'}">
+     						<label><c:out value="${ label_email_to }" /> :</label><c:out value="${communicationDetails[2].cemEmailTo}"/><br />
+	    					<c:if test="${not empty communicationDetails[2].cemEmailCc}"><label><c:out value="${ label_email_cc }" /> :</label><c:out value="${communicationDetails[2].cemEmailCc}"/><br /></c:if>
+     					</c:when>
+     				</c:choose>
+     			</c:otherwise>
+     		</c:choose>
+     		<label><c:out value="${ label_not_success_email_address }" /> :</label><c:out value="${expRule.expNotificationId.notSuccessEmailAddress}"/><br />
+     		<label><c:out value="${ label_not_failure_email_address }" /> :</label><c:out value="${expRule.expNotificationId.notFailureEmailAddress}"/><br />
+     		
+     		<c:if test="${not empty expRule.expSchedulerId.schReportFrequency}"><label><c:out value="${ label_report_frequency }" /> :</label><c:out value="${expRule.expSchedulerId.schReportFrequency}"/><br /></c:if>
+     		<c:if test="${not empty expRule.expSchedulerId.schReportEmailTo}"><label><c:out value="${ label_report_recipient_to }" /> :</label><c:out value="${expRule.expSchedulerId.schReportEmailTo}"/><br /></c:if>
+     		<c:if test="${not empty expRule.expSchedulerId.schReportEmailCc}"><label><c:out value="${ label_report_recipient_cc }" /> :</label><c:out value="${expRule.expSchedulerId.schReportEmailCc}"/><br /></c:if>
+     		<label><c:out value="${ label_rule_status }" /> :</label><c:choose>
+					<c:when test="${expRule.expStatus == '0'}"><c:out value="${ label_activate_status_active }"/><br /></c:when>
+					<c:when test="${expRule.expStatus == '1'}"><c:out value="${ label_activate_status_inactive }"/><br /></c:when>
+				</c:choose>
+    	</div>
+    	<c:choose>
+    		<c:when test="${expRule.expSchedulerId.schChoosenType == '1'}">
+    			<div style="padding-left: 100px;padding-top: 20px"><c:out value="Document Details are Reading From Property File"/></div>
+    		</c:when>
+    		<c:otherwise>
+    			<div style="padding: 10px;">
+				  <table>
+					 <tr>
+				  	 	<th><c:out value="${ label_document_type }"></c:out></th>
+			  	 		<th><c:out value="${ label_generation_source }"></c:out></th>
+			  	 		<th><c:out value="${ label_text_ratedornonrated }"></c:out></th>
+			  	 		<th style="display:none;"><c:out value="${ lable_text_relavanttype }"></c:out></th> 
+ 			  	 		<c:if test="${not empty ruleCategory}">
+    						<th>Require Flag</th>
+     					</c:if>
+			  	 		<th><c:out value="${ lable_text_version }"></c:out></th>
+				  	 </tr>
+				   <c:forEach items="${ddpexportrule}" var="element" varStatus="loop"> 
+					 	  <input type="hidden" value="${element.rdtId}"/>
+				 	 <tbody>
+					  	 <tr>
+					  	 	<Td><c:out value="${element.rdtDocType}"/></Td>
+					  	 	<Td><c:out value="${element.genSource}"/></Td>
+					  	 	<Td><c:choose>
+					  	 			<c:when test="${element.strRate == ''}"><c:out value="Non-Rated"/></c:when>
+				  	 				<c:when test="${element.strRate == 'N/A'}"><c:out value="Not Applicable"/></c:when>
+				  	 				<c:otherwise><c:out value="${element.strRate}"/></c:otherwise>
+				  	 			</c:choose>
+				  	 		</Td>
+					  	 	<TD style="display:none;"><c:choose>
+					  	 			<c:when test="${element.relevantType == '1'}"><c:out value="Primary"></c:out></c:when>
+					  	 			<c:when test="${element.relevantType == '2'}"><c:out value="Secondary"></c:out></c:when>
+					  	 			<c:otherwise><c:out value="${element.relevantType }" /></c:otherwise>
+					  	 		</c:choose>
+					  	 	</TD>
+					  	 	<c:set value="${element.rdtPartyId}" var="rdtPartyId"></c:set>
+					  	 	<c:if test="${empty rdtPartyId}">
+						  	 	<td>
+						  	 		<c:choose>
+							  	 		<c:when test="${element.manditoryFlag == '1'}"><c:out value="Mandatory"/></c:when>
+							  	 		<c:when test="${element.manditoryFlag == '2'}"><c:out value="Atlease one"/></c:when>
+							  	 		<c:otherwise><c:out value="Optional"/></c:otherwise>
+								  	 </c:choose>
+								 </td>
+					  	 	</c:if>
+					  	 	<TD><c:choose>
+					  	 			<c:when test="${element.expVersionSetup == ''}"><c:out value="None" /></c:when>
+					  	 			<c:otherwise> <c:out value="${element.expVersionSetup }" /></c:otherwise>
+					  	 		</c:choose>
+					  	 	</TD>
+					  	 </tr>
+				  	 </tbody>
+				   </c:forEach>
+			 	</table>
+			 </div>  
+    		</c:otherwise>
+    	</c:choose>
+    </page:show>
+    <script type="text/javascript">
+   		 changeActiveLinkColor("exprule"); // change the active link background color
+   		 
+   		 function showFunction()
+   		 {
+   			var ruleStatus = '${expRule.expStatus}';
+   			if(ruleStatus =='1')
+   			{
+   				alert("Rule is inactive. Please change the Rule status to run On-Demand service");
+   				return false;	
+   			}
+   			var conf = confirm("do you want to run On-Demand Service ?");
+   			if(!conf)
+   				return false;
+   			return true;
+   		 }
+    </script>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpScheduler" items="${ddpschedulers}" z="A+ABdD9g9ih/KTz+rPoqcDdeW90=">
+        <table:table data="${ddpschedulers}" id="l_com_agility_ddp_data_domain_DdpScheduler" path="/ddpschedulers" typeIdFieldName="schId" z="mL5AhymsXGDuIHA9YkQWkIqDT1w=">
+            <table:column calendar="true" dateTimePattern="${ddpScheduler_schstartdate_date_format}" id="c_com_agility_ddp_data_domain_DdpScheduler_schStartDate" property="schStartDate" z="bcVIm4n5/wCq5ukgs3X0/hC7kDE="/>
+            <table:column calendar="true" dateTimePattern="${ddpScheduler_schenddate_date_format}" id="c_com_agility_ddp_data_domain_DdpScheduler_schEndDate" property="schEndDate" z="3u/tgY+irp3lFubcP5NnGf320vc="/>
+        </table:table>
+    </page:list>
+</div>

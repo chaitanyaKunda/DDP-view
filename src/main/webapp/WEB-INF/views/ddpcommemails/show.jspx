@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCommEmail" object="${ddpcommemail}" path="/ddpcommemails" z="BFeZy0T6xm6OB9CLr/ac04VUEPc=">
+        <field:display field="cemEmailFrom" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailFrom" object="${ddpcommemail}" z="6CReEoCCYurg4pSk1g7j9bWSbTE="/>
+        <field:display field="cemEmailTo" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailTo" object="${ddpcommemail}" z="TnKzat5K1bgoLKnd94Qnz1H7OO8="/>
+        <field:display field="cemEmailCc" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailCc" object="${ddpcommemail}" z="7GjbDhAyJVHN9g3/8FIc0zqzthc="/>
+        <field:display field="cemEmailSubject" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailSubject" object="${ddpcommemail}" z="KPqjBl1AD0usAjtBQJr+jV10P/M="/>
+        <field:display field="cemEmailBody" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBody" object="${ddpcommemail}" z="653iUF2UAB8K767oIrjk183Xvi0="/>
+        <field:display field="cemEmailAttachmentLimit" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailAttachmentLimit" object="${ddpcommemail}" z="91K3YQKDUQK0syFDYluTctgbEF8="/>
+        <field:display field="cemFtpLocation" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemFtpLocation" object="${ddpcommemail}" z="juQqMH3VAsWquE+V5jcudJDBvPg="/>
+        <field:display field="cemUncPath" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemUncPath" object="${ddpcommemail}" z="ARoGR2uQcN2uQWmbxVlKF+hP/Ok="/>
+        <field:display field="cemEmailBcc" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBcc" object="${ddpcommemail}" z="vjCElBABdGTdNb7WhH7pc7o1szc="/>
+        <field:display field="cemEmailReplyTo" id="s_com_agility_ddp_data_domain_DdpCommEmail_cemEmailReplyTo" object="${ddpcommemail}" z="ecsfvovQ16dQzDHhrmL3MjjntR0="/>
+    </page:show>
+</div>

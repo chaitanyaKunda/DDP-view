@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpCommUnc" modelAttribute="ddpCommUnc" path="/ddpcommuncs" render="${empty dependencies}" z="laIsr1D15Uy435e2b44dnyuwlVo=">
+        <field:input field="cunUncPath" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPath" z="+y7BX0Ownmp5ahHD6pvjzXGQqjo="/>
+        <field:input field="cunUncUserName" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncUserName" z="kHLec2iSdT/ZE3Y04+nXLz/a13s="/>
+        <field:input field="cunUncPassword" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPassword" z="3nxjt9THBDiZ4GbA1n8aPYNa45c="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpCommUnc" render="${not empty dependencies}" z="6IS0jDUmtOPwT8lllstkYNXXtvQ="/>
+</div>

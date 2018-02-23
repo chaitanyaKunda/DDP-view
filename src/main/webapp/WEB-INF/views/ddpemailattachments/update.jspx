@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpEmailAttachment" idField="eatId" modelAttribute="ddpEmailAttachment" path="/ddpemailattachments" versionField="none" z="2qU0RIHc9/1O/50RxA62+wH1b2k=">
+        <field:input field="eatEmailId" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatEmailId" required="true" validationMessageCode="field_invalid_integer" z="9jf2SLmndiHcblvsKMqEY79JMdQ="/>
+        <field:input field="eatSize" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatSize" validationMessageCode="field_invalid_integer" z="h5h6scbnKLXViOPwL3uskPtu4vc="/>
+        <field:input field="eatAttachmentNumberLimit" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatAttachmentNumberLimit" validationMessageCode="field_invalid_integer" z="9Ic2huF/9rQer4sEO0RvyqJ5kyI="/>
+        <field:input field="eatCompression" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatCompression" z="eggCYsH1QdZMmIsHdTFqZbecjSo="/>
+        <field:input field="eatConversion" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatConversion" z="dFRjYAhj4gqlWzxPB2blSrMe0u8="/>
+        <field:input field="eatPdfFormat" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatPdfFormat" z="deg/MoqpUyZLUSG7jdw9zLsbiu8="/>
+        <field:input field="eatPdfSignedOption" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatPdfSignedOption" validationMessageCode="field_invalid_integer" z="ot8byvk42/DNGIrDU4hgygo2E8I="/>
+        <field:input field="eatHyperlinkOption" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatHyperlinkOption" validationMessageCode="field_invalid_integer" z="J2zJ6XjEfxJ6vVyTC2OeHQaqM7E="/>
+        <field:input field="eatHyperlink" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatHyperlink" z="c2HRF0l/9OwF6fsCS72uDSqRMqI="/>
+        <field:input field="eatStatus" id="c_com_agility_ddp_data_domain_DdpEmailAttachment_eatStatus" validationMessageCode="field_invalid_integer" z="kJ37fe8EQ2/1wFCvEs4Tu3pY+Sg="/>
+    </form:update>
+</div>

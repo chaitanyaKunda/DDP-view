@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" 
+    xmlns:beans="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd">
+    <!-- HTTP security configurations -->
+    <http auto-config="true" use-expressions="true">
+        
+        <form-login login-processing-url="/resources/j_spring_security_check" username-parameter="j_username" password-parameter="j_password"  login-page="/login" authentication-failure-url="/login?login_error=t" />
+        <logout logout-url="/resources/j_spring_security_logout" logout-success-url="/login" invalidate-session="true"/>
+        <!-- Configure these elements to secure URIs in your application -->
+        <intercept-url pattern="/admin/**" access="hasRole('admin')" />
+        <intercept-url pattern="/user/**" access="hasRole('user')" />
+        <intercept-url pattern="/resources/**" access="permitAll" />
+        <intercept-url pattern="/dijit/**" access="permitAll" />
+        <intercept-url pattern="/dojo/**" access="permitAll" />
+        <intercept-url pattern="/images/**" access="permitAll" />
+        <intercept-url pattern="/js/**" access="permitAll" />
+        <intercept-url pattern="/styles/**" access="permitAll" />
+        <intercept-url pattern="/login/**" access="permitAll" />
+        <intercept-url pattern="/userguidev/**" access="permitAll" />
+        <intercept-url pattern="/process/**" access="permitAll" />
+<!-- 		<intercept-url pattern="/UserGuide.*" access="permitAll" /> -->
+        <intercept-url pattern="/**" access="isAuthenticated()" />
+        <csrf disabled="true"/>
+        <headers>
+        <!-- this section disable put the header 'X-Content-Type-Options' -->
+      	  <content-type-options disabled="true"/>
+    	</headers>
+        
+    </http>
+    <!-- Configure Authentication mechanism -->
+    <!-- <authentication-manager alias="authenticationManager"> -->
+        <!-- SHA-256 values can be produced using 'echo -n your_desired_password | sha256sum' (using normal *nix environments) -->
+    <!--    <authentication-provider>
+            <password-encoder hash="sha-256" />
+            <user-service>
+                <user name="admin" password="8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918" authorities="ROLE_ADMIN" />
+                <user name="user" password="04f8996da763b7a969b1028ee3007569eaf3a635486ddab211d512c85b9df8fb" authorities="ROLE_USER" />
+            </user-service>
+        </authentication-provider>
+    </authentication-manager>
+     -->
+     
+    <!-- Custom Authentication/Authorisation mechanism -->
+    <authentication-manager alias="authenticationManager">
+    	<!-- <authentication-provider>
+    		<jdbc-user-service data-source-ref="dataSource" 
+            users-by-username-query="SELECT usr_login_id USERNAME, usr_password PASSWORD , CASE usr_status WHEN 1 THEN 'true' ELSE 'false' END ENABLED FROM ddp_user WHERE usr_login_id=?;"
+            authorities-by-username-query="SELECT u.usr_login_id USERNAME, g.grp_name, r.rol_name ROLENAME FROM ddp_user u, ddp_group_setup gs, ddp_group g, ddp_role_setup rs, ddp_role r WHERE gs.grs_user_id = u.usr_id and gs.grs_group_id = g.grp_id and rs.rls_role_id = r.rol_id and u.usr_login_id=?;"
+            />
+    	</authentication-provider>
+    	-->
+    	<authentication-provider user-service-ref = "customJdbcAuth">
+    		<!-- <password-encoder hash="md5"/> -->
+    	</authentication-provider>
+    	<authentication-provider ref="adAuthenticationProvider"/>
+    </authentication-manager>
+	
+	<beans:bean id="customJdbcAuth" class="com.agility.ddp.view.auth.CustomJdbcDaoImpl"> 
+	<!-- <beans:bean id="jdbcUserService" class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl"> -->
+		<beans:property name="dataSource" ref="dataSource" />
+		
+		<beans:property name="enableAuthorities" value="true" />
+		<beans:property name="usersByUsernameQuery"
+            			value="SELECT usr_login_id USERNAME, usr_password PASSWORD , CASE usr_status WHEN 0 THEN 'true' ELSE 'false' END ENABLED FROM ddp_user WHERE LOWER(usr_domain)='inline' and usr_login_id=?;" />
+        <!-- <beans:property name="authoritiesByUsernameQuery"
+            			value="SELECT u.usr_login_id USERNAME, g.grp_name, r.rol_name ROLENAME FROM ddp_user u, ddp_group_setup gs, ddp_group g, ddp_role_setup rs, ddp_role r WHERE gs.grs_user_id = u.usr_id and gs.grs_group_id = g.grp_id and rs.rls_role_id = r.rol_id and u.usr_login_id=?;" /> -->
+		<!-- Below query should be fine-tuned not to return multiple query. Currently return multiple rows but correct values  -->
+		<beans:property name="authoritiesByUsernameQuery"
+            			value="SELECT distinct u.usr_login_id USERNAME, r.rol_name ROLENAME, g.grp_name FROM ddp_user u, ddp_group_setup gs, ddp_group g, ddp_role_setup rs, ddp_role r WHERE gs.grs_user_id = u.usr_id and (rs.rls_child_usr_id = u.usr_id or rs.rls_parent_grp_id = gs.grs_group_id) and g.grp_id = gs.grs_group_id and r.rol_id = rs.rls_role_id and u.usr_login_id=?;" />
+		            			
+	</beans:bean>
+	
+	<beans:bean id="adAuthenticationProvider" class="org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider">
+		<beans:constructor-arg value="logistics.intra" />
+		<beans:constructor-arg value="ldap://logistics.intra:389/" />
+		<!-- Convert AD errors. -->
+		<beans:property name="useAuthenticationRequestCredentials" value="true" />
+    	<beans:property name="convertSubErrorCodesToExceptions" value="true" />
+    	<beans:property name="userDetailsContextMapper" ref="customUserDetailsContextMapper" />
+	</beans:bean>
+	
+	<!-- Customising UserDetail -->
+  	<beans:bean id="customUserDetailsContextMapper" class="com.agility.ddp.view.auth.CustomUserDetailsContextMapper">
+  		<beans:property name="dataSource" ref="dataSource" />
+  		<!-- <beans:property name="roleQuery" 
+  						value="SELECT u.usr_login_id USERNAME, g.grp_name, r.rol_name ROLENAME FROM ddp_user u, ddp_group_setup gs, ddp_group g, ddp_role_setup rs, ddp_role r WHERE gs.grs_user_id = u.usr_id and gs.grs_group_id = g.grp_id and rs.rls_role_id = r.rol_id and u.usr_login_id=?" /> -->
+		<!-- UNION Query -->
+		<!-- <beans:property name="roleQuery" 
+  						value="SELECT u.usr_login_id USERNAME, g.grp_name, r.rol_name ROLENAME FROM ddp_user u, ddp_group_setup gs, ddp_group g, ddp_role_setup rs, ddp_role r WHERE gs.grs_user_id = u.usr_id and rs.rls_child_usr_id = u.usr_id and g.grp_id = gs.grs_group_id and r.rol_id = rs.rls_role_id and u.usr_login_id=? UNION SELECT u.usr_login_id USERNAME, g.grp_name, r.rol_name ROLENAME FROM ddp_user u, ddp_group_setup gs, ddp_group g, ddp_role_setup rs, ddp_role r WHERE gs.grs_user_id = u.usr_id and rs.rls_parent_grp_id = gs.grs_group_id and g.grp_id = gs.grs_group_id and r.rol_id = rs.rls_role_id and u.usr_login_id=?" /> -->
+		<!-- Below query should be fine-tuned not to return multiple query. Currently return multiple rows but correct values  -->
+		<beans:property name="roleQuery" 
+  						value="SELECT distinct u.usr_login_id USERNAME, r.rol_name ROLENAME, g.grp_name FROM ddp_user u, ddp_group_setup gs, ddp_group g, ddp_role_setup rs, ddp_role r WHERE gs.grs_user_id = u.usr_id and (rs.rls_child_usr_id = u.usr_id or rs.rls_parent_grp_id = gs.grs_group_id) and g.grp_id = gs.grs_group_id and r.rol_id = rs.rls_role_id and u.usr_login_id=?;" />		  						  							
+  	</beans:bean>
+    
+  	<beans:bean id="jdbcTemplate"  class="org.springframework.jdbc.core.JdbcTemplate">
+  		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<!-- Querying Active Directory -->
+	<beans:bean id="queryActiveDirectory" class="com.agility.ddp.view.auth.QueryActiveDirectory">
+    	<beans:property name="initialContextFactory" value="com.sun.jndi.ldap.LdapCtxFactory" />
+    	<beans:property name="provideUrl" value="ldap://logistics.intra:389" />
+		<beans:property name="securityAuthentication" value="simple" />
+		<beans:property name="securityPrincipal" value="CN=DMAdmin,OU=Service Accounts,OU=DMS,OU=IT Infrastructure Servers,OU=DataCenter Singapore,DC=logistics,DC=intra" />
+		<beans:property name="securityCredentials" value="agildcmnsy" />
+		<beans:property name="securityProtocol" value="simple" />
+	</beans:bean>	
+	  	
+</beans:beans>

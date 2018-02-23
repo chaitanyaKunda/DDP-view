@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpAuditTxn" items="${ddpaudittxns}" z="xQU/UmOUfqa6Oh+0deAlZ6DG25U=">
+        <table:table data="${ddpaudittxns}" id="l_com_agility_ddp_data_domain_DdpAuditTxn" path="/ddpaudittxns" typeIdFieldName="atxId" z="YQm9e/lelGLMq/wB97WC0AD4kk8=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpAuditTxn_atxTxnId" property="atxTxnId" z="kFLaPI6rJpsF6XCCZPwIiL83OV0="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAuditTxn_atxEventName" property="atxEventName" z="ZcKq5vLmhRc0FMyXUIC6YYEp8gw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAuditTxn_atxEventSource" property="atxEventSource" z="I+wdcUz+64iB7sFaYxxd7v1qeJk="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAuditTxn_atxObjectName" property="atxObjectName" z="Q72BbOnDhlWokqcKy/Pad4bA2Dw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAuditTxn_atxApplicationName" property="atxApplicationName" z="+33YZ/5nKsbL7hJVAbgP8QLTKyo="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAuditTxn_atxDetail" property="atxDetail" z="WXNEC3F1jiQSaz5Lu3Dk5GsjBEg="/>
+        </table:table>
+    </page:list>
+</div>

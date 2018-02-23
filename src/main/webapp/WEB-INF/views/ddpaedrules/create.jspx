@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+   	 <spring:message code="checkbox_disable_from_address_message" var="disablefromadd"/>
+	 <spring:message code="checkbox_enable_from_address_message" var="enablefromadd"/>
+	 <spring:message code="validation.email.multi.reqexp" var="multiemailregexp"></spring:message>
+	 <spring:message code="validation.email.single.reqexp" var="emailregexp"></spring:message>
+	 <spring:message code="gensource.3rdparty" var="noncontroldocs"></spring:message>
+	 <spring:message code="partycode.restrict.company" var="partyrestictoncompanies"></spring:message>
+	 <spring:message code="partycode.restrict.doctype" var="partyrestictondoctypes"></spring:message> 
+	 <spring:message code="label_rule_name" var="label_rule_name"></spring:message> 
+	 <spring:message code="label_rule_description" var="label_rule_description" htmlEscape="false"></spring:message> 
+	 <spring:message code="label_rule_status" var="label_rule_status" htmlEscape="false"></spring:message>
+	 <spring:message code="label_activate_status_active" var="label_activate_status_active" htmlEscape="false"></spring:message>
+	 <spring:message code="label_activate_status_inactive" var="label_activate_status_inactive" htmlEscape="false"></spring:message>
+	 <spring:message code="label_party_id" var="label_party_id" htmlEscape="false"></spring:message> 
+	 <spring:message code="label_rule_activation_date" var="label_rule_activation_date" htmlEscape="false"></spring:message> 
+	 <spring:message code="label_company" var="label_company" htmlEscape="false"></spring:message> 
+	 <spring:message code="label_branch" var="label_branch" htmlEscape="false"></spring:message> 
+	 <spring:message code="label_selected_branch" var="label_selected_branch" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_from" var="label_email_from" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_to" var="label_email_to" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_cc" var="label_email_cc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_sla_info_receivers" var="label_sla_info_receivers" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_notification" var="label_text_notification" htmlEscape="false"></spring:message>
+	 <spring:message code="label_document_type" var="label_document_type" htmlEscape="false"></spring:message>
+	 <spring:message code="label_party_code" var="label_party_code" htmlEscape="false"></spring:message>
+	 <spring:message code="label_generation_source" var="label_generation_source" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_ratedornonrated" var="label_text_ratedornonrated" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_printing" var="label_text_printing" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_sla_desc" var="label_text_sla_desc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_add" var="label_text_add" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_remove" var="label_text_remove" htmlEscape="false"></spring:message>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpAedRule" modelAttribute="rulewrapper" path="/ddpaedrules" render="${empty dependencies}" z="z9MVOEGgjARxoZA816evTM9BmdM=">
+
+<!-- 	DDP Rule Define -->
+
+		<c:if test="${not empty duplicateCustID}">	
+			<div align="center" style="color:red;"><spring:message code="lable_duplicate_customer_id" arguments="${duplicateCustID}"/><br />
+			<spring:message code="lable_customer_id_change"/><br />
+			</div>
+		</c:if>
+		<field:textarea field="ddpRule.rulName" id="c_com_agility_ddp_data_domain_DdpRule_rulName" required="true" z="+VJWpzBrzlyznDW4nOdja775Vu4=" label="${ label_rule_name }" render="false"/>
+        <field:textarea field="ddpRule.rulDescription" id="c_com_agility_ddp_data_domain_DdpRule_rulDescription" z="X5Zp1m3NXtx8grhkwRwIBofhiaU=" label="${ label_rule_description }" required="true" validationRegex="([ a-zA-Z0-9._%+-])*"/>
+        <field:input field="ddpRule.rulStatus" id="c_com_agility_ddp_data_domain_DdpRule_rulStatus" required="true" validationMessageCode="field_invalid_integer" z="yckOJm0r7XtdLnT7heqYiA19GEo=" label="${ label_rule_status }" render="false"/>
+        <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpRule" render="${not empty dependencies}" z="BpraijW2L/6y7AGMLhDE9ClSO4U="/>
+		<field:input field="ddpRuleDetail.rdtPartyId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyId" z="tIo4WlRonY5XIphh7X4sIUo8pms=" label="${ label_party_id }" required="true"/>
+		
+		<field:datetime required="false" dateTimePattern="${ddpAedRule_aedactivationdate_date_format}" field="ddpRuleDetail.rdtActivationDate" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtaedActivationDate" z="user-managed" label="${ label_rule_activation_date }" />
+		
+		
+	    <field:combo_select field="ddpRuleDetail.rdtCompany" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtCompany" itemValue="comCompanyCode" items="${ddpcompanys}" path="/ddpcompanys" z="YlC0mvaIyYCKEw4mtyPrfLjkqHs=" label="${ label_company }" itemLabel="comCompanyCode" mandatory="true"/>
+	    
+		
+		<table class="tab"  border="0" cellspacing="0" cellpadding="0" >
+			<tr style="background-color: #FFFFFF;">
+		    <td class="first">
+		    	<field:select field="ddpRuleDetail.rdtBranch" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch" itemValue="brnBranchCode" itemLabel="brnBranchCode" label="${ label_branch }"
+		    	  items="${ddpbranches}" path="/ddpbranches" z="fZrPJOO9YNRi3HDQu/rW+Hsi4Z0=" mandatory="true"/>
+	    	</td>
+	    	<td class="second">
+	    		 <span>
+					<button class="switch" id="left" title="Move Items to First list">&lt;</button>
+					<button class="switch" id="right" title="Move Items to Second list">&gt;</button>
+				</span>
+			</td>
+			<td class="third">
+				<field:select field="lstBranch" id="c_com_agility_ddp_data_domain_DdpRuleDetail_selectbranch" itemValue="brnBranchCode" label="${ label_selected_branch }"
+		    	  items="${selectedBranchList}" path="/ddpbranches" z="fZrPJOO9YNRi3HDQu/rW+Hsi4Z0=" required="true" mandatory="true"/>
+			</td>	
+			</tr>
+		</table>	
+				
+			
+<!--    Communication Details -->
+  		<div id="first"><span style="color:rgb(224,169,27);position:relative;top:1px;left:300px"><input type="checkbox" id="chbFrm" name="chbFrm" title="Enable from address" /><span class="mess"> ${enablefromadd}</span></span></div>	
+   		<field:input field="ddpCommEmail.cemEmailFrom" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailFrom" z="AemQpy9byieKKeZq+zK41tVGueA=" label="${ label_email_from }"  validationRegex="${emailregexp}" />
+   		
+<!--         <field:input field="ddpCommEmail.cemEmailTo" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailTo" z="F1ZxvZHXZ9TDyU2/hDrctmqJMVI=" label="Email To"  validationRegex="[ a-zA-Z0-9._%+-;]+@[ a-zA-Z0-9.-]+\.[a-zA-Z ]{2,4}"/> -->
+<!--         <field:input field="ddpCommEmail.cemEmailCc" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailCc" z="l8BWslrw8yPVX1a1oxueqBoNypI=" label="Email CC"  validationRegex="[a-zA-Z0-9._%+-;]+@[a-zA-Z0-9.-;]+\.[a-zA-Z]{2,4}"/> -->
+  		<field:input field="ddpCommEmail.cemEmailTo" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailTo" z="F1ZxvZHXZ9TDyU2/hDrctmqJMVI=" label="${ label_email_to }" required="true" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" width="40em"/> 
+	    <field:input field="ddpCommEmail.cemEmailCc" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailCc" z="l8BWslrw8yPVX1a1oxueqBoNypI=" label="${ label_email_cc }" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" width="40em"/>
+        <field:textarea field="ddpCommEmail.cemEmailSubject" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailSubject" z="QekQ67Tz9iorh8Cv3elRXaFod4A=" label="Email Subject" render="false"/>
+        <field:textarea field="ddpCommEmail.cemEmailBody" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBody" z="J+KPWDP22/a4NxtUJfEF2jj0cJQ=" label="Email Body" render="false"/>
+		
+		<select name='SLAfreqLKP' id='SLAfreqLKP' style="display:none;">
+    				<option value='none' selected='selected'>None</option>
+					<option value='day'>Day</option>
+					<option value='week'>Week</option>
+					<option value='month'>Month</option>
+		</select>
+		
+        <select name="divdoctypeitems" id="divdoctypeitems" style="display:none;">
+    		<c:forEach items="${ddpdoctypes}" var="element" varStatus="loop">
+    			<option value="${element.dtyDocTypeCode}"> ${element.dtyDocTypeCode} </option>
+    		</c:forEach>
+    	</select>
+    	
+    	<select name="divPartyCodes" id="divPartyCodes" style="display:none;">
+    		<c:forEach items="${ddppartys}" var="element" varStatus="loop">
+    			<option value="${element.ptyPartyCode}"> ${element.ptyPartyName} </option>
+    		</c:forEach>
+    	</select>
+    	
+        <select name="divCommOption" id="divCommOption" style="display:none;" >
+	        <c:forEach items="${ddpCommOptionsLkp}" var="element" varStatus="loop">
+	        		<option value="${element.id.cplOption}">${element.id.cplOption}</option>
+		   </c:forEach>
+        </select>
+        
+        <select name="divDdpGenSource" id="divDdpGenSource" style="display:none;" >
+	        <c:forEach items="${ddpGenSourceLkp}" var="element" varStatus="loop">
+	        		<option value="${element.id.gslOption}">${element.id.gslDescription}</option>
+		   </c:forEach>
+        </select>
+        
+        <select name="divDdpRate" id="divDdpRate" style="display:none;" >
+	        <c:forEach items="${ddpRatedLkp}" var="element" varStatus="loop">
+	        		<option value="${element.id.rtlOption}">${element.id.rtlDescription}</option>
+		   </c:forEach>
+        </select>
+        
+		<c:forTokens items="${noncontroldocs}" delims="," var="noncontroldoc" varStatus="loop">
+			<input type="hidden" value="${noncontroldoc}" class="clsnoncontroldoc" id="noncontroldoc${loop.index}"/>
+		</c:forTokens>
+		 
+		<c:forTokens items="${partyrestictoncompanies}" delims="," var="partyrestictoncompany" varStatus="loop">
+			<input type="hidden" value="${partyrestictoncompany}" class="clspartyrestictoncompany" id="partyrestictoncompany${loop.index}"/>
+		</c:forTokens>
+		<c:forTokens items="${partyrestictondoctypes}" delims="," var="partyrestictondoctype" varStatus="loop">
+			<input type="hidden" value="${partyrestictondoctype}" class="clspartyrestictondoctype" id="partyrestictondoctype${loop.index}"/>
+		</c:forTokens>
+        
+         <!--  Notification Part -->
+	    <div id="divNotification" style="padding: 10px;">
+	    	<table id="tblNotification" class="tblNotification" style="width: 100%">
+				<th colspan="2"><c:out value="${ label_text_notification }"></c:out></th>
+				<tr><td>
+				<div style="float: right;display: inline;" id="helpID"><img src="../userguidev/info.png" width="15px" title="meta data entries"/></div><br />
+    			<div style="float: left;"><field:input field="ddpNotification.notSuccessEmailAddress" id="c_com_agility_ddp_data_domain_DdpNotification_notSuccessEmailAddress" z="QekQ67Tz9iorh8Cv3elRXaFod4A=" label="${ label_sla_info_receivers }" validationRegex="${multiemailregexp}" width="30em"/></div>
+    			<div id="helpTextSLAID" style="float:right;align-right: 30px;align-top: 10px; display: none;"><spring:message code="helpTextSLANotification" var="helpTextSLA"></spring:message>
+	    			<p>User can specify the Maximum/Minimum number of times that invoices/document types (SLA) that could be sent for a given <b>Client ID</b> in a <i>day/week/month</i>. When creating AED rule for a <b>Client ID</b>, user can set Max SLA and Min SLA for each Document type as None/day/week/month.<br />
+						&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<b>None</b>&amp;nbsp; :  No SLA is setup and no notification will be sent<br/>
+						&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<b>Day</b>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; :  Max/Min number of documents to be sent for this Client ID in a day<br/>
+						&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<b>Week</b>&amp;nbsp; :  Max/Min number of documents to be sent for this Client ID in a week<br/>
+						&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;<b>Month</b>&amp;nbsp;:  Max/Min number of documents to be sent for this Client ID in a month</p>
+    			</div>
+    			</td></tr>
+	    	</table>
+	    </div>
+	    <!--  Notification Part Ends -->
+	    
+        <div style="padding: 10px;" >
+       	<table id="tblDoc" class="tblDoc" style="width:100%">
+       		<tr>
+       				<th><c:out value="${ label_document_type }"></c:out></th>
+			  	 	<th><c:out value="${ label_party_code }"></c:out></th>
+		  	 		<th><c:out value="${ label_generation_source }"></c:out></th>
+		  	 		<th><c:out value="${ label_text_ratedornonrated }"></c:out></th>
+		  	 		<th><c:out value="${ label_text_printing }"></c:out></th> 
+		  	 		<th colspan="3"><c:out value="${ label_text_sla_desc }"></c:out> </th> 
+		  	 		<th><div class="ancadd btn_shape"><c:out value="${ label_text_add }"></c:out></div></th> 
+		  	 	</tr> 
+	    </table>
+	    </div>
+	    <!--  script for validation -->
+	    <script type="text/javascript">
+    		$(document).ready(function(){
+    			
+    			$("#proceed").click(function(){
+    				
+    				var widgets = [];
+    				var element;
+    				widgets.push("widget__ddpNotification.notSuccessEmailAddress_id","widget__ddpCommEmail.cemEmailFrom_id","widget__ddpCommEmail.cemEmailCc_id");
+    				widgets.push("widget__ddpCommEmail.cemEmailTo_id","widget__ddpRuleDetail.rdtPartyId_id");
+    				for(var index=0; index &lt; widgets.length ; index++)
+   					{
+    					if(dojo.hasClass( document.getElementById(widgets[index]),"dijitError"))
+       					{
+        					element = widgets[index].substring(7 ,widgets[index].length);
+        					dojo.byId(element).focus();
+       					}
+   					}
+    					
+//     				var reg= /[ a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z ]+[,; ]*/;
+//      				var mulreg =/^([ a-zA-Z0-9]+([-+. ]\w+)*@\w+([-. ]\w+)*\.\w+([-. a-zA-Z0-9]+)*([.; ])*)*$/;
+//      				if(! dojo.byId("_ddpNotification.notSuccessEmailAddress_id").value==''){
+//      					if(dojo.hasClass( document.getElementById(widgets[0]),"dijitError"))
+//        					{
+//         					var element = widgets[0].substring(7 ,widgets[0].length);
+//         					dojo.byId(element).focus();
+//        					}
+//      				}
+//      				if(! dojo.byId("_ddpCommEmail.cemEmailFrom_id").value==''){
+//      					if(! dojo.byId("_ddpCommEmail.cemEmailCc_id").value==''){
+//          					if(dojo.hasClass( document.getElementById(widgets[1]),"dijitError"))
+//            					{
+//             					element = widgets[1].substring(7 ,widgets[1].length);
+//             					dojo.byId(element).focus();
+//            					}
+//          				}
+//      				}
+//      				if(! dojo.byId("_ddpCommEmail.cemEmailCc_id").value==''){
+//      					if(dojo.hasClass( document.getElementById(widgets[2]),"dijitError"))
+//        					{
+//         					element = widgets[2].substring(7 ,widgets[2].length);
+//         					dojo.byId(element).focus();
+//        					}
+//      				}
+//  					if(dojo.hasClass( document.getElementById(widgets[3]),"dijitError"))
+//    					{
+//     					element = widgets[3].substring(7 ,widgets[3].length);
+//     					dojo.byId(element).focus();
+//    					}
+// //     				if(dojo.byId("_ddpCommEmail.cemEmailTo_id").value=='')
+// //    					{
+// //    						dojo.byId("_ddpCommEmail.cemEmailTo_id").focus();
+// //    					}
+//  					if(dojo.hasClass( document.getElementById(widgets[4]),"dijitError"))
+//    					{
+//     					element = widgets[4].substring(7 ,widgets[4].length);
+//     					dojo.byId(element).focus();
+//    					}
+    				
+    			});
+    		});
+    	</script>
+    	<!-- End Script for validation -->
+		<script language="javascript">
+		
+		changeActiveLinkColor("aedrule"); // change the active link background color
+		
+		 var noncontroldocsArr = [];
+		 var partyrestictoncompaniesArr = [];		
+		 var partyrestictondoctypesArr = [];
+	 	 dojo.query(".clsnoncontroldoc").forEach(function(node){
+	 		noncontroldocsArr.push(node.value);
+		 });
+	 	 dojo.query(".clspartyrestictoncompany").forEach(function(node){
+	 		partyrestictoncompaniesArr.push(node.value);
+	 	 });
+	 	 dojo.query(".clspartyrestictondoctype").forEach(function(node){
+	 		partyrestictondoctypesArr.push(node.value);
+	 	 });
+        // DOM is ready
+//         $("#chbFrm").attr('title', 'Enable/Disable From Address');
+         var totalRowCount = 0;
+         var tag = 1;
+         var fromAddress="";
+         dojo.addOnLoad(function(){
+
+        	 dojo.style(dojo.byId("_ddpCommEmail.cemEmailFrom_id"),{display:'none'});
+        	 $('input[type="checkbox"]').click(function(){
+        		if(tag == 1)
+        			{
+	        			tag=0;
+	        			$("#chbFrm").attr('title', 'Disable From Address');
+	        			dojo.byId("_ddpCommEmail.cemEmailFrom_id").value=fromAddress;
+	        			$(".mess").text(" ${disablefromadd}");
+	        			dojo.style(dojo.byId("_ddpCommEmail.cemEmailFrom_id"),{display:'block'});
+	//	        			dojo.style(dojo.byId("_c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailFrom_id"),{display:'block'});
+        			}
+        		else
+        			{
+        				tag=1;
+	//	        		dojo.style(dojo.byId("_c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailFrom_id"),{display:'none'});
+	        			$("#chbFrm").attr('title', 'Enable From Address');
+	        			$(".mess").text(" ${enablefromadd}");
+	        			fromAddress = dojo.byId("_ddpCommEmail.cemEmailFrom_id").value;
+	        			dojo.byId("_ddpCommEmail.cemEmailFrom_id").value="";
+	        			dojo.style(dojo.byId("_ddpCommEmail.cemEmailFrom_id"),{display:'none'});
+        			}
+             });
+        	 myDivObj = document.getElementById("divOption");
+        	 if ( myDivObj ) {
+        	 }else{
+        	 }
+        	 
+        	 $('#tblDoc #trDoc #td1').find('#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtDocType_id').find('label').remove();    
+        	 $('#tblDoc #trDoc #td1').find('#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyCode_id').find('label').remove();
+        	 
+       	 	/********************************************************************************************************************/
+    		// listen to the "move items" buttons
+			dojo.query("button.switch")
+				.connect("onclick",function(e){
+					switch(e.target.id.toString()){
+						case "left" : 
+						{
+							var listLength = document.getElementById("_lstBranch_id");
+							if(listLength != null){
+								for(var i=0; i &lt; listLength.options.length;i++){
+									var selectedtext=dijit.byId("_lstBranch_id").containerNode.options[i].text;
+									var selectedvalue=dijit.byId("_lstBranch_id").containerNode.options[i].value;
+								    if(listLength.options[i].selected){
+								    	document.getElementById("_ddpRuleDetail.rdtBranch_id").add(new Option(selectedtext, selectedvalue));
+								    }
+							    }  
+								removeItem(document.getElementById("_lstBranch_id"));
+							}
+							else{
+								alert("Please select atleast one branch to move");
+							}
+							break;
+						}
+						case "right" : 
+						{
+							var listLength = document.getElementById("_ddpRuleDetail.rdtBranch_id");
+							if(listLength != null){
+								for(var i=0; i &lt; listLength.options.length;i++){
+									var selectedtext=dijit.byId("_ddpRuleDetail.rdtBranch_id").containerNode.options[i].text;
+									var selectedvalue=dijit.byId("_ddpRuleDetail.rdtBranch_id").containerNode.options[i].value;
+								    if(listLength.options[i].selected){
+								    	document.getElementById("_lstBranch_id").add(new Option(selectedtext, selectedvalue));
+								    }
+							    }  
+								removeItem(document.getElementById("_ddpRuleDetail.rdtBranch_id"));
+								addtolist(document.getElementById("_lstBranch_id"));
+							}
+							else{
+								alert("Please select atleast one branch to move");
+							}
+							break;
+						}
+						e.preventDefault();
+					}
+					e.preventDefault();
+			 });
+			 function addtolist(listitem){
+				
+				var i;
+				for(i=0;i &lt; listitem.options.length;i++) 
+				{
+					listitem[i].selected=true;
+				}
+			 }
+			 function removeItem(selectbox)
+			 {
+				var i;
+				for(i=selectbox.options.length-1;i>=0;i--)
+				{
+				if(selectbox.options[i].selected)
+				selectbox.remove(i);
+				}
+			  }
+			  /********************************************************************************************************************/
+				
+		        
+			  /********************************************************************************************************************/
+	          //Method to call on load for branches list according to selected country
+// 	          $("#_lstBranch_id").empty()
+// 	          var companyID = dijit.byId("_ddpRuleDetail.rdtCompany_id");
+// 	          var _fragment_item_ = dojo.byId("_fragment_item_"); 
+//      	 	  $.ajax({
+// 		    	    type: "POST",
+// // 		    	    url: "ddpaedrules/branchbycountry?companyID="+ dojo.trim(companyID.value),
+// 					url: "ddpaedrules/branchByCountryAsString?companyID="+ dojo.trim(companyID.value),
+// 		    	    data: {
+// 		    	    		"companyID" : dojo.trim(companyID.value)
+// 		    	    	  },
+// 		    	    contentType: "application/HTML; charset=utf-8",
+// 		    	    async: false,
+// 		    	    dataType: "HTML",
+// 		    	    success: function(response) {
+// 		    	    	var brn = response.split(",");
+// 		    	    	$("#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch_id").find('select[id="_ddpRuleDetail.rdtBranch_id"]').empty();
+// 		    	    	out =" &lt;option value='ALL'&gt;ALL &lt;/option&gt;";
+// 		    	    	$("#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch_id").find('select[id="_ddpRuleDetail.rdtBranch_id"]').append(out);
+// 		    	    	for(var k=0;k &lt; brn.length ;k++)
+// 		    	    	{
+// 		    	    		 var result = brn[k]; 
+// 			    	    		out =" &lt;option value='"+result+"'&gt;"+result+" &lt;/option&gt;";
+// 			    	    		$("#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch_id").find('select[id="_ddpRuleDetail.rdtBranch_id"]').append(out);
+//  						}
+	    	    		
+// 		    	    },
+// 		    	    error: function() {
+// 		    	       alert("Failed to load Branches");
+// 		    	       e.preventDefault();
+// 		    	    }
+// 		    	});
+     	     /********************************************************************************************************************/
+	     	    
+   	         		         
+		         
+		         
+	            /********************************************************************************************************************/
+	     	    //select and remove the branches
+	     	 	var cnt = 2;
+		        $(".ancadd").click(function(){
+			        var rowscount = totalRowCount;
+			        
+			      //Document Type creation 
+			        var doctypeLst = document.getElementById("divdoctypeitems");
+			        var  selectDdpDoctype= "&lt;select name='selectDoctype"+(parseInt(rowscount)+1)+"' id='selectDoctype"+(parseInt(rowscount)+1)+"' onchange='restrictPrintingEmailing(this,"+(parseInt(rowscount)+1)+")'  style='width:120px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        for(var i=0; i &lt; doctypeLst.options.length;i++){
+						var selectedvalue=doctypeLst.options[i].value;
+						var selectedtext=doctypeLst.options[i].text;
+						selectDdpDoctype+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+				    }
+			       selectDdpDoctype+="&lt;/select&gt;";
+			        //Document Type creation ends
+			        
+			      //Party Code creation 
+			        var partyLst = document.getElementById("divPartyCodes");
+			        var  selectDdpPartyCode= "&lt;select name='selectpartycode"+(parseInt(rowscount)+1)+"' id='selectpartycode"+(parseInt(rowscount)+1)+"' style='width:150px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        for(var i=0; i &lt; partyLst.options.length;i++){
+						var selectedvalue=partyLst.options[i].value;
+						var selectedtext=partyLst.options[i].text;
+						selectDdpPartyCode+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+				    }
+			       selectDdpPartyCode+="&lt;/select&gt;";
+			        //Party Code creation ends
+			        
+			        //Generate Source creation 
+			        var genSourcelkpLst = document.getElementById("divDdpGenSource");
+			        var  selectDdpGenSource= "&lt;select name='selectDdpGenSource"+(parseInt(rowscount)+1)+"' id='selectDdpGenSource"+(parseInt(rowscount)+1)+"' onchange='restrictGenSource(this,"+(parseInt(rowscount)+1)+")' style='width:160px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        for(var i=0; i &lt; genSourcelkpLst.options.length;i++){
+						var selectedvalue=genSourcelkpLst.options[i].value;
+						var selectedtext=genSourcelkpLst.options[i].text;
+						selectDdpGenSource+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+				    }
+			        selectDdpGenSource+="&lt;/select&gt;";
+			        //Generate Source creation ends
+
+			      	//Rate creation 
+			        var ratelkpLst = document.getElementById("divDdpRate");
+			        var  selectDdpRate= "&lt;select name='selectDdpRate"+(parseInt(rowscount)+1)+"' id='selectDdpRate"+(parseInt(rowscount)+1)+"' style='width:120px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        for(var i=0; i &lt; ratelkpLst.options.length;i++){
+						var selectedvalue=ratelkpLst.options[i].value;
+						var selectedtext=ratelkpLst.options[i].text;
+						selectDdpRate+="&lt;option value=\""+selectedvalue+"\" &gt;"+selectedtext+"&lt;/option&gt;";
+				    }
+			        selectDdpRate+="&lt;/select&gt;";
+			        //Rate ends
+
+			        //comOption creation 
+			        var comOptionlkpLst = document.getElementById("divCommOption");
+			        var  selectCommOption= "&lt;select name='selectCommOption"+(parseInt(rowscount)+1)+"' id='selectCommOption"+(parseInt(rowscount)+1)+"'  style='width:80px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        for(var i=0; i &lt; comOptionlkpLst.options.length;i++){
+						var selectedvalue=comOptionlkpLst.options[i].value;
+						var selectedtext=comOptionlkpLst.options[i].text;
+						selectCommOption+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+				    }
+			        selectCommOption+="&lt;/select&gt;";
+			        //comOption creation ends
+			        
+			        //SLA tab creation
+			        var slaFreqLst = document.getElementById("SLAfreqLKP");
+			        var selectSLAfreq = "&lt;select name='selectSLAfreq"+(parseInt(rowscount)+1)+"' id='selectSLAfreq"+(parseInt(rowscount)+1)+"' onChange='restrictSLA(this,"+(parseInt(rowscount)+1)+")' style='width:60px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        for(var i=0; i &lt; slaFreqLst.options.length; i++)
+			        {
+			        	var selectedvalue=slaFreqLst.options[i].value;
+						var selectedtext=slaFreqLst.options[i].text;
+						selectSLAfreq+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+			        }
+			        
+			        var  SLAMin= "&lt;input name='SLAMin"+(parseInt(rowscount)+1)+"' id='SLAMin"+(parseInt(rowscount)+1)+"' readOnly='readOnly' class='seqcls' onkeypress='return isNumber(event)' style='width:25px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        var  SLAMax= "&lt;input name='SLAMax"+(parseInt(rowscount)+1)+"' id='SLAMax"+(parseInt(rowscount)+1)+"' readOnly='readOnly' class='seqcls' onkeypress='return isNumber(event)' style='width:25px;border:1px solid rgb(215, 215, 215);' &gt;";
+			        
+				    var out=" &lt;tr id='"+(parseInt(rowscount)+1)+"'&gt;";
+				    out +="&lt;td&gt; "+selectDdpDoctype+" &lt;/td&gt; ";
+					out +="&lt;td&gt;"+selectDdpPartyCode+" &lt;/td&gt; ";	
+					out +="&lt;td&gt;"+selectDdpGenSource+"&lt;/td&gt;";
+					out +="&lt;td&gt;"+selectDdpRate+"&lt;/td&gt;";
+					out +="&lt;td&gt;"+selectCommOption+"&lt;/td&gt;";
+					out +="&lt;td&gt;"+selectSLAfreq+"&lt;/td&gt;";
+					out +="&lt;td&gt;Min "+SLAMin+"&lt;/td&gt;";
+					out +="&lt;td&gt;Max "+SLAMax+"&lt;/td&gt;";
+					out +="&lt;td&gt; ";
+					out +="  &lt;a href='javascript:void(0);' id='anc_rem' class='ancrem btn_shape' &gt; ${ label_text_remove } &lt;/a &gt;&lt;/td&gt;&lt;/tr&gt;";
+				     
+				    $('#tblDoc').last().append(out);
+	            	 cnt++;
+		             totalRowCount = parseInt(rowscount)+1 ;
+		             restrictRated("selectDdpRate",(parseInt(rowscount)+1));
+		          	//var stat = "'"+parseInt(rowscount)+1+"'";
+		           //  $("#tableDocCount").val(stat);
+		          
+	    	   });
+		       
+		       $(document).on("click", ".ancrem", function (e) {
+		                 var target = e.target;
+		                 $(target).closest('tr').remove();
+	
+		       });
+		       /********************************************************************************************************************/
+			    
+		       /********************************************************************************************************************/
+		      
+		       
+		         //Call this method on change
+		         var companyID = dijit.byId("_ddpRuleDetail.rdtCompany_id");
+		         dojo.connect(companyID,"onChange",function(evt){
+		         	//Empty the Selected text box on selection change 
+		         	$("#_lstBranch_id").empty()
+		     	 	$.ajax({
+				    	    type: "GET",
+				    	    url: "../../ruleutil/valuesByCountryAsString",
+				    	    data: {
+				    	    		"companyID" : dojo.trim(companyID.value)
+				    	    	  },
+				    	    contentType: "application/HTML; charset=utf-8",
+				    	    async: false,
+				    	    dataType: "HTML",
+				    	    success: function(response) {
+				    	    	var result = JSON.parse(response);
+				    	    	var brn = result.branchs.split(",");
+				    	    	var dty = result.doctypes.split(",");
+				    	    	removeOptions(dojo.byId("_ddpRuleDetail.rdtBranch_id"));
+				    	    	var brnoptions="";
+				    	    	for(var k=0;k &lt; brn.length ;k++)
+				    	    	{
+				    	    		 var kbrn = brn[k]; 
+				    	    		 brnoptions +=" &lt;option value='"+kbrn+"'&gt;"+kbrn+" &lt;/option&gt;";
+		 						}
+				    	    	$("#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch_id").find('select[id="_ddpRuleDetail.rdtBranch_id"]').append(brnoptions);
+				    	    	removeOptions(dojo.byId("divdoctypeitems"));
+				    	    	var dtyoptions = "";
+				    	    	for(var k=0;k &lt; dty.length ;k++)
+				    	    	{
+				    	    		 var kdty = dty[k]; 
+				    	    		 dtyoptions +=" &lt;option value='"+kdty+"'&gt;"+kdty+" &lt;/option&gt;";
+		 						}
+				    	    	$("#divdoctypeitems").append(dtyoptions);
+				    	    	adjustDocOptions();
+		                         _fragment_item_.innerHTML = "" + result;
+		                         Spring.addDecoration(new Spring.ElementDecoration({
+		                                                   elementId : '_ddpRuleDetail.rdtBranch_id',
+		                                                   widgetType: 'dijit.form.MultiSelect',
+		                                                   widgetAttrs : {hasDownArrow : true}
+		                         }));
+			    	    		
+				    	    	e.preventDefault();
+				    	    },
+				    	    error: function() {
+				    	       alert("Failed to load Select User");
+				    	       e.preventDefault();
+				    	    }
+				    	});
+		         	/** Adjust the Doc rows with updated Documents**/
+		         	var rowscount = $("#tblDoc tr").length;
+		       	 });
+		        /********************************************************************************************************************/
+		         dojo.connect(dojo.byId("_ddpRuleDetail.rdtPartyId_id"),"onkeypress",function(evt){
+				        
+			        	var key;
+// 			        	if(navigator.appName == "Netscape") 
+// 			        	    key = evt.charCode; //or e.which; (standard method)
+// 			        	else 
+// 			        	    key = evt.keyCode;
+						key = (evt.which) ? evt.which : evt.keyCode;
+						console.log(' : '+ key);
+			        	//alert(key);
+			        	var ok;
+			        	if (dijit.byId("_ddpRuleDetail.rdtPartyId_id").getValue() === "*") {
+			        		ok = false;
+			        		  if (!ok &amp;&amp; (key != 8) &amp;&amp; (key != 9)){
+						        	if (evt.preventDefault) {
+						                evt.preventDefault();
+						            }
+						            else {
+						               return false;
+						            }
+						        }
+			        	} else {
+			        	 // alert(dijit.byId("_ddpRuleDetail.rdtPartyId_id").getValue().length);
+			        		if (dijit.byId("_ddpRuleDetail.rdtPartyId_id").getValue().length === 0) {
+			        			
+					        	 ok =  key == 35  ||key == 36 || key == 46 || key == 47 || key ==61 || key == 95 || key == 16 || key == 17 || key == 42 || key == 8 || key == 9 || key &gt; 64 &amp;&amp; key &lt; 91 || // A-Z
+					            key &gt; 96 &amp;&amp; key &lt; 123 || // a-z
+					            key &gt; 47 &amp;&amp; key &lt; 58; // 0-9
+			        		} else {
+			        			
+			        		
+			        			 ok =  key == 35 || key == 36 || key == 46|| key == 47 || key ==61 || key == 16|| key == 95 || key == 17 || key == 8 || key == 9 || key &gt; 64 &amp;&amp; key &lt; 91 || // A-Z
+						            key &gt; 96 &amp;&amp; key &lt; 123 || // a-z
+						            key &gt; 47 &amp;&amp; key &lt; 58; 
+			        		}
+			        		  if (!ok &amp;&amp; (key != 8) &amp;&amp; (key != 9)){
+						        	if (evt.preventDefault) {
+						                evt.preventDefault();
+						            }
+						            else {
+						               return false;
+						            }
+						        }
+			        	}
+				        
+				      
+			        });
+			 });
+        	 /***************************On Load Ends*****************************************************************************************/
+        	 
+        	 function removeOptions(selectbox)
+			{
+			    var i;
+			    for(i=selectbox.options.length-1;i>=0;i--)
+			    {
+			        selectbox.remove(i);
+			    }
+			}
+        	 /******************* on click for Help Begin *******************/    
+				$("#helpID").click(function(){
+					$("#helpTextSLAID").toggle();
+				});
+		    
+			/******************* on click for Help Ends*******************/ 
+			function restrictPartyCode(id,count)
+			{
+				 $('#selectpartycode'+count).val('CLID'); // Set Default to Client ID
+			}
+			function restrictPrintingEmailing(id, count)
+			{
+				//Restrict party code based on county and document type.
+				var company = dijit.byId("_ddpRuleDetail.rdtCompany_id").value;
+				var doctypeValue = document.getElementById("selectDoctype"+count).value;
+				//Restrict party code based on county and document type Ends.
+				
+	        	 $('#selectDdpGenSource'+count).val('Control');
+	        	 var myElem = document.getElementById("selectDoctype"+count).value;
+        		 //Make Generating System as 3rd party if Document Types are : 
+        		 if(contains(noncontroldocsArr,myElem)){
+        			 $('#selectDdpGenSource'+count).val('3rd Party');
+        			 basicRestictGenSource(id,count);
+        		 }
+	        	restrictRated(id,count);
+	        	changePrintOption(id, count);
+	        	if(contains(partyrestictoncompaniesArr,company)){
+	        		changePartyCodeByCountryDoc(id, count);
+	        	}
+	        }
+        	function restrictGenSource(id,count) 
+        	{
+        		var comGenSource = document.getElementById("selectDdpGenSource"+count);
+        		var comGenSourceCount = document.getElementById("selectCommOption"+count).length;
+        		var selectedStr = comGenSource.options[comGenSource.selectedIndex].value;
+        		var comOptionlkpLst = document.getElementById("selectCommOption"+count);
+        		if (selectedStr == '3rd Party') {
+        			removeOptions(comOptionlkpLst);
+	        		 var option = document.createElement('option');
+	        		 option.text = "Not Applicable";
+  			        option.value= "Not Applicable";
+  			        //dcomGenSource.options.add(opt);
+  			        try {
+  			        	comOptionlkpLst.add(option, null); //Standard 
+	  			     }catch(error) {
+	  			       	comOptionlkpLst.add(option); // IE only
+	  			      }
+        		} else {
+        			if (comGenSourceCount == 1) {
+        				removeOptions(comOptionlkpLst);
+        				var comOptionlkp = document.getElementById("divCommOption");
+     			        for(var i=0; i &lt; comOptionlkp.options.length;i++){
+     			        	 var option = document.createElement('option');
+     			        	option.text=comOptionlkp.options[i].value;
+     			        	option.value=comOptionlkp.options[i].text;
+     			        	try {
+     			        		comOptionlkpLst.add(option, null); //Standard 
+    	  			          }catch(error) {
+    	  			        	comOptionlkpLst.add(option); // IE only
+    	  			          }
+     				    }
+     			       changePrintOption(id, count);
+        			}
+        		}
+        	}
+        	function changePrintOption(id, count)
+        	{
+        		 var myElem = document.getElementById("selectDoctype"+count).value;
+       			 var genSourceValue = document.getElementById("selectDdpGenSource"+count).value;
+       		 	 if (genSourceValue == '3rd Party')
+       				 return;
+	       		 if(myElem=='HAWB' || myElem=='MAWB' || myElem=='MBL'|| myElem=='HBL'|| myElem=='BOL'|| myElem=='BOLINS'|| myElem=='BOLCNT' ){
+	       			 var comOptionlkpLst1 = document.getElementById("divCommOption");
+	       			 var comOptionlkpLst = document.getElementById("selectCommOption"+count);
+	       			 if(comOptionlkpLst.options.length==1)
+			         {
+			        	var selectedvalue='Yes';
+	   					var selectedtext='Yes';
+	   					var o = new Option(selectedtext, selectedvalue);
+	   					/// jquerify the DOM object 'o' so we can use the html method
+	   					$(o).html(selectedtext);
+	   					$("#selectCommOption"+count).append(o);
+			         }
+	    		     for(var i=0; i &lt; comOptionlkpLst1.options.length;i++){
+	    					var selectedtext=comOptionlkpLst1.options[i].text;
+	    					if(selectedtext=="No" ){
+	    						comOptionlkpLst.remove(comOptionlkpLst.selectedIndex);
+	    					}
+	    			 }
+	    		     var comOptionlkpLst = document.getElementById("selectCommOption"+count);
+	    		     if(comOptionlkpLst.options.length==0){
+			        	 	var selectedvalue='Yes';
+							var selectedtext='Yes';
+							var o = new Option(selectedtext, selectedvalue);
+							/// jquerify the DOM object 'o' so we can use the html method
+							$(o).html(selectedtext);
+							$("#selectCommOption"+count).append(o);
+			         }
+       			 }else{
+       			 	$("#selectCommOption"+count).empty();
+       				 var comOptionlkpLst = document.getElementById("divCommOption");
+    		         for(var i=0; i &lt; comOptionlkpLst.options.length;i++){
+    		        	var selectedvalue=comOptionlkpLst.options[i].value;
+    					var selectedtext=comOptionlkpLst.options[i].text;
+    					var o = new Option(selectedtext, selectedvalue);
+    					/// jquerify the DOM object 'o' so we can use the html method
+    					$(o).html(selectedtext);
+    					$("#selectCommOption"+count).append(o);
+    			     }
+       		 	}
+        	}
+	        function changePartyCodeByCountryDoc(id, count)
+	        {
+	        	var myElem = document.getElementById("selectDoctype"+count).value;
+      		 	
+	       		 if(contains(partyrestictondoctypesArr,myElem)){
+	       			 var comOptionlkpLst1 = document.getElementById("divPartyCodes");
+	       			 var comOptionlkpLst = document.getElementById("selectpartycode"+count);
+// 	       			 if(comOptionlkpLst.options.length==1)
+// 			         {
+// 			        	var selectedvalue='CLID';
+// 	   					var selectedtext='CLIENT_ID';
+// 	   					var o = new Option(selectedtext, selectedvalue);
+// 	   					/// jquerify the DOM object 'o' so we can use the html method
+// 	   					$(o).html(selectedtext);
+// 	   					$("#selectpartycode"+count).append(o);
+// 			         }
+	    		     for(var i=0; i &lt; comOptionlkpLst1.options.length;i++){
+	    					var selectedvalue=comOptionlkpLst1.options[i].value;
+	    					if(selectedvalue != "CLID" ){
+// 	    						comOptionlkpLst.remove(i);
+	    						$("#selectpartycode"+count+" option[value='"+selectedvalue+"']").remove();
+	    					}
+	    			 }
+	    		     var comOptionlkpLst = document.getElementById("selectpartycode"+count);
+	    		     if(comOptionlkpLst.options.length==0){
+			        	 	var selectedvalue='CLID';
+							var selectedtext='CLIENT_ID';
+							var o = new Option(selectedtext, selectedvalue);
+							/// jquerify the DOM object 'o' so we can use the html method
+							$(o).html(selectedtext);
+							$("#selectpartycode"+count).append(o);
+			         }
+      			 }else{
+      			 	$("#selectpartycode"+count).empty();
+      				 var comOptionlkpLst = document.getElementById("divPartyCodes");
+   		         for(var i=0; i &lt; comOptionlkpLst.options.length;i++){
+   		        	var selectedvalue=comOptionlkpLst.options[i].value;
+   					var selectedtext=comOptionlkpLst.options[i].text;
+   					var o = new Option(selectedtext, selectedvalue);
+   					/// jquerify the DOM object 'o' so we can use the html method
+   					$(o).html(selectedtext);
+   					$("#selectpartycode"+count).append(o);
+   			     }
+      		 	}
+	        }
+	     // contains function
+	        function contains(arr, findValue) {
+	            var i = arr.length;
+	             
+	            while (i--) {
+	                if (arr[i] === findValue) return true;
+	            }
+	            return false;
+	        }
+	        function basicRestictGenSource(id,count)
+	    	{
+	    		var comGenSource = document.getElementById("selectDdpGenSource"+count);
+        		var comGenSourceCount = document.getElementById("selectCommOption"+count).length;
+        		var selectedStr = comGenSource.options[comGenSource.selectedIndex].value;
+        		var comOptionlkpLst = document.getElementById("selectCommOption"+count);
+        		
+        		removeOptions(comOptionlkpLst);
+	       		 var option = document.createElement('option');
+	       		 option.text = "Not Applicable";
+		        option.value= "Not Applicable";
+		        //dcomGenSource.options.add(opt);
+		        try {
+		        	comOptionlkpLst.add(option, null); //Standard 
+ 			     }catch(error) {
+ 			       	comOptionlkpLst.add(option); // IE only
+ 			     }
+	    	}
+	        function restrictSLA(id,count)
+	    	{
+	    		var selectSLAfreq = document.getElementById("selectSLAfreq"+count).value;
+        		if(selectSLAfreq=='none')
+       			{
+        			document.getElementById("SLAMin"+count).value='';
+       				document.getElementById("SLAMax"+count).value='';
+       				document.getElementById("SLAMin"+count).readOnly=true;
+       				document.getElementById("SLAMax"+count).readOnly=true;
+       			}
+        		else
+       			{
+	       			document.getElementById("SLAMin"+count).readOnly=false;
+	   				document.getElementById("SLAMax"+count).readOnly=false;
+       			}
+	    	}
+	        function restrictRated(id,count)
+	        {
+	        	 var myElem = document.getElementById("selectDoctype"+count).value;
+	        	 var rateElem = document.getElementById("selectDdpRate"+count);
+	        	 if(myElem =='AWB' || myElem =='HAWB' || myElem =='MAWB' || myElem =='BOL' || myElem =='CDN' || myElem =='CM' || myElem =='ACM' || myElem =='HACM' || myElem =='WAY')
+	        	 {
+	        		if(rateElem.length == '1')
+	        		{
+	        			removeOptions(rateElem);
+				        var ratelkpLst = document.getElementById("divDdpRate");
+    			        for(var i=0; i &lt; ratelkpLst.options.length;i++){
+    			        	 var option = document.createElement('option');
+    			        	option.value=ratelkpLst.options[i].value;
+    			        	option.text=ratelkpLst.options[i].text;
+    			        	try {
+    			        		rateElem.add(option, null); //Standard 
+   	  			          	}catch(error) {
+   	  			        		rateElem.add(option); // IE only
+   	  			          	}
+    				    }
+	        		}
+	        	 }
+	        	 else
+	        	 {
+	        			removeOptions(rateElem);
+	        			//add Not Applicable 
+	        		  	var option = document.createElement('option');
+			      		option.value='N/A';
+			        	option.text='Not Applicable';
+			        	try {
+			        		rateElem.add(option, null); //Standard 
+  			          	}catch(error) {
+  			        		rateElem.add(option); // IE only
+  			          	}
+	        	 }
+	        }
+	        function isNumber(evt) {
+		        evt = (evt) ? evt : window.event;
+		        var charCode = (evt.which) ? evt.which : evt.keyCode;
+		        if (charCode &gt; 31 &amp;&amp; (charCode &lt; 48 || charCode &gt; 57)) {
+		            return false;
+		        }
+		        return true;
+		    }
+	        function adjustDocOptions()
+    		{
+    			var rowscount = $("#tblDoc tr").length;
+    			for(k=1;k &lt; rowscount ; k++)
+				{
+    				var d = document.getElementById("selectDoctype"+($("#tblDoc tr:eq("+k+")").attr("id")));
+    				var idvalue = "selectDoctype"+($("#tblDoc tr:eq("+k+")").attr("id"));
+    				var temp = d.options[d.selectedIndex].value;
+    				$('#'+idvalue+' option[value!="'+d.options[d.selectedIndex].value+'"]').remove(); //not working in IE
+    				$("#"+idvalue).append($("#divdoctypeitems").html());
+    				removeDuplicateOptions(idvalue);
+    				//remove duplicate options
+//     				$("#"+idvalue+" option").val(function(i,v){
+//     					  $(this).siblings("[value='"+ v +"']").remove();
+//     				});
+    				d.selectedIndex = 0;
+				}
+    		}
+	        function removeDuplicateOptions(selectboxname) 
+		    {
+		    	var code = {};
+		    	$("select[name='"+selectboxname+"'] > option").each(function () {
+		        if(code[this.text]) {
+		            $(this).remove();
+		       	 } else {
+		            code[this.text] = this.value;
+		        }
+		    	});
+		    }
+	    	function myFunction(){
+	    		
+	    		var rowscount = $("#tblDoc tr").length;
+	    		document.getElementById("rowscount").value=parseInt(totalRowCount);
+		
+				//atleast one branch
+				var blbrnflage = false;
+				var listBranchLength = document.getElementById("_lstBranch_id");
+				var i;
+				var allOptionPresent = false;
+				for(i=0;i &lt; listBranchLength.options.length; i++) 
+				{
+					blbrnflage =true;
+					listBranchLength[i].selected=true;
+					if (listBranchLength.options[i].value === "ALL") {
+						allOptionPresent = true;
+					}
+				}
+				if(blbrnflage==false){
+					alert("Select atleast one branch");
+					return false;
+				}
+				if(rowscount &lt; 2)
+				{
+					alert("please add doctype row");
+					return false;
+				}
+					
+				if (dijit.byId("_ddpRuleDetail.rdtPartyId_id").getValue() === "*" ) {
+					if (allOptionPresent) {
+						alert("Please UnSelect Branch 'ALL'option for entering the wildcard operator(*) in Client ID ");
+						return false;
+					}
+				}
+				
+				//checking for duplicate combinations of DocType and PartyIDs
+				for(var k=1;k &lt; rowscount - 1;k++)
+				{
+					var d = document.getElementById("selectDoctype"+($("#tblDoc tr:eq("+k+")").attr("id")));
+					var doctype1 = d.options[d.selectedIndex].value;
+					for(var m = k+1;m &lt;rowscount;m++)
+					{
+						var d1 = document.getElementById("selectDoctype"+($("#tblDoc tr:eq("+m+")").attr("id")));
+						var doctype2 = d1.options[d1.selectedIndex].value;
+						
+						var p1 = document.getElementById("selectpartycode"+($("#tblDoc tr:eq("+k+")").attr("id")));
+						var party1 = p1.options[p1.selectedIndex].value;
+						var p2 = document.getElementById("selectpartycode"+($("#tblDoc tr:eq("+m+")").attr("id")));
+						var party2 = p2.options[p2.selectedIndex].value;
+						
+						var g1 = document.getElementById("selectDdpGenSource"+($("#tblDoc tr:eq("+k+")").attr("id")));
+						var genSource1 = g1.options[g1.selectedIndex].value;
+						var g2 = document.getElementById("selectDdpGenSource"+($("#tblDoc tr:eq("+m+")").attr("id")));
+						var genSource2 = g2.options[g2.selectedIndex].value;
+						
+						
+						if(doctype1 == doctype2 ) {
+							if ( party1 == party2) {
+								if (genSource1 == genSource2) {
+									alert("Please choose another combination of DocType : "+doctype1+", PartyCodes : "+party1+" and Generating Source : "+genSource1);
+									return false;
+								}
+							}
+						}
+					}
+				}
+				
+				//validation for Min and Max values
+				for(var i=1; i &lt; rowscount;i++)
+				{
+					var slaFreq = document.getElementById("selectSLAfreq"+($("#tblDoc tr:eq("+i+")").attr("id"))).value;
+					if(slaFreq != 'none')
+					{
+						if(document.getElementById("SLAMin"+($("#tblDoc tr:eq("+i+")").attr("id"))).value == '' )
+						{
+							alert("Please Provide Mimnimum SLA value for document type : "+document.getElementById("selectDoctype"+($("#tblDoc tr:eq("+i+")").attr("id"))).value);
+							return false;	
+						}
+						if(document.getElementById("SLAMax"+($("#tblDoc tr:eq("+i+")").attr("id"))).value == '' )
+						{
+							alert("Please Provide Maximun SLA value for document type : "+document.getElementById("selectDoctype"+($("#tblDoc tr:eq("+i+")").attr("id"))).value);
+							return false;	
+						}
+						if(dojo.byId("_ddpNotification.notSuccessEmailAddress_id").value == '')
+	   					{
+	   						alert("Please provide email ID to send SLA Notification");
+	   						dijit.byId("_ddpNotification.notSuccessEmailAddress_id").focus();
+	   						return false;
+	   					}
+						var slaMin = document.getElementById("SLAMin"+($("#tblDoc tr:eq("+i+")").attr("id"))).value;
+						var slaMax = document.getElementById("SLAMax"+($("#tblDoc tr:eq("+i+")").attr("id"))).value;
+						if(slaMin &gt; slaMax)
+						{
+							alert("Minimum SLA value should be less than Maximum SLA value for document type : "+document.getElementById("selectDoctype"+($("#tblDoc tr:eq("+i+")").attr("id"))).value);
+							return false;
+						}
+					}
+				}
+				for(var i=1; i &lt; rowscount;i++)
+				{
+					var slaFreq = document.getElementById("selectSLAfreq"+($("#tblDoc tr:eq("+i+")").attr("id"))).value;
+					if(slaFreq == 'none')
+					{
+						document.getElementById("SLAMin"+($("#tblDoc tr:eq("+i+")").attr("id"))).value = "0";
+						document.getElementById("SLAMax"+($("#tblDoc tr:eq("+i+")").attr("id"))).value = "0";
+					}	
+				}
+			}
+	    	
+		</script>
+		<INPUT type="hidden" value="rowscount" id="rowscount" name="rowscount"  />
+	 </form:create>
+</div>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpBranch" object="${ddpbranch}" path="/ddpbranches" z="xzyuo7eQBrkFXWpsOpjypftJsWk=">
+        <field:display field="brnBranchName" id="s_com_agility_ddp_data_domain_DdpBranch_brnBranchName" object="${ddpbranch}" z="+DT599R3iT6Cgj/+U31rtK13KFo="/>
+        <field:display field="brnBranchCode" id="s_com_agility_ddp_data_domain_DdpBranch_brnBranchCode" object="${ddpbranch}" z=""/>
+        <field:display field="brnCompnayCode" id="s_com_agility_ddp_data_domain_DdpBranch_brnCompnayCode" object="${ddpbranch}" z="Dmk4VVZ7T0qCXE59vW+XCWgHCCI="/>
+     	<field:display field="brnStatus" id="s_com_agility_ddp_data_domain_DdpBranch_brnStatus" object="${ddpbranch}" z="rLnyB0ZNsNCNG3OElI8EGgpSme0="/>
+    </page:show>
+    <script>
+	dojo.addOnLoad(function(){
+			var t = $('#_s_com_agility_ddp_data_domain_DdpBranch_brnStatus_id').text(); 
+			var j = t.replace(':','').trim();
+			var n = j.replace("Status","").trim();
+			var k = n.replace(':','').trim();
+			var status = k;
+			if(status=='0'){
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpBranch_brnStatus_brnStatus_id").innerHTML  = 'Active';
+			}else{
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpBranch_brnStatus_brnStatus_id").innerHTML  = 'InActive';
+			}
+	});	
+	
+	</script>
+    
+</div>

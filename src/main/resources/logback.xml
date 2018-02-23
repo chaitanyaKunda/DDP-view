@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- For assistance related to logback-translator or configuration  -->
+<!-- files in general, please contact the logback user mailing list -->
+<!-- at http://www.qos.ch/mailman/listinfo/logback-user             -->
+<!--                                                                -->
+<!-- For professional support please see                            -->
+<!--    http://www.qos.ch/shop/products/professionalSupport         -->
+<!--                                                                -->
+<configuration>
+
+	<property resource="ddp.properties" />
+	<property name="JBOSS_HOME" value="F:\wildfly-10.1.0.Final" />
+	<property name="DEPLOYMENT_DIR" value="${JBOSS_HOME}/standalone" />
+	<property name="LOGGING_DIR" value="${JBOSS_HOME}/logs" />
+	<property name="LOGGING_DIR" value="logs" />
+	
+  	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+    	<encoder>
+      		<!-- <pattern>%d [%t] %-5p %c - %m%n</pattern> -->
+      		<!-- <pattern>%d %5p [%t] %-55logger{55} | %m%n</pattern> -->
+      		<pattern>%d %5p %-55logger{55} | %m%n</pattern>
+    	</encoder>
+  	</appender>
+  
+  	<appender name="RF" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    	<File>${LOGGING_DIR}/ddp_application.log</File>
+    	<encoder>
+      		<!-- <pattern>%p %t %c - %m%n</pattern> -->
+      		<!-- <pattern>%d %5p [%t] %-55logger{55} | %m%n</pattern> -->
+      		<pattern>%d %5p %-55logger{55} | %m%n</pattern>
+    	</encoder>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+      		<maxIndex>1</maxIndex>
+      		<FileNamePattern>${LOGGING_DIR}/ddp_application.log.%i</FileNamePattern>
+    	</rollingPolicy>
+    	<triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+      		<MaxFileSize>100KB</MaxFileSize>
+    	</triggeringPolicy>
+  	</appender>
+  	
+  	<appender name="RT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    	<File>${LOGGING_DIR}/ddp.log</File>
+    	<encoder>
+      		<!-- <pattern>%p %t %c - %m%n</pattern> -->
+      		<!-- <pattern>%d %5p [%t] %-55logger{55} | %m%n</pattern> -->
+      		<pattern>%d %5p %-55logger{55} | %m%n</pattern>
+    	</encoder>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      		<!-- daily rollover -->
+      		<fileNamePattern>${LOGGING_DIR}/ddp.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 100MB -->
+        		<maxFileSize>10MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+      		<!-- keep 30 days' worth of history -->
+      		<maxHistory>30</maxHistory>
+    	</rollingPolicy>
+  	</appender>
+  	
+  	<appender name="core" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    	<File>${LOGGING_DIR}/ddp_core.log</File>
+    	<encoder>
+      		<!-- <pattern>%p %t %c - %m%n</pattern> -->
+      		<!-- <pattern>%d %5p [%t] %-55logger{55} | %m%n</pattern> -->
+      		<pattern>%d %5p %-55logger{55} | %m%n</pattern>
+    	</encoder>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      		<!-- daily rollover -->
+      		<fileNamePattern>${LOGGING_DIR}/ddp_core.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 100MB -->
+        		<maxFileSize>10MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+      		<!-- keep 30 days' worth of history -->
+      		<maxHistory>30</maxHistory>
+    	</rollingPolicy>
+  	</appender>
+  	
+  	<appender name="data" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    	<File>${LOGGING_DIR}/ddp_data.log</File>
+    	<encoder>
+      		<!-- <pattern>%p %t %c - %m%n</pattern> -->
+      		<!-- <pattern>%d %5p [%t] %-55logger{55} | %m%n</pattern> -->
+      		<pattern>%d %5p %-55logger{55} | %m%n</pattern>
+    	</encoder>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      		<!-- daily rollover -->
+      		<fileNamePattern>${LOGGING_DIR}/ddp_data.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 100MB -->
+        		<maxFileSize>10MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+      		<!-- keep 30 days' worth of history -->
+      		<maxHistory>30</maxHistory>
+    	</rollingPolicy>
+  	</appender>
+  	
+  	<appender name="view" class="ch.qos.logback.core.rolling.RollingFileAppender">
+    	<!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender-->
+    	<File>${LOGGING_DIR}/ddp_view.log</File>
+    	<encoder>
+      		<!-- <pattern>%p %t %c - %m%n</pattern> -->
+      		<!-- <pattern>%d %5p [%t] %-55logger{55} | %m%n</pattern> -->
+      		<pattern>%d %5p %-55logger{55} | %m%n</pattern>
+    	</encoder>
+    	<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+      		<!-- daily rollover -->
+      		<fileNamePattern>${LOGGING_DIR}/ddp_view.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+      		<timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+        		<!-- or whenever the file size reaches 100MB -->
+        		<maxFileSize>10MB</maxFileSize>
+      		</timeBasedFileNamingAndTriggeringPolicy>
+      		<!-- keep 30 days' worth of history -->
+      		<maxHistory>30</maxHistory>
+    	</rollingPolicy>
+  	</appender>
+  	
+  	<logger name="com.agility.ddp.core" additivity="false" level="INFO">
+    	<appender-ref ref="core" />
+  	</logger>
+  	
+  	<logger name="com.agility.ddp.data" additivity="false" level="INFO">
+    	<appender-ref ref="data" />
+  	</logger>
+  	
+  	<logger name="com.agility.ddp.view" additivity="false" level="INFO">
+    	<appender-ref ref="view" />
+  	</logger>
+  
+  	<root level="INFO">
+  	<!-- <root level="DEBUG"> -->
+    	<appender-ref ref="stdout"/>
+    	<appender-ref ref="RT"/>
+  	</root>
+  
+</configuration>

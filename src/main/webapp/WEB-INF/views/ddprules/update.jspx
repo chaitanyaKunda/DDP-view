@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpRule" idField="rulId" modelAttribute="ddpRule" path="/ddprules" versionField="none" z="UsgYoWtV2gQ5hhQPTjzaO6EMFUw=">
+        <field:select field="ddpAedRule" id="c_com_agility_ddp_data_domain_DdpRule_ddpAedRule" itemValue="aedRuleId" items="${ddpaedrules}" path="/ddpaedrules" z="hsqxlk8ZJ+d61RF4jAkC60VwtB8="/>
+        <field:select field="ddpExportRule" id="c_com_agility_ddp_data_domain_DdpRule_ddpExportRule" itemValue="expRuleId" items="${ddpexportrules}" path="/ddpexportrules" z="izENabzw+DK0j3rUz/0lU0o7mPI="/>
+        <field:simple field="ddpCategorizedDocss" id="c_com_agility_ddp_data_domain_DdpRule_ddpCategorizedDocss" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Categorized Docs" z="4oXJIh1/5aFctb6XYkOrpnc7yVo="/>
+        <field:simple field="ddpRulePmSvcs" id="c_com_agility_ddp_data_domain_DdpRule_ddpRulePmSvcs" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Pm Svc" z="gsewCAyyFI6rAMdSR5l//iF9BXg="/>
+        <field:input field="rulName" id="c_com_agility_ddp_data_domain_DdpRule_rulName" required="true" z="+VJWpzBrzlyznDW4nOdja775Vu4="/>
+        <field:input field="rulDescription" id="c_com_agility_ddp_data_domain_DdpRule_rulDescription" z="X5Zp1m3NXtx8grhkwRwIBofhiaU="/>
+        <field:input field="rulStatus" id="c_com_agility_ddp_data_domain_DdpRule_rulStatus" required="true" validationMessageCode="field_invalid_integer" z="yckOJm0r7XtdLnT7heqYiA19GEo="/>
+        <field:input field="rulCreatedBy" id="c_com_agility_ddp_data_domain_DdpRule_rulCreatedBy" required="true" z="TPH49bJ1W6mqkN6dJBnxhgG7w6U="/>
+        <field:datetime dateTimePattern="${ddpRule_rulcreateddate_date_format}" field="rulCreatedDate" id="c_com_agility_ddp_data_domain_DdpRule_rulCreatedDate" required="true" z="BaLqJRef8lph6tr9v9JZyn6YzZ0="/>
+        <field:input field="rulModifiedBy" id="c_com_agility_ddp_data_domain_DdpRule_rulModifiedBy" required="true" z="rSfHNzYW67w9QRSuszVcmmbADpM="/>
+        <field:datetime dateTimePattern="${ddpRule_rulmodifieddate_date_format}" field="rulModifiedDate" id="c_com_agility_ddp_data_domain_DdpRule_rulModifiedDate" required="true" z="FLLmVVWHhjyK9AVwrKzkceMQuBw="/>
+        <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpRule_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="ytuxTu2geBEopLMnqj72VXBNYHk="/>
+        <field:select field="ddpMultiAedRule" id="c_com_agility_ddp_data_domain_DdpRule_ddpMultiAedRule" itemValue="maedRuleId" items="${ddpmultiaedrules}" path="/ddpmultiaedrules" z="S4SC+/mXEENK/4uQR4if1IU41fg="/>
+        <field:simple field="ddpEmailTriggerSetups" id="c_com_agility_ddp_data_domain_DdpRule_ddpEmailTriggerSetups" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Email Trigger Setup" z="lgcqiIMl+/rKXYp/eMkHhcPopyE="/>
+    </form:update>
+</div>

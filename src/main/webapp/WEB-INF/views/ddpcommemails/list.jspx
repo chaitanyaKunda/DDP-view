@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCommEmail" items="${ddpcommemails}" z="EpFCTEYbvc8cm0NEXd8EoAQ30T0=">
+        <table:table data="${ddpcommemails}" id="l_com_agility_ddp_data_domain_DdpCommEmail" path="/ddpcommemails" typeIdFieldName="cemEmailId" z="Z+j9wSz9yhcy17lHqR1djSXZ8hU=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailFrom" property="cemEmailFrom" z="DNQyLFV0IinrKFw6l0NSQxGhNhU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailTo" property="cemEmailTo" z="odlY5Jtbmd/GArtFvb+HnrhgMGc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailCc" property="cemEmailCc" z="yofwV48qUfOsFnwm17+BOZuzpkU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailSubject" property="cemEmailSubject" z="x3X3LaJ/t0zLw3/D5xQ9XExX8wE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBody" property="cemEmailBody" z="dTi3r9ueMmbyTLwOtEA66wr4ttk="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailAttachmentLimit" property="cemEmailAttachmentLimit" z="3ppJgYTKtiDyN89d46j2hvRum3s="/>
+        </table:table>
+    </page:list>
+</div>

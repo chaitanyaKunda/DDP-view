@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpRule" items="${ddprules}" z="2lFsCGt9LueBhe3UvsbHyn1o3CA=">
+        <table:table data="${ddprules}" id="l_com_agility_ddp_data_domain_DdpRule" path="/ddprules" typeIdFieldName="rulId" z="JBYhmTg4vo06/ZakcqbiCgRn2lk=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpRule_ddpAedRule" property="ddpAedRule" z="DcInjpvWwnHbftZyU2Wi59m4pgQ="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRule_ddpExportRule" property="ddpExportRule" z="mHBradTlWKPpoiyQR4KvzhLxxv0="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRule_ddpMultiAedRule" property="ddpMultiAedRule" z="YTJnxhbWv7upI2UY4VUovxdMbi0="/>
+        </table:table>
+    </page:list>
+</div>

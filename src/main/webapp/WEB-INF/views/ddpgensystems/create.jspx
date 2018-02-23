@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpGenSystem" modelAttribute="ddpGenSystem" path="/ddpgensystems" render="${empty dependencies}" z="gssE+b7SCCDi5sS30WpKU4IZePM=">
+        <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpGenSystem_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="c+LTqlEbVs360jHbYfTerxAxH/8="/>
+        <field:input field="genCompanyCode" id="c_com_agility_ddp_data_domain_DdpGenSystem_genCompanyCode" z="rgqNg21vbP4yzlbtymdJXQSzOTw="/>
+        <field:input field="genServerIp" id="c_com_agility_ddp_data_domain_DdpGenSystem_genServerIp" z="eexwNtkIn6msQaSIK+zcj0SdAJc="/>
+        <field:input field="genServerName" id="c_com_agility_ddp_data_domain_DdpGenSystem_genServerName" z="vtFNYZZKrUxAFx/grYl+P+o3GeY="/>
+        <field:input field="genDomain" id="c_com_agility_ddp_data_domain_DdpGenSystem_genDomain" z="V5ZRMNWc90S2RoGM54eGb/fzv4A="/>
+        <field:input field="genServiceAccount" id="c_com_agility_ddp_data_domain_DdpGenSystem_genServiceAccount" z="RNNwPhK9UFSNMXDZA3uKkHjJbBQ="/>
+        <field:input field="genSaPassword" id="c_com_agility_ddp_data_domain_DdpGenSystem_genSaPassword" z="vPOxldNmUzAg9KvH3R9Nc0dTHl0="/>
+        <field:input field="genFilePath" id="c_com_agility_ddp_data_domain_DdpGenSystem_genFilePath" z="IZyfx3zWNQo21gxSkcDf1JguFpQ="/>
+        <field:input field="genStatus" id="c_com_agility_ddp_data_domain_DdpGenSystem_genStatus" required="true" validationMessageCode="field_invalid_integer" z="HMyygZv+qQF9u8hMPPyZznJv280="/>
+        <field:input field="genCreatedBy" id="c_com_agility_ddp_data_domain_DdpGenSystem_genCreatedBy" required="true" z="BERDZu+K9Dm1yJ9unwFN4Gh2OWI="/>
+        <field:datetime dateTimePattern="${ddpGenSystem_gencreateddate_date_format}" field="genCreatedDate" id="c_com_agility_ddp_data_domain_DdpGenSystem_genCreatedDate" required="true" z="otLFhJlkL2NAcdJ9AhbmG5CVZ44="/>
+        <field:input field="genModifiedBy" id="c_com_agility_ddp_data_domain_DdpGenSystem_genModifiedBy" required="true" z="aS8lNVLtRIWprgKhE/wswkIyv88="/>
+        <field:datetime dateTimePattern="${ddpGenSystem_genmodifieddate_date_format}" field="genModifiedDate" id="c_com_agility_ddp_data_domain_DdpGenSystem_genModifiedDate" required="true" z="1oAD4CsyxrVCKTjYBSrwV+v7yrg="/>
+        <field:input field="genApplicationCode" id="c_com_agility_ddp_data_domain_DdpGenSystem_genApplicationCode" required="true" z="fcd7A6whj9eBy9gO8y91lflt82E="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpGenSystem" render="${not empty dependencies}" z="RkbUOyTvSogjC3E7AzQME2/OUyw="/>
+</div>

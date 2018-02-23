@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" >
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpAedRule" items="${ddpaedrules}" z="FwwbGpd+OfhfXkXaaXGoUBwsXdE=" path="/ddpaedrules">
+        <table:table data="${ddpaedrules}" id="l_com_agility_ddp_data_domain_DdpAedRule" path="/ddpaedrules" typeIdFieldName="aedRuleId" z="GPuBE6chRXE4kVPqmteytkv5Xck=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedRule_ddpRule" property="ddpRule" z="RZgJ6/1WVfvsfLbMvzW5BFebl0s="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedRule_aedCommunicationId" property="aedCommunicationId" z="gp5ZHN2TiptmDJX4hLUb6E7BKuE="  render="false"/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedRule_aedCompressionId" property="aedCompressionId" z="wxPhvSM7znHxTVPYH0oTA9qbhFM=" render="false"/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedRule_aedDocnameConvId" property="aedDocnameConvId" z="3QVIXsc2c/KQmFb1MDv+F+9HoOE=" render="false"/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedRule_aedMergeId" property="aedMergeId" z="KbH6/qOxqdCl4T3ZHo/db43H8v8=" render="false"/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedRule_aedNotificationId" property="aedNotificationId" z="D/lv7LPeEH4cmCmWThvQUNinRn4=" render="false"/>
+        </table:table>
+    </page:list>
+</div>

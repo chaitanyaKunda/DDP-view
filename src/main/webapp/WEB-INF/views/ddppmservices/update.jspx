@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpPmService" idField="psrId" modelAttribute="ddpPmService" path="/ddppmservices" versionField="none" z="4vW0odMrjFu06/cT49rBASLDJaE=">
+        <field:simple field="ddpRulePmSvcs" id="c_com_agility_ddp_data_domain_DdpPmService_ddpRulePmSvcs" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Pm Svc" z="bpb3q+76iq6OHorFlf2aWwJZ2NQ="/>
+        <field:input field="psrName" id="c_com_agility_ddp_data_domain_DdpPmService_psrName" required="true" z="JKNib7cU0ZY4Gcf2Iw1OtCUARb0="/>
+        <field:input field="psrDescription" id="c_com_agility_ddp_data_domain_DdpPmService_psrDescription" z="YKrAkuoBebwIimTTbX1eJ/d9mOo="/>
+        <field:input field="psrStatus" id="c_com_agility_ddp_data_domain_DdpPmService_psrStatus" required="true" validationMessageCode="field_invalid_integer" z="woQcUuettLa99ygFu69FChVjt94="/>
+    </form:update>
+</div>

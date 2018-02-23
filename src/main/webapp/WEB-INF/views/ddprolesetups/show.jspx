@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+ xmlns:c="http://java.sun.com/jsp/jstl/core" 
+ xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields"
+ xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:custom_list_1 id="pl_com_agility_ddp_data_domain_DdpRoleSetup" path="/ddprolesetups" items="${ddprolesetup}" z="ZrFHtFH+bt9h5Ors1GkpU5ELGmg=">
+        <c:forEach items="${username}" var="element" varStatus="loop">
+			<div style="padding-left: 1px; top: 3px;"><label>Assigned Role for User :</label><c:out value="${element}"/></div>
+	    </c:forEach>
+	    <table:customtable data="${ddprolesetup}" id="l_com_agility_ddp_data_domain_DdpGroupSetup" path="/ddprolesetups" typeSubIdFieldName="rlsChildUsrId" typeIdFieldName="rlsId" z="8YwFrJH7zBnqg/jiqJIXk1nFNpY=">
+	            <table:column id="c_com_agility_ddp_view_util_userrole_rlsname" property="rlsRoleId" z="sc1Z/OIfdVFn0XAlFphj+SwHJto="/>
+	    </table:customtable>
+    </page:custom_list_1>
+</div>

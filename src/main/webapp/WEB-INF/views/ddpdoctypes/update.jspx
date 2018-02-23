@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpDoctype" idField="dtyDocTypeCode" idFieldValue="${dtyDocTypeCode}" modelAttribute="ddpDoctype" path="/ddpdoctypes" versionField="none" z="pNYtnkrZGh7P6PWENZKCuyMu2NQ=">
+        <!--         <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpDoctype_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="pKLMvUvKwXwELQBKhNSDPuwhqYc="/> -->
+        <field:input field="dtyDocTypeName" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyDocTypeName" required="true" z="JD3JQdWxXAjzhn/8fFq9AOFTnf0="/>
+        <field:input field="dtySource" id="c_com_agility_ddp_data_domain_DdpDoctype_dtySource" z="Ad6+XG0NCDeHD25s4624N0jlFMw="/>
+        <field:input field="dtyCompanyCode" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCompanyCode" z="gbVhm7HriZvBEifxzd1XOQqlN6w="/>
+        <div style="display: none">
+            <field:input field="dtyStatus" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyStatus" required="true" validationMessageCode="field_invalid_integer" z="0/kH0R9atpd1Nu72KkYGw+yNNkg="/>
+        </div>
+        <table border="0" cellpadding="0" cellspacing="0" class="tab" style="width:0px; font-family: Open Sans', sans-serif;">
+            <tr style="background-color: #FFFFFF;">
+                <td class="first">
+                    <label>Document Type Status</label>
+                </td>
+                <td class="first">
+                    <select id="status" name="status">
+                        <option value="0">Active</option>
+                        <option value="1">InActive</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <field:input field="dtyCreatedBy" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCreatedBy" render="false" required="true" z="user-managed"/>
+        <field:datetime dateTimePattern="${ddpDoctype_dtycreateddate_date_format}" field="dtyCreatedDate" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCreatedDate" render="false" required="true" z="user-managed"/>
+        <field:input field="dtyModifiedBy" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyModifiedBy" render="false" required="true" z="user-managed"/>
+        <field:datetime dateTimePattern="${ddpDoctype_dtymodifieddate_date_format}" field="dtyModifiedDate" id="c_com_agility_ddp_data_domain_DdpDoctype_dtyModifiedDate" render="false" required="true" z="user-managed"/>
+    </form:update>
+    <script type="text/javascript">
+    	dojo.addOnLoad(function(){
+    		var status = document.getElementById("_dtyStatus_id").value;
+    		var objStatus = document.getElementById("status");
+    		if(status=='0')
+    			objStatus.options[0].selected=true;
+    		else
+    			objStatus.options[1].selected=true;
+    	});
+    </script>
+</div>

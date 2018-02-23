@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpDmsDocsHolder" idField="thlSynId" modelAttribute="ddpDmsDocsHolder" path="/ddpdmsdocsholders" versionField="none" z="N6PlZXLbpf+C7sWAo4OXwnIX4GI=">
+        <field:input field="thlRObjectId" id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlRObjectId" z="TO03AjR9lzZx/6wd0LD0RhKt5Fc="/>
+        <field:input field="thlIsProcessReq" id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlIsProcessReq" required="true" z="b46W4zBqkhmhH59DpKEluoqsSHk="/>
+        <field:input field="thlTboName" id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlTboName" z="Xhw1p1PMRfJ4LfFPrYffkWfBVEo="/>
+    </form:update>
+</div>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+		<page:list id="pl_com_agility_ddp_data_domain_DdpUser" path="/ddpusers"
+			items="${ddpusers}" z="Gsy7UFPJ2NPhnWev+WRr/m+92wc=">
+			<table:table data="${ddpusers}"
+				id="l_com_agility_ddp_data_domain_DdpUser" path="/ddpusers"
+				typeIdFieldName="usrId" z="GwzrmsKR9m5qFCng/8Yu+7HZ0fY=">
+				<table:column id="c_com_agility_ddp_data_domain_DdpUser_usrLoginId"
+					property="usrLoginId" z="qKW1pFcediv+6r9mp41Uh3jPPig=" />
+				<table:column id="c_com_agility_ddp_data_domain_DdpUser_usrFirstName"
+					property="usrFirstName" z="UMYrot6mR8pE81q306phZ9sIRDI=" />
+				<table:column
+					id="c_com_agility_ddp_data_domain_DdpUser_usrDisplayName"
+					property="usrDisplayName" z="4OkoZFya1Q/tEIKNOJINITYt/Bg=" />
+				<table:column id="c_com_agility_ddp_data_domain_DdpUser_usrEmailAddress"
+					property="usrEmailAddress" z="Jy4oQ7kG1lGQpMWWjQqEkuSLbNo=" />
+					
+			</table:table>
+		</page:list>
+</div>

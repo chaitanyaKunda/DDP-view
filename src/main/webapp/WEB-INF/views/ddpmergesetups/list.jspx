@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpMergeSetup" items="${ddpmergesetups}" z="AoKkCwv1aSf9NT4iNnGhcNzs5Fk=">
+        <table:table data="${ddpmergesetups}" id="l_com_agility_ddp_data_domain_DdpMergeSetup" path="/ddpmergesetups" typeIdFieldName="mtsMergeId" z="2Qo0WWy5x9vptvb4yE6eFk353iE=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpMergeSetup_ddpAedReqDocs" property="ddpAedReqDocs" z="cue87BpB/pYJTPU0ZiqL+BukNno="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsPdfFormat" property="mtsPdfFormat" z="iVDWbpuUzUF9dCV/KUtzb59nwUM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsTocEnable" property="mtsTocEnable" z="5Gbf2uDkDhNEfyUzVxSDWeJI/0U="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMergeSetup_mtsWatermarkText" property="mtsWatermarkText" z="/WxjtJ9cy/fr5nbQihb/bIirKnU="/>
+        </table:table>
+    </page:list>
+</div>

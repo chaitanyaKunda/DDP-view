@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpcommunicationlkps/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommunicationlkps/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcommunicationlkps/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommunicationlkps/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcommunicationlkps/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommunicationlkps/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcommunicationlkps/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcommunicationlkps/update.jspx"/>
+    </definition>
+</tiles-definitions>

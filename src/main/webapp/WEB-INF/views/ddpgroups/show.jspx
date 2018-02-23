@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpGroup" object="${ddpgroup}" path="/ddpgroups" z="neFBBmHdOGAiFxOQ4tbkCfzCM4s=">
+        <field:display field="grpName" id="s_com_agility_ddp_data_domain_DdpGroup_grpName" object="${ddpgroup}" z="E7ieZ5Ctu1kqtdznmiO3+tXR04U="/>
+        <field:display field="grpDisplayName" id="s_com_agility_ddp_data_domain_DdpGroup_grpDisplayName" object="${ddpgroup}" z="v8nYpa2XlJmevBY+pNk1kbcPt7Y="/>
+        <field:display field="grpDescription" id="s_com_agility_ddp_data_domain_DdpGroup_grpDescription" object="${ddpgroup}" z="xhYsIul6Ux/K7CRDbP8LTZLZVn4="/>
+        <field:display field="grpStatus" id="s_com_agility_ddp_data_domain_DdpGroup_grpStatus" object="${ddpgroup}" z="f+K8S2fdbA726dKKHXk3KyAyjHk=" render="false"/>
+        <field:display field="grpCreatedBy" id="s_com_agility_ddp_data_domain_DdpGroup_grpCreatedBy" object="${ddpgroup}" z="s66j7z0vbGn3A03swLeApVAafi0="/>
+        <field:display calendar="true" dateTimePattern="${ddpGroup_grpcreateddate_date_format}" field="grpCreatedDate" id="s_com_agility_ddp_data_domain_DdpGroup_grpCreatedDate" object="${ddpgroup}" z="yLMwwF9uBnk2nSCBsmRLfEtZsRE="/>
+        <field:display field="grpModifiedBy" id="s_com_agility_ddp_data_domain_DdpGroup_grpModifiedBy" object="${ddpgroup}" z="Ahcb8pxJSjxaJoL0XLDolKNSRUA="/>
+        <field:display calendar="true" dateTimePattern="${ddpGroup_grpmodifieddate_date_format}" field="grpModifiedDate" id="s_com_agility_ddp_data_domain_DdpGroup_grpModifiedDate" object="${ddpgroup}" z="1Ew1PPxG4KXrzKyRjCpAPh0Az3E="/>
+    </page:show>
+</div>

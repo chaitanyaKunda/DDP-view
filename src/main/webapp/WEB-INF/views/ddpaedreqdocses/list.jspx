@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpAedReqDocs" items="${ddpaedreqdocses}" z="yPlMRpe87StLGmBKZ51qbPc3OTc=">
+        <table:table data="${ddpaedreqdocses}" id="l_com_agility_ddp_data_domain_DdpAedReqDocs" path="/ddpaedreqdocses" typeIdFieldName="ardMergeId" z="UKMvql25TQIQec/dAysOF+XGm3M=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ddpMergeSetup" property="ddpMergeSetup" z="OAgGgt5mxbJmJNayBJmPBz4+7o0="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardDocType" property="ardDocType" z="vQpHMDBx/uxOS+ctR6UagfeYvyw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardDocRequired" property="ardDocRequired" z="UQ9E8JoPd9ZKby+G3eXOL9OjIVI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardMergeSeq" property="ardMergeSeq" z="6Z2fTUY4w8IR4syLgFiwLiUTFgI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardStatus" property="ardStatus" z="6y5b50MNKbA0y0Y0aot1y59nxTw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardCreatedBy" property="ardCreatedBy" z="cOuvaXUcW8Sivupnrsp34dkLqdc="/>
+        </table:table>
+    </page:list>
+</div>

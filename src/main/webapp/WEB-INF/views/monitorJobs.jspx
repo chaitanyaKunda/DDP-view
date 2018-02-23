@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" 
+     xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" 
+     xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="error_backto_home_url" var="home_url"></spring:message> 
+   	<head>
+   	 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta http-equiv="X-UA-Compatible" content="IE=8" />
+		<style>
+		.clsbutton{
+			   position : relative;
+			   border-radius: 10px;
+ 			   margin-left: 80%; 
+ 			   margin-bottom: 10%;
+ 			   margin-top: 20%;
+			   width:70px;
+		}
+		
+		.ddpjobs {
+		    width:48%;
+		    height: 300px;
+		    float: left;
+		/*     background:#ecd2c6; */
+		}
+		.AEDrulejob {
+		    width:48%;
+		    height: 300px;
+		    float: left;
+		/*     background: #de9999; */
+		}
+		.consolidatedAEDrulejob {
+		    width:48%;
+		    height: 350px;
+		    float: left;
+		/*     background: #de9999; */
+		}
+		.ExportRuleJobs {
+		    width:48%;
+		    height: 350px;
+		    float: left;
+		/*     background: #ecd2c6; */
+		}
+		
+		.monitorcontent{
+		    width: 100%;
+		    position: relative;
+		}
+		#monitormenu {
+				position: fixed;
+				top: 0;
+				background: blue;
+				height: 50px;
+				width: 100%;
+			}
+			#loading-tp {
+		   width: 37%;
+		   height: 200px;
+		   padding: 10px;
+		   padding-top: inherit;
+		   position: fixed;
+		   display: block;
+		   opacity: 0.7;
+		   background-color: #fff;
+		   z-index: 99;
+		   text-align: center;
+		}
+		#loading {
+		   width: 100%;
+		   height: 100%;
+		   position: fixed;
+		   display: block;
+		   opacity: 0.7;
+		   background-color: #fff;
+		   z-index: 99;
+		   text-align: center;
+		}
+		
+		#loading-image {
+		  position: absolute;
+		  top: 100px;
+		  left: 240px;
+		  z-index: 100;
+		}
+		
+		#ddpjobsID #overlayDDP{
+			  height: 10%;
+			  width: 5%;
+ 			  opacity:0;
+ 			  top: 200%; 
+			  left: 40%;
+			  position: absolute;
+			  padding: 0;
+ 			  transition: opacity .5s;
+			  filter: alpha(opacity=0);
+		}
+		#aedjobsID #overlayAED{
+			  height: 10%;
+			  width: 5%;
+			  opacity: 0;
+ 			  top: 200%; 
+			  left: 80%;
+			  position: absolute;
+			  padding: 0;
+			  transition: opacity .5s;
+			  filter: alpha(opacity=0);
+		}
+		#consaedjobsID #overlayCONAED{
+			  height: 10%;
+			  width: 5%;
+			  opacity: 0;
+ 			  top: 420%; 
+			  left: 40%;
+			  position: absolute;
+			  padding: 0;
+			  transition: opacity .5s;
+			  filter: alpha(opacity=0);
+		}
+		#expjobsID #overlayEXP{
+			  height: 10%;
+			  width: 5%;
+			  opacity: 0;
+ 			  top: 420%; 
+			  left: 80%;
+			  position: absolute;
+			  padding: 0;
+			  transition: opacity .5s;
+			  filter: alpha(opacity=0);
+		}
+		</style>
+    </head>
+
+<!-- 		<div class="monitorcontent"> -->
+			<div style="float: right;margin-right: 30px;"><button style="border-radius: 10px;" title="Global Refresh" id="btnGbl">Refresh</button></div>
+			<div class="ddpjobs" style="padding: 10px;padding-top: 30px;" id="ddpjobs">
+				<div style="background:#ecd2c6;border-radius: 25px;" id="ddpjobsID">
+					<div style="padding-left: 30px;"> DDP Jobs Details </div>
+					<table id="tblDDP">
+						<tr><th>Job</th><th>Status</th></tr>
+						<tr></tr>
+					</table>
+					<button class="clsbutton" title="Refresh DDP Jobs" id="btnDDP">Refresh</button>
+					<div id="overlayDDP" align="center"><img src="${home_url}/userguidev/ajax-loader.gif" alt="Loading..." /></div>
+				</div>
+			</div>
+			<div class="AEDrulejob" style="padding: 10px;">
+				<div style="background:#de9999;border-radius: 25px;" id="aedjobsID">
+					<div style="padding-left: 30px;"><span> AED Rule Job Details </span></div>
+					<table  id="tblAED">
+					<tr><th>Job</th><th>Status</th></tr>
+					<tr></tr>
+					</table>
+					<button class="clsbutton" title="Refresh AED JObs" id="btnAED">Refresh</button>
+					<div id="overlayAED" align="center"><img src="${home_url}/userguidev/ajax-loader.gif" alt="Loading..." /></div>
+				</div>
+			</div>
+			<div class="consolidatedAEDrulejob" style="padding: 10px;">
+				<div style="background:#de9999;border-radius: 25px;" id="consaedjobsID">
+					<div style="padding-left: 30px;"><span> Consolidated AED Rule Job Details </span></div>
+					<table id="tblCON">
+						<tr><th>Job Name</th><th>Started at</th><th>Status</th></tr>
+						<tr></tr>
+					</table>
+					<button class="clsbutton" title="Refresh Consolidated Jobs" id="btnConAED">Refresh</button>
+					<div id="overlayCONAED" align="center"><img src="${home_url}/userguidev/ajax-loader.gif" alt="Loading..." /></div>
+				</div>
+			</div>
+			<div class="ExportRuleJobs" style="padding: 10px;">
+				<div style="background:#ecd2c6;border-radius: 25px;" id="expjobsID">
+					<div style="padding-left: 30px;"><span> Export Rule Job Details </span></div>
+					<table id="tblEXP">
+						<tr><th>Job Name</th><th>Started at</th><th>Status</th></tr>
+						<tr></tr>
+					</table>
+					<button class="clsbutton" title="Refresh Export Jobs" id="btnEXP">Refresh</button>
+					<div id="overlayEXP" align="center"><img src="${home_url}/userguidev/ajax-loader.gif" alt="Loading..." /></div>
+				</div>
+			</div>
+<!-- 			<div id="loading" style="display: none;"> -->
+<!-- 				<img id="loading-image" src="${home_url}/userguidev/ajax-loader.gif" alt="Loading..." /> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+
+	 	<script type="text/javascript">
+	 	
+	 	
+		var height = $(document).height();
+		var menu_height = $("#monitormenu").height();
+		var content_height = height - menu_height;
+
+		$(".monitorcontent").css("height", content_height);
+		$(".monitorcontent").css("top", menu_height);
+		
+		var greenImg = "&lt;img src='userguidev/green.png' width='20px'&gt;";
+		var redImg = "&lt;img src='userguidev/red.png' width='20px'&gt;";
+		console.log('job Details: ${jobDetails.consolidatedAEDRuleJobs}');
+		/**************** setting up job details ******************/
+		refreshDDPJobs();
+		/****************job Details Ends *******************/
+		/****Setting AED Job Details*****/
+		refreshAEDJobsrefresh('${jobDetails.aedRuleJobs.aedJobsJson}');
+		/****Setting AED Job Details*****/
+		/****Setting Consolidated AED Job Details*****/
+		refreshConAEDJobsrefresh('${jobDetails.consolidatedAEDRuleJobs.consolidatedJobsJson}');
+		/****Setting Consolidated AED Job Details*****/
+		/****Setting Export Job Details*****/
+		refreshExportJobsrefresh('${jobDetails.exportRuleJobs.exportJobsJson}');
+		/****Setting Export Job Details*****/
+		refreshMenuIcon();
+		
+		/***call all Divs Ajax calls *****/
+		sendAjaxCallDDPJobs();
+		sendAjaxCallAEDJobs();
+		sendAjaxCallConAEDJobs();
+		sendAjaxCallEXPJobs();
+		
+		
+		
+		function refreshMenuIcon()
+		{
+			var imageID = $('#i_custom_ddp_admin_master_auditlogs a img');
+			if('${jobDetails.ddpJobsStatus}' == false)
+				imageID.attr("src","userguidev/green.png");
+			else
+				imageID.attr("src","userguidev/red.png");
+			imageID.attr("width","24");
+		}
+		function refreshDDPJobs()
+		{
+			var ddpJobs = "";
+			ddpJobs += "&lt;tr&gt;&lt;td&gt; Auto Emailing of Docs(AED) &lt;/td&gt;&lt;td&gt;";
+			if('${jobDetails.aedRuleJobs.aedRulesStatus}' == false )
+				ddpJobs += redImg+"&lt;/td&gt;&lt;/tr&gt;";
+			else
+				ddpJobs += greenImg+"&lt;/td&gt;&lt;/tr&gt;";
+			
+			ddpJobs += "&lt;tr&gt;&lt;td&gt; Consolidated Emailing of Docs(AED) &lt;/td&gt;&lt;td&gt;";
+			if('${jobDetails.consolidatedAEDRuleJobs.consolidateAedRulesStatus}' == false )
+				ddpJobs += redImg+"&lt;/td&gt;&lt;/tr&gt;";
+			else
+				ddpJobs += greenImg+"&lt;/td&gt;&lt;/tr&gt;";
+			
+			ddpJobs += "&lt;tr&gt;&lt;td&gt; Export Document Setup &lt;/td&gt;&lt;td&gt;";
+			if('${jobDetails.exportRuleJobs.exportRulesStatus}' == false )
+				ddpJobs += redImg+"&lt;/td&gt;&lt;/tr&gt;";
+			else
+				ddpJobs += greenImg+"&lt;/td&gt;&lt;/tr&gt;";
+				
+			$("#tblDDP").append(ddpJobs);
+			ddpJobs = "";
+		}
+		function refreshAEDJobs()
+		{
+			console.log("coming control main");
+			var aedjobs = "";
+			if('${jobDetails.aedRuleJobs.aedJobsJson}'=='' || '${jobDetails.aedRuleJobs.aedJobsJson}'==null)
+			{
+				aedjobs += "&lt;tr&gt;&lt;td&gt; No Job is Running &lt;/td&gt;&lt;td&gt;"+redImg+"&lt;/td&gt;&lt;/tr&gt;"
+			}
+			else{
+				var aedJsons = JSON.parse('${jobDetails.aedRuleJobs.aedJobsJson}');
+				for(var i=0;i &lt; aedJsons.length;i++)
+				{
+					if(aedJsons[i].id.jrfStatus == '1')
+						imgTag = greenImg;
+					else
+						imgTag = redImg;	
+					aedjobs += "&lt;tr&gt;&lt;td&gt;"+aedJsons[i].id.jrfJobId.split(".")[5]+"&lt;/td&gt;&lt;td&gt;"+imgTag+"&lt;/td&gt;&lt;/tr&gt;"
+				}
+			}
+			$("#tblAED").append(aedjobs);
+			aedJobs="";	
+		}
+		function refreshConAEDJobs()
+		{
+			var conjobs = "";
+			if('${jobDetails.consolidatedAEDRuleJobs.consolidatedJobsJson}' == '' || '${jobDetails.consolidatedAEDRuleJobs.consolidatedJobsJson}'==null)
+			{
+				conjobs += "&lt;tr&gt;&lt;td&gt; No Threads Running &lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td&gt;"+redImg+"&lt;/td&gt;&lt;/tr&gt;"
+			}
+			else{
+				var conJsons = JSON.parse('${jobDetails.consolidatedAEDRuleJobs.consolidatedJobsJson}');
+				Object.keys(conJsons).forEach(function(key){
+					    conjobs += "&lt;tr&gt;&lt;td&gt;"+key+"&lt;/td&gt;&lt;td&gt;"+conJsons[key]+"&lt;/td&gt;&lt;td&gt;"+greenImg+"&lt;/td&gt;&lt;/tr&gt;"
+				});
+			
+			}
+			$("#tblCON").append(conjobs);
+			conjobs="";	
+		}
+		function refreshExportJobs()
+		{
+			var expjobs="";
+			if('${jobDetails.exportRuleJobs.exportJobsJson}' == '' || '${jobDetails.exportRuleJobs.exportJobsJson}' == null)
+			{
+				expjobs += "&lt;tr&gt;&lt;td&gt; No Threads Running &lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td&gt;"+redImg+"&lt;/td&gt;&lt;/tr&gt;"
+			}
+			else{
+				var expJsons = JSON.parse('${jobDetails.exportRuleJobs.exportJobsJson}');
+				Object.keys(expJsons).forEach(function(key){
+					   expjobs += "&lt;tr&gt;&lt;td&gt;"+key+"&lt;/td&gt;&lt;td&gt;"+expJsons[key]+"&lt;/td&gt;&lt;td&gt;"+greenImg+"&lt;/td&gt;&lt;/tr&gt;"
+				});
+			}
+			
+			$("#tblEXP").append(expjobs);
+			expjobs="";	
+		}
+		
+		 $('#btnGbl').click(function(){
+				
+			 $.ajax({
+				 type:"GET",
+				 url: "process/jobDetailsRefresh/0",
+			 	contentType:"application/HTML; charset=utf-8",
+			 	dataType:"HTML",
+			 	success:function(response){
+			 		var result = JSON.parse(response);
+			 		var aedRuleJobs = result.aedRuleJobs;
+			 		var consolidatedAEDRuleJobs = result.consolidatedAEDRuleJobs;
+			 		var exportRuleJobs = result.exportRuleJobs;
+// 			 		refreshAEDJobsrefresh(aedRuleJobs.aedJobsJson);
+// 			 		refreshConAEDJobsrefresh(consolidatedAEDRuleJobs.consolidatedJobsJson);
+// 			 		refreshExportJobsrefresh(exportRuleJobs.exportJobsJson);
+			 		refreshDDPJobsrefresh(result);
+			 		refreshMenuIconrefresh(result);
+			 	},
+			 	error:function(){
+			 		console.log("Error Occured while reloading");	
+			 	}
+			 });
+		 });
+		 $('#btnDDP').click(function(){
+			
+			sendAjaxCallDDPJobs();
+		 });
+		 function sendAjaxCallDDPJobs()
+		 {
+			 $.ajax({
+				 type:"GET",
+				 url: "process/jobDetailsRefresh/0",
+			 	contentType:"application/HTML; charset=utf-8",
+			 	dataType:"HTML",
+			 	beforeSend: function() {
+			 	  dojo.style(dojo.byId("overlayDDP"),{opacity:1});
+			 	 dojo.style(dojo.byId("overlayDDP"),{filter:"alpha(opacity=100)"}); //for IE
+			 	 },
+			 	 complete: function(){
+			 		 dojo.style(dojo.byId("overlayDDP"),{opacity:0});
+			 		dojo.style(dojo.byId("overlayDDP"),{filter:"alpha(opacity=0)"}); //for IE
+			 	  },
+			 	success:function(response){
+			 		var result = JSON.parse(response);
+			 		var aedRuleJobs = result.aedRuleJobs;
+			 		var consolidatedAEDRuleJobs = result.consolidatedAEDRuleJobs;
+			 		var exportRuleJobs = result.exportRuleJobs;
+			 		refreshDDPJobsrefresh(result);
+			 		refreshMenuIconrefresh(result);
+			 	},
+			 	error:function(){
+			 		console.log("Error Occured while reloading");	
+			 	}
+			 });
+		 }
+		 $('#btnAED').click(function(){
+			
+			 sendAjaxCallAEDJobs();
+		 });
+		 function sendAjaxCallAEDJobs()
+		 {
+			 $.ajax({
+				 type:"GET",
+				 url: "process/jobDetailsRefresh/1",
+			 	contentType:"application/HTML; charset=utf-8",
+			 	dataType:"HTML",
+			 	beforeSend: function() {
+			 	    console.log(" btnAED sending request..");
+			 	   dojo.style(dojo.byId("overlayAED"),{opacity:1});
+			 	  dojo.style(dojo.byId("overlayAED"),{filter:"alpha(opacity=100)"}); //for IE
+			 	  },
+			 	 complete: function(){
+			 		console.log("btnAED Received Request.");
+			 		 dojo.style(dojo.byId("overlayAED"),{opacity:0});
+			 		 dojo.style(dojo.byId("overlayAED"),{filter:"alpha(opacity=0)"}); //for IE
+			 	  },
+			 	success:function(response){
+			 		var result = JSON.parse(response);
+			 		var aedRuleJobs = result.aedRuleJobs;
+			 		var consolidatedAEDRuleJobs = result.consolidatedAEDRuleJobs;
+			 		var exportRuleJobs = result.exportRuleJobs;
+			 		refreshAEDJobsrefresh(aedRuleJobs.aedJobsJson);
+			 	},
+			 	error:function(){
+			 		console.log("Error Occured while reloading");	
+			 	}
+			 });
+		 }
+		 $('#btnConAED').click(function(){
+			
+			 sendAjaxCallConAEDJobs();
+		 });
+		 function sendAjaxCallConAEDJobs()
+		 {
+			 $.ajax({
+				 type:"GET",
+				 url: "process/jobDetailsRefresh/2",
+			 	contentType:"application/HTML; charset=utf-8",
+			 	dataType:"HTML",
+			 	beforeSend: function() {
+			 	    console.log(" ConAED sending request..");
+			 	   dojo.style(dojo.byId("overlayCONAED"),{opacity:1});
+			 	  dojo.style(dojo.byId("overlayCONAED"),{filter:"alpha(opacity=100)"}); //for IE
+			 	   
+			 	  },
+			 	 complete: function(){
+			 		console.log("ConAED Received Received.");
+			 		 dojo.style(dojo.byId("overlayCONAED"),{opacity:0});
+			 		dojo.style(dojo.byId("overlayCONAED"),{filter:"alpha(opacity=0)"}); //for IE
+			 	  },
+			 	success:function(response){
+			 		var result = JSON.parse(response);
+			 		var aedRuleJobs = result.aedRuleJobs;
+			 		var consolidatedAEDRuleJobs = result.consolidatedAEDRuleJobs;
+			 		var exportRuleJobs = result.exportRuleJobs;
+			 		refreshConAEDJobsrefresh(consolidatedAEDRuleJobs.consolidatedJobsJson);
+			 	},
+			 	error:function(){
+			 		console.log("Error Occured while reloading");	
+			 	}
+			 });
+		 }
+		 $('#btnEXP').click(function(){
+			
+			 sendAjaxCallEXPJobs();
+			 console.log("Export Refresh Clicked !");
+		 });
+		 function sendAjaxCallEXPJobs()
+		 {
+			 $.ajax({
+				 type:"GET",
+				 url: "process/jobDetailsRefresh/3",
+			 	contentType:"application/HTML; charset=utf-8",
+			 	dataType:"HTML",
+			 	beforeSend: function() {
+			 	    console.log(" EXP sending request..");
+			 	   dojo.style(dojo.byId("overlayEXP"),{opacity:1});
+			 	  dojo.style(dojo.byId("overlayEXP"),{filter:"alpha(opacity=100)"}); //for IE
+			 	  },
+			 	 complete: function(){
+			 		console.log("EXP Received Received.");
+			 		 dojo.style(dojo.byId("overlayEXP"),{opacity:0});
+			 		dojo.style(dojo.byId("overlayEXP"),{filter:"alpha(opacity=0)"}); //for IE
+			 	  },
+			 	success:function(response){
+			 		var result = JSON.parse(response);
+			 		var aedRuleJobs = result.aedRuleJobs;
+			 		var consolidatedAEDRuleJobs = result.consolidatedAEDRuleJobs;
+			 		var exportRuleJobs = result.exportRuleJobs;
+			 		refreshExportJobsrefresh(exportRuleJobs.exportJobsJson);
+			 	},
+			 	error:function(){
+			 		console.log("Error Occured while reloading");	
+			 	}
+			 });
+		 }
+		 /**************/
+		 function refreshAEDJobsrefresh(aedJobsJson)
+		{
+			 $("#tblAED").find("tr:not(:first)").remove();
+			var aedjobs = "";
+			if(aedJobsJson =='' || aedJobsJson==null)
+			{
+				aedjobs += "&lt;tr&gt;&lt;td&gt; No Job is Running &lt;/td&gt;&lt;td&gt;"+redImg+"&lt;/td&gt;&lt;/tr&gt;"
+			}
+			else{
+				var aedJsons = JSON.parse(aedJobsJson);
+				for(var i=0; i &lt;aedJsons.length ; i++)
+				{
+					if(aedJsons[i].id.jrfStatus == '1')
+						imgTag = greenImg;
+					else
+						imgTag = redImg;	
+					aedjobs += "&lt;tr&gt;&lt;td&gt;"+aedJsons[i].id.jrfJobId.split(".")[5]+"&lt;/td&gt;&lt;td&gt;"+imgTag+"&lt;/td&gt;&lt;/tr&gt;"
+				}
+			}
+			$("#tblAED").append(aedjobs);
+			aedJobs="";	
+		}
+		function refreshConAEDJobsrefresh(consolidatedJobsJson)
+		{
+			console.log('at: '+consolidatedJobsJson);
+		 	$("#tblCON").find("tr:not(:first)").remove();
+			var conjobs = "";
+			if(consolidatedJobsJson == '' || consolidatedJobsJson==null)
+			{
+				conjobs += "&lt;tr&gt;&lt;td&gt; No Threads Running &lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td&gt;"+redImg+"&lt;/td&gt;&lt;/tr&gt;"
+			}
+			else{
+				var conJsons = JSON.parse(consolidatedJobsJson);
+				Object.keys(conJsons).forEach(function(key){
+					    conjobs += "&lt;tr&gt;&lt;td&gt;"+key+"&lt;/td&gt;&lt;td&gt;"+conJsons[key]+"&lt;/td&gt;&lt;td&gt;"+greenImg+"&lt;/td&gt;&lt;/tr&gt;"
+				});
+			}
+			$("#tblCON").append(conjobs);
+			conjobs="";	
+		}
+		function refreshExportJobsrefresh(exportJobsJson)
+		{
+			$("#tblEXP").find("tr:not(:first)").remove();
+			var expjobs="";
+			if(exportJobsJson == '' || exportJobsJson == null)
+			{
+				expjobs += "&lt;tr&gt;&lt;td&gt; No Threads Running &lt;/td&gt;&lt;td&gt; &lt;/td&gt;&lt;td&gt;"+redImg+"&lt;/td&gt;&lt;/tr&gt;"
+			}
+			else{
+				var expJsons = JSON.parse(exportJobsJson);
+				Object.keys(expJsons).forEach(function(key){
+					   expjobs += "&lt;tr&gt;&lt;td&gt;"+key+"&lt;/td&gt;&lt;td&gt;"+expJsons[key]+"&lt;/td&gt;&lt;td&gt;"+greenImg+"&lt;/td&gt;&lt;/tr&gt;"
+				});
+			}
+			$("#tblEXP").append(expjobs);
+			expjobs="";	
+		}
+		function refreshDDPJobsrefresh(jobDetails)
+		{
+			$("#tblDDP").find("tr:not(:first)").remove();
+			var ddpJobs = "";
+			ddpJobs += "&lt;tr&gt;&lt;td&gt; Auto Emailing of Docs(AED) &lt;/td&gt;&lt;td&gt;";
+			if(jobDetails.aedRuleJobs.aedRulesStatus == true )
+				ddpJobs += redImg+"&lt;/td&gt;&lt;/tr&gt;";
+			else
+				ddpJobs += greenImg+"&lt;/td&gt;&lt;/tr&gt;";
+			
+			ddpJobs += "&lt;tr&gt;&lt;td&gt; Consolidated Emailing of Docs(AED) &lt;/td&gt;&lt;td&gt;";
+			if(jobDetails.consolidatedAEDRuleJobs.consolidateAedRulesStatus == false )
+				ddpJobs += redImg+"&lt;/td&gt;&lt;/tr&gt;";
+			else
+				ddpJobs += greenImg+"&lt;/td&gt;&lt;/tr&gt;";
+			
+			ddpJobs += "&lt;tr&gt;&lt;td&gt; Export Document Setup &lt;/td&gt;&lt;td&gt;";
+			if(jobDetails.exportRuleJobs.exportRulesStatus == false )
+				ddpJobs += redImg+"&lt;/td&gt;&lt;/tr&gt;";
+			else
+				ddpJobs += greenImg+"&lt;/td&gt;&lt;/tr&gt;";
+				
+			$("#tblDDP").append(ddpJobs);
+			ddpJobs = "";
+		}
+		function refreshMenuIconrefresh(jobDetails)
+		{
+			console.log(jobDetails.ddpJobsStatus);
+			var imageID = $('#i_custom_ddp_admin_master_auditlogs a img');
+			if(jobDetails.ddpJobsStatus == '1')
+				imageID.attr("src","userguidev/green.png");
+			else
+				imageID.attr("src","userguidev/red.png");
+			imageID.attr("width","24");
+		}
+		 /**************/
+	</script>
+
+	
+	
+	</div>	

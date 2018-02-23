@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpRate" object="${ddprate}" path="/ddprates" z="olQkhHn+m0OwOrxLlswDrKYGi/w=">
+        <field:display field="rtsRdtId" id="s_com_agility_ddp_data_domain_DdpRate_rtsRdtId" object="${ddprate}" z="ru+H8JoO3nGMJBqtlDqE3Yrpw9c="/>
+        <field:display field="rtsOption" id="s_com_agility_ddp_data_domain_DdpRate_rtsOption" object="${ddprate}" z="6CZ8UN+2g3yPKzjOhEEiPKTHzM8="/>
+        <field:display field="rtsCreatedBy" id="s_com_agility_ddp_data_domain_DdpRate_rtsCreatedBy" object="${ddprate}" z="h2YwxpvmEWUDNJ4UH2kRDvAWI0U="/>
+        <field:display field="rtsCreatedDate" id="s_com_agility_ddp_data_domain_DdpRate_rtsCreatedDate" object="${ddprate}" z="cwAXjMkRei1p9VEPJhFsu9DbNXQ="/>
+        <field:display field="rtsModifiedBy" id="s_com_agility_ddp_data_domain_DdpRate_rtsModifiedBy" object="${ddprate}" z="EFOy47vrdo/SA3pXIGfqysKeJ2Y="/>
+        <field:display field="rtsModifiedDate" id="s_com_agility_ddp_data_domain_DdpRate_rtsModifiedDate" object="${ddprate}" z="Ufa4HUhx2PmKojHk+OaeVLiyoLI="/>
+    </page:show>
+</div>

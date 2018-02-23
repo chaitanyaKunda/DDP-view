@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCategorizedDetail" items="${ddpcategorizeddetails}" z="mSdqPjMzzvbNwHPn3oitAGGOsX0=">
+        <table:table data="${ddpcategorizeddetails}" id="l_com_agility_ddp_data_domain_DdpCategorizedDetail" path="/ddpcategorizeddetails" typeIdFieldName="cadId" z="EVqCdDVlUv3evwgCxBbgPR6LSf8=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDetail_cadDtxId" property="cadDtxId" z="Dy/2ax0+4msKqkviJAmsJgVn4SI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDetail_cadRObjectId" property="cadRObjectId" z="iJhZ1S+L0i9tXxGhe2V3PBTn6/w="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDetail_cadOriginSysId" property="cadOriginSysId" z="WvMiFK03xEHPWgLbPXgK6SQ31GY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDetail_cadServiceType" property="cadServiceType" z="YsoRvlIn4GJlXgN7xtnRHauQXrM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDetail_cadTotalRulesReqCount" property="cadTotalRulesReqCount" z="oRKeNlVO/cJIGtKu8So+Mbu4dQg="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDetail_cadRulesInProgressCount" property="cadRulesInProgressCount" z="j/cXc29V4kCScY0CllpQTW6596w="/>
+        </table:table>
+    </page:list>
+</div>

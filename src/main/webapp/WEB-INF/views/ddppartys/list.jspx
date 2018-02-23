@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpParty" items="${ddppartys}" z="KDOeTYhKSSFVBqnnCyiZnDl0PFw=" path="/ddppartys">
+        <table:table data="${ddppartys}" id="l_com_agility_ddp_data_domain_DdpParty" path="/ddppartys" typeIdFieldName="ptyPartyCode" z="/JaXc5MxD+ZDZ+UhH3WpHIFYtlE=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyName" property="ptyPartyName" z="fxvWw9MjZksmm6xRZXVTbDLMn/s="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpParty_ptyPartyCode" property="ptyPartyCode" z="fxvWw9MjZksmm6xRZXVTbDLMn/s="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpParty_ptyCompanyCode" property="ptyCompanyCode" z="5Uh/fsNtVegPZsrPB+7wwioA34A="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" property="ptyApplicationCode" z="T6HRiIHSyf0pV8XRtlviEFj3nt4="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpParty_ptyApplicationCode" property="ptyStatus" z="xda0OFV56/1OiLH05XySdXGr+Aw=" render="false"/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpParty_ptyCreatedBy" property="ptyCreatedBy" z="EeNXuJNP16UJ7VvvUVhyC/lbTzw="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/> 
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpUser" idField="ddpUser.usrId" modelAttribute="userWrapper" path="/ddpusers" versionField="none" z="lsnPlqzLmK13rmQ+vE9LjsHLApA=">
+    <div id="myTabContainer"
+			style="height: 620px; width: auto; padding: 10px;">
+			<!-- add a tab -->
+		<div id="updateCreation" style="width: 100%">
+        <field:input field="ddpUser.usrLoginId" id="c_com_agility_ddp_data_domain_DdpUser_usrLoginId" required="true" disabled="false" z="Oc0B/iNWj1QczpSMt3cNS8HyTG0=" readonly="true"/>
+        <field:input field="ddpUser.usrFirstName" id="c_com_agility_ddp_data_domain_DdpUser_usrFirstName" required="true" z="wTxb9JFa+9O0KXCLEmSJl06PFFk=" readonly="true"/>
+        <field:input field="ddpUser.usrMiddleName" id="c_com_agility_ddp_data_domain_DdpUser_usrMiddleName" z="0FmT5Je2JAGYEDCPSwbUshcgdjg=" readonly="true"/>
+        <field:input field="ddpUser.usrLastName" id="c_com_agility_ddp_data_domain_DdpUser_usrLastName" required="true" z="noUmduT2BJyPTvPUukQsVHhnoqc=" readonly="true"/>
+        <field:input field="ddpUser.usrDisplayName" id="c_com_agility_ddp_data_domain_DdpUser_usrDisplayName" required="true" z="tm0zsDt+r8RkWXeqENBCs2zASgU=" readonly="true"/>
+        <field:input field="ddpUser.usrEmailAddress" id="c_com_agility_ddp_data_domain_DdpUser_usrEmailAddress" required="true" z="ZVNo+ovwB6K6T0o8NZSWZ/oJZAE=" readonly="true"/>
+        <field:input field="ddpUser.usrDomain" id="c_com_agility_ddp_data_domain_DdpUser_usrDomain" required="true" z="Wp+NR9pr5wqF8HizOkLV32FrZlU=" readonly="true"/>
+        <field:input field="ddpUser.usrPassword" id="c_com_agility_ddp_data_domain_DdpUser_usrPassword" z="/WjuuZhWzxFJ+jUb4v5y8D4XT9c=" render="true" readonly="true"/>
+    	<table class="tab" border="0" cellspacing="0" cellpadding="0"  style="width:0px;">
+		<tr style="background-color: #FFFFFF;">
+			<td class="first">
+			<label>User Status</label>
+			</td>
+			<td class="first">
+				<select id="status" name="status" >
+				  <option value="0">Active</option>
+				  <option value="1">InActive</option>
+				</select>
+			</td>
+		</tr>
+		</table> 
+		<br></br>
+		<div style="display: none"  hidden="true" >
+	        <field:input field="ddpUser.usrStatus" id="c_com_agility_ddp_data_domain_DdpUser_usrStatus"  
+	         required="true" validationMessageCode="field_invalid_integer" z="JoJ6elAlc5ZLSd/HEaOqHl3EFac=" readonly="true"/>
+         </div>
+        <field:input field="ddpUser.usrRegion" id="c_com_agility_ddp_data_domain_DdpUser_usrRegion" z="mmVzu28ctQ68U5jJkMpkSLWcDPE="/>
+        <field:input field="ddpUser.usrCountry" id="c_com_agility_ddp_data_domain_DdpUser_usrCountry" z="aGTWZN7gTxBJyqTUGrWuUYsxzG4="/>
+        <field:input field="ddpUser.usrCompanyCode" id="c_com_agility_ddp_data_domain_DdpUser_usrCompanyCode" z="aP3hYI9AdefeKewzaZ3nBKtAOHM=" />
+        <field:input field="ddpUser.usrBranchCode" id="c_com_agility_ddp_data_domain_DdpUser_usrBranchCode" z="uyHGVMjfWjT9bScMQ6WCXkNAEGY=" />
+        <field:input field="ddpUser.usrHintQuestion" id="c_com_agility_ddp_data_domain_DdpUser_usrHintQuestion" z="ASc2AJSbJR2m5hGAxFiMLtcS1w8=" readonly="true"/>
+        <field:input field="ddpUser.usrHintAnswer" id="c_com_agility_ddp_data_domain_DdpUser_usrHintAnswer" z="q4DqE3WwegCnxw34IGPlwwLi+f4=" readonly="true"/>
+        </div>
+       	<!-- add the content pane decoration (all tabs must live in content panes) -->
+		<script type="text/javascript">
+			Spring.addDecoration(new Spring.ElementDecoration({
+				elementId : 'updateCreation',
+				widgetType : 'dijit.layout.ContentPane',
+				widgetAttrs : {
+					title : 'User Creation',
+					selected : true
+				}
+			}));
+			
+		</script>
+		<div id="updateGroupSetUp">
+				<table class="tab"  border="0" cellspacing="0" cellpadding="0">    
+					<tr style="background-color: #FFFFFF;">
+						<td class="first">
+							<field:select field="ddpGroupSetup.grsGroupId" 
+							id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsGroupId"
+							itemValue="grpId" items="${ddpgroupsdisname}" path="/ddpgroups"
+							z="vaH8PDuvo8gPQfLwRpi0L5aJgZE=" /></td>
+						<td class="second"> <span>
+							<button class="switch" id="left" title="Move Items to First list">&lt;</button>
+							<button class="switch" id="right" title="Move Items to Second list">&gt;</button>
+							</span></td>
+						<td class="third">
+							<field:select id="c_selectgroupid"
+							field="ddpUser.ddpGroupSetups"
+							itemValue="grpId" items="${ddpgroupselectedlist}" path="/ddpusers"
+							z="vaH8PDuvo8gPQfLwRpi0L5aJgZE=" />
+						</td>
+					</tr>
+				</table>	
+			</div>
+			<!-- decorate the second tab div with a content pane -->
+			<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+					elementId : 'updateGroupSetUp',
+					widgetType : 'dijit.layout.ContentPane',
+					widgetAttrs : {
+						title : 'Group Setup',
+						selected : false
+					}
+				}));
+				
+		</script>
+		<div id="updateRroleSetup">
+			<table class="tab"  border="0" cellspacing="0" cellpadding="0">    
+				<tr style="background-color: #FFFFFF;"><td class="first">
+					<field:select field="ddpRoleSetup.rlsRoleId"
+						id="c_com_agility_ddp_data_domain_DdpRoleSetup_rlsRoleId"
+						itemValue="rolId" items="${ddproledisplayname}" path="/ddproles"
+						z="dd3u4LN0eXTnlZWAb7GJuEyxrw0=" /></td>
+					<td class="second"> <p>
+						<button class="switchrleid" id="leftrleid" title="Move Items to First list">&lt;</button>
+						<button class="switchrleid" id="rightrleid" title="Move Items to Second list">&gt;</button>
+						</p></td>
+					<td class="third"> 
+						<field:select field="ddpUser.ddpRoleSetups"
+						id="c_selectroleid"
+						itemValue="rolId" items="${ddproleselectedlist}" path="/ddpusers"
+						z="HzGf6GoJHPOlqHU3KBs/guX1m2M=" /></td>
+				</tr>	
+			</table>
+		</div>	
+		<!-- add the content pane decoration (all tabs must live in content panes) -->
+		<script type="text/javascript">
+		Spring.addDecoration(new Spring.ElementDecoration({
+			elementId : 'updateRroleSetup',
+			widgetType : 'dijit.layout.ContentPane',
+			widgetAttrs : {
+				title : 'Role Setup',
+				selected : false
+			}
+		}));
+		</script>
+		<!-- add the content pane decoration (all tabs must live in content panes) -->
+		<script type="text/javascript">
+			
+			dojo.addOnLoad(function(){
+				// listen to the "move items" buttons
+				
+				$("#updateCreation").addClass("dijitVisible");
+				var status = document.getElementById("_ddpUser.usrStatus_id").value;
+				var objSelect = document.getElementById("status");
+				if(status=='0'){
+// 					document.getElementById("_ddpUser.usrStatus_id").value = 'Active';
+					objSelect.options[0].selected = true;
+// 					$("#status option:selected").val(0);
+				}else{
+					objSelect.options[1].selected = true;
+				}
+				removeItemgrp();
+				removeItemrole();
+				
+				selectGroup();
+				selectRole();
+				dojo.query("button.switch")
+					.connect("onclick",function(e){
+						switch(e.target.id.toString()){
+							case "left" : 
+							{
+								var listLength = document.getElementById("_ddpUser.ddpGroupSetups_id");
+								if(listLength != null){
+									for(var i=0; i &lt; listLength.options.length;i++){
+										var selectedtext=dijit.byId("_ddpUser.ddpGroupSetups_id").containerNode.options[i].text;
+										var selectedvalue=dijit.byId("_ddpUser.ddpGroupSetups_id").containerNode.options[i].value;
+									    if(listLength.options[i].selected){
+									    	document.getElementById("_ddpGroupSetup.grsGroupId_id").add(new Option(selectedtext, selectedvalue));
+									    }
+								    }  
+									removeItem(document.getElementById("_ddpUser.ddpGroupSetups_id"));
+								}
+								else{
+									alert("Please select atleast one group to move");
+								}
+								break;
+							}
+							case "right" : 
+							{
+								var listLength = document.getElementById("_ddpGroupSetup.grsGroupId_id");
+								if(listLength != null){
+									for(var i=0; i &lt; listLength.options.length;i++){
+										var selectedtext=dijit.byId("_ddpGroupSetup.grsGroupId_id").containerNode.options[i].text;
+										var selectedvalue=dijit.byId("_ddpGroupSetup.grsGroupId_id").containerNode.options[i].value;
+									    if(listLength.options[i].selected){
+									    	document.getElementById("_ddpUser.ddpGroupSetups_id").add(new Option(selectedtext, selectedvalue));
+									    }
+								    }  
+									removeItem(document.getElementById("_ddpGroupSetup.grsGroupId_id"));
+									addtolist(document.getElementById("_ddpUser.ddpGroupSetups_id"));
+								}
+								else{
+									alert("Please select atleast one group to move");
+								}
+								break;
+							}
+							e.preventDefault();
+						}
+						e.preventDefault();
+				});
+				dojo.query("button.switchrleid")
+				.connect("onclick",function(e){
+					switch(e.target.id.toString()){
+						case "leftrleid" : 
+						{
+							var listLength = document.getElementById("_ddpUser.ddpRoleSetups_id");
+							if(listLength != null){
+							for(var i=0; i &lt; listLength.options.length;i++){
+								var selectedtext=dijit.byId("_ddpUser.ddpRoleSetups_id").containerNode.options[i].text;
+								var selectedvalue=dijit.byId("_ddpUser.ddpRoleSetups_id").containerNode.options[i].value;
+							    if(listLength.options[i].selected){
+							    	document.getElementById("_ddpRoleSetup.rlsRoleId_id").add(new Option(selectedtext, selectedvalue));
+							    }
+						    }  
+							removeItem(document.getElementById("_ddpUser.ddpRoleSetups_id"));
+							}else{
+								alert("Please select atleast one role to move");
+							}
+							break;
+							
+						}
+						case "rightrleid" : 
+						{
+							var listLength = document.getElementById("_ddpRoleSetup.rlsRoleId_id");
+							if(listLength != null){
+							for(var i=0; i &lt; listLength.options.length;i++){
+								var selectedtext=dijit.byId("_ddpRoleSetup.rlsRoleId_id").containerNode.options[i].text;
+								var selectedvalue=dijit.byId("_ddpRoleSetup.rlsRoleId_id").containerNode.options[i].value;
+							    if(listLength.options[i].selected){
+							    	document.getElementById("_ddpUser.ddpRoleSetups_id").add(new Option(selectedtext, selectedvalue));
+							    }
+						    }  
+							removeItem(document.getElementById("_ddpRoleSetup.rlsRoleId_id"));
+							addtolist(document.getElementById("_ddpUser.ddpRoleSetups_id"));
+							}else{
+								alert("Please select atleast one role to move");
+							}
+							break;
+						}
+						e.preventDefault();
+					}
+					e.preventDefault();
+				 });
+				
+			});
+			function addtolist(listitem){
+				var i;
+				for(i=0;i &lt; listitem.options.length;i++) 
+				{
+					listitem[i].selected=true;
+				}
+			}
+			function removeItem(selectbox)
+			{
+				var i;
+				for(i=selectbox.options.length-1;i>=0;i--)
+				{
+				if(selectbox.options[i].selected)
+				selectbox.remove(i);
+				}
+			}
+			
+			
+			
+			function removeItemgrp(){
+				var listGroupLength = document.getElementById("_ddpGroupSetup.grsGroupId_id");
+				var listSelectLength = document.getElementById("_ddpUser.ddpGroupSetups_id");
+				
+				if(listGroupLength.options.length == listSelectLength.options.length){
+					for(var i=listGroupLength.options.length-1;i>=0;i--){
+						document.getElementById("_ddpGroupSetup.grsGroupId_id").options.remove(i);
+					}
+				}else{
+					for(var i=0; i &lt; listGroupLength.options.length; i++){
+						for(var  j=0; j&lt;listSelectLength.options.length; j++){
+							if(listGroupLength.options[i].text == listSelectLength.options[j].text){
+								document.getElementById("_ddpGroupSetup.grsGroupId_id").options.remove(i);
+							}
+						}
+					}
+				}
+			}
+			function removeItemrole(){
+				var listRoleLength = document.getElementById("_ddpRoleSetup.rlsRoleId_id");
+				var listSelectRoleLength = document.getElementById("_ddpUser.ddpRoleSetups_id");
+				
+				if(listRoleLength.options.length == listSelectRoleLength.options.length){
+					for(var i=listRoleLength.options.length-1;i>=0;i--){
+						document.getElementById("_ddpRoleSetup.rlsRoleId_id").options.remove(i);
+					}
+				}else{
+					for(var i=0; i &lt; listRoleLength.options.length; i++){
+						for(var j=0; j&lt;listSelectRoleLength.options.length; j++){
+							if(listRoleLength.options[i].text == listSelectRoleLength.options[j].text){
+								document.getElementById("_ddpRoleSetup.rlsRoleId_id").remove(i);
+							}
+						}
+					}	
+				}
+			}
+			function selectGroup(){
+				var listGroupLength = document.getElementById("_ddpUser.ddpGroupSetups_id");
+				var i;
+				for(i=0;i &lt; listGroupLength.options.length; i++) 
+				{
+					listGroupLength[i].selected=true;
+				}
+			}
+			function selectRole(){
+				var listRoleLength = document.getElementById("_ddpUser.ddpRoleSetups_id");
+				var i;
+				for(i=0;i &lt; listRoleLength.options.length; i++) 
+				{
+					listRoleLength[i].selected=true;
+				}
+			}
+			$("#proceed").click(function(event)
+			{
+				var listGroupLength = document.getElementById("_ddpUser.ddpGroupSetups_id");
+				var i;
+				for(i=0;i &lt; listGroupLength.options.length; i++) 
+				{
+					listGroupLength[i].selected=true;
+				}
+				
+				var listRoleLength = document.getElementById("_ddpUser.ddpRoleSetups_id");
+				var i;
+				for(i=0;i &lt; listRoleLength.options.length; i++) 
+				{
+					listRoleLength[i].selected=true;
+				}
+				
+			});
+			function myFunction(){
+				//Group
+				var blngrpflage = false;
+				var listGroupLength = document.getElementById("_ddpUser.ddpGroupSetups_id");
+				var i;
+				for(i=0;i &lt; listGroupLength.options.length; i++) 
+				{
+					blngrpflage =true;
+				    listGroupLength[i].selected=true;
+				}
+				if(blngrpflage==false){
+					alert("Select atleast one group");
+					return false;
+				}
+				//Role
+				var blnrlsflage = false;
+				var listRoleLength = document.getElementById("_ddpUser.ddpRoleSetups_id");
+				var i;
+				for(i=0;i &lt; listRoleLength.options.length; i++) 
+				{
+					blnrlsflage =true;
+					listRoleLength[i].selected=true;
+				}
+				if(blnrlsflage==false){
+					alert("Select atleast one role");
+					return false;
+				}
+			}
+		</script>
+		
+		<!-- decorate the tab container to create it -->
+		<script type="text/javascript">
+			Spring.addDecoration(new Spring.ElementDecoration({
+				elementId : 'myTabContainer',
+				widgetType : 'dijit.layout.TabContainer'
+			}));
+		</script>
+		<!-- now, find the tab container, and the title pane, (which is the ID with a prefix of '_title'.  Add the tab container to the tab pane at the top of it..  Note that the button is at the bottom of the TitlePane. -->
+		<script type="text/javascript">
+			dojo.addOnLoad(function() {
+				var tabs = dijit.byId("myTabContainer");
+				var pane = dijit.byId("myTabContainer");
+				tabs.placeAt(pane.containerNode, "first");
+				tabs.startup();
+				tabs.resize();
+			});
+		</script>
+    </div>    
+    </form:update>
+</div>

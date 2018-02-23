@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_Sysdiagrams" items="${sysdiagramses}" z="5Cfpu3CmdqhZpdKFS+Y0LsmJ9P0=">
+        <table:table data="${sysdiagramses}" id="l_com_agility_ddp_data_domain_Sysdiagrams" path="/sysdiagramses" typeIdFieldName="diagramId" z="Ly+URaErazs9L0lYGtkpfg4tYLQ=">
+            <table:column id="c_com_agility_ddp_data_domain_Sysdiagrams_name" property="name" z="VMyUN5+WiYBpzlrn0evyi9AM/fQ="/>
+            <table:column id="c_com_agility_ddp_data_domain_Sysdiagrams_principalId" property="principalId" z="yzAb2/v6yf+cpbLRdIvPerGNz+g="/>
+            <table:column id="c_com_agility_ddp_data_domain_Sysdiagrams_definition" property="definition" z="UIL9kJ5aYfAFcL4SKoFqZA8NASY="/>
+        </table:table>
+    </page:list>
+</div>

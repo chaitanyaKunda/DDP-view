@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpexportrules/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpexportrules/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpexportrules/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpexportrules/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpexportrules/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpexportrules/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpexportrules/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpexportrules/update.jspx"/>
+    </definition>
+<definition extends="default" name="ddpexportrules/display">
+        <put-attribute name="body" value="/WEB-INF/views/ddpexportrules/display.jspx"/>
+    </definition>
+<definition extends="default" name="ddpexportrules/onDemandExport">
+        <put-attribute name="body" value="/WEB-INF/views/ddpexportrules/onDemandExport.jspx"/>
+    </definition>
+<definition extends="default" name="ddpexportrules/template">
+        <put-attribute name="body" value="/WEB-INF/views/ddpexportrules/template.jspx"/>
+    </definition>
+</tiles-definitions>

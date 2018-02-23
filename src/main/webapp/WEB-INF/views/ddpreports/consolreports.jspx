@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_document_type" var="label_document_type" htmlEscape="false"></spring:message>
+   	<spring:message code="label_company" var="label_company" htmlEscape="false"></spring:message>
+   	<spring:message code="label_party_id" var="label_party_id" htmlEscape="false"></spring:message>
+   	<spring:message code="label_report_status" var="label_report_status" htmlEscape="false"></spring:message>
+   	<spring:message code="label_report_status_all" var="label_report_status_all" htmlEscape="false"></spring:message>
+   	<spring:message code="label_report_status_success" var="label_report_status_success" htmlEscape="false"></spring:message>
+   	<spring:message code="label_report_status_failed" var="label_report_status_failed" htmlEscape="false"></spring:message>
+   	<spring:message code="label_report_status_pending" var="label_report_status_pending" htmlEscape="false"></spring:message>
+   	<spring:message code="label_report_status_duplicate" var="label_report_status_duplicate" htmlEscape="false"></spring:message>
+   	<spring:message code="label_start_date" var="label_start_date" htmlEscape="false"></spring:message>
+   	<spring:message code="label_end_date" var="label_end_date" htmlEscape="false"></spring:message>
+   	<spring:message code="label_download_report" var="label_download_report" htmlEscape="false"></spring:message>
+   	<spring:message code="label_report_mail" var="label_report_mail" htmlEscape="false"></spring:message>
+   	<spring:message code="label_email_to" var="label_email_to" htmlEscape="false"></spring:message>
+   	<spring:message code="label_email_cc" var="label_email_cc" htmlEscape="false"></spring:message>
+   	<spring:message code="label_activate_status_active" var="label_activate_status_active" htmlEscape="false"></spring:message>
+   	<spring:message code="label_activate_status_inactive" var="label_activate_status_inactive" htmlEscape="false"></spring:message>
+   	<spring:message code="label_multi_aed_rule_report" var="label_multi_aed_rule_report" htmlEscape="false"></spring:message>
+   	<spring:message code="label_multi_aed_rule_transmitted_docs_report" var="label_multi_aed_rule_transmitted_docs_report" htmlEscape="false"></spring:message>
+   	<spring:message code="label_multi_aed_rule_setup_report" var="label_multi_aed_rule_setup_report" htmlEscape="false"></spring:message> 
+   	<head>
+    </head>
+    <SCRIPT type="text/javascript">
+    <!--jquery.sumoselect_js__url-->
+    </SCRIPT>
+     <script type="text/javascript">
+        $(document).ready(function () {
+            
+            window.searchSelAll = $('.search-box-open-up').SumoSelect({ csvDispCount: 3, selectAll:true, search: true, searchText:'Enter here.', up:false, okCancelInMulti: true });
+
+        });
+    </script>
+      <SCRIPT type="text/javascript">
+    <!--jquery.sumoselect_js__url-->
+    </SCRIPT>
+        <style type="text/css">
+        body{font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;color:#444;font-size:13px;}
+        p,div,ul,li{padding:0px; margin:0px;}
+    </style>
+      <SCRIPT type="text/javascript">
+    <!--jquery.sumoselect_js__url-->
+    </SCRIPT>
+    <spring:url value="/resources/styles/sumoselect.css" var="sumoselect_css_url"/>
+   	<link href="${sumoselect_css_url}" rel="stylesheet" type="text/css"/>
+   	<spring:url value="/js/jquery.sumoselect.js" var="jquery_sumoselect_js__url"/>
+ 	<script src="${jquery_sumoselect_js__url}" type="text/javascript">
+        <!--jquery.sumoselect_js__url-->
+    </script> 	
+   	
+    <form:report id="fc_com_agility_ddp_view_domain_ReportWrapper" modelAttribute="reportUtil" path="/ruleutil/consolreports" label="${ label_multi_aed_rule_report }">
+   		
+   		<div id="reportTabContainer" style="height: 460px; width: auto; padding: 10px;">
+			<!-- add a tab -->
+		<div id="transmittedDocsDiv" style="width: 100%">
+			<label for="company"><c:out value="${ label_company }"></c:out></label>
+	   		<select multiple="multiple" placeholder="select company" class="search-box-open-up" name="transCompanyList" id="selTransCompanies">
+					 <c:forEach items="${companies}" var="element">
+				 			 <option value="${element.comCompanyCode}">${element.comCompanyCode}</option>
+			    	 </c:forEach>
+	    	 </select>
+			 <br /><br />
+			 <label for="doctype"><c:out value="${ label_document_type }"></c:out></label>
+   			 <select multiple="multiple" placeholder="select documents" class="search-box-open-up" name="transDoctypeList" id="selTransDocuments">
+				 <c:forEach items="${doctypes}" var="element">
+			 			 <option value="${element.dtyDocTypeCode}">${element.dtyDocTypeCode}</option>
+		    	 </c:forEach>
+	    	 </select>
+	    	 <br /><br />
+	    	 <label for="clientID"><c:out value="${ label_party_id }"></c:out></label>
+   			 <select multiple="multiple" placeholder="select client ID" class="search-box-open-up" name="transClientIDList" id="selTransClientID">
+				 <c:forEach items="${distinctClientIDs}" var="element">
+			 			 <option value="${element}">${element}</option>
+		    	 </c:forEach>
+	    	 </select>
+		 	<br /><br />
+			<div id="transStatusDiv"><label for="status"><c:out value="${ label_report_status }"></c:out></label>
+	    			<input type="checkbox" name="reportWrapper.statusList" id="trans_select_all" value="all"> &amp;nbsp;<c:out value="${ label_report_status_all }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+				    <input class="transStatusCheckbox" type="checkbox" name="reportWrapper.statusList" value="1">&amp;nbsp; <c:out value="${ label_report_status_success }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+			<!-- 	    <input class="transStatusCheckbox" type="checkbox" name="reportWrapper.statusList" value="3">&amp;nbsp; <c:out value="${ label_report_status_failed }"></c:out> </input>&amp;nbsp;&amp;nbsp;  -->
+				    <input class="transStatusCheckbox" type="checkbox" name="reportWrapper.statusList" value="0">&amp;nbsp;<c:out value="${ label_report_status_pending }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+				    <input class="transStatusCheckbox" type="checkbox" name="reportWrapper.statusList" value="-1"> &amp;nbsp;<c:out value="${ label_report_status_failed }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+				    <input class="transStatusCheckbox" type="checkbox" name="reportWrapper.statusList" value="4">&amp;nbsp; <c:out value="${ label_report_status_duplicate }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+	    	</div>
+	   		<br /><br />
+	   		<field:datetime id="fd_com_ddp_view_reportwrapper_startdate" field="reportWrapper.startDate" dateTimePattern="${dateformat}" label="${ label_start_date }"></field:datetime>
+	   		<field:datetime id="fd_com_ddp_view_reportwrapper_enddate" field="reportWrapper.endDate" dateTimePattern="${dateformat}" label="${ label_end_date }"></field:datetime>
+	   			<!-- Radio button to choose download / send mail -->
+	    	<input type="radio" id="transDownlaodID" name="TransmitTypeTransmittedRB" value="download" style="margin-left:80px;" class="clsTransmitTypeTransmittedDocs" checked="checked">  <c:out value="${ label_download_report }"></c:out></input>
+	    	<input type="radio" id="transSendMailID" name="TransmitTypeTransmittedRB" value="sendmail" style="margin-left:160px;" class="clsTransmitTypeTransmittedDocs">  <c:out value="${ label_report_mail }"></c:out></input>
+	    	<br /><br />
+	    	<div id="transMailDetailDiv" style="display:none;">
+		    		<field:input field="reportWrapper.toAddress" id="fi_com_ddp_view_reportwrapper_toaddress" z="ERveL3838KEe73z6mAcYUuKgMTU=" label="${ label_email_to }" addStar="true" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*"/>
+		    		<field:input field="reportWrapper.ccAddress" id="fi_com_ddp_view_reportwrapper_ccaddress" z="ERveL3838KEe73z6mAcYUuKgMTU=" label="${ label_email_cc }" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*"/>
+	    	</div>
+    	</div>
+		<!-- add the content pane decoration (all tabs must live in content panes) -->
+		<script type="text/javascript">
+			Spring.addDecoration(new Spring.ElementDecoration({
+				elementId : 'transmittedDocsDiv',
+				widgetType : 'dijit.layout.ContentPane',
+				widgetAttrs : {
+					title : '${ label_multi_aed_rule_transmitted_docs_report }',
+					selected : true
+				}
+			}));
+			
+			
+		</script>
+    	<div id="rulesDiv" style="width: 100%">
+		
+	   		 <label for="company"><c:out value="${ label_company }"></c:out></label>
+	   			 <select multiple="multiple" placeholder="select company" class="search-box-open-up" name="setupCompanyList" id="selSetupCompanies">
+					 <c:forEach items="${companies}" var="element">
+				 			 <option value="${element.comCompanyCode}">${element.comCompanyCode}</option>
+			    	 </c:forEach>
+		    	 </select>
+			 <br /><br />
+			 <label for="doctype"><c:out value="${ label_document_type }"></c:out></label>
+	   			 <select multiple="multiple" placeholder="select documents" class="search-box-open-up" name="setupDoctypeList" id="selSetupDocuments">
+					 <c:forEach items="${doctypes}" var="element">
+				 			 <option value="${element.dtyDocTypeCode}">${element.dtyDocTypeCode}</option>
+			    	 </c:forEach>
+		    	 </select>
+		    	 <br /><br />
+		     <label for="clientID"><c:out value="${ label_party_id }"></c:out></label>
+	   			 <select multiple="multiple" placeholder="select client ID" class="search-box-open-up" name="setupClientIDList" id="selSetupClientID">
+					 <c:forEach items="${distinctClientIDs}" var="element">
+				 			 <option value="${element}">${element}</option>
+			    	 </c:forEach>
+		    	 </select>
+			 <br /><br />
+			<div id="statusDiv"><label for="status"><c:out value="${ label_report_status }"></c:out></label>
+	    			<input type="checkbox" name="rulesetupReportWrapper.statusList" id="setup_select_all" value="all">&amp;nbsp; <c:out value="${ label_report_status_all }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+				    <input class="setupStatusCheckbox" type="checkbox" name="rulesetupReportWrapper.statusList" value="0">&amp;nbsp; <c:out value="${ label_activate_status_active }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+				    <input class="setupStatusCheckbox" type="checkbox" name="rulesetupReportWrapper.statusList" value="1">&amp;nbsp; <c:out value="${ label_activate_status_inactive }"></c:out> </input>&amp;nbsp;&amp;nbsp;
+	    	</div>
+	   		<br /><br />
+	   			<!-- Radio button to choose download / send mail -->
+	    	<input type="radio" id="setupDownlaodID" name="TransmitTypeRuleRB" value="download" style="margin-left:80px;" class="clsTransmitTypeRuleSetup" checked="checked">  <c:out value="${ label_download_report }"></c:out></input>
+	    	<input type="radio" id="setupSendMailID" name="TransmitTypeRuleRB" value="sendmail" style="margin-left:160px;" class="clsTransmitTypeRuleSetup">  <c:out value="${ label_report_mail }"></c:out></input>
+	    	<br /><br />
+	    	<div id="setupMailDetailDiv" style="display:none;">
+	    		<field:input field="rulesetupReportWrapper.toAddress" id="fi_com_ddp_view_reportwrapper_toaddress" z="ERveL3838KEe73z6mAcYUuKgMTU=" label="${ label_email_to }" addStar="true" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*"/>
+	    		<field:input field="rulesetupReportWrapper.ccAddress" id="fi_com_ddp_view_reportwrapper_ccaddress" z="ERveL3838KEe73z6mAcYUuKgMTU=" label="${ label_email_cc }" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*"/>
+	    	</div>
+    	</div>
+    	<!-- decorate the second tab div with a content pane -->
+		
+   		<script type="text/javascript"> 
+   		$(function() {
+		     $(".multiselect").multiselect();
+		});
+		jQuery.fn.multiselect = function() {
+		    $(this).each(function() {
+		        var checkboxes = $(this).find("input:checkbox");
+		        checkboxes.each(function() {
+		            var checkbox = $(this);
+		            // Highlight pre-selected checkboxes
+		            if (checkbox.prop("checked"))
+		                checkbox.parent().addClass("multiselect-on");
+		 
+		            // Highlight checkboxes that the user selects
+		            checkbox.click(function() {
+		                if (checkbox.prop("checked"))
+		                    checkbox.parent().addClass("multiselect-on");
+		                else
+		                    checkbox.parent().removeClass("multiselect-on");
+		            });
+		        });
+		    });
+		};
+	
+		 $('#trans_select_all').on('click',function(){
+		    if(this.checked){
+		        $('.transStatusCheckbox').each(function(){
+		            this.checked = true;
+		        });
+		    }else{
+		         $('.transStatusCheckbox').each(function(){
+		            this.checked = false;
+		        });
+		    }
+		});
+		$('#setup_select_all').on('click',function(){
+		    if(this.checked){
+		        $('.setupStatusCheckbox').each(function(){
+		            this.checked = true;
+		        });
+		    }else{
+		         $('.setupStatusCheckbox').each(function(){
+		            this.checked = false;
+		        });
+		    }
+		});
+
+		$('.transStatusCheckbox').on('click',function(){
+		    if($('.transStatusCheckbox:checked').length == $('.transStatusCheckbox').length){
+		        $('#trans_select_all').prop('checked',true);
+		    }else{
+		        $('#trans_select_all').prop('checked',false);
+		    }
+		});
+		$('.setupStatusCheckbox').on('click',function(){
+		    if($('.setupStatusCheckbox:checked').length == $('.setupStatusCheckbox').length){
+		        $('#setup_select_all').prop('checked',true);
+		    }else{
+		        $('#setup_select_all').prop('checked',false);
+		    }
+		});
+		$(document).ready(function(){
+			changeActiveLinkColor("colreport"); // change the active link background color
+	  		$("#proceed").click(function(){
+				var widgets = [];
+				var element;
+				widgets.push("widget__reportWrapper.ccAddress_id","widget__reportWrapper.toAddress_id");
+				widgets.push("widget__rulesetupReportWrapper.ccAddress_id","widget__rulesetupReportWrapper.toAddress_id");
+				for(var index=0; index &lt; widgets.length ; index++)
+				{
+					if(dojo.hasClass( document.getElementById(widgets[index]),"dijitError"))
+						{
+	  					element = widgets[index].substring(7 ,widgets[index].length);
+	  					dojo.byId(element).focus();
+						}
+				}
+			
+ 			});
+		});
+		dojo.addOnLoad(function(){
+			
+				/***************/
+				
+				var today = new Date();
+				var lastSixMonthsDate = new Date(today.getFullYear(), today.getMonth()-12, today.getDate()-1);
+				var currentDate = new Date(today.getFullYear(),today.getMonth(), today.getDate());
+				currentDate.setHours(23, 59, 59, 999);
+				dijit.byId('_reportWrapper.startDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_reportWrapper.startDate_id').constraints.max = currentDate;
+				dijit.byId('_reportWrapper.endDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_reportWrapper.endDate_id').constraints.max = currentDate;
+				
+				dijit.byId('_reportWrapper.startDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_reportWrapper.startDate_id').constraints.max = currentDate;
+				dijit.byId('_reportWrapper.endDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_reportWrapper.endDate_id').constraints.max = currentDate;
+					
+				dojo.connect(dijit.byId('_reportWrapper.endDate_id'),"onChange",function(val){
+					val.setHours(23, 59, 59, 999);
+					dijit.byId('_reportWrapper.endDate_id').attr('value',val) ;
+		});
+		/*****************/
+		
+		 var tabs = dijit.byId("reportTabContainer");
+			 dojo.connect(tabs,"_transition", function(newPage, oldPage){
+				 if(newPage.id == 'transmitDiv')
+					 dijit.byId("_rulesetupReportWrapper.toAddress_id").attr("required",false);
+				 else if(newPage.id == 'rulesDiv')
+					 dijit.byId("_reportWrapper.toAddress_id").attr("required",false);
+			 });
+   				/*****************/
+   				
+   				/************************choose clsTransmitType ***********/
+   				
+   				$(".clsTransmitTypeTransmittedDocs").change(function(){
+   					dijit.byId("_rulesetupReportWrapper.toAddress_id").attr("required",false);
+    				if(this.value == 'download')
+    				{
+    					dojo.style(dojo.byId("transMailDetailDiv"),{display:'none'});
+    					dijit.byId("_reportWrapper.toAddress_id").attr("required",false);
+    				}
+    				else
+    				{
+    					dijit.byId("_reportWrapper.toAddress_id").attr("required",true);
+    					dojo.style(dojo.byId("transMailDetailDiv"),{display:'inline'});
+    				}	
+    			});
+   				$(".clsTransmitTypeRuleSetup").change(function(){
+   					dijit.byId("_reportWrapper.toAddress_id").attr("required",false);
+    				if(this.value == 'download')
+    				{
+    					dojo.style(dojo.byId("setupMailDetailDiv"),{display:'none'});
+    					dijit.byId("_rulesetupReportWrapper.toAddress_id").attr("required",false);
+    				}
+    				else
+    				{
+    					dijit.byId("_rulesetupReportWrapper.toAddress_id").attr("required",true);
+    					dojo.style(dojo.byId("setupMailDetailDiv"),{display:'inline'});
+    				}	
+    			});
+    			/************************choose clsTransmitType ends***********/
+	
+		$('.sumo_transCompanyList .btnOk').on('click', function() {
+			var selectedCompanies = $("#selTransCompanies :selected");
+				if(selectedCompanies.length == 1)
+				{
+					removeItemsFromSelectBox('selTransClientID');
+					var selectedcompany = selectedCompanies.val();
+					//Send Ajax call to receive the list of distinct Client IDs		 
+				$.ajax({
+					
+					type	: "GET",
+					url		: "../../ruleutil/distinctClientIDByCompany",
+					data	: {
+								"comapnycode"  : selectedCompanies.val(),
+								"ruletype" : "MULIT_AED_RULE" 
+					},
+					contentType : "application/HTML; charset=utf-8",
+					async	: false,
+					dataType : "HTML",
+					success	:function(response){
+						var result =  JSON.parse(response);
+						var varDistinctClientIDs =  result.varDistinctClientIDs.split(',');
+						for(var indexI=0; indexI &lt; varDistinctClientIDs.length; indexI++)
+							$('#selTransClientID')[0].sumo.add(varDistinctClientIDs[indexI],varDistinctClientIDs[indexI]);
+					},
+					error	:function(){
+						e.preventDefault();
+					}
+				});	
+				}
+				else
+				{
+					removeItemsFromSelectBox('selTransClientID');
+				}
+		});
+		$('.sumo_setupCompanyList .btnOk').on('click', function() {
+			var selectedCompanies = $("#selSetupCompanies :selected");
+			if(selectedCompanies.length == 1)
+				{
+				removeItemsFromSelectBox('selSetupClientID');    					
+					var selectedcompany = selectedCompanies.val();
+					//Send Ajax call to receive the list of distinct Client IDs		 
+				$.ajax({
+					
+					type	: "GET",
+					url		: "../../ruleutil/distinctClientIDByCompany",
+					data	: {
+								"comapnycode"  : selectedCompanies.val(),
+								"ruletype" : "MULTI_AED_RULE" 
+					},
+					contentType : "application/HTML; charset=utf-8",
+					async	: false,
+					dataType : "HTML",
+					success	:function(response){
+						var result =  JSON.parse(response);
+						var varDistinctClientIDs =  result.varDistinctClientIDs.split(',');
+						for(var indexI=0; indexI &lt; varDistinctClientIDs.length; indexI++)
+							$('#selSetupClientID')[0].sumo.add(varDistinctClientIDs[indexI],varDistinctClientIDs[indexI]);
+					},
+					error	:function(){
+						e.preventDefault();
+					}
+				});	
+				}
+			else
+			{
+				removeItemsFromSelectBox('selSetupClientID');
+				$('#selSetupClientID')[0].sumo.selectAll(true);
+			}
+		});
+	
+	}); // addOnLoad Ends
+
+	function removeItemsFromSelectBox(selectbox)
+	{
+		  $('#'+selectbox).html('');	
+		  $('#'+selectbox)[0].sumo.reload();
+			    $('#'+selectbox)[0].sumo.selectAll(false);
+	}
+	function removeOptions(selectbox)
+	{
+	    var i;
+	    for(i=selectbox.options.length-1;i>=0;i--)
+	    {
+	        selectbox.remove(i);
+	    }
+	}
+	function myFunction()
+	{
+		var ruleSetupTab = dijit.byId("rulesDiv");
+		 if(ruleSetupTab.get('selected')){
+			 document.getElementById('selectedTab').value='ruleSetupTab';
+			 var selectedCompanies = $("#selSetupCompanies :selected");
+			 if(selectedCompanies.length == 0)
+			 {
+			 	alert("please select atlease one company");
+			 	return false;
+			 }
+			 if($("[class='setupStatusCheckbox']:checked").length == 0)
+			 {
+			 	alert("please select atlease one status option");
+			 	return false;
+			 }
+		 }
+		 else{
+			 document.getElementById('selectedTab').value='transTab';
+			 var selectedCompanies = $("#selTransCompanies :selected");
+			 if(selectedCompanies.length == 0)
+			 {
+			 	alert("please select atlease one company");
+			 	return false;
+			 }
+			 if($("[class='transStatusCheckbox']:checked").length == 0)
+			 {
+			 	alert("please select atlease one status option");
+			 	return false;
+			 }
+		 }
+	}
+   	</script>
+   	<script type="text/javascript">
+			Spring.addDecoration(new Spring.ElementDecoration({
+				elementId : 'rulesDiv',
+				widgetType : 'dijit.layout.ContentPane',
+				widgetAttrs : {
+					title : '${ label_multi_aed_rule_setup_report }',
+					selected : false
+				}
+			}));
+			
+			
+		</script>
+		<!-- decorate the tab container to create it -->
+		<script type="text/javascript">
+			Spring.addDecoration(new Spring.ElementDecoration({
+				elementId : 'reportTabContainer',
+				widgetType : 'dijit.layout.TabContainer'
+			}));
+		</script>
+		<script type="text/javascript">
+				dojo.addOnLoad(function() {
+					var tabs = dijit.byId("reportTabContainer");
+					var pane = dijit.byId("reportTabContainer");
+					tabs.placeAt(pane.containerNode, "first");
+					tabs.startup();
+					tabs.resize();
+				});
+		</script>
+   	<input type="hidden" id="selectedTab" name="selectedTab"></input>
+   	</div>
+   	</form:report>
+</div>

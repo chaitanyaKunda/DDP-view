@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpGenSystem" items="${ddpgensystems}" z="sGL3lFt8NJZTgHdh5bqjowFnphw=">
+        <table:table data="${ddpgensystems}" id="l_com_agility_ddp_data_domain_DdpGenSystem" path="/ddpgensystems" typeIdFieldName="genApplicationCode" z="6oMT2LXWTNTIN/zY3G4/XaxNL2s=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpGenSystem_genCompanyCode" property="genCompanyCode" z="WFk1JKWYnDaYl0J94dbgzPN5xXY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGenSystem_genServerIp" property="genServerIp" z="xpTAXQDjDSwl4ZTGWI5DzjzjQVE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGenSystem_genServerName" property="genServerName" z="ZeebqWOrrGsBK/KYHoG2+L2PlB4="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGenSystem_genDomain" property="genDomain" z="KQq6D/avzqFUIIoVPx0nMknsUoY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGenSystem_genServiceAccount" property="genServiceAccount" z="mePklpP8xtlQHo+HnLUjqUBXO0E="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpExportQuery" items="${ddpexportquerys}" z="6pvhYQP5LMKRhICdYM5BDoH5Wr0=">
+        <table:table data="${ddpexportquerys}" id="l_com_agility_ddp_data_domain_DdpExportQuery" path="/ddpexportquerys" typeIdFieldName="exqId" z="rm+CpiC0IAI9MYwA5ybsZNDVQIE=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQuery_exqExpRuleId" property="exqExpRuleId" z="FenWdnuc+UVmjGoaaGYOccGDgko="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQuery_exqSchId" property="exqSchId" z="09/vkOjGtGHb9n1333OMivHRAGc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQuery_exqQuery" property="exqQuery" z="fJo31rd2XsB4AZQ66gvju+IGrtw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportQuery_exqStatus" property="exqStatus" z="vKIrfXY5U6zYutnZXFs5wtbyX1k="/>
+        </table:table>
+    </page:list>
+</div>

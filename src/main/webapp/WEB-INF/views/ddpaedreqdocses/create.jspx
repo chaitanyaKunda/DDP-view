@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpAedReqDocs" modelAttribute="ddpAedReqDocs" path="/ddpaedreqdocses" render="${empty dependencies}" z="zBoo1MFQID8pcJf+tnvrRts4bxw=">
+        <field:select field="ddpMergeSetup" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ddpMergeSetup" itemValue="mtsMergeId" items="${ddpmergesetups}" path="/ddpmergesetups" z="XZzVG5qfaCt5CbCPkQA/BtBxUYY="/>
+        <field:input field="ardDocType" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardDocType" required="true" z="teZd9mYP6VDSR9+Aw4vBPW7se/I="/>
+        <field:input field="ardDocRequired" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardDocRequired" required="true" z="PhdQJ0LRRS2pFofRpIeyDjZCxFQ="/>
+        <field:input field="ardMergeSeq" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardMergeSeq" validationMessageCode="field_invalid_integer" z="Vf0GAdGy90olmu79K9XQ7OvJqro="/>
+        <field:input field="ardStatus" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardStatus" required="true" validationMessageCode="field_invalid_integer" z="HIlSPRxXdpwzBxsul7MzBTVaGg0="/>
+        <field:input field="ardCreatedBy" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardCreatedBy" required="true" z="IokhggM7p7fRYDAs6vJE2tVMrAY="/>
+        <field:datetime dateTimePattern="${ddpAedReqDocs_ardcreateddate_date_format}" field="ardCreatedDate" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardCreatedDate" required="true" z="/l64TDBjcq46gSHJ+DSdIKTKxjU="/>
+        <field:input field="ardModifiedBy" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardModifiedBy" required="true" z="LStnWiN1JezyoOPmRRgaBvG6HBI="/>
+        <field:datetime dateTimePattern="${ddpAedReqDocs_ardmodifieddate_date_format}" field="ardModifiedDate" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardModifiedDate" required="true" z="6TOyfut4RizJNwXw5BUz+4gvX6A="/>
+        <field:input field="ardMergeId" id="c_com_agility_ddp_data_domain_DdpAedReqDocs_ardMergeId" required="true" validationMessageCode="field_invalid_integer" z="4Qm4LNlHM6O5iHmQEHH7o8Uo1Bg="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpAedReqDocs" render="${not empty dependencies}" z="4GwUi8qTVdmhsW5IoLuOdknHgLA="/>
+</div>

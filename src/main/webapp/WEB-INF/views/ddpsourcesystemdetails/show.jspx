@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpSourceSystemDetail" object="${ddpsourcesystemdetail}" path="/ddpsourcesystemdetails" z="n6OX1eMFDAYtAafwWKa+19+BMkM=">
+        <field:display field="ssdApplicationCode" id="s_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdApplicationCode" object="${ddpsourcesystemdetail}" z="4l0vSJekaJyDcHWeYf3Z0083/tM="/>
+        <field:display field="ssdCategory" id="s_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdCategory" object="${ddpsourcesystemdetail}" z="VkOHBmhs9bVcs7rnQBnQIf2Oc6E="/>
+        <field:display field="ssdKey" id="s_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdKey" object="${ddpsourcesystemdetail}" z="10wiscH2xbXs4hI/dTtiIKAFldg="/>
+        <field:display field="ssdValue" id="s_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdValue" object="${ddpsourcesystemdetail}" z="IkjslNeitYMYYQGCDIh5DE6obtU="/>
+    </page:show>
+</div>

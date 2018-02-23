@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_Sysdiagrams" object="${sysdiagrams}" path="/sysdiagramses" z="TezIu9e8Lk6r1/Z+E5AmS3AbdJY=">
+        <field:display field="name" id="s_com_agility_ddp_data_domain_Sysdiagrams_name" object="${sysdiagrams}" z="CcpVS3vMQ05HNzd1YTBlinRmc/4="/>
+        <field:display field="principalId" id="s_com_agility_ddp_data_domain_Sysdiagrams_principalId" object="${sysdiagrams}" z="rCR4lshfvrTXjTVe6ZJYZTc/bUc="/>
+        <field:display field="definition" id="s_com_agility_ddp_data_domain_Sysdiagrams_definition" object="${sysdiagrams}" z="MZxByUaBnTYH3XuaFXwOhEZEumk="/>
+    </page:show>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpDocnameConv" items="${ddpdocnameconvs}" z="7NUsIN5JqMJ6eZCIseX0pl026F0=">
+        <table:table data="${ddpdocnameconvs}" id="l_com_agility_ddp_data_domain_DdpDocnameConv" path="/ddpdocnameconvs" typeIdFieldName="dcvId" z="csDo9B4aVTT2gwi9tJpuFFD3uRM=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvCompanyCode" property="dcvCompanyCode" z="aiUFrQ52qzEiK5AkjDB/kIyqudc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvBranchCode" property="dcvBranchCode" z="pdEHL2kJToqEX7RbxBr4iK63VRU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvDoctypeCode" property="dcvDoctypeCode" z="EP1FEOmgC7FTrONqGocqN5PDPgM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvGenNamingConv" property="dcvGenNamingConv" z="t7+x+iN/US2Siqu89bcw6q+WKhQ="/>
+        </table:table>
+    </page:list>
+</div>

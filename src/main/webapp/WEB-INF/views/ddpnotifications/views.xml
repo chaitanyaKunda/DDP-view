@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpnotifications/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpnotifications/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpnotifications/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpnotifications/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpnotifications/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpnotifications/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpnotifications/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpnotifications/update.jspx"/>
+    </definition>
+</tiles-definitions>

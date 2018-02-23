@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpRuleDetail" object="${ddpruledetail}" path="/ddpruledetails" z="CGUr5ORmMSapzKDBTK/JlLkUt90=">
+        <field:display field="rdtBranch" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch" object="${ddpruledetail}" z="1OgZxeHl9EP7JwWIkfeyW9PiZxU="/>
+        <field:display field="rdtCommunicationId" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtCommunicationId" object="${ddpruledetail}" z="Djs7qApTJmnpUGNztzd+oxFv3Cg="/>
+        <field:display field="rdtCompany" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtCompany" object="${ddpruledetail}" z="jfnY14S/Azepsryi5El2GeacFoE="/>
+        <field:display field="rdtDocType" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtDocType" object="${ddpruledetail}" z="X62MvrHMz5Th/zIiyjQx6mf+DN4="/>
+        <field:display field="rdtGenSystem" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtGenSystem" object="${ddpruledetail}" z="sNfTQxxN9sfefR+YOFmjU/XjsYU="/>
+        <field:display field="rdtNotificationId" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtNotificationId" object="${ddpruledetail}" z="0s2CttVJ1zfUfcnsR5LEoX9x72s="/>
+        <field:display field="rdtPartyCode" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyCode" object="${ddpruledetail}" z="usam9SckN43CPSOfpa4PZp5MHHM="/>
+        <field:display field="rdtSchedulerId" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtSchedulerId" object="${ddpruledetail}" z="6fLcSUY0vaYACZWx1wQbLDqeSwM="/>
+        <field:display field="rdtStatus" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtStatus" object="${ddpruledetail}" z="ppGzjppnd3+1YNTKkqTH4rw6GPs="/>
+        <field:display field="rdtCreatedBy" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtCreatedBy" object="${ddpruledetail}" z="z03Eo4irnKUpixTMs+rsdvi5wpE="/>
+        <field:display calendar="true" dateTimePattern="${ddpRuleDetail_rdtcreateddate_date_format}" field="rdtCreatedDate" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtCreatedDate" object="${ddpruledetail}" z="hUwxfSB64Ade/qBV/lRzN3MuVMk="/>
+        <field:display field="rdtModifiedBy" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtModifiedBy" object="${ddpruledetail}" z="j5VyceznyAj0fHvgVxiLCxzPu7Q="/>
+        <field:display calendar="true" dateTimePattern="${ddpRuleDetail_rdtmodifieddate_date_format}" field="rdtModifiedDate" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtModifiedDate" object="${ddpruledetail}" z="5F42EnkmKmI/zpMDKDHTOwLDkyI="/>
+        <field:display field="rdtRuleId" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtRuleId" object="${ddpruledetail}" z="yO6ony+Ut6NoO4Jp1PGXdIPXvmA="/>
+        <field:display field="rdtPartyId" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyId" object="${ddpruledetail}" z="4EIdVvUESWHEnY08+PSIu6rN+YU="/>
+        <field:display field="rdtRuleType" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtRuleType" object="${ddpruledetail}" z="8Vjn8ilbO8aEfjj0z1BSNFYrfVg="/>
+        <field:display calendar="true" dateTimePattern="${ddpRuleDetail_rdtactivationdate_date_format}" field="rdtActivationDate" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtActivationDate" object="${ddpruledetail}" z="sEUy23+bOSR59hVzZCdzBnGDJlQ="/>
+        <field:display field="rdtForcedType" id="s_com_agility_ddp_data_domain_DdpRuleDetail_rdtForcedType" object="${ddpruledetail}" z="7LJZ9ldRvGIVjcrpmhwcwxxND5g="/>
+    </page:show>
+</div>

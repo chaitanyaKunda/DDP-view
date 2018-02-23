@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0"
+	xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" >
+	<spring:message code="label_rule_description" var="label_rule_description" htmlEscape="false"></spring:message> 
+	<spring:message code="label_party_id" var="label_party_id" htmlEscape="false"></spring:message>
+	<spring:message code="label_company" var="label_company" htmlEscape="false"></spring:message> 
+	<spring:message code="label_branch" var="label_branch" htmlEscape="false"></spring:message>  
+	<spring:message code="label_email_to" var="label_email_to" htmlEscape="false"></spring:message>
+	<spring:message code="label_email_cc" var="label_email_cc" htmlEscape="false"></spring:message>
+	<spring:message code="label_sla_info_receivers" var="label_sla_info_receivers" htmlEscape="false"></spring:message>
+	<spring:message code="label_activate_status_active" var="label_activate_status_active" htmlEscape="false"></spring:message>
+	<spring:message code="label_activate_status_inactive" var="label_activate_status_inactive" htmlEscape="false"></spring:message>
+	<spring:message code="label_rule_status" var="label_rule_status" htmlEscape="false"></spring:message>
+	 <spring:message code="label_document_type" var="label_document_type" htmlEscape="false"></spring:message>
+	 <spring:message code="label_party_code" var="label_party_code" htmlEscape="false"></spring:message>
+	 <spring:message code="label_generation_source" var="label_generation_source" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_ratedornonrated" var="label_text_ratedornonrated" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_printing" var="label_text_printing" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_sla_desc" var="label_text_sla_desc" htmlEscape="false"></spring:message>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <style>
+    	label{ width : 400px !important ;}
+    </style>
+		<page:show id="ps_com_agility_ddp_data_domain_DdpAedRule" 
+			object="${ddpaedrule}" path="/ddpaedrules"	z="neFBBmHdOGAiFxOQ4tbkCfzCM4s=">
+			<div style="padding-left: 1px; top: 3px;"><label><c:out value="${label_rule_description}" /> :</label><c:out value="${itemName}"/><br />
+												<label><c:out value="${label_party_id}" /> :</label><c:out value="${ddpaedrule[0].rdtPartyId}"/><br />
+												<label><c:out value="${label_email_to}" /> :</label><c:out value="${ddpaedrule[0].cemEmailTo}"/><br />
+				<c:if test="${not empty ddpaedrule[0].cemEmailCc}"><label><c:out value="${label_email_cc}" /> :</label><c:out value="${ddpaedrule[0].cemEmailCc}"/><br /></c:if>
+				<label><c:out value="${label_company}" /> :</label><c:out value="${ddpaedrule[0].rdtCompanyCode}"/><br />
+				<label><c:out value="${label_branch}" /> :</label><c:out value="${ddpaedrule[0].rdtBranch}"/><br />
+				<c:choose>
+					<c:when test="${SLANotify == ''}"></c:when>
+					<c:otherwise>
+						<label><c:out value="${label_sla_info_receivers}" /> :</label><c:out value="${SLANotify}" /><br />
+					</c:otherwise>
+				</c:choose>
+				<label><c:out value="${label_rule_status}" /> :</label><c:choose>
+					<c:when test="${isActive == '0'}"><c:out value="${label_activate_status_active}"/><br /></c:when>
+					<c:when test="${isActive == '1'}"><c:out value="${label_activate_status_inactive}"/><br /></c:when>
+				</c:choose>
+			</div>
+			<div style="padding: 10px;">
+			  <table>
+				 <tr>
+			  	 	<th><c:out value="${ label_document_type }"></c:out></th>
+			  	 	<th><c:out value="${ label_party_code }"></c:out></th>
+		  	 		<th><c:out value="${ label_generation_source }"></c:out></th>
+		  	 		<th><c:out value="${ label_text_ratedornonrated }"></c:out></th>
+		  	 		<th><c:out value="${ label_text_printing }"></c:out></th> 
+		  	 		<th style="display:none;"><c:out value="${ label_text_printing }"></c:out></th>
+		  	 		<th colspan="3"><c:out value="${ label_text_sla_desc }"></c:out></th> 
+			  	 </tr>
+			   <c:forEach items="${ddpaedrule}" var="element" varStatus="loop"> 
+			 	  <input type="hidden" value="${element.rdtId}"/>
+			 	 <tbody>
+				  	 <tr>
+				  	 	<Td><c:out value="${element.rdtDocType}"/></Td>	
+				  	 	<Td><c:out value="${element.rdtPartyName}"/></Td>			  	 	
+				  	 	<Td><c:out value="${element.genSource}"/></Td>
+				  	 	<Td><c:choose>
+				  	 			<c:when test="${element.strRate == 'N/A'}"><c:out value="Not Applicable"/></c:when>
+				  	 			<c:otherwise><c:out value="${element.strRate}"/></c:otherwise>
+				  	 		</c:choose></Td>
+						<Td><c:choose>
+								<c:when test="${element.genSource == '3rd Party'}"><c:out value="Not Applicable"/></c:when>
+								<c:when test="${element.copPrint == 'Printing'}"><c:out value="Yes"/></c:when>
+								<c:otherwise><c:out value="No"/></c:otherwise>
+							</c:choose> 
+						</Td>
+				  	 	<Td style="display:none;"><c:out value="${element.copEmail}"/></Td>
+				  	 	<td><c:choose><c:when test="${ element.rdtSlaFreq == ''}"><c:out value="None"></c:out></c:when>
+				  	 		<c:otherwise><c:out value="${element.rdtSlaFreq}"></c:out></c:otherwise></c:choose></td>
+				  	 	<td><c:out value="${element.rdtSlaMin}"></c:out></td>
+				  	 	<td><c:out value="${element.rdtSlaMax}"></c:out></td>
+				  	 </tr>
+			  	 </tbody>
+			   </c:forEach>
+		 	</table>
+		 </div>  
+		</page:show>
+	<script type="text/javascript">
+   		 
+   		 function isRuleProcessing(ruleID,path)
+   		 {
+ 
+			 $.ajax({
+					 type: "GET",
+		        	 url:"isRuleInProcessing",
+		        	 data: {'ruleID':ruleID },
+			       	 async: false,
+			      	            		        
+				         success: function(response){
+				         	if (response == "true") {
+				         		var conf = confirm("Don't modify the rule due to the record is under process. Still, do you want to modify the rule? then click OK.");
+				        		if(conf)
+				        		{ 
+					         		window.location.href = path;
+				        		}
+					         } else {
+					        		window.location.href = path;
+						      }
+				         	//return false; 
+				         }, error: function(e){
+						        alert ("While checking record an error is occurried, please retry again.");
+					           // return false;
+						        window.location.href = path;
+					        }
+					 	
+				         });
+				 			
+   	   		
+   		 }
+    </script>
+</div>

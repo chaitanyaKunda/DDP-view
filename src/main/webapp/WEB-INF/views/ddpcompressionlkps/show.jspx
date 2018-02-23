@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCompressionLkp" object="${ddpcompressionlkp}" path="/ddpcompressionlkps" z="NuTjznUB0c22LXraLnJKZwYYzIQ=">
+        <field:display field="cmlCopmressionLevel" id="s_com_agility_ddp_data_domain_DdpCompressionLkp_cmlCopmressionLevel" object="${ddpcompressionlkp}" z="yTJ6Sov3UvnnxmWSPR3bKFoDGMc="/>
+        <field:display field="cmlCompressionSize" id="s_com_agility_ddp_data_domain_DdpCompressionLkp_cmlCompressionSize" object="${ddpcompressionlkp}" z="5CrdlD682+crnw9Jsj2fsJVQOyA="/>
+    </page:show>
+</div>

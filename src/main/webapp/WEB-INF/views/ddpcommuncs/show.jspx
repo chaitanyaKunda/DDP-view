@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCommUnc" object="${ddpcommunc}" path="/ddpcommuncs" z="dJe6v803XD9SbF/EBuy9UMy9SSY=">
+        <field:display field="cunUncPath" id="s_com_agility_ddp_data_domain_DdpCommUnc_cunUncPath" object="${ddpcommunc}" z="+ejGB01RCUqEsOn+kcg2PaeRskQ="/>
+        <field:display field="cunUncUserName" id="s_com_agility_ddp_data_domain_DdpCommUnc_cunUncUserName" object="${ddpcommunc}" z="zHfeyviI8/UPXPUzUJ/g8YgVLZk="/>
+        <field:display field="cunUncPassword" id="s_com_agility_ddp_data_domain_DdpCommUnc_cunUncPassword" object="${ddpcommunc}" z="d5FdvO2gbh4dhginKeop1j0rd4A="/>
+    </page:show>
+</div>

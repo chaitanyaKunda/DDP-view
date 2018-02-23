@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpExportSuccessReport" items="${ddpexportsuccessreports}" z="KWvXA2HUgCGmDwtp/OjT5pl62FI=">
+        <table:table data="${ddpexportsuccessreports}" id="l_com_agility_ddp_data_domain_DdpExportSuccessReport" path="/ddpexportsuccessreports" typeIdFieldName="esrId" z="PXWROplDNOuHFy3xQnjKPbrLJa0=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportSuccessReport_esrMisId" property="esrMisId" z="n8a4i+1teq9/m6FPe2UPlHNLWnU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportSuccessReport_esrRuleId" property="esrRuleId" z="HnyKQWwWfSymeEpWBPW1l7UMPCw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportSuccessReport_esrJobNumber" property="esrJobNumber" z="oM8yOfdsHcbSnlyXdIjg/aL3EaY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportSuccessReport_esrConsignmentId" property="esrConsignmentId" z="oIaKFXzcP7s+qW+uhKPC/TKJzRE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportSuccessReport_esrAppName" property="esrAppName" z="p7EqpzZVLSqoeGOSZ9+Aw2W8y2w="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportSuccessReport_esrFileName" property="esrFileName" z="2Np/oeQtu+qFSMsjZCHlRG4dGgA="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpaedrules/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpaedrules/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpaedrules/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpaedrules/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/update.jspx"/>
+    </definition>
+    <definition extends="default" name="ddpaedrules/display">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/display.jspx"/>
+    </definition>
+    <definition extends="default" name="ddpaedrules/categorizedDocs">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/categorizedDocs.jspx"/>
+    </definition>
+    <definition extends="default" name="ddpaedrules/categorizedDocsDetails">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/categorizedDocsDetails.jspx"/>
+    </definition>
+     <definition extends="default" name="ddpaedrules/auditLogs">
+        <put-attribute name="body" value="/WEB-INF/views/ddpaedrules/auditLogs.jspx"/>
+    </definition>
+</tiles-definitions>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DmsDdpSyn" object="${dmsddpsyn}" path="/dmsddpsyns" z="goLgfwnihIwKRPSypw2BW0MJSd4=">
+        <field:display field="synRObjectId" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synRObjectId" object="${dmsddpsyn}" z="ZCdGOmANpOHaYA5UHd+aS2C62q8="/>
+        <field:display field="synGenSystem" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synGenSystem" object="${dmsddpsyn}" z="Vvpqe8V5pDei06paEDFpB1Iz/68="/>
+        <field:display field="synCompanySource" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synCompanySource" object="${dmsddpsyn}" z="JPteojybVYrOqU7pNZdRuwscw14="/>
+        <field:display field="synBranchSource" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synBranchSource" object="${dmsddpsyn}" z="z/klVd4cVOQFCUCvZhPDc+i3Qo4="/>
+        <field:display field="synDeptSource" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synDeptSource" object="${dmsddpsyn}" z="ebXxx9fYaCAn3S7M4xtDO1N6kQk="/>
+        <field:display field="synDocType" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synDocType" object="${dmsddpsyn}" z="T7V1pWPI7cJj/W7gj14Qtggx6ic="/>
+        <field:display field="synClientId" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synClientId" object="${dmsddpsyn}" z="6ZNfIKqo0JcIs0YOAuYKQBJsV7A="/>
+        <field:display field="synShipper" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synShipper" object="${dmsddpsyn}" z="ADR26ax+uBmvo2E56MAFOMQHfU8="/>
+        <field:display field="synConsignee" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synConsignee" object="${dmsddpsyn}" z="G3EvREDrQJpu9sdudcTr/maHBLg="/>
+        <field:display field="synNotifyParty" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synNotifyParty" object="${dmsddpsyn}" z="5syIEia8IU4/UVDxOZzrYzAW6VE="/>
+        <field:display field="synDebitsForward" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synDebitsForward" object="${dmsddpsyn}" z="yfhsfpF8evq4oJFjM8+tbVd2J7Y="/>
+        <field:display field="synDebitsBack" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synDebitsBack" object="${dmsddpsyn}" z="Njtl/XMAhY4B8Ud2CKANS+lif9Y="/>
+        <field:display field="synInitialAgent" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synInitialAgent" object="${dmsddpsyn}" z="RgPo9Sq0YM5TnWS1LKQnecdgGPg="/>
+        <field:display field="synIntermediateAgent" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synIntermediateAgent" object="${dmsddpsyn}" z="sz72nqCnHbHPBQ9SMD8MaCWSXPc="/>
+        <field:display field="synFinalAgentId" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synFinalAgentId" object="${dmsddpsyn}" z="GtnTRrfjtoApErvPIPUhReR4JXU="/>
+        <field:display field="synIsRated" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synIsRated" object="${dmsddpsyn}" z="A8fRB00CTeN9iarwEQuWT1isgfQ="/>
+        <field:display calendar="true" dateTimePattern="${dmsDdpSyn_syncreateddate_date_format}" field="synCreatedDate" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synCreatedDate" object="${dmsddpsyn}" z="POhN7k70pqZBXeAiYR6xTEAvARc="/>
+        <field:display field="synTboName" id="s_com_agility_ddp_data_domain_DmsDdpSyn_synTboName" object="${dmsddpsyn}" z="WmrczMEQ/BWZwLkNwqIxDc0sl6g="/>
+    </page:show>
+</div>

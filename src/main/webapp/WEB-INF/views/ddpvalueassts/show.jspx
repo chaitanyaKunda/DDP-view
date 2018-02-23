@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpValueAsst" object="${ddpvalueasst}" path="/ddpvalueassts" z="Z5HQnMzxHoCjIv6tuoVg0WPmOrE=">
+        <field:display field="vlaOperationName" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaOperationName" object="${ddpvalueasst}" z="bnXpMHZp4TmQVFbIejQu5xNPzkI="/>
+        <field:display field="vlaPropName" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaPropName" object="${ddpvalueasst}" z="SqiHGZCM6fx3i2dzxJiSNlfadik="/>
+        <field:display field="vlaPropVale" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaPropVale" object="${ddpvalueasst}" z="QjqCQlHQzOuaFz9PTUucHuShzPI="/>
+        <field:display field="vlaStatus" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaStatus" object="${ddpvalueasst}" z="q8p5nI4QtNRk2DCYN/uHGZClSSQ="/>
+        <field:display field="vlaCreatedBy" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaCreatedBy" object="${ddpvalueasst}" z="es23ZzFJjuxS2pkpBvbfPmyZaNE="/>
+        <field:display calendar="true" dateTimePattern="${ddpValueAsst_vlacreateddate_date_format}" field="vlaCreatedDate" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaCreatedDate" object="${ddpvalueasst}" z="MoMAG2x5tkTtkbBQYCCTR4mDyk4="/>
+        <field:display field="vlaModifiedBy" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaModifiedBy" object="${ddpvalueasst}" z="mSGKVNXgE71+dUEh0p3tsXG6Lco="/>
+        <field:display calendar="true" dateTimePattern="${ddpValueAsst_vlamodifieddate_date_format}" field="vlaModifiedDate" id="s_com_agility_ddp_data_domain_DdpValueAsst_vlaModifiedDate" object="${ddpvalueasst}" z="tUOOy+JlQGgTtaaOV0/37n+PvkA="/>
+    </page:show>
+</div>

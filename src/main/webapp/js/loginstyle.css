@@ -1,0 +1,214 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+*
+{
+	margin:0px;
+	padding:0px;
+}
+p
+{
+	padding:2px 0;
+}
+.clr
+{
+	clear:both;
+	padding:0;
+	margin:0;
+}
+img
+{
+	border:none;
+	margin:0px;
+	padding:0px;
+}
+
+/*------------LoginForm Start------------*/
+
+.login_main
+{
+	position:relative;
+	left:31%;
+	width:430px;
+	margin-top:60px;
+	background:url(../images/loginform_bg_shadow.png);
+	padding:15px;
+	border-radius:5px;
+    height: 358px;
+	top: 90px;
+}
+.loginform
+{
+	background:url(../images/loginform_bg.jpg);
+	border:1px solid #d7d7d7;
+}
+.loginform_header
+{
+	width:100%;
+	background:url(../images/login_header_bg.jpg) repeat-x;
+/* 	height:33px; */
+	top:17px;
+	position:relative;
+}
+.loginform_header h1
+{
+	color:#fff;
+	font-weight:700;
+	line-height:33px;
+	font-size:15px;
+	padding-left:15px;
+}
+.loginform_header .leftstrip
+{
+	position:absolute;
+	background:url(../images/login_header_leftside.png);
+	width:7px;
+	height:47px;
+	left:-7px;
+	top:-7px;
+}
+.login_table tr:nth-child(odd) {
+  background-color: none !important;
+}
+
+.login_table tr:nth-child(even) {
+  background-color: none !important;
+}
+.login_bottom_table{
+	
+}
+.login_bottom_table tr
+{
+background-color:none;
+}
+
+.login_bottom_table td
+{
+border:none ;
+}
+
+
+.login_table
+{
+	margin:27px 0px 10px 0px;
+	padding:0px 10px;
+	width:100% ;
+	cellpadding:0;
+	cellspacing:0 ;
+	border:0;border:none;
+}
+.login_table tr{
+ background-color:none;
+}
+
+.login_errors{
+	color: red;
+    display: block;
+    font-weight: bold;
+    width: 100%;
+    padding-top: 40px;
+    
+}
+.login_table td
+{
+	padding:5px;
+	border:none !important;
+	
+}
+.login_table td label
+{
+	font-weight:600;
+	color:#000000;
+	font-size:15px;
+}
+.login_table .txtbox
+{
+	background:url(../images/login_txtbox_bg.jpg) repeat-x;
+	height:25px;
+	border:1px solid #cecece;
+	width:170px;
+	padding-right:30px;
+	color:#000000;
+}
+
+.user_icon
+{
+	position:absolute;
+	background:url(../images/login_user_icon.png);
+	width:16px;
+	height:16px;
+	right: 22px;
+    top: 70px;
+/*  right: -115px; */
+/*  top: 102px; */
+}
+.pwd_icon
+{
+	position:absolute;
+	background:url(../images/login_pwd_icon.png);
+	width:16px;
+	height:16px;
+	right: 22px;
+    top: 105px;
+}
+.login_remember
+{
+	font-size:13px;
+	font-weight:600;
+	color:#8b8b8b;
+}
+.login_lbl{
+	 float: left;
+    margin-left: 5px;
+    margin-top: 0;
+    width: 180px;
+}
+.login_forgot a
+{
+	color:#009ae2;
+	text-decoration:underline;
+}
+.login_button
+{
+	width:150px;
+	height:30px;
+	background:url(../images/login_btn.jpg) repeat-x;
+	color:#fff;
+	text-transform:uppercase;
+	font-weight:600;
+	font-size:14px;
+	border:1px solid #c75d16;
+	margin-top:5px;
+	cursor:pointer;
+}
+.login_bottom
+{
+	 background:url(../images/login_bottom_bg.jpg); 
+	 width:100%;	
+}
+.login_bottom_table
+{
+	border-top:1px solid #c5c8cc;
+	border-bottom:1px solid #c5c8cc;
+	padding-bottom:10px;
+}
+.login_bottom_table td
+{
+	padding:3px 5px;
+}
+.login_bottom_table td.note
+{
+	color:#f5741c;
+	font-size:15px;
+	font-weight:600;
+}
+.login_bottom_table td a
+{
+	color:#156bbc;
+	text-decoration:none;
+	font-size:15px;
+}
+
+/*------------LoginForm End------------*/

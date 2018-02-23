@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpDmsDocsDetail" object="${ddpdmsdocsdetail}" path="/ddpdmsdocsdetails" z="3cHFk8clOL1UXXtzsQTN7enyPPc=">
+        <field:display field="dddDtxId" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDtxId" object="${ddpdmsdocsdetail}" z="ERsj82Kd61IDip6bdxoe3GRnSB0="/>
+        <field:display field="dddRObjectId" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddRObjectId" object="${ddpdmsdocsdetail}" z="eY5zzMKPIt4+xiuve6qLHOui9lw="/>
+        <field:display field="dddControlDocType" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddControlDocType" object="${ddpdmsdocsdetail}" z="krVjBId48S4/VbXEHpKevWC7Zig="/>
+        <field:display field="dddConsignmentId" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddConsignmentId" object="${ddpdmsdocsdetail}" z="ujlV4IXKtRi+gt5JhSsXuWqteRI="/>
+        <field:display field="dddDocRef" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDocRef" object="${ddpdmsdocsdetail}" z="qcX8MrdAgKt+SH9bfBS/to+cHG8="/>
+        <field:display field="dddGlobalDocRef" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddGlobalDocRef" object="${ddpdmsdocsdetail}" z="lI5vBDlpos7Ss/yjzDHNSuA47Ig="/>
+        <field:display field="dddCarrierRef" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCarrierRef" object="${ddpdmsdocsdetail}" z="U92MYgGRdRZdRp+0uOfW+4DqasY="/>
+        <field:display field="dddCompanySource" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCompanySource" object="${ddpdmsdocsdetail}" z="+ksElV3V4dM5xdMbIH1ubFiHR10="/>
+        <field:display field="dddCompanyDestination" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCompanyDestination" object="${ddpdmsdocsdetail}" z="dJ9FoFzBVnr3prifBDGg4eB4otc="/>
+        <field:display field="dddBranchSource" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBranchSource" object="${ddpdmsdocsdetail}" z="zKXtchai3GmrbLWs83hPwrG7Z/M="/>
+        <field:display field="dddBranchDestination" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBranchDestination" object="${ddpdmsdocsdetail}" z="wNs+7Kq0a9I5qCrh9g9qyjHUiAY="/>
+        <field:display field="dddDeptSource" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDeptSource" object="${ddpdmsdocsdetail}" z="kHypLUDF9/PSUcU0Jjx/VeiXFgQ="/>
+        <field:display field="dddDeptDestination" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDeptDestination" object="${ddpdmsdocsdetail}" z="vL7xDLMEkB1ybvQ2MZo9l0aSozQ="/>
+        <field:display field="dddBillOfLadingNumber" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBillOfLadingNumber" object="${ddpdmsdocsdetail}" z="TShHcgX6jcIKGJD+aKsvfDK6sx0="/>
+        <field:display field="dddMasterAirwayBillNum" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddMasterAirwayBillNum" object="${ddpdmsdocsdetail}" z="2YCo2RqHBoN5BR7Yfq9KoKDUO6c="/>
+        <field:display field="dddHouseAirwayBillNum" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddHouseAirwayBillNum" object="${ddpdmsdocsdetail}" z="yO1ENp+2vBKbU+xSmTcSEPkfYvY="/>
+        <field:display field="dddMasterJobNumber" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddMasterJobNumber" object="${ddpdmsdocsdetail}" z="jGV7Qc27FHBFScDj16UwWA+zayE="/>
+        <field:display field="dddClientId" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddClientId" object="${ddpdmsdocsdetail}" z="Gig2kYYCUj2mGKFhG20Hr1oCvHA="/>
+        <field:display field="dddShipper" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddShipper" object="${ddpdmsdocsdetail}" z="UTuJPU21lKLMsHFgZOPTJEF6MHA="/>
+        <field:display field="dddConsignee" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddConsignee" object="${ddpdmsdocsdetail}" z="W6L9zNdLyQJDDRFx2o5c7j44th8="/>
+        <field:display field="dddNotifyParty" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddNotifyParty" object="${ddpdmsdocsdetail}" z="m96g8THrOpE3AeGWv9j7fFl/BKo="/>
+        <field:display field="dddDebitsForward" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDebitsForward" object="${ddpdmsdocsdetail}" z="NFgeQsEGQmu6x2tJjmqnzh3OV/Q="/>
+        <field:display field="dddDebitsBack" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDebitsBack" object="${ddpdmsdocsdetail}" z="FDHhCQLB/VJHeo+qDKcCKCKJMfI="/>
+        <field:display field="dddInitialAgent" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddInitialAgent" object="${ddpdmsdocsdetail}" z="6wjOpUNdQqRyJmjZ55KqOAAethA="/>
+        <field:display field="dddIntermediateAgent" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddIntermediateAgent" object="${ddpdmsdocsdetail}" z="3BGVXFbQ6REcjSyw4FNXzX6yqXo="/>
+        <field:display field="dddFinalAgentId" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddFinalAgentId" object="${ddpdmsdocsdetail}" z="0TAVQN2PH0kYrb6b/NUY3Vt2UqI="/>
+        <field:display field="dddCustomsEntryNo" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCustomsEntryNo" object="${ddpdmsdocsdetail}" z="/gIZwmISGad/c3T18Ar1jXijJf0="/>
+        <field:display field="dddIsRated" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddIsRated" object="${ddpdmsdocsdetail}" z="zaxEpWgGhQ3sV4wcHnI3PUaEP9s="/>
+        <field:display field="dddBatchName" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBatchName" object="${ddpdmsdocsdetail}" z="xFU9u5knkIbGzZHNFES2tJ9yR30="/>
+        <field:display field="dddGeneratingSystem" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddGeneratingSystem" object="${ddpdmsdocsdetail}" z="rfQdX1iVp1V6kH2mOvfuhZW9XGw="/>
+        <field:display field="dddUserId" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddUserId" object="${ddpdmsdocsdetail}" z="ihb4azr3VAyt4Bmpd+iJ4VVQ7xg="/>
+        <field:display field="dddUserReference" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddUserReference" object="${ddpdmsdocsdetail}" z="H9OZvrfo+MAQiI21AmRMcUDhdi4="/>
+        <field:display field="dddNote" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddNote" object="${ddpdmsdocsdetail}" z="nobjsypSkUYwYzzsvaizLzZoW9c="/>
+        <field:display field="dddFileType" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddFileType" object="${ddpdmsdocsdetail}" z="NOJfupike/7Xen0xeHlrMjld2TM="/>
+        <field:display field="dddContentSize" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddContentSize" object="${ddpdmsdocsdetail}" z="pNh+iHlYBHDIqblp9jNUAJGpzOs="/>
+        <field:display field="dddContentType" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddContentType" object="${ddpdmsdocsdetail}" z="80glX70yI0ii/iJv108f19QQAUc="/>
+        <field:display field="dddObjectName" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddObjectName" object="${ddpdmsdocsdetail}" z="dTJDPXJXfOGnvu5FaauIJ6bqGxU="/>
+        <field:display field="dddJobNumber" id="s_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddJobNumber" object="${ddpdmsdocsdetail}" z="UODY0EIU5ctu8+icz3n5/pa74Lk="/>
+    </page:show>
+</div>

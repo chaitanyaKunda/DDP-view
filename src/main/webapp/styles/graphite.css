@@ -1,0 +1,90 @@
+.demo-container {
+	border: 1px solid #dedede;
+	padding: 0px;
+}
+
+.dcjq-count {
+	float: right;
+	padding-right: 10px;
+}
+
+.graphite .accordion {
+	border-top: 1px solid #111;
+	border-right: 1px solid #111;
+	border-left: 1px solid #111;
+}
+
+.graphite .accordion,.graphite .accordion li {
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+.graphite .accordion a {
+	padding: 0px 0px 0px 40px;
+	background: url(../images/accordion_background.jpg);
+/* 	height: 28px; */
+	line-height: 23px;
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	position: relative;
+	font-weight: 600;
+}
+
+.graphite .accordion ul a {
+	background: #fbfbfb url(../images/accordion_arrow.png) no-repeat 20px
+		48%;
+	color: #000000;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+.graphite .accordion a.dcjq-parent,.graphite .accordion a.dcjq-parent:hover
+	{
+	background: url(../images/accordion_background.jpg);
+}
+
+.graphite .accordion a.dcjq-parent.active {
+	background: url(../images/accordion_active_background.jpg);
+}
+
+.graphite .accordion a .dcjq-icon {
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	width: 34px;
+	margin-top: -15px;
+	height: 28px;
+	background: url(../images/accordion_plus.png) no-repeat 0 center;
+}
+
+.graphite .accordion a.dcjq-parent.active .dcjq-icon {
+	background: url(../images/accordion_minus.png) no-repeat 0 center;
+}
+
+.graphite .accordion a:hover {
+	background: #ececec url(../images/accordion_arrow.png) no-repeat 20px
+		48%;
+}
+
+.graphite .accordion a:active {
+	
+}
+
+.graphite h3 {
+	padding: 0px 0px 0px 20px;
+	font-family: 'Open Sans', sans-serif;
+	font-size:13px; 
+	background: url(../images/accordion_background.jpg);
+	height: 28px;
+	line-height: 28px;
+	text-decoration: none;
+	display: block;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	position: relative;
+	font-weight: 800
+}

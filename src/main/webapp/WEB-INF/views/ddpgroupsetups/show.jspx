@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields"
+xmlns:c="http://java.sun.com/jsp/jstl/core"  
+xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields"
+xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:custom_list id="pl_com_agility_ddp_data_domain_DdpGroupSetup" items="${ddpgroupsetup}" z="MGVPNL/PmsDm3JXUYwOxCr6Wsx8=" path="/ddpgroupsetups">
+    	<c:forEach items="${username}" var="element" varStatus="loop">
+			<div style="padding-left: 1px; top: 3px;"><label>Assigned Group for User :</label><c:out value="${element}"/></div>
+     	 </c:forEach>
+    <table:customtable data="${ddpgroupsetup}" id="l_com_agility_ddp_data_domain_DdpGroupSetup" path="/ddpgroupsetups" typeSubIdFieldName="grsUserId" typeIdFieldName="grsId" z="8YwFrJH7zBnqg/jiqJIXk1nFNpY=">
+            <table:column id="c_com_agility_ddp_view_util_usergroup_grsname" property="grsGroupId" z="sc1Z/OIfdVFn0XAlFphj+SwHJto="/>
+    </table:customtable>
+    </page:custom_list>
+</div>

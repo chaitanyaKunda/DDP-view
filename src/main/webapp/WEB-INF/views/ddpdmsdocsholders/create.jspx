@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpDmsDocsHolder" modelAttribute="ddpDmsDocsHolder" path="/ddpdmsdocsholders" render="${empty dependencies}" z="AW+D1xXTQ83vkHe9HMP1IB2v+IU=">
+        <field:input field="thlRObjectId" id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlRObjectId" z="TO03AjR9lzZx/6wd0LD0RhKt5Fc="/>
+        <field:input field="thlIsProcessReq" id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlIsProcessReq" required="true" z="b46W4zBqkhmhH59DpKEluoqsSHk="/>
+        <field:input field="thlTboName" id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlTboName" z="Xhw1p1PMRfJ4LfFPrYffkWfBVEo="/>
+        <field:input field="thlSynId" id="c_com_agility_ddp_data_domain_DdpDmsDocsHolder_thlSynId" required="true" validationMessageCode="field_invalid_integer" z="j807pwf4XNUHIvGqaM2H8qi54WM="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpDmsDocsHolder" render="${not empty dependencies}" z="XaYZiIJHxtfZHskih2yVZiErKm0="/>
+</div>

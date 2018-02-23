@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCommFtp" items="${ddpcommftps}" z="JbnwRaUxBNgr85/n6SQ09nWFNI8=">
+        <table:table data="${ddpcommftps}" id="l_com_agility_ddp_data_domain_DdpCommFtp" path="/ddpcommftps" typeIdFieldName="cftFtpId" z="dGYdjg2wRZrJnVwstHb0CXJRZgg=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpLocation" property="cftFtpLocation" z="5pP9CpsymEQ419Sh2Rx7uE5GSAc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpUserName" property="cftFtpUserName" z="+TJhfFcRaeCvgzV1HiJXNv9TdKM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPassword" property="cftFtpPassword" z="HB5f4Mo3m91mQWnBt7CH0r2MiVI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPort" property="cftFtpPort" z="reQOlKtr4Qdokf+Grwney7eYFWY="/>
+        </table:table>
+    </page:list>
+</div>

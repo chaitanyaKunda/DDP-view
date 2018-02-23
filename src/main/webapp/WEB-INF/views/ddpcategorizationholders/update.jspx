@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpCategorizationHolder" idField="chlId" modelAttribute="ddpCategorizationHolder" path="/ddpcategorizationholders" versionField="none" z="RtPRVR+YlxBYvy5A3YPLakRzOms=">
+        <field:input field="chlSynId" id="c_com_agility_ddp_data_domain_DdpCategorizationHolder_chlSynId" required="true" validationMessageCode="field_invalid_integer" z="xVl0fcOrTLlg730poXtykUGxfdQ="/>
+        <field:input field="chlDtxId" id="c_com_agility_ddp_data_domain_DdpCategorizationHolder_chlDtxId" required="true" validationMessageCode="field_invalid_integer" z="BDliKNCdKSxW8qWXJWSpQH+k3UE="/>
+        <field:input field="chlRulId" id="c_com_agility_ddp_data_domain_DdpCategorizationHolder_chlRulId" required="true" validationMessageCode="field_invalid_integer" z="yyQC+DhlK6PiKkfW72nGQVjutaQ="/>
+    </form:update>
+</div>

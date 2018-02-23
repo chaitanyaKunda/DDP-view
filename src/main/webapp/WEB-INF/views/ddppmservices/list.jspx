@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpPmService" items="${ddppmservices}" z="mwqJgyMITuOy5H9hNIr/U2sYo5Y=">
+        <table:table data="${ddppmservices}" id="l_com_agility_ddp_data_domain_DdpPmService" path="/ddppmservices" typeIdFieldName="psrId" z="f0bTdW3eM8Rch9voN4TPSJRVans=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpPmService_psrName" property="psrName" z="vl1+yC6ZEFVrvkyEXfIS/KkBXu8="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpPmService_psrDescription" property="psrDescription" z="jhmORAfU/3erQBM2b9t8ka/TAdk="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpPmService_psrStatus" property="psrStatus" z="PySu3o/C2NRuuUbIJaQdUbDbra0="/>
+        </table:table>
+    </page:list>
+</div>

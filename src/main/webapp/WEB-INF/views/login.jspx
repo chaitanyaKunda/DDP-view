@@ -1,0 +1,131 @@
+<html xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:tiles="http://tiles.apache.org/tags-tiles"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+	<link rel="stylesheet" type="text/css" href="styles/loginstyle.css"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8" />
+    <jsp:output omit-xml-declaration="yes" />
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<spring:message code="application_name" var="app_name"	htmlEscape="false" />
+	
+	<title><spring:message code="welcome_h3" arguments="${app_name}" /></title>
+	</head><body>
+	<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/md5.js"><!-- Need for IE --></script>
+	<script type="text/javascript">
+		if (!String.prototype.trim) 
+		{
+		 	String.prototype.trim = function() 
+		 	{
+		  		return this.replace(/^\s+|\s+$/g,'');
+		 	}
+		}
+		function validateForm()
+		{
+			var user=document.f.j_username.value;
+			var pass=document.f.j_password.value;
+			
+			document.getElementById('uerror').innerHTML="";
+			document.getElementById('perror').innerHTML="";
+			if(user == '')
+			{
+				document.getElementById('uerror').innerHTML="Please Enter Username";
+				return false;
+			}
+		 
+			if(pass == '')
+			{
+				document.getElementById('perror').innerHTML="Please Enter Password";
+				return false;
+			}
+			//alert(document.f.j_password.value);
+			//document.f.j_password.value = CryptoJS.MD5(document.f.j_password.value);
+			//alert(document.f.j_password.value);
+		}
+	</script>
+    <div class="login_wrapper"  >
+     	<div class="login_main">
+     		<div class="loginform">
+		        	<div class="loginform_header">
+		            	<h1>DDP LOGIN</h1>
+		            	<div class="leftstrip"></div>
+		            </div>	
+		            <spring:url value="/resources/j_spring_security_check" var="form_url" />
+		            <form name="f" id="login" action="${fn:escapeXml(form_url)}" method="POST" onsubmit="return validateForm()" >
+		            <table width="100%" cellpadding="0" cellspacing="0" border="0" class="login_table">
+					      <tr style="background-color: #FFFFFF;">
+						        <td><label for="j_username"  class="login_lbl">
+						          <spring:message code="security_login_form_name" />
+						        </label></td>
+						        <td><input id="j_username" type='text' name='j_username' class="txtbox" /></td>
+						        <spring:message code="security_login_form_name_message" var="name_msg" htmlEscape="false" />
+					      </tr>
+					      <tr>
+					      		<td></td>
+								<td><div id="uerror" style="color: red;"></div></td>
+						  </tr>
+					      <tr style="background-color: #FFFFFF;">
+						        <td><label for="j_password" class="login_lbl">
+						          <spring:message code="security_login_form_password" />
+						        </label></td>
+						        <td><input class="txtbox" id="j_password" type='password' name='j_password' /></td>
+						        <spring:message code="security_login_form_password_message" var="pwd_msg" htmlEscape="false" />
+					      </tr>
+					      <tr>
+					      		<td></td>
+								<td><div id="perror" style="color: red;"></div></td>
+						  </tr>
+				          <tr style="background-color: #FFFFFF; display: none;"  >
+				        	<td colspan="2">
+				               	<input type="checkbox" class="login_checkbox" />  <span class="login_remember">Remember me</span>   <span><img src="images/dots.jpg" /></span>    <span class="login_forgot"><a href="#">Forgot Password</a></span>
+				            </td>
+				          </tr>
+				          <tr style="background-color: #FFFFFF;">
+			                	<td align="center" colspan="2">
+			                		<!-- <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script> -->
+					        		<spring:message code="button_submit" var="submit_label" htmlEscape="false" />	
+			                		<input type="submit"  value="${fn:escapeXml(submit_label)}" class="login_button" />
+			                	</td>
+				          </tr>
+				    </table>
+				    </form>
+					<div class="login_bottom">
+						<table width="100%" cellpadding="0" cellspacing="0" border="0"
+							class="login_bottom_table">
+							<tr>
+								<td class="note"><!--  Note :--></td>
+							</tr>
+							<tr>
+								<td align="center"> <b style="color:rgb(247,89,7);">WELCOME TO DDP ( <span style="font-size=80%;">Version 9.3.0</span> )</b>
+								</td>
+							</tr>
+							<tr>
+								<spring:message code='link_userguide' var="userGuideFile" htmlEscape='false'/>
+								<spring:eval expression="@environment.getProperty('app.evn')" var="environ" />
+<!-- 								<td align="right"><a href="userguidev/${userGuideFile}" target="_block" title="view user guide">User Guide</a></td> -->
+								<td align="right"><a href="userguidev/UserGuide_${environ}.pdf" target="_block" title="view user guide">User Guide</a></td>
+							</tr>
+						</table>
+					</div>
+					
+				</div>
+		
+			</div>	
+			<c:if test="${not empty param.login_error}">
+				<div class="login_errors">
+					<p>
+						<spring:message code="security_login_unsuccessful" />
+						<c:out value="${SPRING_SECURITY_LAST_EXCEPTION.message}" />
+					</p>
+				</div>
+			
+			</c:if>
+		    <c:if test="${empty param.login_error}">
+	   	    </c:if>
+    	</div>
+	</body>
+</html>
+

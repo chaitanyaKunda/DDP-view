@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCommFtp" object="${ddpcommftp}" path="/ddpcommftps" z="vxuui0/83jilhOZqA7Es8DrDbBU=">
+        <field:display field="cftFtpLocation" id="s_com_agility_ddp_data_domain_DdpCommFtp_cftFtpLocation" object="${ddpcommftp}" z="XAEHpXdFZup9ducwvk79sPxon4k="/>
+        <field:display field="cftFtpUserName" id="s_com_agility_ddp_data_domain_DdpCommFtp_cftFtpUserName" object="${ddpcommftp}" z="eL1dvKyhz1H8xhK69r7ZUk7eRiM="/>
+        <field:display field="cftFtpPassword" id="s_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPassword" object="${ddpcommftp}" z="I19zfPU4lYEyo8SLkC4dmHm9EvA="/>
+        <field:display field="cftFtpPort" id="s_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPort" object="${ddpcommftp}" z="LnUHjOpV/f8PCZm8TuwDaJR1tFM="/>
+    </page:show>
+</div>

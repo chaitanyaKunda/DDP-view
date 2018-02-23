@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCategorizedDocs" items="${ddpcategorizeddocses}" z="+eyg0pN5NjC9SjkNq4Wsn5wJpMc=">
+        <table:table data="${ddpcategorizeddocses}" id="l_com_agility_ddp_data_domain_DdpCategorizedDocs" path="/ddpcategorizeddocses" typeIdFieldName="catId" z="4FT75ct9kf1zLsKVMBKGSWTrSAo=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDocs_catDtxId" property="catDtxId" z="Y+PiqZo3FuX2eDCx8ciL4LNu86o="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDocs_catRulId" property="catRulId" z="woNxu6b+cBDA2JihvS6q84szLXg="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDocs_catTotalPmReq" property="catTotalPmReq" z="l42SFRr4r9VhPcigym6PtS101qo="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDocs_catCurrentPmSeq" property="catCurrentPmSeq" z="QMzhPYS/CuGoxEhrmAfyv769UHY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedDocs_catCurrentPm" property="catCurrentPm" z="JH+SsPLfs5MCR19vKWoSPw0VXOs="/>
+        </table:table>
+    </page:list>
+</div>

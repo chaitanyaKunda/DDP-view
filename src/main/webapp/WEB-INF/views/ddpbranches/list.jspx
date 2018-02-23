@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpBranch" items="${ddpbranches}" z="KAoFDgZNNhJRXgekIG7q4Jb3r9A=" path="/ddpbranches">
+        <table:table data="${ddpbranches}" id="l_com_agility_ddp_data_domain_DdpBranch" path="/ddpbranches" typeIdFieldName="brnBranchCode" z="FfWSDCYztdVmJH4pIEXvjWIApKM=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpBranch_brnBranchName" property="brnBranchName" z="wdLTRrlsPsfM3U0BZuP3DFe/Owc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpBranch_brnBranchCode" property="brnBranchCode" z="wdLTRrlsPsfM3U0BZuP3DFe/Owc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpBranch_brnCompnayCode" property="brnCompnayCode" z="qlQ8rNIfYAuivX6oWe8ZbKPvTZw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpBranch_brnStatus" property="brnStatus" z="0Rw56Zubf7n7cyuaEzpUdI388cY=" render="false"/>
+        </table:table>
+    </page:list>
+</div>

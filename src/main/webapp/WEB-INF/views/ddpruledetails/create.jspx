@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpRuleDetail" modelAttribute="ddpRuleDetail" path="/ddpruledetails" render="${empty dependencies}" z="+AfLS6EloShTxXH/LY2OcOZIPb4=">
+        <field:select field="rdtBranch" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch" itemValue="brnBranchCode" items="${ddpbranches}" path="/ddpbranches" z="fZrPJOO9YNRi3HDQu/rW+Hsi4Z0="/>
+        <field:select field="rdtCommunicationId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtCommunicationId" itemValue="cmsCommunicationId" items="${ddpcommunicationsetups}" path="/ddpcommunicationsetups" z="+gA84Npe9pCxUMSRxe26ElHxxJI="/>
+        <field:select field="rdtCompany" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtCompany" itemValue="comCompanyCode" items="${ddpcompanys}" path="/ddpcompanys" z="YlC0mvaIyYCKEw4mtyPrfLjkqHs="/>
+        <field:select field="rdtDocType" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtDocType" itemValue="dtyDocTypeCode" items="${ddpdoctypes}" path="/ddpdoctypes" z="Q/JpEc2mJbvIv3kZuUe9BmMlJV4="/>
+        <field:select field="rdtGenSystem" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtGenSystem" itemValue="genApplicationCode" items="${ddpgensystems}" path="/ddpgensystems" z="bMWcCvuVy1QSYQa3D+stldtvh3g="/>
+        <field:select field="rdtNotificationId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtNotificationId" itemValue="notId" items="${ddpnotifications}" path="/ddpnotifications" z="5H/apIaMtYJP0fMu5+T5fG7wLXU="/>
+        <field:select field="rdtPartyCode" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyCode" itemValue="ptyPartyCode" items="${ddppartys}" path="/ddppartys" z="EWkDDY691LgCRZNVN6VakfTVqPo="/>
+        <field:select field="rdtSchedulerId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtSchedulerId" itemValue="schId" items="${ddpschedulers}" path="/ddpschedulers" z="IrHlZAk96FZ05EtNM3icb1Fcm0o="/>
+        <field:input field="rdtStatus" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtStatus" required="true" validationMessageCode="field_invalid_integer" z="qXe+1Q6FCkX898vukSRw+O0LFYA="/>
+        <field:input field="rdtCreatedBy" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtCreatedBy" required="true" z="Pf7ehyK0fLElQgMBJ4uFjzmybN4="/>
+        <field:datetime dateTimePattern="${ddpRuleDetail_rdtcreateddate_date_format}" field="rdtCreatedDate" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtCreatedDate" required="true" z="gedSJSI/vbPNe2ehEjxDDU3hLUU="/>
+        <field:input field="rdtModifiedBy" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtModifiedBy" required="true" z="r6jQfG6S2dh3+F96/HEEKbyygsc="/>
+        <field:datetime dateTimePattern="${ddpRuleDetail_rdtmodifieddate_date_format}" field="rdtModifiedDate" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtModifiedDate" required="true" z="nBh8DbVsqQzbJubQrZN/lit44q4="/>
+        <field:simple field="ddpCommOptionsSetups" id="c_com_agility_ddp_data_domain_DdpRuleDetail_ddpCommOptionsSetups" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Comm Options Setup" z="MH6AeemS7WcWiVDclOZef7lNBkg="/>
+        <field:select field="rdtRuleId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtRuleId" itemValue="rulId" items="${ddprules}" path="/ddprules" z="9fUuoSwfPxlXQTBvkRpvtYQZFJs="/>
+        <field:input field="rdtPartyId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyId" z="tIo4WlRonY5XIphh7X4sIUo8pms="/>
+        <field:input field="rdtRuleType" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtRuleType" required="true" z="GCgBoe0dxhaBan1og+G5eBVvKjo="/>
+        <field:datetime dateTimePattern="${ddpRuleDetail_rdtactivationdate_date_format}" field="rdtActivationDate" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtActivationDate" z="hbN6al0IbPMeR9cbO9J+1NudWMc="/>
+        <field:simple field="ddpGenSourceSetups" id="c_com_agility_ddp_data_domain_DdpRuleDetail_ddpGenSourceSetups" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Gen Source Setup" z="Ll4GcvDrIRWjL5oUXZkmLV6Gv+A="/>
+        <field:simple field="ddpRates" id="c_com_agility_ddp_data_domain_DdpRuleDetail_ddpRates" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rate" z="IOoLuWUCmb+Rvnyz2WkpnQvtuH8="/>
+        <field:simple field="ddpRateSetups" id="c_com_agility_ddp_data_domain_DdpRuleDetail_ddpRateSetups" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rate Setup" z="6V+PhYWqEq7MUlWN9MbwG6KMStk="/>
+        <field:simple field="ddpExportVersionSetups" id="c_com_agility_ddp_data_domain_DdpRuleDetail_ddpExportVersionSetups" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Export Version Setup" z="KnFHBDUb3ybHDDsy7+wkFYpIjJo="/>
+        <field:input field="rdtForcedType" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtForcedType" validationMessageCode="field_invalid_integer" z="vFXf17P/mpyGUOQY8VEK1reWUmU="/>
+        <field:input field="rdtDepartment" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtDepartment" z="z4VNWDdF2VPa3ZlR+nk/dZ36bYA="/>
+        <field:input field="rdtDocSequence" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtDocSequence" validationMessageCode="field_invalid_integer" z="lOOexqlBbECy5z2byf/P5OSci+g="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpRuleDetail" render="${not empty dependencies}" z="Y+EwzYjnVwfrGOXClHzMS5uwIXE="/>
+</div>

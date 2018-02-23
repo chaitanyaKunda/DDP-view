@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpDmsDocsDetail" modelAttribute="ddpDmsDocsDetail" path="/ddpdmsdocsdetails" render="${empty dependencies}" z="zIlRY5/1l13zWXEUlpkfMuoFD+w=">
+        <field:select field="dddDtxId" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDtxId" itemValue="dtxId" items="${ddpdmsdocstxns}" path="/ddpdmsdocstxns" z="G7L2sE19Ri9Nfqvl0lWuZfF+C0Q="/>
+        <field:input field="dddRObjectId" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddRObjectId" z="tj4nEapItQ5kvmAAwGPxKHZAVl4="/>
+        <field:input field="dddControlDocType" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddControlDocType" z="oSrXYhuVINPu1+d4Zpo2yISQ1tg="/>
+        <field:input field="dddConsignmentId" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddConsignmentId" z="9+ivZN4GsSDsa8gIPAsXYDGJ0vM="/>
+        <field:input field="dddDocRef" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDocRef" z="wV1qAT08vbBbYgWWo/QvcecQIYk="/>
+        <field:input field="dddGlobalDocRef" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddGlobalDocRef" z="Sdwpvxc/zxuXClxNrvJJOqtVpmA="/>
+        <field:input field="dddCarrierRef" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCarrierRef" z="vph0TN8WI5OjjMa/PPEKWDU7YBc="/>
+        <field:input field="dddCompanySource" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCompanySource" z="SWBKPfniaqarXcQuj8EBFhIQTSM="/>
+        <field:input field="dddCompanyDestination" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCompanyDestination" z="5d4s7vV213rHOZepCbzWsvY2368="/>
+        <field:input field="dddBranchSource" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBranchSource" z="nwHOVPlFjOrDYgF6zZ8MDeP4eTU="/>
+        <field:input field="dddBranchDestination" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBranchDestination" z="sU9ypI4doUQvKfFkLWVfG+Y+nsw="/>
+        <field:input field="dddDeptSource" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDeptSource" z="2iKKiPG8jmjeFx57Ywar8xFgX7M="/>
+        <field:input field="dddDeptDestination" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDeptDestination" z="EU/X1mVyypsZob0qHV+Kfapuur0="/>
+        <field:input field="dddBillOfLadingNumber" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBillOfLadingNumber" z="7uoK67cGCNteekSKtZwR8Driqwc="/>
+        <field:input field="dddMasterAirwayBillNum" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddMasterAirwayBillNum" z="+evQuvhA2xHKJpXlEByiRBuUoqM="/>
+        <field:input field="dddHouseAirwayBillNum" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddHouseAirwayBillNum" z="TryEhzCeL4/lEyUJ72rLsXI1Ekk="/>
+        <field:input field="dddMasterJobNumber" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddMasterJobNumber" z="BVjNuXxPk+b2aHAkv/cXCst6E7Q="/>
+        <field:input field="dddClientId" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddClientId" z="GVJTX37UhEdfTN4c1tt4Gi4zvqo="/>
+        <field:input field="dddShipper" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddShipper" z="kUj+jOJp7pcwhNPsZPFp+eEecxc="/>
+        <field:input field="dddConsignee" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddConsignee" z="kdUTi1Hf2vZJHquT8W+2Updr+WA="/>
+        <field:input field="dddNotifyParty" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddNotifyParty" z="k6oau+M+4paJqhUOh1JUDiCl6fc="/>
+        <field:input field="dddDebitsForward" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDebitsForward" z="Y0M7c0Ik6K0AWgBgKWU6bgom9Xg="/>
+        <field:input field="dddDebitsBack" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDebitsBack" z="RqkBZtbQyeZsnY3Y24jOniba99w="/>
+        <field:input field="dddInitialAgent" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddInitialAgent" z="aspsfWxsSejmlbS7kXqCofm/2SI="/>
+        <field:input field="dddIntermediateAgent" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddIntermediateAgent" z="uQdvGkmNknGhKRbzWZK+/h4L8hQ="/>
+        <field:input field="dddFinalAgentId" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddFinalAgentId" z="9IW6p9HNvapS4EFoN0ZAQuHSJso="/>
+        <field:input field="dddCustomsEntryNo" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddCustomsEntryNo" z="iY9skH5aybTe86MD47ZK/9+UtXs="/>
+        <field:input field="dddIsRated" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddIsRated" validationMessageCode="field_invalid_integer" z="iSYUaObcWsL2lu0oEtGM8RxEQ8w="/>
+        <field:input field="dddBatchName" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddBatchName" z="qwL50Hc4VD97kiFu96ucj0Oqgxc="/>
+        <field:input field="dddGeneratingSystem" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddGeneratingSystem" z="EKLUWRoeWIaGYZJ/u4gyixTLcPY="/>
+        <field:input field="dddUserId" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddUserId" z="ySK+0QxRLMBpH3OZJUFiw4HeTVw="/>
+        <field:input field="dddUserReference" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddUserReference" z="KaFEjO4drXC1VaKGIDRxdGzq5v0="/>
+        <field:input field="dddNote" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddNote" z="oKevZ1RPuvV80vLv28eyuqPFt4w="/>
+        <field:input field="dddFileType" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddFileType" z="bTkcZDSoITfg2BP3neb7k3juqqE="/>
+        <field:input field="dddContentSize" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddContentSize" z="njvSeJEbF/DishWBrtB25Knjb84="/>
+        <field:input field="dddContentType" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddContentType" z="2AQt20/P/csIVXtghUbnT3KXsOY="/>
+        <field:input field="dddObjectName" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddObjectName" z="Du5WwGqgSCZnClJ5TdrmjwLBz2w="/>
+        <field:input field="dddJobNumber" id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddJobNumber" z="8bI2godbu93lhH8X2XWxFckqjSY="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpDmsDocsDetail" render="${not empty dependencies}" z="Zg18qu34JzkDWLbcLHC5Bsh7ZZM="/>
+</div>

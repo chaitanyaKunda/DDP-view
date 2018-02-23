@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpDoctype" object="${ddpdoctype}" path="/ddpdoctypes" z="vBatuaePFbeqkhUK028DHjSs+wI=">
+        <field:display field="dtyDocTypeName" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyDocTypeName" object="${ddpdoctype}" z="bJRw0Sq8yFbea+2ZlvpKbwum5Cs="/>
+        <field:display field="dtyDocTypeCode" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyDocTypeCode" object="${ddpdoctype}" z="bJRw0Sq8yFbea+2ZlvpKbwum5Cs="/>
+        <field:display field="dtySource" id="s_com_agility_ddp_data_domain_DdpDoctype_dtySource" object="${ddpdoctype}" z="lYgdoSk+bImbuH7N4erHwBvHcBQ="/>
+        <field:display field="dtyCompanyCode" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyCompanyCode" object="${ddpdoctype}" z="FOL7AZn8stHyxDnuF34EArl2HpE="/>
+        <field:display field="dtyStatus" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyStatus" object="${ddpdoctype}" z="nblihbLct81fObcjTzxW6biXfTk="/>
+        <field:display field="dtyCreatedBy" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyCreatedBy" object="${ddpdoctype}" z="ripHRpTTU4bYntPvCqj3AiEh7ho="/>
+        <field:display calendar="true" dateTimePattern="${ddpDoctype_dtycreateddate_date_format}" field="dtyCreatedDate" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyCreatedDate" object="${ddpdoctype}" z="5g2YamQ1X3HHU3/RBYEO+mbmKRk="/>
+        <field:display field="dtyModifiedBy" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyModifiedBy" object="${ddpdoctype}" z="dOyQfjALceLRCrjWKKt1F6EhYqE="/>
+        <field:display calendar="true" dateTimePattern="${ddpDoctype_dtymodifieddate_date_format}" field="dtyModifiedDate" id="s_com_agility_ddp_data_domain_DdpDoctype_dtyModifiedDate" object="${ddpdoctype}" z="/Z+3bvpny7NrHwR6SfDyTZPe7hE="/>
+    </page:show>
+    
+  	<script>
+		dojo.addOnLoad(function(){
+			var t = $('#_s_com_agility_ddp_data_domain_DdpDoctype_dtyStatus_dtyStatus_id').text(); 
+			var j = t.replace(':','').trim();
+			var n = j.replace("Status","").trim();
+			var status = n.replace(':','').trim();
+			if(status=='0'){
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpDoctype_dtyStatus_dtyStatus_id").innerHTML  = 'Active';
+			}else{
+				document.getElementById("_s_com_agility_ddp_data_domain_DdpDoctype_dtyStatus_dtyStatus_id").innerHTML  = 'InActive';
+			}
+		});	
+	
+	</script>
+    
+</div>

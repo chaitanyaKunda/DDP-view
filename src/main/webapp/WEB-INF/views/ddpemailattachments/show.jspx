@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpEmailAttachment" object="${ddpemailattachment}" path="/ddpemailattachments" z="EDID7gNbFF632tyPnbR2WhvtwSE=">
+        <field:display field="eatEmailId" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatEmailId" object="${ddpemailattachment}" z="HUwwTGaJJ29PglqBzFkCaEptgYw="/>
+        <field:display field="eatSize" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatSize" object="${ddpemailattachment}" z="x01Rrpzh0qPZ8r9CILCqJgz3qxw="/>
+        <field:display field="eatAttachmentNumberLimit" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatAttachmentNumberLimit" object="${ddpemailattachment}" z="V9dBmq0qNMFuvv4MjtfiPDIJ7sY="/>
+        <field:display field="eatCompression" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatCompression" object="${ddpemailattachment}" z="J9EC+LoM7mbTT4ZCLUn5+ulpn5E="/>
+        <field:display field="eatConversion" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatConversion" object="${ddpemailattachment}" z="d/wnLQKqV3A+fSgjERo7yKfX/Ys="/>
+        <field:display field="eatPdfFormat" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatPdfFormat" object="${ddpemailattachment}" z="ZxM+GYyJuofoXGm6vNefwZxU7CI="/>
+        <field:display field="eatPdfSignedOption" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatPdfSignedOption" object="${ddpemailattachment}" z="FMX2MHl/fTEeQcZbry5sMugAJLE="/>
+        <field:display field="eatHyperlinkOption" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatHyperlinkOption" object="${ddpemailattachment}" z="KLCAgFPfSzDWOjwTJAw5T3ZLbYo="/>
+        <field:display field="eatHyperlink" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatHyperlink" object="${ddpemailattachment}" z="6TFesBWN2czTDoIqMDkgZz4FIfo="/>
+        <field:display field="eatStatus" id="s_com_agility_ddp_data_domain_DdpEmailAttachment_eatStatus" object="${ddpemailattachment}" z="Ldx6f5icDKwVfO6cJJJaNbZAS88="/>
+    </page:show>
+</div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpDmsDocsDetail" items="${ddpdmsdocsdetails}" z="gop/PxkcPE6j2kSD8GutiWk7FYg=">
+        <table:table data="${ddpdmsdocsdetails}" id="l_com_agility_ddp_data_domain_DdpDmsDocsDetail" path="/ddpdmsdocsdetails" typeIdFieldName="dddId" z="M4vNxjzzNQh4g2w9rvllgq45Sqo=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDtxId" property="dddDtxId" z="0Kn3FEdVtCjtTeiyiOd8JfiqT/s="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddRObjectId" property="dddRObjectId" z="GWTrSwuSgxuBE1A93rVqEFzO/uY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddControlDocType" property="dddControlDocType" z="+bVmmMqZMuYNlRMpg9Diz6hLcvM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddConsignmentId" property="dddConsignmentId" z="UWb2prFZDpR6qg16muw5ZfGQLhw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddDocRef" property="dddDocRef" z="Zsh7fRapdAAq7MIymaw/OKRiHUw="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpDmsDocsDetail_dddGlobalDocRef" property="dddGlobalDocRef" z="Nff4RsIDtES2t63FuMFCXOubGsk="/>
+        </table:table>
+    </page:list>
+</div>

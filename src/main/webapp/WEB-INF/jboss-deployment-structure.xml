@@ -1,0 +1,11 @@
+<jboss-deployment-structure>
+    <deployment>
+        <!-- Exclusions allow you to prevent the server from automatically adding some dependencies     -->
+        <exclusions>
+            <module name="org.slf4j" />
+            <module name="org.slf4j.impl" />
+            <!-- Exclude container version of hibernate. By default its version 4, we want bundled version to load -->
+            <module name="org.hibernate" slot="main" />
+        </exclusions>
+    </deployment>
+</jboss-deployment-structure>

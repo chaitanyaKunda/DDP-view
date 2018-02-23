@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpGenSourceSetup" modelAttribute="ddpGenSourceSetup" path="/ddpgensourcesetups" render="${empty dependencies}" z="wZ4Y7WpX77yBg5PI+GY/vsN66Js=">
+        <field:select field="gssRdtId" id="c_com_agility_ddp_data_domain_DdpGenSourceSetup_gssRdtId" itemValue="rdtId" items="${ddpruledetails}" path="/ddpruledetails" z="IW7RfBBhbjGO/tCO8WfO1n12r20="/>
+        <field:input field="gssOption" id="c_com_agility_ddp_data_domain_DdpGenSourceSetup_gssOption" z="LFYCdJywimRpZM/53RKz/wJ2PgQ="/>
+        <field:input field="gssCreatedBy" id="c_com_agility_ddp_data_domain_DdpGenSourceSetup_gssCreatedBy" required="true" z="1lSUi9yqW8x9IavaBEcGUczq3sI="/>
+        <field:datetime dateTimePattern="${ddpGenSourceSetup_gsscreateddate_date_format}" field="gssCreatedDate" id="c_com_agility_ddp_data_domain_DdpGenSourceSetup_gssCreatedDate" required="true" z="vaIBNgUOi9niPv/77FwiWcnrueM="/>
+        <field:input field="gssModifiedBy" id="c_com_agility_ddp_data_domain_DdpGenSourceSetup_gssModifiedBy" required="true" z="uw8a325Xzj2LH2o09JUVk7dzbxA="/>
+        <field:datetime dateTimePattern="${ddpGenSourceSetup_gssmodifieddate_date_format}" field="gssModifiedDate" id="c_com_agility_ddp_data_domain_DdpGenSourceSetup_gssModifiedDate" required="true" z="7QvQV0AD81C0tRcwl+9KABePLLY="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpGenSourceSetup" render="${not empty dependencies}" z="mGQTgK2QC/6kf/QCL2p4C33K0io="/>
+</div>

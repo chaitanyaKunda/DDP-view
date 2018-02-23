@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpRole" object="${ddprole}" path="/ddproles" z="ZzaVwzHJUXsL1t5PKC8xVdxQyBM=">
+        <field:display field="rolName" id="s_com_agility_ddp_data_domain_DdpRole_rolName" object="${ddprole}" z="y2hXdH7gXIzHl1qk8RP/qtTfnsA="/>
+        <field:display field="rolDisplayName" id="s_com_agility_ddp_data_domain_DdpRole_rolDisplayName" object="${ddprole}" z="UbPsh5XViGYKCwHlT+Xb0EfG+1M="/>
+        <field:display field="rolDescription" id="s_com_agility_ddp_data_domain_DdpRole_rolDescription" object="${ddprole}" z="B17+vbr48U7KEaefhktk1HTbyOo="/>
+        <field:display field="rolStatus" id="s_com_agility_ddp_data_domain_DdpRole_rolStatus" object="${ddprole}" z="OvNMN5kPvrf3xiRf7URw3mjry9M=" render="false"/>
+        <field:display field="rolCreatedBy" id="s_com_agility_ddp_data_domain_DdpRole_rolCreatedBy" object="${ddprole}" z="C9MT0UOFncTYI+0Z75y8LNyyDSQ="/>
+        <field:display calendar="true" dateTimePattern="${ddpRole_rolcreateddate_date_format}" field="rolCreatedDate" id="s_com_agility_ddp_data_domain_DdpRole_rolCreatedDate" object="${ddprole}" z="Uv/d9kTXVJWjnV3dRfAHmC4u7GY="/>
+        <field:display field="rolModifiedBy" id="s_com_agility_ddp_data_domain_DdpRole_rolModifiedBy" object="${ddprole}" z="RDe5TRfq3A5sfuIGL5ok4jD4akU="/>
+        <field:display calendar="true" dateTimePattern="${ddpRole_rolmodifieddate_date_format}" field="rolModifiedDate" id="s_com_agility_ddp_data_domain_DdpRole_rolModifiedDate" object="${ddprole}" z="Ao5ksWOBz+BRgiMdeLBncG5UwL0="/>
+    </page:show>
+</div>

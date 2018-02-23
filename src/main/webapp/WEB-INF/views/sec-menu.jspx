@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"  class="graphite demo-container"
+	xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" 
+	xmlns:spring="http://www.springframework.org/tags" 
+	xmlns:sec="http://www.springframework.org/security/tags" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" id="menu" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<spring:message code="label_menu_header_ddp_setup" var="label_menu_header_ddp_setup" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_header_email_docs_setup" var="label_menu_header_email_docs_setup" htmlEscape="false"></spring:message>
+	<spring:message code="label_menuheader_export_docs_setup" var="label_menuheader_export_docs_setup" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_aed" var="label_menu_aed" htmlEscape="false"></spring:message>
+	<spring:message code="lable_menu_consoidaged_aed" var="lable_menu_consoidaged_aed" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_export" var="label_menu_export" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_header_reports" var="label_menu_header_reports" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_aed_reports" var="label_menu_aed_reports" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_consol_reports" var="label_menu_consol_reports" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_export_reports" var="label_menu_export_reports" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_header_administration" var="label_menu_header_administration" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_header_user_setup" var="label_menu_header_user_setup" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_header_dms_setup" var="label_menu_header_dms_setup" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_users" var="label_menu_users" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_groups" var="label_menu_groups" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_roles" var="label_menu_roles" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_assign_groups" var="label_menu_assign_groups" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_assing_roles" var="label_menu_assing_roles" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_company" var="label_menu_company" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_branch" var="label_menu_branch" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_doctype" var="label_menu_doctype" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_party" var="label_menu_party" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_categorized_docs" var="label_menu_categorized_docs" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_docs_details" var="label_menu_docs_details" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_audit" var="label_menu_audit" htmlEscape="false"></spring:message>
+	<spring:message code="label_menu_monitor_jobs" var="label_menu_monitor_jobs" htmlEscape="false"></spring:message>
+	<menu:headermenu id="c_custom_ddp_header" openPane="true" label="${ label_menu_header_ddp_setup }">
+		<menu:menu  id="_menu" z="user-managed">
+			<menu:category id="c_custom_ddp_email" z="user-managed" label="${ label_menu_header_email_docs_setup }">
+				<menu:item id="i_custom_ddp_email_aed" url="/ddpaedrules/list/mediator" z="user-managed" cssClass="aedrule" label="${ label_menu_aed }"/>
+				<menu:item id="i_custom_ddp_Multi_Aed_setup" url="/ddpmultiaedrules/list/mediator" z="user-managed" cssClass="schrule" label="${ lable_menu_consoidaged_aed }"/>	
+<!-- 				<menu:item id="i_custom_ddp_email_aed" url="/ddprules?form" z="user-managed" /> -->
+<!-- 				<menu:item id="i_custom_ddp_email_aed" url="/ddpruledetails?form" z="user-managed" /> -->
+<!-- 				<menu:item id="i_custom_ddp_email_conmer" url="/ddprules?page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed" /> -->
+			</menu:category>
+			<menu:category id="c_custom_ddp_export" z="user-managed" label="${ label_menuheader_export_docs_setup }">
+				<menu:item id="i_custom_ddp_export_setup" url="/ddpexportrules/list/mediator" z="user-managed" cssClass="exprule" label="${ label_menu_export }"/>
+<!-- 				<menu:item id="i_custom_ddp_admin_master_auditlogs" url="/ddpexportrules/list/template?form" z="user-managed" label="RTMS configuration"/> -->
+			</menu:category>
+			
+		</menu:menu>
+	</menu:headermenu>
+	<c:set var="flag" value="0"></c:set>
+	<c:set var="reportview" value="0"></c:set>
+	<sec:authentication property="principal.authorities" var="authorities"/>
+	<c:forEach items="${authorities}" var="authority">
+		<c:if test="${authority=='admin_role'}">
+			<c:set var="flag" value="1"></c:set>
+			<c:set var="reportview" value="1"></c:set>
+		</c:if>
+		<c:if test="${fn:startsWith(authority, 'REPORT')}">
+			<c:set var="reportview" value="1"></c:set>
+		</c:if>
+	</c:forEach>
+	<c:if test="${reportview==1}">
+		<menu:headermenu id="c_custom_ddp_report_header" label="${ label_menu_header_reports }">
+			<menu:menu  id="_menu" z="user-managed">
+				<menu:category id="c_custom_ddp_report" z="user-managed" label="${ label_menu_header_reports }">
+					<menu:item id="i_custom_ddp_aed_reports" url="/ruleutil/aedreports/form" z="user-managed" render="true" cssClass="aedreport" label="${ label_menu_aed_reports }"/>
+					<menu:item id="i_custom_ddp_consolidated_reports" url="/ruleutil/consolreports/form" z="user-managed" render="true" cssClass="colreport" label="${ label_menu_consol_reports }"/>
+					<menu:item id="i_custom_ddp_export_reports" url="/ruleutil/exportreports/form" z="user-managed" render="true" cssClass="expreport" label="${ label_menu_export_reports }"/>
+				</menu:category>
+			</menu:menu>
+		</menu:headermenu>
+	</c:if>  
+	 <c:if test="${flag==1}"> 
+		<menu:headermenu id="c_custom_admin_header" openPane="false" label="${ label_menu_header_administration }">
+			<menu:menu  id="_menu" z="user-managed">
+				<menu:category id="c_custom_ddp_admin_user" z="user-managed" label="${ label_menu_header_user_setup }">
+					<menu:item id="i_custom_ddp_admin_user_adduser" url="/ddpusers/list?searchform" z="user-managed" label="${ label_menu_users }"/>
+					<menu:item id="i_custom_ddp_admin_user_addgroup" url="/ddpgroups/list?list&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed" label="${ label_menu_groups }"/>
+<!-- 					<menu:item id="i_custom_ddp_admin_user_addrole" url="/ddproles/list?list&amp;page=1&amp;size=${empty param.size ? 10 : param.size}" z="user-managed" /> -->
+					<menu:item id="i_custom_ddp_admin_user_addrole" url="/ddproles/list/mediator" label="${ label_menu_roles }"/>
+					<menu:item id="i_custom_ddp_admin_user_assgroup" url="/ddpgroupsetups/list?searchgroupsetup" z="user-managed" label="${ label_menu_assign_groups }"/>
+					<menu:item id="i_custom_ddp_admin_user_assrole" url="/ddprolesetups/list?searchrolesetup" z="user-managed" label="${ label_menu_assing_roles }"/>
+				</menu:category>
+				<menu:category id="c_custom_ddp_admin_master" z="user-managed" label="${ label_menu_header_dms_setup }">
+					<menu:item id="i_custom_ddp_admin_master_company" url="/ddpcompanys/list/mediator" z="user-managed" label="${ label_menu_company }"/>
+					<menu:item id="i_custom_ddp_admin_master_branch" url="/ddpbranches/list/mediator" z="user-managed" label="${ label_menu_branch }"/>
+					<menu:item id="i_custom_ddp_admin_master_doctype" url="/ddpdoctypes/list/mediator" z="user-managed" label="${ label_menu_doctype }"/>
+					<menu:item id="i_custom_ddp_admin_master_party" url="/ddppartys/list/mediator" z="user-managed" label="${ label_menu_party }"/>
+					<menu:item id="i_custom_ddp_admin_master_categorized" url="/ddpcategorizeddocses/docsmediator" z="user-managed" label="${ label_menu_categorized_docs }"/>
+					<menu:item id="i_custom_ddp_admin_master_categorizeddocsdetails" url="/ddpcategorizeddocses/docsmediator?amp;docs=1" z="user-managed" />
+					<menu:item id="i_custom_ddp_admin_master_auditlogs" url="/ddpaudittxns/auditMediator" z="user-managed" label="${ label_menu_audit }"/>
+					<menu:item id="i_custom_ddp_admin_master_auditlogs" url="/jobDetails" z="user-managed" label="${ label_menu_monitor_jobs }" img="true"/>
+				</menu:category>
+			</menu:menu>
+		</menu:headermenu >
+	</c:if>
+	<script>
+	function changeActiveLinkColor(id)
+	{
+		$("a."+id).css("background","#EADFDF");
+	}
+		
+	</script>
+</div>

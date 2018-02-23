@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpCommunicationSetup" idField="cmsCommunicationId" modelAttribute="ddpCommunicationSetup" path="/ddpcommunicationsetups" versionField="none" z="DJyZm5N4Yj0BsvgI1V6G3infHBA=">
+        <field:simple field="ddpAedRules" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_ddpAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Aed Rule" z="W9RX9UwdE0iPMzSMwkdSiv6F3J8="/>
+        <field:simple field="ddpExportRules" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_ddpExportRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Export Rule" z="0OERSr89jB6fJW5AN6d8Lkds9vk="/>
+        <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="wLMgSqmtAKHnq5uUgJnq3yq6A+U="/>
+        <field:input field="cmsCommunicationProtocol" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsCommunicationProtocol" z="GeZ4fqFi09x3V1aGbHxJwpI7lT4="/>
+        <field:input field="cmsProtocolSettingsId" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsProtocolSettingsId" z="YJvt2M4gK5QOPEfAntZZpfU597E="/>
+        <field:input field="cmsStatus" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsStatus" required="true" validationMessageCode="field_invalid_integer" z="wkmnnUDuQW4cZrG8Rl1g04s6lIk="/>
+        <field:input field="cmsCreatedBy" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsCreatedBy" required="true" z="EKjeTj0/aEfADfATpL8w0DUdEsI="/>
+        <field:datetime dateTimePattern="${ddpCommunicationSetup_cmscreateddate_date_format}" field="cmsCreatedDate" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsCreatedDate" required="true" z="DbsbVgsOiVFH1bJDmruRh6xAZQ0="/>
+        <field:input field="cmsModifiedBy" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsModifiedBy" required="true" z="BOn5JTu2O4t/6ufo+aHL4/LRrXk="/>
+        <field:datetime dateTimePattern="${ddpCommunicationSetup_cmsmodifieddate_date_format}" field="cmsModifiedDate" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsModifiedDate" required="true" z="FeNz9fuBappMXWF24nGhrDNKqjI="/>
+        <field:simple field="ddpMultiAedRules" id="c_com_agility_ddp_data_domain_DdpCommunicationSetup_ddpMultiAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Multi Aed Rule" z="CCFG4t5+/mARE5xUIwcQK2A6n+I="/>
+    </form:update>
+</div>

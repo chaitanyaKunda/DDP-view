@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpGroupSetup" items="${ddpgroupsetups}" z="MGVPNL/PmsDm3JXUYwOxCr6Wsx8=">
+        <table:table data="${ddpgroupsetups}" id="l_com_agility_ddp_data_domain_DdpGroupSetup" path="/ddpgroupsetups" typeIdFieldName="grsId" z="8YwFrJH7zBnqg/jiqJIXk1nFNpY=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsGroupId" property="grsGroupId" z="GHJIDFjbnIbDOBIT7FfZMcd1gN8="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsUserId" property="grsUserId" z="sc1Z/OIfdVFn0XAlFphj+SwHJto="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsStatus" property="grsStatus" z="T84S2nueKejnK9QXv2Ji31RN2qA="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsCreatedBy" property="grsCreatedBy" z="2NWpI86CZAhaETv+QlmuavPLNBc="/>
+            <table:column calendar="true" dateTimePattern="${ddpGroupSetup_grscreateddate_date_format}" id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsCreatedDate" property="grsCreatedDate" z="Fo/KDZC3jd3mYgE1ZVQ1S9cECDI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpGroupSetup_grsModifiedBy" property="grsModifiedBy" z="bi7xWzkK0MtKj1T33XSx9RzIdYQ="/>
+        </table:table>
+    </page:list>
+</div>

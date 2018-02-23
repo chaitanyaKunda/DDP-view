@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpSourceSystemDetail" items="${ddpsourcesystemdetails}" z="9s8XStU1pQh3as6Vwrpy+t+DNko=">
+        <table:table data="${ddpsourcesystemdetails}" id="l_com_agility_ddp_data_domain_DdpSourceSystemDetail" path="/ddpsourcesystemdetails" typeIdFieldName="ssdId" z="5rRkcDb1LgRVCOdoBY8gnLC9hc4=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdApplicationCode" property="ssdApplicationCode" z="lwr9Qic8esuP/7KcMu4elO7YYgc="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdCategory" property="ssdCategory" z="PTQ/vAloTQwUytTRI7KYsvuFiLU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdKey" property="ssdKey" z="NVsmu+rp6/RI/EdbYu74YlVLr48="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpSourceSystemDetail_ssdValue" property="ssdValue" z="CGt1b/X7WONWvigLdALBuMxRYSw="/>
+        </table:table>
+    </page:list>
+</div>

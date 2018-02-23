@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpMultiAedSuccessReport" modelAttribute="ddpMultiAedSuccessReport" path="/ddpmultiaedsuccessreports" render="${empty dependencies}" z="hhEwNTnZX9YJ6tzNdQa8swQtjkM=">
+        <field:input field="maedrRuleId" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrRuleId" required="true" validationMessageCode="field_invalid_integer" z="7L59D5pDaBXRI7ETxrVnyNCXnXI="/>
+        <field:input field="maedrCatId" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrCatId" validationMessageCode="field_invalid_integer" z="+tzFqnZMkcUY0cV7Ouf32PY5oAw="/>
+        <field:input field="maedrDocType" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrDocType" z="/YbeerEO/oPX/HVm/797xasX/Ok="/>
+        <field:input field="maedrRObjectId" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrRObjectId" z="oLIfTLwo1xlLskv2E/QxwbkhK3U="/>
+        <field:input field="maedrObjectName" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrObjectName" z="uNjLu6E/ODBwjxPyRslC14q1umc="/>
+        <field:input field="maedrJobNumber" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrJobNumber" z="CRtnKpUDKGRFhBjobU+BUqNT+H4="/>
+        <field:input field="maedrConsignmentId" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrConsignmentId" z="l3rTVHL44fqJA1L4rHlWFjIt2Xk="/>
+        <field:input field="maedrDocRef" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrDocRef" z="/n/Nr+ogxhECtDX9ViCfXtXe4f0="/>
+        <field:input field="maedrMasterJobNumber" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrMasterJobNumber" z="7XvxK83y/yQC1zE8Nu4h+DntyN8="/>
+        <field:input field="maedrFileSize" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrFileSize" validationMessageCode="field_invalid_integer" z="8pAykBk1wwTz9ykfSV6/5aXjvK8="/>
+        <field:datetime dateTimePattern="${ddpMultiAedSuccessReport_maedrdmscreated_date_format}" field="maedrDmsCreated" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrDmsCreated" z="e/X8+OuB2pxo6rUbi6f2HBzrED4="/>
+        <field:datetime dateTimePattern="${ddpMultiAedSuccessReport_maedrconsolidatedate_date_format}" field="maedrConsolidateDate" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrConsolidateDate" z="26nNPVIXw5UhYAD05q2jM0Qx+aU="/>
+        <field:input field="maedrConsolidateType" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrConsolidateType" z="9R0LMp7ANhXqvjfZWESmI11FgD8="/>
+        <field:input field="maedrServiceType" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrServiceType" z="vTOd0SmVPN1xs8M5GW1qpf4aYr4="/>
+        <field:input field="maedrId" id="c_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrId" required="true" validationMessageCode="field_invalid_integer" z="JBg2ORyrFMgHRlSIoYu2lF8+4/c="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpMultiAedSuccessReport" render="${not empty dependencies}" z="c6c9g7JHSuPKxuGXG4BQq0bvMv4="/>
+</div>

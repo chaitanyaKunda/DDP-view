@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpRulePmSvc" items="${ddprulepmsvcs}" z="O+vmch5JWmgFRNE3UZc82WH6XxA=">
+        <table:table data="${ddprulepmsvcs}" id="l_com_agility_ddp_data_domain_DdpRulePmSvc" path="/ddprulepmsvcs" typeIdFieldName="rpsId" z="/sJigUARds9N7OlarXKiFUazmuk=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsPsrId" property="rpsPsrId" z="71xfkuz2/p1avS0dii6Jz9r2dHU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsRuleId" property="rpsRuleId" z="RTL/TwPVMOBCg0BCeLokGEZBh2o="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsSeq" property="rpsSeq" z="3taKUrVv9M5LA0ZUrwWv9OMrfw0="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsNotificationId" property="rpsNotificationId" z="TFriBep3NvRNHFh+4TdqthQ4ixg="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsStatus" property="rpsStatus" z="6/JpYMAxHNgjuLryynACrVydU/s="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRulePmSvc_rpsCreatedBy" property="rpsCreatedBy" z="gJcl2eAkYTmFb7GyxsRoClABgqY="/>
+        </table:table>
+    </page:list>
+</div>

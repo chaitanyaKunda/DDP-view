@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" 
+     xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" 
+     xmlns:spring="http://www.springframework.org/tags"  xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_rule_name" var="label_rule_name" htmlEscape="false"></spring:message>
+	 <spring:message code="label_party_id" var="label_party_id" htmlEscape="false"></spring:message>
+	 <spring:message code="label_party_code" var="label_party_code" htmlEscape="false"></spring:message>
+	 <spring:message code="label_company" var="label_company" htmlEscape="false"></spring:message>
+	 <spring:message code="label_branch" var="label_branch" htmlEscape="false"></spring:message>
+	 <spring:message code="label_docname_generic" var="label_docname_generic" htmlEscape="false"></spring:message>
+	 <spring:message code="label_docname_dup" var="label_docname_dup" htmlEscape="false"></spring:message>
+	 <spring:message code="label_frequency" var="label_frequency" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_to" var="label_email_to" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_cc" var="label_email_cc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_frequency" var="label_frequency" htmlEscape="false"></spring:message>
+	 <spring:message code="label_ftp_full_location" var="label_ftp_full_location" htmlEscape="false"></spring:message>
+	 <spring:message code="label_full_unc_path" var="label_full_unc_path" htmlEscape="false"></spring:message>
+	 <spring:message code="label_not_success_email_address" var="label_not_success_email_address" htmlEscape="false"></spring:message>
+	 <spring:message code="label_not_failure_email_address" var="label_not_failure_email_address" htmlEscape="false"></spring:message>
+	 <spring:message code="label_report_frequency" var="label_report_frequency" htmlEscape="false"></spring:message>
+	 <spring:message code="label_report_recipient_to" var="label_report_recipient_to" htmlEscape="false"></spring:message>
+	 <spring:message code="label_report_recipient_cc" var="label_report_recipient_cc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_from_date_inclusive" var="label_from_date_inclusive" htmlEscape="false"></spring:message>
+	 <spring:message code="label_to_date_inclusive" var="label_to_date_inclusive" htmlEscape="false"></spring:message>  
+   	<head>
+   	 	<style>
+   	 		label{ width : 400px !important ;}
+   	 		.btn {
+			  background: #faa805;
+			  background-image: -webkit-linear-gradient(top, #faa805, #faa805);
+			  background-image: -moz-linear-gradient(top, #faa805, #faa805);
+			  background-image: -ms-linear-gradient(top, #faa805, #faa805);
+			  background-image: -o-linear-gradient(top, #faa805, #faa805);
+			  background-image: linear-gradient(to bottom, #faa805, #faa805);
+			  -webkit-border-radius: 28;
+			  -moz-border-radius: 28;
+			  border-radius: 28px;
+			  font-family: Arial;
+			  color: #ffffff;
+			  font-size: 15px;
+			  padding: 10px 20px 10px 20px;
+			  text-decoration: none;
+			}
+			
+			.btn:hover {
+			  background: #fad105;
+			  background-image: -webkit-linear-gradient(top, #fad105, #fad105);
+			  background-image: -moz-linear-gradient(top, #fad105, #fad105);
+			  background-image: -ms-linear-gradient(top, #fad105, #fad105);
+			  background-image: -o-linear-gradient(top, #fad105, #fad105);
+			  background-image: linear-gradient(to bottom, #fad105, #fad105);
+			  text-decoration: none;
+			}
+   	 	</style>
+    </head>
+     <c:set value = "${pageContext.request.contextPath}" var="contextPath"/> 
+    <c:set value="/ddpexportrules" var="path" />
+    
+    
+    <script type="text/javascript">
+		dojo.require("dijit.MenuBar");
+		dojo.require("dijit.PopupMenuBarItem");
+		dojo.require("dijit.Menu");
+		dojo.require("dijit.MenuItem");
+		dojo.require("dijit.PopupMenuItem");
+
+		dojo.declare('dijit.MenuItem', dijit.MenuItem, {
+		    _onClick: function(evt) {
+		        this.getParent().onItemClick(this, evt);
+		    }
+		});
+		dojo.addOnLoad(function() {
+		
+				dojo.connect(dojo.byId("_jobNumber_id"), "onkeypress", function(e){
+					var key = e.charCode || e.keyCode;
+						
+					if ((key &lt; 22 || key &gt; 22) &amp;&amp; (key &lt; 48 || key &gt; 57) &amp;&amp; (key &lt; 65 || key &gt; 90) &amp;&amp; (key &lt; 97 || key &gt; 122) &amp;&amp; (key &lt; 44 || key &gt; 46)  &amp;&amp; (key &lt; 8 || key &gt; 9) &amp;&amp; (key &lt; 127 || key &gt;127)  &amp;&amp; (key &lt; 16 || key &gt; 17)) {
+						alert("In Job Number(s) field allows alphanumeric  and special(,) characters.");
+				   		dojo.stopEvent(e);
+					}
+				});
+	
+				dojo.connect(dojo.byId("_consignmentID_id"), "onkeypress", function(e){
+					var key = e.charCode || e.keyCode;
+									
+					if ((key &lt; 22 || key &gt; 22) &amp;&amp; (key &lt; 48 || key &gt; 57) &amp;&amp; (key &lt; 65 || key &gt; 90)  &amp;&amp; (key &lt; 97 || key &gt; 122)  &amp;&amp; (key &lt; 44 || key &gt; 46)  &amp;&amp; (key &lt; 8 || key &gt; 9) &amp;&amp; (key &lt; 127 || key &gt;127)  &amp;&amp; (key &lt; 16 || key &gt; 17)) {
+						alert("In Consignment ID field allows alphanumeric  and special(,) characters.");
+				   		dojo.stopEvent(e); 
+					}
+				});
+	
+				dojo.connect(dojo.byId("_docRef_id"), "onkeypress", function(e){
+					var key = e.charCode || e.keyCode;
+								
+					if ((key &lt; 22 || key &gt; 22) &amp;&amp; (key &lt; 48 || key &gt; 57) &amp;&amp; (key &lt; 65 || key &gt; 90)  &amp;&amp; (key &lt; 97 || key &gt; 122)  &amp;&amp; (key &lt; 44 || key &gt; 47)  &amp;&amp; (key &lt; 8 || key &gt; 9)  &amp;&amp; (key &lt; 32 || key &gt; 32) &amp;&amp; (key &lt; 127 || key &gt;127)  &amp;&amp; (key &lt; 16 || key &gt; 17)) {
+						alert("In Document Reference field allows alphanumeric  and special(.,/-) characters.");
+				   		dojo.stopEvent(e);
+					}
+				});
+			
+		    	var today = new Date();
+				var lastSixMonthsDate = new Date(today.getFullYear(), today.getMonth()-12, today.getDate()-1);
+				var currentDate = new Date(today.getFullYear(),today.getMonth(), today.getDate());
+				currentDate.setHours(23, 59, 59, 999);
+				dijit.byId('_fromDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_fromDate_id').constraints.max = currentDate;
+				dijit.byId('_toDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_toDate_id').constraints.max = currentDate;
+				
+				
+				
+				dojo.connect(dijit.byId('_toDate_id'),"onChange",function(val){
+					val.setHours(23, 59, 59, 999);
+					dijit.byId('_toDate_id').attr('value',val) ;
+				});
+
+				dijit.byId('_jobFromDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_jobFromDate_id').constraints.max = currentDate;
+				dijit.byId('_jobToDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_jobToDate_id').constraints.max = currentDate;
+				
+				dojo.connect(dijit.byId('_jobToDate_id'),"onChange",function(val){
+					val.setHours(23, 59, 59, 999);
+					dijit.byId('_jobToDate_id').attr('value',val) ;
+				});
+
+				dijit.byId('_consFromDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_consFromDate_id').constraints.max = currentDate;
+				dijit.byId('_consToDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_consToDate_id').constraints.max = currentDate;
+				
+				dojo.connect(dijit.byId('_consToDate_id'),"onChange",function(val){
+					val.setHours(23, 59, 59, 999);
+					dijit.byId('_consToDate_id').attr('value',val) ;
+				});
+
+				dijit.byId('_docRefFromDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_docRefFromDate_id').constraints.max = currentDate;
+				dijit.byId('_docRefToDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_docRefToDate_id').constraints.max = currentDate;
+				
+				dojo.connect(dijit.byId('_docRefToDate_id'),"onChange",function(val){
+					val.setHours(23, 59, 59, 999);
+					dijit.byId('_docRefToDate_id').attr('value',val) ;
+				});
+
+				dijit.byId('_reportsFromDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_reportsFromDate_id').constraints.max = currentDate;
+				dijit.byId('_reportsToDate_id').constraints.min = lastSixMonthsDate;
+				dijit.byId('_reportsToDate_id').constraints.max = currentDate;
+				
+				dojo.connect(dijit.byId('_reportsToDate_id'),"onChange",function(val){
+					val.setHours(23, 59, 59, 999);
+					dijit.byId('_reportsToDate_id').attr('value',val) ;
+				});
+
+		    });
+	
+		//dojo.query("#_fromDate_id").connect("onclick", myObject, "onClick");
+		
+	</script>
+
+		<!-- script for file menu -->
+	<ul  dojoType="dijit.MenuBar" id="navMenu">
+		<li  dojoType="dijit.PopupMenuBarItem" style="background-color:#FF8330;width:117px;">
+			<span> File </span>
+			<ul dojoType="dijit.Menu" id="fileMenu" style="background-color:#FF8330;width:117px;">
+				<li  dojoType="dijit.MenuItem"  style="background-color:#FF8330;width:117px;">
+  						<a href="${contextPath}${path}/list/form" title="create new" alt="create new">
+  						<span style="color: white;font-weight: 600;margin-right: 30px;">Create New</span>
+  						</a>
+				</li>
+				<li  dojoType="dijit.MenuItem"  style="background-color:#FF8330;width:117px;">
+						<a href="${contextPath}${path}/list/mediator" title="list" alt="list"> 
+						<span style="color: white;font-weight: 600;margin-right: 30px;">List</span>
+						</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+		
+		<spring:url value="/js/date.format.js" var="date_format_js_url"/>
+ 	 <script src="${date_format_js_url}" type="text/javascript">
+        <!--date_format_js_url-->
+    </script> 
+    
+    <!--  view the Details of the Rule  -->
+    	<c:set value="${expRule.expSchedulerId.schRuleCategory}" var="ruleCategory"></c:set>
+    	<c:set var="isExportByQuery" value="0" ></c:set>
+ 		<c:set var="isVendorDoc" value="0" ></c:set>
+    	<div style="padding-left: 1px; top: 3px;"><label>Rule Name :</label><c:out  value="${itemName}"/></div>
+    	<div style="padding-left: 1px; padding-top: 0px;">
+    		<label><c:out value="${ label_party_id }" /> :</label>
+    		<c:choose>
+    			<c:when test="${not empty expRule.expSchedulerId.schRuleCategory}">
+    				<c:out value="${expRule.expSchedulerId.schRuleCategory}"/>
+    				<c:set var="isExportByQuery" value="1"></c:set>
+    				<c:if test="${expRule.expSchedulerId.schRuleCategory == 'GENESIS'}">
+    					<c:set var="isVendorDoc" value="1" ></c:set>
+    				</c:if>
+    			</c:when>
+    			<c:otherwise><c:out value="${ddpexportrule[0].rdtPartyId}"/></c:otherwise>
+    		</c:choose>
+    		
+    		<br />
+    		<c:if test="${empty ruleCategory}">
+    			<label><c:out value="${ label_party_code }"/> :</label><c:out  value="${ddpexportrule[0].rdtPartyName}"/><br />
+    			<label><c:out value="${ label_company }" /> :</label><c:out  value="${ddpexportrule[0].rdtCompanyCode}"/><br />
+    			<label><c:out value="${ label_branch }" /> :</label><c:out  value="${ddpexportrule[0].rdtBranch}"/><br />
+    			<c:set value="${ddpexportrule[0].rdtPartyId}" var="clientID"></c:set>
+     		</c:if>
+	    	<c:choose>
+				<c:when test="${commConfig == 'FTP'}">
+					<label><c:out value="${ label_ftp_full_location }" /> :</label><c:out  value="${communicationDetails.ftpLocation}"/>
+				</c:when>
+				<c:when test="${commConfig == 'UNC'}">
+					<label><c:out value="${ label_full_unc_path }" /> :</label><c:out  value="${communicationDetails.uncPath}"/>	
+				</c:when>
+	    		<c:otherwise>
+	    			<label>Email To :</label><c:out value="${communicationDetails.cemEmailTo}"/><br />
+	    			<c:if test="${not empty communicationDetails.cemEmailCc}"><label>Email CC :</label><c:out value="${communicationDetails.cemEmailCc}"/></c:if>
+	    		</c:otherwise>
+	    	</c:choose><br />
+    	</div>
+    	<c:choose>
+    		<c:when test="${expRule.expSchedulerId.schChoosenType == '1'}">
+    			<div style="padding-left: 100px;padding-top: 20px"><c:out value="Document Details are Reading From Property File"/></div>
+    		</c:when>
+    		<c:otherwise>
+    			<div style="padding: 10px;">
+				  <table>
+					 <tr>
+				  	 	<th>Document Type</th>
+			  	 		<th>Generating Source</th>
+			  	 		<th>Rate Option</th>
+			  	 		<th style="display:none;">Relevant Type</th> 
+ 			  	 		<c:if test="${not empty ruleCategory}">
+    						<th>Require Flag</th>
+     					</c:if>
+			  	 		<th>Version</th>
+				  	 </tr>
+				   <c:forEach items="${ddpexportrule}" var="element" varStatus="loop"> 
+					 	  <input type="hidden" value="${element.rdtId}"/>
+				 	 <tbody>
+					  	 <tr>
+					  	 	<Td><c:out value="${element.rdtDocType}"/></Td>
+					  	 	<Td><c:out value="${element.genSource}"/></Td>
+					  	 	<Td><c:choose>
+					  	 			<c:when test="${element.strRate == ''}"><c:out value="Non-Rated"/></c:when>
+				  	 				<c:when test="${element.strRate == 'N/A'}"><c:out value="Not Applicable"/></c:when>
+				  	 				<c:otherwise><c:out value="${element.strRate}"/></c:otherwise>
+				  	 			</c:choose>
+				  	 		</Td>
+					  	 	<TD style="display:none;"><c:choose>
+					  	 			<c:when test="${element.relevantType == '1'}"><c:out value="Primary"></c:out></c:when>
+					  	 			<c:when test="${element.relevantType == '2'}"><c:out value="Secondary"></c:out></c:when>
+					  	 			<c:otherwise><c:out value="${element.relevantType }" /></c:otherwise>
+					  	 		</c:choose>
+					  	 	</TD>
+					  	 	<c:set value="${element.rdtPartyId}" var="rdtPartyId"></c:set>
+					  	 	<c:if test="${empty rdtPartyId}">
+						  	 	<td>
+						  	 		<c:choose>
+							  	 		<c:when test="${element.manditoryFlag == '1'}"><c:out value="Mandatory"/></c:when>
+							  	 		<c:when test="${element.manditoryFlag == '2'}"><c:out value="Atlease one"/></c:when>
+							  	 		<c:otherwise><c:out value="Optional"/></c:otherwise>
+								  	 </c:choose>
+								 </td>
+					  	 	</c:if>
+					  	 	<TD><c:choose>
+					  	 			<c:when test="${element.expVersionSetup == ''}"><c:out value="None" /></c:when>
+					  	 			<c:otherwise> <c:out value="${element.expVersionSetup }" /></c:otherwise>
+					  	 		</c:choose>
+					  	 	</TD>
+					  	 </tr>
+				  	 </tbody>
+				   </c:forEach>
+			 	</table>
+			 </div>  
+    		</c:otherwise>
+    	</c:choose>
+   		<!--  End of view the Details of the Rule  -->
+		<br />
+		<c:set value="${itemId}" var="itemId" />
+		<div id="myTabContainer"
+			style="height: 320px; width: auto; padding: 10px;">
+			<div id="generalExport" style="width: 100%">
+				<form:ondemandservice id="fc_com_agility_ddp_data_domain_DdpExportRule" modelAttribute="onDemandExportWrapper"  path="/ddpexportrules" urlExtention="onDemandRun" render="${empty dependencies}"  exportid="${itemId}">
+					<field:datetime id="label_com_agility_ddp_date_from_date" field="fromDate" dateTimePattern="${standard_date_format}" label="${ label_from_date_inclusive }"  addStar="true" ></field:datetime>
+					<field:datetime id="label_com_agility_ddp_date_to_date" field="toDate" dateTimePattern="${standard_date_format}" label="${ label_to_date_inclusive }" addStar="true"></field:datetime>
+				</form:ondemandservice>		
+			</div>  	       		
+			<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+					elementId : 'generalExport',
+					widgetType : 'dijit.layout.ContentPane',
+					widgetAttrs : {
+						title : 'On-Demand Export',
+						selected : true
+					}
+				}));
+			</script>
+			
+			<c:set var="tabSubString" value="JobNumber"></c:set>
+			<c:set var="labelString" value="Job Number(s)"></c:set>
+			<c:if test="${isVendorDoc == '1'}">
+				<c:set var="tabSubString" value="Supplier Name"></c:set>
+				<c:set var="labelString" value="Supplier Name(s)"></c:set>
+			</c:if> 
+			
+			<div id="jobNumberExport" style="width: 100%">
+				<form:ondemandservice id="fc_com_agility_ddp_data_domain_DdpExportRule" modelAttribute="onDemandExportWrapper"  path="/ddpexportrules" urlExtention="onDemandJobNumberRun" render="${empty dependencies}"  exportid="${itemId}">
+					<field:textarea field="jobNumber" id="label_com_agility_ddp_jobnumber" label="${labelString}" required="true" validationRegex="^[a-zA-Z0-9,]*$" addStar="true"  />
+					<field:datetime id="label_com_agility_ddp_date_from_date" field="jobFromDate" dateTimePattern="${standard_date_format}" label="${ label_from_date_inclusive }"  addStar="true"  ></field:datetime>
+					<field:datetime id="label_com_agility_ddp_date_to_date" field="jobToDate" dateTimePattern="${standard_date_format}" label="${ label_to_date_inclusive }" addStar="true"  ></field:datetime>
+				</form:ondemandservice>		
+			</div>
+			  	       		
+			<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+					elementId : 'jobNumberExport',
+					widgetType : 'dijit.layout.ContentPane',
+					widgetAttrs : {
+						title : 'Export By ${tabSubString}',
+						selected : true
+					}
+				}));
+			</script>
+			
+			<c:set var="tabSubString" value="Consignment Id"></c:set>
+			<c:set var="labelString" value="Consignment ID(s)"></c:set>
+			<c:if test="${isVendorDoc == '1'}">
+			<c:set var="tabSubString" value="C2C Number"></c:set>
+			<c:set var="labelString" value="C2C Number(s)"></c:set>
+			</c:if>  
+			
+			<div id="consignmentIDExport" style="width: 100%">
+				<form:ondemandservice id="fc_com_agility_ddp_data_domain_DdpExportRule" modelAttribute="onDemandExportWrapper"  path="/ddpexportrules" urlExtention="onDemandConsignmentIDRun" render="${empty dependencies}"  exportid="${itemId}">
+				<field:textarea field="consignmentID" id="label_com_agility_ddp_consignment_id" label="${labelString}" required="true" addStar="true"/>
+					<field:datetime id="label_com_agility_ddp_date_from_date" field="consFromDate" dateTimePattern="${standard_date_format}" label="${ label_from_date_inclusive }" addStar="true"></field:datetime>
+					<field:datetime id="label_com_agility_ddp_date_to_date" field="consToDate" dateTimePattern="${standard_date_format}" label="${ label_to_date_inclusive }"  addStar="true"></field:datetime>
+				</form:ondemandservice>		
+			</div> 
+				       		
+			<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+					elementId : 'consignmentIDExport',
+					widgetType : 'dijit.layout.ContentPane',
+					widgetAttrs : {
+						title : 'Export By ${tabSubString}',
+						selected : true
+					}
+				}));
+			</script>
+			
+			<c:if test="${isVendorDoc == '0' }">
+				<div id="docRefExport" style="width: 100%">
+					<form:ondemandservice id="fc_com_agility_ddp_data_domain_DdpExportRule" modelAttribute="onDemandExportWrapper"  path="/ddpexportrules"  urlExtention="onDemandDocRefRun" render="${empty dependencies}"  exportid="${itemId}">
+						<field:textarea field="docRef" id="label_com_agility_ddp_doc_ref" label="Document References" required="true" addStar="true"/>
+						<field:datetime id="label_com_agility_ddp_date_from_date" field="docRefFromDate" dateTimePattern="${standard_date_format}" label="${ label_from_date_inclusive }"  addStar="true"></field:datetime>
+						<field:datetime id="label_com_agility_ddp_date_to_date" field="docRefToDate" dateTimePattern="${standard_date_format}" label="${ label_to_date_inclusive }" addStar="true" ></field:datetime>
+					</form:ondemandservice>		
+				</div>  	       		
+				<script type="text/javascript">
+					Spring.addDecoration(new Spring.ElementDecoration({
+						elementId : 'docRefExport',
+						widgetType : 'dijit.layout.ContentPane',
+						widgetAttrs : {
+							title : 'Export By Document Reference',
+							selected : true
+						}
+					}));
+				</script>
+			</c:if>
+			<div id="reportsExport" style="width: 100%">
+				<form:ondemandservice id="fc_com_agility_ddp_data_domain_DdpExportRule" modelAttribute="onDemandExportWrapper"  path="/ddpexportrules" urlExtention="onDemandReportsRun" render="${empty dependencies}"  exportid="${itemId}">
+					<field:datetime id="label_com_agility_ddp_date_from_date" field="reportsFromDate" dateTimePattern="${standard_date_format}" label="${ label_from_date_inclusive }" addStar="true"  ></field:datetime>
+					<field:datetime id="label_com_agility_ddp_date_to_date" field="reportsToDate" dateTimePattern="${standard_date_format}" label="${ label_to_date_inclusive }" addStar="true" ></field:datetime>
+				</form:ondemandservice>		
+			</div>  	       		
+			<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+					elementId : 'reportsExport',
+					widgetType : 'dijit.layout.ContentPane',
+					widgetAttrs : {
+						title : 'Reports',
+						selected : true
+					}
+				}));
+			</script>		
+       	</div>	
+       	
+
+		<script type="text/javascript">
+					
+		    function myFunction(extensionUrl) {
+
+		    	if (extensionUrl === 'onDemandRun') {
+			    	
+		    		if (dijit.byId('_fromDate_id').value == '' || dijit.byId('_fromDate_id').value == null ) {
+			    		alert("Please select From Date(inclusive) field in General Export tab.");
+			    		dijit.byId('_fromDate_id').focus();
+			    		return false;
+			    	} else if (dijit.byId('_toDate_id').value == '' || dijit.byId('_toDate_id').value == null) {
+			    		alert("Please select To Date(inclusive)  field in General Export tab.");
+			    		dijit.byId('_toDate_id').focus();
+			    		return false;
+				    }
+		    		var fromdate = dijit.byId('_fromDate_id').value;
+			    	var todate = dijit.byId('_toDate_id').value;
+			    	if (fromdate > todate) {
+						alert("Invalid date range From Date(inclusive) cannot be greater than To Date(inclusive)");
+						dijit.byId('_fromDate_id').focus();
+						return false;
+				    }
+				    
+			    } else if (extensionUrl === 'onDemandJobNumberRun')  {
+
+			    	if (dijit.byId('_jobNumber_id').value == '' || dijit.byId('_jobNumber_id').value == null ) {
+			    		alert("Please enter Job Number(s) field in Export By JobNumber tab.");
+			    		dijit.byId('_jobNumber_id').focus();
+			    		return false;
+			    	} else if (dijit.byId('_jobFromDate_id').value == '' || dijit.byId('_jobFromDate_id').value == null ) {
+			    		alert("Please select From Date(inclusive) field in Export By JobNumber tab.");
+			    		dijit.byId('_jobFromDate_id').focus();
+			    		return false;				    	
+			    	} else if (dijit.byId('_jobToDate_id').value == '' || dijit.byId('_jobToDate_id').value == null ) {
+			    		alert("Please select To Date(inclusive) field in Export By JobNumber tab.");
+			    		dijit.byId('_jobToDate_id').focus();
+			    		return false;
+				   	 }		    	
+
+			    	var fromdate = dijit.byId('_jobFromDate_id').value;
+			    	var todate = dijit.byId('_jobToDate_id').value;
+			    	if (fromdate > todate) {
+						alert("Invalid date range From Date(inclusive) cannot be greater than To Date(inclusive)");
+						dijit.byId('_jobFromDate_id').focus();
+						return false;
+				    }
+				    
+			    } else if (extensionUrl === 'onDemandConsignmentIDRun')  {
+
+			    	if (dijit.byId('_consignmentID_id').value == '' || dijit.byId('_consignmentID_id').value == null ) {
+			    		alert("Please enter Consignment ID field in Export By Consignment Id tab.");
+			    		dijit.byId('_consignmentID_id').focus();
+			    		return false;
+			    	} else if (dijit.byId('_consFromDate_id').value == '' || dijit.byId('_consFromDate_id').value == null ) {
+			    		alert("Please select From Date(inclusive) field in Export By Consignment Id tab.");
+			    		dijit.byId('_consFromDate_id').focus();
+			    		return false;				    	
+			    	} else if (dijit.byId('_consToDate_id').value == '' || dijit.byId('_consToDate_id').value == null ) {
+			    		alert("Please select To Date(inclusive) field in Export By Consignment Id tab.");
+			    		dijit.byId('_consToDate_id').focus();
+			    		return false;
+				   	 }		    	
+
+			    	var fromdate = dijit.byId('_consFromDate_id').value;
+			    	var todate = dijit.byId('_consToDate_id').value;
+			    	if (fromdate > todate) {
+						alert("Invalid date range From Date(inclusive) cannot be greater than To Date(inclusive)");
+						dijit.byId('_consFromDate_id').focus();
+						return false;
+				    }
+				    
+			    } else if (extensionUrl === 'onDemandDocRefRun')  {
+
+			    	if (dijit.byId('_docRef_id').value == '' || dijit.byId('_docRef_id').value == null ) {
+			    		alert("Please enter Document Reference field in Export By Document Reference tab.");
+			    		dijit.byId('_docRef_id').focus();
+			    		return false;
+			    	} else if (dijit.byId('_docRefFromDate_id').value == '' || dijit.byId('_docRefFromDate_id').value == null ) {
+			    		alert("Please select From Date(inclusive) field in Export By Document Reference tab.");
+			    		dijit.byId('_docRefFromDate_id').focus();
+			    		return false;				    	
+			    	} else if (dijit.byId('_docRefToDate_id').value == '' || dijit.byId('_docRefToDate_id').value == null ) {
+			    		alert("Please select To Date(inclusive) field in Export By Document Reference tab.");
+			    		dijit.byId('_docRefToDate_id').focus();
+			    		return false;
+				   	 }		    	
+
+			    	var fromdate = dijit.byId('_docRefFromDate_id').value;
+			    	var todate = dijit.byId('_docRefToDate_id').value;
+			    	if (fromdate > todate) {
+						alert("Invalid date range From Date(inclusive) cannot be greater than To Date(inclusive)");
+						dijit.byId('_docRefFromDate_id').focus();
+						return false;
+				    }
+				    
+			    } else if (extensionUrl === 'onDemandReportsRun')  {
+
+			    	if (dijit.byId('_reportsFromDate_id').value == '' || dijit.byId('_reportsFromDate_id').value == null ) {
+			    		alert("Please select From Date(inclusive) field in Reports tab.");
+			    		dijit.byId('_reportsFromDate_id').focus();
+			    		return false;				    	
+			    	} else if (dijit.byId('_reportsToDate_id').value == '' || dijit.byId('_reportsToDate_id').value == null ) {
+			    		alert("Please select To Date(inclusive) field in Reports tab.");
+			    		dijit.byId('_reportsToDate_id').focus();
+			    		return false;
+				   	 }		    	
+
+			    	var fromdate = dijit.byId('_reportsFromDate_id').value;
+			    	var todate = dijit.byId('_reportsToDate_id').value;
+			    	if (fromdate > todate) {
+						alert("Invalid date range From Date(inclusive) cannot be greater than To Date(inclusive)");
+						dijit.byId('_reportsFromDate_id').focus();
+						return false;
+				    }
+			    }
+		    		    	
+		    	if (extensionUrl === 'onDemandReportsRun')  {
+
+			    //	alert ("Request : "+ JSON.stringify(dijit.byId('_reportsToDate_id').value));
+		    		alert("Reports generating process started...");
+					
+					//
+// 					var $form = $("#exportmodule_"+extensionUrl);
+// 					var url =  "../onDemandReportsRun/${itemId}";
+// 					var data =$form.serialize(); 
+					
+// 					 $.ajax({
+// 						    type:"post",
+// 						    url:url,
+// 						    data:data,
+// 						    async: false,
+// 						    success: function(response){
+// 							    alert("Response : "+response);
+// 						    					if(response== '0' )
+// 						    					{
+// 						    							alert("Inside the success report");
+						    						
+// 						    					}
+// 						    					else
+// 						    					{
+						    						
+// 						    							alert("no reports are available");
+						    						
+// 						    					}
+						    					
+// 						    				},
+// 						    error: function(response){
+// 						    		alert(response);
+// 						    	}
+// 					});
+// 					 alert("End of Reports generating process started...");
+		    	} else {
+		      		alert("Documents exporting process started...");
+		    	}
+		      	
+		     }
+
+		     function fromDate(){
+		     	 alert("inside the from date");
+		      }
+		       			 
+		      changeActiveLinkColor("exprule"); // change the active link background color
+		
+		</script>
+		
+		<script type="text/javascript">
+				Spring.addDecoration(new Spring.ElementDecoration({
+					elementId : 'myTabContainer',
+					widgetType : 'dijit.layout.TabContainer'
+				}));
+			</script>
+				
+</div>	

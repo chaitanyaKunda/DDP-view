@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpExportQuery" idField="exqId" modelAttribute="ddpExportQuery" path="/ddpexportquerys" versionField="none" z="Z4ZV24h1r6HQ4dK9nAe11Mt8mvY=">
+        <field:input field="exqExpRuleId" id="c_com_agility_ddp_data_domain_DdpExportQuery_exqExpRuleId" required="true" validationMessageCode="field_invalid_integer" z="0LekOHSXDLvBymwNzpfSy2xyN4Y="/>
+        <field:input field="exqSchId" id="c_com_agility_ddp_data_domain_DdpExportQuery_exqSchId" required="true" validationMessageCode="field_invalid_integer" z="JtZx/oHSY7wmZ+4xVcJvn8LolCU="/>
+        <field:input field="exqQuery" id="c_com_agility_ddp_data_domain_DdpExportQuery_exqQuery" z="GE87ptq16Q5EyTg8WKJ8gHIZkgE="/>
+        <field:input field="exqStatus" id="c_com_agility_ddp_data_domain_DdpExportQuery_exqStatus" validationMessageCode="field_invalid_integer" z="c3wD4juXAfEHrR+tGTrCRydEe6Q="/>
+    </form:update>
+</div>

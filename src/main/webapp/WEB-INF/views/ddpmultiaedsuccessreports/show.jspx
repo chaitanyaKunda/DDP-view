@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpMultiAedSuccessReport" object="${ddpmultiaedsuccessreport}" path="/ddpmultiaedsuccessreports" z="56CKJsqc1mqFvkZch7Zif1oT6RM=">
+        <field:display field="maedrRuleId" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrRuleId" object="${ddpmultiaedsuccessreport}" z="/upbqjkZC6RVIXDXdnW+KdzUqNE="/>
+        <field:display field="maedrCatId" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrCatId" object="${ddpmultiaedsuccessreport}" z="EIzXufAx/rlHNP6O8dRy4aJJIwQ="/>
+        <field:display field="maedrDocType" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrDocType" object="${ddpmultiaedsuccessreport}" z="z8Y/nDMtUQ09Td7wEsKu3JD/5Fs="/>
+        <field:display field="maedrRObjectId" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrRObjectId" object="${ddpmultiaedsuccessreport}" z="MJ5Jzii8VPWo+nM5u5ISSkdbdZE="/>
+        <field:display field="maedrObjectName" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrObjectName" object="${ddpmultiaedsuccessreport}" z="wVA29QSAH7OhvtJr44z8vgq1bpo="/>
+        <field:display field="maedrJobNumber" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrJobNumber" object="${ddpmultiaedsuccessreport}" z="41dQyRl+rNe3u4rxPqFlc7gD6lg="/>
+        <field:display field="maedrConsignmentId" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrConsignmentId" object="${ddpmultiaedsuccessreport}" z="/NFDBoalkVlX7qv+xjvBXXCu7Hk="/>
+        <field:display field="maedrDocRef" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrDocRef" object="${ddpmultiaedsuccessreport}" z="4btbOSlMFAw/qYaWQSzL0z605gg="/>
+        <field:display field="maedrMasterJobNumber" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrMasterJobNumber" object="${ddpmultiaedsuccessreport}" z="JYvjJo/Feh/cI+mEDXnj81jEVpk="/>
+        <field:display field="maedrFileSize" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrFileSize" object="${ddpmultiaedsuccessreport}" z="RBS/sLDuY9+tbGPWj5P6B4Su720="/>
+        <field:display calendar="true" dateTimePattern="${ddpMultiAedSuccessReport_maedrdmscreated_date_format}" field="maedrDmsCreated" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrDmsCreated" object="${ddpmultiaedsuccessreport}" z="kBV3akdcsHgKwGMlYOf6SZ/t/Ro="/>
+        <field:display calendar="true" dateTimePattern="${ddpMultiAedSuccessReport_maedrconsolidatedate_date_format}" field="maedrConsolidateDate" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrConsolidateDate" object="${ddpmultiaedsuccessreport}" z="z4zy0DZ50jvj/Ohy6kRq3fk93hg="/>
+        <field:display field="maedrConsolidateType" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrConsolidateType" object="${ddpmultiaedsuccessreport}" z="XMs7fArgs6mq5Z1M8aJmz9j7OeY="/>
+        <field:display field="maedrServiceType" id="s_com_agility_ddp_data_domain_DdpMultiAedSuccessReport_maedrServiceType" object="${ddpmultiaedsuccessreport}" z="EFuY/MQlfpGefrn0Kz/HHzchc0Y="/>
+    </page:show>
+</div>

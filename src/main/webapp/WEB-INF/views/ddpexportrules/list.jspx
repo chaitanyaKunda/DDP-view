@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpExportRule" items="${ddpexportrules}" z="zFrMeVLnNWn6Zl+Lu5Yu+AzmL7U=">
+        <table:table data="${ddpexportrules}" id="l_com_agility_ddp_data_domain_DdpExportRule" path="/ddpexportrules" typeIdFieldName="expRuleId" z="hlkGGztRzCXEHx1fot5Xx6ev4/E=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportRule_ddpRule" property="ddpRule" z="0AcKQmQhVfSz0JcufypR5ld8RY8="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportRule_expCommunicationId" property="expCommunicationId" z="eiMDk2OcH+SEiXdknwRAoZ6+mkU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportRule_expCompressionId" property="expCompressionId" z="hFXtA3C69Avk60OEL9CEY/Jsoc8="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportRule_expDocnameConvId" property="expDocnameConvId" z="j2DmstJ0MWo/cqh0frZ9xvnqVpo="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportRule_expMergeId" property="expMergeId" z="allinLidLVCkFjQd++0AQJQcU/g="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpExportRule_expNotificationId" property="expNotificationId" z="EG3IDQnCbCSNbeZVzf3Jo4NTRxY="/>
+        </table:table>
+    </page:list>
+</div>

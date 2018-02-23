@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpRate" items="${ddprates}" z="cfLsoBEd/iWvOs3HeU/Rq58XHbI=">
+        <table:table data="${ddprates}" id="l_com_agility_ddp_data_domain_DdpRate" path="/ddprates" typeIdFieldName="rtsId" z="q2seW9yABgDCtgBK0CnsSTse9j8=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpRate_rtsRdtId" property="rtsRdtId" z="Q63svutSAVmTkUSSBXruYue/w6k="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRate_rtsOption" property="rtsOption" z="Pzfj272Z2ognHgYfdvwfAtq01q4="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRate_rtsCreatedBy" property="rtsCreatedBy" z="/ZpWS0UnIEPua+swQ0uc25/NNTM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRate_rtsCreatedDate" property="rtsCreatedDate" z="AzeEesducwtvjo1+yEU2OR+J5kM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRate_rtsModifiedBy" property="rtsModifiedBy" z="RdYFfF0DbGqR1j6849Nso71ASuo="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpRate_rtsModifiedDate" property="rtsModifiedDate" z="8RsBmS5y764twBnvxzm0Ts9wxso="/>
+        </table:table>
+    </page:list>
+</div>

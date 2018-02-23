@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_agility_ddp_data_domain_DdpScheduler" idField="schId" modelAttribute="ddpScheduler" path="/ddpschedulers" versionField="none" z="XzgrBROytO4ZIphaT1BWfyHRCq8=">
+        <field:simple field="ddpAedRules" id="c_com_agility_ddp_data_domain_DdpScheduler_ddpAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Aed Rule" z="Y1DvGHjsrRXW8nG5w+ecrG2cx3A="/>
+        <field:simple field="ddpExportRules" id="c_com_agility_ddp_data_domain_DdpScheduler_ddpExportRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Export Rule" z="x/Eupa3Ty+Bvx9RrQFpJMKQLcmY="/>
+        <field:simple field="ddpRuleDetails" id="c_com_agility_ddp_data_domain_DdpScheduler_ddpRuleDetails" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Rule Detail" z="RQ7+GxOfxK49wt+DZe29LXyJK54="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schstartdate_date_format}" field="schStartDate" id="c_com_agility_ddp_data_domain_DdpScheduler_schStartDate" required="true" z="93NaETFA64DENBQ/632AfDqIdzs="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schenddate_date_format}" field="schEndDate" id="c_com_agility_ddp_data_domain_DdpScheduler_schEndDate" z="5X//kvFtHaiyKhEAbrs9WPJ3e+E="/>
+        <field:input field="schNotificationId" id="c_com_agility_ddp_data_domain_DdpScheduler_schNotificationId" required="true" validationMessageCode="field_invalid_integer" z="S6YBZCR+/R3jY9FE18C6Eioc8YM="/>
+        <field:input field="schStatus" id="c_com_agility_ddp_data_domain_DdpScheduler_schStatus" required="true" validationMessageCode="field_invalid_integer" z="/KYb0chAH0z0zl/kF6PGMvDuyPs="/>
+        <field:input field="schCreatedBy" id="c_com_agility_ddp_data_domain_DdpScheduler_schCreatedBy" required="true" z="X5TkXE7VUcbzymtFSf7yATZgLeg="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schcreateddate_date_format}" field="schCreatedDate" id="c_com_agility_ddp_data_domain_DdpScheduler_schCreatedDate" required="true" z="7hAIeIHC0Wn3YaqRTT7QvOe0m28="/>
+        <field:input field="schModifiedBy" id="c_com_agility_ddp_data_domain_DdpScheduler_schModifiedBy" required="true" z="thAoRA0ayhJPoueeSuWCHTvnVyg="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schmodifieddate_date_format}" field="schModifiedDate" id="c_com_agility_ddp_data_domain_DdpScheduler_schModifiedDate" required="true" z="zrkIbrgvY46X+ylu7p85qGrlAVM="/>
+        <field:input field="schTimeInterval" id="c_com_agility_ddp_data_domain_DdpScheduler_schTimeInterval" required="true" z="8DLbOzG+s33nr/rmNniKWemIioU="/>
+        <field:input field="schRepeatCount" id="c_com_agility_ddp_data_domain_DdpScheduler_schRepeatCount" z="uhoeGasEoE8tm7wEVDbQ9QAXhaM="/>
+        <field:input field="schIsRunning" id="c_com_agility_ddp_data_domain_DdpScheduler_schIsRunning" validationMessageCode="field_invalid_integer" z="ML/dUfcdkRoaGO1a3q5v+RVyoEw="/>
+        <field:input field="schType" id="c_com_agility_ddp_data_domain_DdpScheduler_schType" z="Id6e8HHiMS6DaRvEp9V8PcInUEQ="/>
+        <field:input field="schCronExpressions" id="c_com_agility_ddp_data_domain_DdpScheduler_schCronExpressions" z="81Jx9HqZ5y/mJJehIE14P1Z5glA="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schlastrun_date_format}" field="schLastRun" id="c_com_agility_ddp_data_domain_DdpScheduler_schLastRun" z="1O96rOW5IHQS8sNFj4H3LFozILg="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schnextrun_date_format}" field="schNextRun" id="c_com_agility_ddp_data_domain_DdpScheduler_schNextRun" z="Eqq75EcJUUnwF1Q5bJ+wHCUtM0U="/>
+        <field:input field="schLastRunStatus" id="c_com_agility_ddp_data_domain_DdpScheduler_schLastRunStatus" z="syijB9tviL5oYGoKSZIu0G5XtT4="/>
+        <field:input field="schSuccessCount" id="c_com_agility_ddp_data_domain_DdpScheduler_schSuccessCount" validationMessageCode="field_invalid_integer" z="DYH/P33PoC18kUviRKeVd0LzMlc="/>
+        <field:input field="schFailedCount" id="c_com_agility_ddp_data_domain_DdpScheduler_schFailedCount" validationMessageCode="field_invalid_integer" z="+Gg/7wiP+XaCQK/r35Y1M+1jE6k="/>
+        <field:input field="schProcessingStatus" id="c_com_agility_ddp_data_domain_DdpScheduler_schProcessingStatus" validationMessageCode="field_invalid_integer" z="g16yu6Jpjv1ldgEpUG4PDCc+AjI="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schlastsuccessrun_date_format}" field="schLastSuccessRun" id="c_com_agility_ddp_data_domain_DdpScheduler_schLastSuccessRun" z="FFOE/FDlLdkJ3/jo2o5T/cN9FX8="/>
+        <field:datetime dateTimePattern="${ddpScheduler_schlastfailedrun_date_format}" field="schLastFailedRun" id="c_com_agility_ddp_data_domain_DdpScheduler_schLastFailedRun" z="pRtrS0Gy/Kj6KjkrxFWqPvUjngY="/>
+        <field:input field="schRuleType" id="c_com_agility_ddp_data_domain_DdpScheduler_schRuleType" z="Q2jWRu3snlawTahbWDHxd9LyulA="/>
+        <field:input field="schRuleCategory" id="c_com_agility_ddp_data_domain_DdpScheduler_schRuleCategory" z="cTcKklFpC42zKB3choMR+VAbboY="/>
+        <field:simple field="ddpMultiAedRules" id="c_com_agility_ddp_data_domain_DdpScheduler_ddpMultiAedRules" messageCode="entity_reference_not_managed" messageCodeAttribute="Ddp Multi Aed Rule" z="va5vUPGVXPWWdkaCNnfW5qqh7u4="/>
+        <field:input field="schChoosenType" id="c_com_agility_ddp_data_domain_DdpScheduler_schChoosenType" validationMessageCode="field_invalid_integer" z="/UqZ7YoBAlImI2hJ9iUC1yATBKc="/>
+        <field:input field="schBatchingCriteria" id="c_com_agility_ddp_data_domain_DdpScheduler_schBatchingCriteria" z="cj3mlAn2nOwtykO+N1q99UbvJFI="/>
+        <field:input field="schDelayIn" id="c_com_agility_ddp_data_domain_DdpScheduler_schDelayIn" z="1lP1JKTEZdNuPSpZtWkqPshCgrc="/>
+        <field:input field="schDelayCount" id="c_com_agility_ddp_data_domain_DdpScheduler_schDelayCount" validationMessageCode="field_invalid_integer" z="xLdaSBiLGzwjvCA6bIP8DfnWna0="/>
+        <field:input field="schReportFrequency" id="c_com_agility_ddp_data_domain_DdpScheduler_schReportFrequency" z="MNonezwJL+2niBMHVsWqklUgGJw="/>
+        <field:input field="schReportEmailTo" id="c_com_agility_ddp_data_domain_DdpScheduler_schReportEmailTo" z="Fh16bCgyH2ZsjlI4NN0Ts5FyJrI="/>
+        <field:input field="schReportEmailCc" id="c_com_agility_ddp_data_domain_DdpScheduler_schReportEmailCc" z="mhOLvYhhHL2BQHGwyFttv9yMFQk="/>
+        <field:input field="schQuerySource" id="c_com_agility_ddp_data_domain_DdpScheduler_schQuerySource" validationMessageCode="field_invalid_integer" z="CUq/U8iLPJrUQCzWRCayE4OECPg="/>
+    </form:update>
+</div>

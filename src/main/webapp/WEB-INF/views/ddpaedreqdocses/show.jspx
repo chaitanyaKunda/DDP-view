@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpAedReqDocs" object="${ddpaedreqdocs}" path="/ddpaedreqdocses" z="irhIUDBmykqFl7oN73vUSvBFrPM=">
+        <field:display field="ddpMergeSetup" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ddpMergeSetup" object="${ddpaedreqdocs}" z="6/zzBCrunW8Is8X7X/eJcV+Yu9g="/>
+        <field:display field="ardDocType" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardDocType" object="${ddpaedreqdocs}" z="pgYokwdPS0phi43LZBuYchB1P1c="/>
+        <field:display field="ardDocRequired" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardDocRequired" object="${ddpaedreqdocs}" z="e0b7WV8LXwLwGLDRzm7sXY6AmV8="/>
+        <field:display field="ardMergeSeq" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardMergeSeq" object="${ddpaedreqdocs}" z="K0F0ibPMP1QOrBKKj3LqT5z+f88="/>
+        <field:display field="ardStatus" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardStatus" object="${ddpaedreqdocs}" z="8yHDQTE3bPv3MYjj/VCNalRTXpo="/>
+        <field:display field="ardCreatedBy" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardCreatedBy" object="${ddpaedreqdocs}" z="Z88Xz8llX8eu7OSPNRoXUv7DcLY="/>
+        <field:display calendar="true" dateTimePattern="${ddpAedReqDocs_ardcreateddate_date_format}" field="ardCreatedDate" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardCreatedDate" object="${ddpaedreqdocs}" z="QOrcwUw+g1S7VEw8/IFR9665lA0="/>
+        <field:display field="ardModifiedBy" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardModifiedBy" object="${ddpaedreqdocs}" z="UiES0tI2R+mE0mBJdUXyY8051TM="/>
+        <field:display calendar="true" dateTimePattern="${ddpAedReqDocs_ardmodifieddate_date_format}" field="ardModifiedDate" id="s_com_agility_ddp_data_domain_DdpAedReqDocs_ardModifiedDate" object="${ddpaedreqdocs}" z="1//6gGQCVhcSpHxruA29Yp8Pdc0="/>
+    </page:show>
+</div>

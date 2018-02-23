@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCompany" items="${ddpcompanys}" z="2QFg8F3keYrLp7vtVogVwQXsymQ=" path="/ddpcompanys">
+        <table:table data="${ddpcompanys}" id="l_com_agility_ddp_data_domain_DdpCompany" path="/ddpcompanys" typeIdFieldName="comCompanyCode" z="h5Q177GjVDAKtXnb15JthMkIC9I=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompany_comCompanyName" property="comCompanyName" z="e5Tigswr4FkScey+HljnC6ZMueY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompany_comCompanyCode" property="comCompanyCode" z="e5Tigswr4FkScey+HljnC6ZMueY="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompany_comCountryCode" property="comCountryCode" z="GXVgVuQ/T7zmfMY/EtJX+PRXz7k="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompany_comCountryName" property="comCountryName" z="RnY1Sx5n47xJSREIoCI6j3JPjm4="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompany_comRegion" property="comRegion" z="P+7NxTghA2RJPiA6FTPzWEo7EzM="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompany_comStatus" property="comStatus" z="RyWsiQwXqHLYuu7TKao6S3won6s=" render="false"/>
+        </table:table>
+    </page:list>
+</div>

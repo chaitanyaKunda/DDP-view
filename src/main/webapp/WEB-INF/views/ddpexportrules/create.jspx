@@ -1,0 +1,2166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?> 
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" 
+	 xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" 
+	 xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" 
+	 xmlns:spring="http://www.springframework.org/tags" 
+	 xmlns:springform="http://www.springframework.org/tags/form" 
+	 xmlns:jsp="http://java.sun.com/JSP/Page"  
+	 xmlns:fn="http://java.sun.com/jsp/jstl/functions" version="2.0">
+	<jsp:directive.page import="com.agility.ddp.core.components.DdpFTPClient"/>
+	<jsp:directive.page import="java.util.Date"/>
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="checkbox_enable_generic_naming_convention" var="enableGenNamField"></spring:message>
+    <spring:message code="checkbox_disable_generic_naming_convention" var="disableGenNamField"></spring:message>
+    <spring:message code="checkbox_enable_dup_naming_convention" var="enableDupNamField"></spring:message>
+    <spring:message code="checkbox_disable_dup_naming_convention" var="disableDupNamField"></spring:message>
+    <spring:message code="validation.email.multi.reqexp" var="multiemailregexp"></spring:message>
+	<spring:message code="validation.email.single.reqexp" var="emailregexp"></spring:message>
+    <spring:message code="help.export.cronexpression" var="cronhelptext" htmlEscape="false"></spring:message>
+    <spring:message code="label_rule_description" var="label_rule_description"></spring:message>
+    <spring:message code="label_party_id" var="label_party_id"></spring:message>
+    <spring:message code="label_party_code" var="label_party_code" htmlEscape="false"></spring:message>
+	 <spring:message code="label_company" var="label_company" htmlEscape="false"></spring:message>
+	 <spring:message code="label_branch" var="label_branch" htmlEscape="false"></spring:message>
+	 <spring:message code="label_selected_branch" var="label_selected_branch" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_from" var="label_email_from" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_to" var="label_email_to" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_cc" var="label_email_cc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_bcc" var="label_email_bcc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_email_replyto" var="label_email_replyto" htmlEscape="false"></spring:message>
+	 <spring:message code="label_batching_criteria" var="label_batching_criteria" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rule_start_date" var="label_rule_start_date" htmlEscape="false"></spring:message>
+	 <spring:message code="label_frequency" var="label_frequency" htmlEscape="false"></spring:message>
+	 <spring:message code="label_protocol_type" var="label_protocol_type" htmlEscape="false"></spring:message>
+	 <spring:message code="label_ftp_location" var="label_ftp_location" htmlEscape="false"></spring:message>
+	 <spring:message code="label_ftp_folder" var="label_ftp_folder" htmlEscape="false"></spring:message>
+	 <spring:message code="label_ftp_username" var="label_ftp_username" htmlEscape="false"></spring:message>
+	 <spring:message code="label_ftp_password" var="label_ftp_password" htmlEscape="false"></spring:message>
+	 <spring:message code="label_ftp_port" var="label_ftp_port" htmlEscape="false"></spring:message>
+	 <spring:message code="label_uncpath" var="label_uncpath" htmlEscape="false"></spring:message>
+	 <spring:message code="label_unc_username" var="label_unc_username" htmlEscape="false"></spring:message>
+	 <spring:message code="label_unc_password" var="label_unc_password" htmlEscape="false"></spring:message>
+	 <spring:message code="label_not_success_email_address" var="label_not_success_email_address" htmlEscape="false"></spring:message>
+	 <spring:message code="label_not_failure_email_address" var="label_not_failure_email_address" htmlEscape="false"></spring:message>
+	 <spring:message code="label_sch_email_to" var="label_sch_email_to" htmlEscape="false"></spring:message>
+	 <spring:message code="label_sch_email_cc" var="label_sch_email_cc" htmlEscape="false"></spring:message>
+	 <spring:message code="label_docname_generic" var="label_docname_generic" htmlEscape="false"></spring:message>
+	 <spring:message code="label_docname_dup" var="label_docname_dup" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rb_protocol_conf" var="label_rb_protocol_conf" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rb_unc_conf" var="label_rb_unc_conf" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rb_email_conf" var="label_rb_email_conf" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rb_rule_by_client" var="label_rb_rule_by_client" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rb_rule_by_query" var="label_rb_rule_by_query" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rb_qry_property" var="label_rb_qry_property" htmlEscape="false"></spring:message>
+	 <spring:message code="lable_rb_qry_ui" var="lable_rb_qry_ui" htmlEscape="false"></spring:message>
+	 <spring:message code="label_rb_qry_txt" var="label_rb_qry_txt" htmlEscape="false"></spring:message>
+	 <spring:message code="label_note" var="label_note" htmlEscape="false"></spring:message>
+	 <spring:message code="label_name_rule_1" var="label_name_rule_1" htmlEscape="false"></spring:message>
+	 <spring:message code="label_name_rule_2" var="label_name_rule_2" htmlEscape="false"></spring:message>
+	 <spring:message code="label_name_rule_3" var="label_name_rule_3" htmlEscape="false"></spring:message>
+	 <spring:message code="label_name_rule_4" var="label_name_rule_4" htmlEscape="false"></spring:message>
+	 
+	 <spring:message code="label_text_communication_detail" var="label_text_communication_detail" htmlEscape="false"></spring:message>
+	 <spring:message code="label_btn_testconnection" var="label_btn_testconnection" htmlEscape="false"></spring:message>
+	 <spring:message code="label_btn_adddetails" var="label_btn_adddetails" htmlEscape="false"></spring:message>
+	 <spring:message code="label_btn_removedetails" var="label_btn_removedetails" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_frequencyreport" var="label_text_frequencyreport" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_namingspec" var="label_text_namingspec" htmlEscape="false"></spring:message>
+	 
+	  <spring:message code="label_text_notification" var="label_text_notification" htmlEscape="false"></spring:message>
+	 <spring:message code="label_document_type" var="label_document_type" htmlEscape="false"></spring:message>
+	 <spring:message code="label_generation_source" var="label_generation_source" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_ratedornonrated" var="label_text_ratedornonrated" htmlEscape="false"></spring:message>
+	 <spring:message code="lable_text_version" var="lable_text_version" htmlEscape="false"></spring:message>
+	 <spring:message code="lable_text_relavanttype" var="lable_text_relavanttype" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_add" var="label_text_add" htmlEscape="false"></spring:message>
+	 <spring:message code="label_text_remove" var="label_text_remove" htmlEscape="false"></spring:message>
+	 
+    <spring:message code="document.rateoption" var="ratedDocs"></spring:message>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpExportRule" modelAttribute="rulewrapper" path="/ddpexportrules" render="${empty dependencies}" z="YuMqpvz6FtUJ2wan1YeVlKJ8a8w=">
+		<c:if test="${not empty duplicateCustID}">	
+			<div align="center" style="color:red;"><spring:message code="lable_duplicate_customer_id" arguments="${duplicateCustID}"/><br />
+			<spring:message code="lable_customer_id_change"/><br />
+			</div>
+		</c:if>
+    	<field:textarea field="ddpRule.rulDescription" id="c_com_agility_ddp_data_domain_DdpRule_rulDescription" z="X5Zp1m3NXtx8grhkwRwIBofhiaU=" label="${label_rule_description}" required="true" />
+    	<!-- Radio button to choose ruleByParyId / ruleByQuery -->
+    	<input type="radio" id="byPartyIdRB" name="radioButtonforRuleType" value="byPartyIdRB" style="margin-left:80px;" class="clsRuleByType" checked="checked">  <c:out value="${ label_rb_rule_by_client }"></c:out> </input>
+    	<input type="radio" id="byQryRB" name="radioButtonforRuleType" value="byQryRB" style="margin-left:160px;" class="clsRuleByType">  <c:out value="${ label_rb_rule_by_query }"></c:out> </input>
+    	<br/><br/>
+    	<div id="ruleByPartyId">
+	    
+	<!--     	<label for="clientId">Client ID</label><springform:input path="ddpRuleDetail.rdtPartyId" /> -->
+	<!--     	<br/><br/>	 -->
+	    	 <field:combo_select field="ddpRuleDetail.rdtPartyCode" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyCode" itemValue="ptyPartyCode" label="${ label_party_code }" items="${ddppartys}" path="/ddppartys" z="EWkDDY691LgCRZNVN6VakfTVqPo=" itemLabel="ptyPartyName" mandatory="true"/>
+	    	 	<field:input field="ddpRuleDetail.rdtPartyId" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtPartyId" label="${label_party_id}" z="tIo4WlRonY5XIphh7X4sIUo8pms=" required="true" validationRegex="^[a-zA-Z0-9#,/._+-][ a-zA-Z0-9#,/._+-]*$" width="30em"/>
+			<!-- company and branch fields -->
+			<field:combo_select field="ddpRuleDetail.rdtCompany" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtCompany" itemValue="comCompanyCode" items="${ddpcompanys}" path="/ddpcompanys" z="YlC0mvaIyYCKEw4mtyPrfLjkqHs=" label="${ label_company }" itemLabel="comCompanyCode" mandatory="true"/>
+		    
+			
+			<table class="tab"  border="0" cellspacing="0" cellpadding="0" >
+				<tr style="background-color: #FFFFFF;">
+			    <td class="first">
+			    	<field:select field="ddpRuleDetail.rdtBranch" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch" itemValue="brnBranchCode" itemLabel="brnBranchCode" label="${ label_branch }"
+			    	  items="${ddpbranches}" path="/ddpbranches" z="fZrPJOO9YNRi3HDQu/rW+Hsi4Z0=" mandatory="true"/>
+		    	</td>
+		    	<td class="second">
+		    		 <span>
+						<button class="switch" id="left" title="Move Items to First list">&lt;</button>
+						<button class="switch" id="right" title="Move Items to Second list">&gt;</button>
+					</span>
+				</td>
+				<td class="third">
+					<field:select field="lstBranch" id="c_com_agility_ddp_data_domain_DdpRuleDetail_selectbranch" itemValue="brnBranchCode" label="${ label_selected_branch }"
+			    	  items="${selectedBranchList}" path="/ddpbranches" z="fZrPJOO9YNRi3HDQu/rW+Hsi4Z0=" required="true" mandatory="true"/>
+				</td>	
+				</tr>
+			</table>	    	
+		</div><!-- close div for ruleByPartyId -->
+		<div id="ruleByQuery" style="display: none;">
+		<textarea rows="5" cols="20"  name="dqlQry" id="dqlQry" value="" style="margin-left: 50px; display: none;"> DQL Query</textarea>
+			<div>
+				<label for='clientID'><c:out value="${ label_party_id }" />:</label>
+				<select id="customeClientId" name="customeClientId" style="width: 212px;">
+					<c:forTokens items="${clientIDs}" delims="," var="customClientID">
+						<option value="${customClientID}" selected="selected"><c:out value="${customClientID}"/></option>
+					</c:forTokens>
+				</select>
+			</div>
+			<br/>
+			<div id="divBatchCriteria">
+				<label for="batchingCriteria"><c:out value="${ label_batching_criteria }"/></label>
+				<select name="selBatchingCriteria" id="selBatchingCriteria" style="width:212px;">
+					<option value="consignmentID">Consignment ID</option>
+<!-- 					<option value="entryNo">Entry Number</option> -->
+					<option value="jobNumber" selected="selected">Job Number</option>
+				</select>
+				<br/><br/>
+			</div>
+		</div><!-- close div from ruleByQuery -->
+    	<!-- <field:datetime dateTimePattern="${ddpRuleDetail_rdtactivationdate_date_format}" field="ddpRuleDetail.rdtActivationDate" id="c_com_agility_ddp_data_domain_DdpRuleDetail_rdtActivationDate" z="hbN6al0IbPMeR9cbO9J+1NudWMc="/> -->
+    	<field:datetime dateTimePattern="${ddpExportRule_expactivationdate_date_format}" field="ddpExportRule.expActivationDate" id="c_com_agility_ddp_data_domain_ddpExportRule_expActivationDate" label="${ label_rule_start_date }" z="lHBl7i0pK0MVmUN7gnU20Kg3Bvw="/>
+    	<!-- frequency field -->
+    		<div id="cronExpression">
+    		<label for="frequency"><c:out value="${ label_frequency }"/></label>
+    		Every <!--<input type="text" id="hourspan" name="hourspan" maxlength="4" size="4" value="0" style="display: none;"/> -->
+					  <select id="hourspan" name="hourspan" style="display: none;">
+					  	<option hidden="true">0</option>
+    					<c:forEach var="hourspancount" begin="1" end="23">
+    						<option value="${hourspancount}">${hourspancount}</option>
+    					 </c:forEach>
+    				</select>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+<!--     			<input type="text" id="minutespan" name="minutespan" maxlength="4" size="4" value="0" style="display: none;"/> -->
+					<select id="minutespan" name="minutespan" style="display: none;">
+						<option hidden="true">0</option>
+    					<c:forEach var="minutespancount" begin="1" end="59">
+    						<option value="${minutespancount}">${minutespancount}</option>
+    					 </c:forEach>
+    				</select>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+    			<select name='frequency' id='frequency'>
+<!--     				<option value='minute' style="display: none;">Minute</option> -->
+    				<option value='hour'>Hour</option>
+					<option value='day'>Day</option>
+					<option value='week' selected='selected'>Week</option>
+					<option value='month'>Month</option>
+				</select>
+    			<span id="dayOfMonthspan" style="display:none"> on
+    				<select id="dayOfMonth" name="dayOfMonth">
+    					<c:forEach var="counter" begin="1" end="31">
+    						<option value="${counter}">${counter}</option>
+    					</c:forEach>
+    					<option value="L">last</option>
+    				</select> day
+    			</span>
+    			<span id="dayOfWeekspan"> on
+    				<select id="dayOfWeek" name="dayOfWeek">
+    					<option value="1">SUNDAY</option>
+    					<option value="2">MONDAY</option>
+    					<option value="3">TUESDAY</option>
+    					<option value="4">WEDNESDAY</option>
+    					<option value="5">THURSDAY</option>
+    					<option value="6">FRIDAY</option>
+    					<option value="7">SATURDAY</option>
+    				</select>
+    			</span>
+    			<span id="timespan" style="display:inline;" title="hours"> at
+    				<select id="hour" name="hour">
+    					<c:forEach var="hcount" begin="0" end="23">
+    						<option value="${hcount}">${hcount}</option>
+    					 </c:forEach>
+    				</select> : 
+    				<select id="minute" name="minute" title="minutes">
+    					<c:forEach var="mcount" begin="0" end="59">
+    						<option value="${mcount}">${mcount}</option>
+    					 </c:forEach>
+    				</select>
+    			</span>
+    			<div id="delayDiv" style="display: inline;" >&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+    				Prior to 
+    				<span id="delayspan" title="picking up documents with delay of">
+    					<select id="delayID" name="delayID">
+    						<c:forEach var="delaycounter" begin="0" end="51">
+    							<option value="${delaycounter}">${delaycounter}</option>
+    						</c:forEach>
+    					</select>
+    				</span>
+    				<span id="delayIN" name="delayIN"> weeks</span>
+    				<div style='display:inline;' class='tooltip'>
+				         <img src="../../userguidev/help.png" width="20px" />
+				   		 <span>${cronhelptext}</span>
+					</div>
+    			</div>
+    		</div>
+     		<input type="hidden" id="weekflag" name="weekflag" value="1" />
+     		<input type="hidden" id="monthflag" name="monthflag" value="0" /> 
+    	<br />
+    	<!-- Start Div for Export Query -->
+    	<select name="divPartyCodes" id="divPartyCodes" style="display: none;">
+			<c:forEach items="${ddppartys}" var="element" varStatus="loop">
+				<option value="${element.ptyPartyCode}">${element.ptyPartyName}</option>
+			</c:forEach>
+		</select>
+		<select name="divQueryOperator" id="divQueryOperator" style="display: none;">
+        	<option value='and'>and</option>
+        	<option value='or'>or</option>
+        </select>
+    	<div id="exportquerysource" style="padding: 10px;display: none;">
+    		<script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+ 	    	<div id="_exportquery_source_div_id">
+ 	    		<script type="text/javascript"> 
+ 	    		Spring.addDecoration(
+						new Spring.ElementDecoration({elementId : '_exportquery_source_div_id',
+						widgetType : 'dijit.TitlePane',
+						widgetAttrs : {title: 'Export Query Source', open: true}}));
+ 	    		</script> 
+ 	    		<div><br />
+ 	    			<!-- Radio button to choose Source of Query -->
+			    	<input type="radio" id="qryprpRB" name="querysource" value="0" style="margin-left:80px;" class="clsQuerySource" checked="checked" title="Export query will be taken from property file."> <c:out value="${ label_rb_qry_property }"></c:out> </input>
+			    	<input type="radio" id="qryUIRB" name="querysource" value="1" style="margin-left:160px;" class="clsQuerySource" title="Export query will build with details provide in below table."> <c:out value="${ lable_rb_qry_ui }"></c:out> </input>
+			    	<input type="radio" id="qrytxtRB" name="querysource" value="2" style="margin-left:240px;" class="clsQuerySource" title="Export query will build with below where clause."> <c:out value="${ label_rb_qry_txt }"></c:out> </input>
+			    	<br/><br/>
+			    	<div id="querysourceprop"><div style="padding-left: 20px;"><c:out value="Export query has been taken from property file. Please contact DDP team to configure export query." /></div></div>
+			    	<div id="querysourceui" style="display: none;">
+			    		<table id="queryTbl" style="border: 0px;">
+			    		<tr id="party0">
+			    			<td style="width: 10%;">Properties : </td>
+			    			<td style="width: 10%;"><select name="partyCode0" id="partyCode0" class="clsPartyCode">
+									<c:forEach items="${ddppartys}" var="element" varStatus="loop">
+										<option value="${element.ptyPartyCode}">${element.ptyPartyName}</option>
+									</c:forEach>
+								</select>
+							</td>
+							<td><input type="text" name="partyValue0" id="partyValue0" class="clsPartyValue" style="border: 1px solid;height:20px;width:98%;" onkeypress='return isSingleQuote(event)' title="Please enter client ID,seperate with comma for multiple client IDs"/></td>
+							<td style="width: 5%;"><div class="clscriteriaadd btn_shape"> add</div></td>
+						</tr>
+			    		</table>
+			    	</div>
+			    	<div id="querysourcetxt" style="display: none;">
+<!-- 			    		<field:textarea field="exportQueryfromTextarea" id="c_com_agility_ddp_data_domain_DdpRule_rulName" label="Query" /> -->
+						<label style="width: 10%;">Query<font color='red'>*</font> :</label><div><springform:textarea path="exportQueryfromTextarea" rows="5" cols="30" style="width: 80%;"/></div>
+						<div style="padding-left: 20px;font-family: sans-serif;color: #d08313;"><br />Note*: please provide where clause in query, system will append the meta data columns and table name from property file.<br />If you want to give complete query please mension the complete query start with 'SELECT *****'<div style='display:inline;' class='tooltip'>
+				         <img src="../../userguidev/help.png" width="20px" />
+				   		 <span style="font-family: sans-serif;font-weight: bold;">If you provide <font color="#d08313">debits_back IN ('AUTOL-VASP','AUTOLIVE9')</font> <br />system will construct the query as below 
+<font color="#d08313">Select r_object_id, agl_customs_entry_no, agl_master_job_number, agl_job_numbers, agl_consignment_id, agl_doc_ref, agl_control_doc_type, r_creation_date,r_content_size,agl_company_source,agl_branch_source,object_name from agl_control_document where (agl_debits_back IN ('AUTOL-VASP','AUTOLIVE9'))</font>
+</span>
+					</div></div>
+			    	</div>
+			    	<div style="float: right;padding-right: 10%;"><br /><button type="button" id="querydownloadID" name="querydownloadID">Download Query</button></div>
+ 	    		</div>
+ 	    	</div>
+    	</div>
+    	<!-- End Export Query  -->
+    	<div id="noofcomms" style="padding: 10px;">
+    	<table style="width: 100%">
+    	<tr><th><c:out value="${ label_text_communication_detail }"></c:out></th></tr>
+    	<input type="hidden" id="noofcommid" name="noofcommid" value="0"/>
+    	<tr><td>
+    	<div id="communicationDiv0" >
+	    	<!-- Radio button to choose FTP or UNC -->
+	    	<input type="radio" id="ftpRB0" name="radioButton0" value="ftpConfig" style="margin-left:80px;" class="clsRB0" checked="checked">  <c:out value="${ label_rb_protocol_conf }"></c:out></input>
+	    	<input type="radio" id="uncRB0" name="radioButton0" value="uncConfig" style="margin-left:160px;" class="clsRB0">  <c:out value="${ label_rb_unc_conf }"></c:out></input>
+	    	<input type="radio" id="emailRB0" name="radioButton0" value="emailConfig" style="margin-left:240px;" class="clsRB0"> <c:out value="${ label_rb_email_conf }"></c:out></input>
+	    	<br/><br/>
+	    	<!--  ftp fields-->
+	    	<div id="ftpDiv0"> 
+	    		<span id="secureProtocol"><label for="secure"><c:out value="${ label_protocol_type }"/></label>
+	    			<select name="secureType0" id="secureType0" style="width: 212px;">
+	    				<option value="ftp" selected="selected">FTP</option>
+	    				<option value="sftp">SFTP</option>
+	    				<option value="ftps">FTPS</option>
+	    			</select></span><br/><br/>
+		    	<field:input field="ddpCommFtp[0].cftFtpLocation" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpLocation_0" z="ICiWYpyBGLWOr1u8V9ztA9/fEMo=" label="${ label_ftp_location }" required="true"/>
+		    	<field:input field="ftpFolder[0]" id="c_com_agility_ddp_data_domain_DdpCommFtp_ftpfolder_0" z="tIo4WlRonY5XIphh7X4sIUo8pms=" label="${ label_ftp_folder }"/>
+		        <field:input field="ddpCommFtp[0].cftFtpUserName" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpUserName_0" z="J1/MFnVpz7xrg73asEnjkBRmybI=" label="${ label_ftp_username }" required="true"/>
+		        <field:input field="ddpCommFtp[0].cftFtpPassword" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPassword_0" type="password" z="U2VqSn+XPnw2rJTiVz7dmdxfHwo=" label="${ label_ftp_password }" required="true"/>
+		        <field:input field="ddpCommFtp[0].cftFtpPort" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPort_0" validationMessageCode="field_invalid_integer" z="9PhgjL7VG0SlI6Pz50H+zyHhEpc=" label="${ label_ftp_port }"/>
+	        </div>
+	    	<!-- UNC Fields -->
+	    	<div id="uncDiv0" style="display:none;">
+	    		<field:input field="ddpCommUnc[0].cunUncPath" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPath_0" z="+y7BX0Ownmp5ahHD6pvjzXGQqjo=" label="${ label_uncpath }" addStar="true"/>
+	       		<field:input field="ddpCommUnc[0].cunUncUserName" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncUserName_0" z="kHLec2iSdT/ZE3Y04+nXLz/a13s=" label="${ label_unc_username }"/>
+	        	<field:input field="ddpCommUnc[0].cunUncPassword" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPassword_0" type="password" z="3nxjt9THBDiZ4GbA1n8aPYNa45c=" label="${ label_unc_password }"/>
+	    	</div>
+	    	<!--  Email Fields -->
+	    	<div id="emailDiv0" style="display: none;">
+		    	<field:input field="ddpCommEmail.cemEmailFrom" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailFrom" z="AemQpy9byieKKeZq+zK41tVGueA=" label="${ label_email_from }"  validationRegex="${emailregexp}" />
+		        <field:input field="ddpCommEmail.cemEmailTo" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailTo" z="F1ZxvZHXZ9TDyU2/hDrctmqJMVI=" label="${ label_email_to }"  validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" addStar="true" width="40em"/>
+		        <field:input field="ddpCommEmail.cemEmailCc" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailCc" z="l8BWslrw8yPVX1a1oxueqBoNypI=" label="${ label_email_cc }"  validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" width="40em"/>
+		        <field:textarea field="ddpCommEmail.cemEmailSubject" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailSubject" z="QekQ67Tz9iorh8Cv3elRXaFod4A=" label="Email Subject" render="false"/>
+        		<field:textarea field="ddpCommEmail.cemEmailBody" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBody" z="J+KPWDP22/a4NxtUJfEF2jj0cJQ=" label="Email Body" render="false"/>
+		        <field:input field="ddpCommEmail.cemEmailBcc" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailBcc" z="F1ZxvZHXZ9TDyU2/hDrctmqJMVI=" label="${ label_email_bcc }" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" width="25em"/>
+      			<field:input field="ddpCommEmail.cemEmailReplyTo" id="c_com_agility_ddp_data_domain_DdpCommEmail_cemEmailReplyTo" z="F1ZxvZHXZ9TDyU2/hDrctmqJMVI=" label="${ label_email_replyto }" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" />
+	    	</div>
+<!-- 	    		<input type="button" id="testConnID" value="test connection" onClick="testConnection(0);" style="float:right;top: 50px;"></input> -->
+<!-- 	    		<img src="../userguidev/info.png" width="15px" title="Test Connection" style="position: absolute;bottom: 400px;"/> -->
+			<span id="testConnID" style="margin-left: 380px;"><input id="testBtn0" type="button" value="${ label_btn_testconnection }" class="btn_shape" style="margin-right: 5px" onClick="testConnection(0,0);" />
+			<input type="button" value="${ label_btn_adddetails }" class="addcomm btn_shape" onClick="fnAddConnection('div0');" style="padding-left:10px;"/><br /></span>
+		    <inupt type="hidden" id="connectFlag0" name="connectFlag0" value="1"/>
+		    <inupt type="hidden" id="testConnectionHit0" name="testConnectionHit0" value="1"/>
+    	</div>
+    	</td></tr>
+    	<tr><td>
+    	<div id="communicationDiv1" style="display: none;">
+    	<input type="hidden" id="isDiv1Selected" name="isDiv1Selected" value="1"/>
+	    	<!-- Radio button to choose FTP or UNC -->
+	    	<input type="radio" id="ftpRB1" name="radioButton1" value="ftpConfig" style="margin-left:80px;" class="clsRB1" checked="checked">  <c:out value="${ label_rb_protocol_conf }"></c:out></input>
+	    	<input type="radio" id="uncRB1" name="radioButton1" value="uncConfig" style="margin-left:160px;" class="clsRB1">  <c:out value="${ label_rb_unc_conf }"></c:out></input>
+	    	<br/><br/>
+	    	<!--  ftp fields-->
+	    	<div id="ftpDiv1"> 
+	    		<span id="secureProtocol1"><label for="secure"><c:out value="${ label_protocol_type }"/></label>
+	    			<select name="secureType2" id="secureType1" style="width: 212px;">
+	    				<option value="ftp" selected="selected">FTP</option>
+	    				<option value="sftp">SFTP</option>
+	    				<option value="ftps">FTPS</option>
+	    			</select></span><br/><br/>
+		    	<field:input field="ddpCommFtp[1].cftFtpLocation" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpLocation_1" z="ICiWYpyBGLWOr1u8V9ztA9/fEMo=" label="${ label_ftp_location }" addStar="true"/>
+		    	<field:input field="ftpFolder[1]" id="c_com_agility_ddp_data_domain_DdpCommFtp_ftpfolder_1" z="tIo4WlRonY5XIphh7X4sIUo8pms=" label="${ label_ftp_folder }"/>
+		        <field:input field="ddpCommFtp[1].cftFtpUserName" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpUserName_1" z="J1/MFnVpz7xrg73asEnjkBRmybI=" label="${ label_ftp_username }" addStar="true"/>
+		        <field:input field="ddpCommFtp[1].cftFtpPassword" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPassword_1" type="password" z="U2VqSn+XPnw2rJTiVz7dmdxfHwo=" label="${ label_ftp_password }" addStar="true"/>
+		        <field:input field="ddpCommFtp[1].cftFtpPort" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPort_1" validationMessageCode="field_invalid_integer" z="9PhgjL7VG0SlI6Pz50H+zyHhEpc=" label="${ label_ftp_port }"/>
+	        </div>
+	    	<!-- UNC Fields -->
+	    	<div id="uncDiv1" style="display:none;">
+	    		<field:input field="ddpCommUnc[1].cunUncPath" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPath_1" z="+y7BX0Ownmp5ahHD6pvjzXGQqjo=" label="${ label_uncpath }" addStar="true"/>
+	       		<field:input field="ddpCommUnc[1].cunUncUserName" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncUserName_1" z="kHLec2iSdT/ZE3Y04+nXLz/a13s=" label="${ label_unc_username }"/>
+	        	<field:input field="ddpCommUnc[1].cunUncPassword" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPassword_1" type="password" z="3nxjt9THBDiZ4GbA1n8aPYNa45c=" label="${ label_unc_password }"/>
+	    	</div>
+<!-- 	    		<input type="button" id="testConnID" value="test connection" onClick="testConnection(0);" style="float:right;top: 50px;"></input> -->
+<!-- 	    		<img src="../userguidev/info.png" width="15px" title="Test Connection" style="position: absolute;bottom: 400px;"/> -->
+			<span id="testConnID" style="margin-left: 380px;"><input type="button" value="${ label_btn_testconnection }" style="margin-right: 5px"  class="btn_shape" onClick="testConnection(1,0);"/>
+			<input type="button" value="${ label_btn_adddetails }" class="addcomm btn_shape" style="margin-right: 5px"  onClick="fnAddConnection('div1');"/>
+			<input type="button" value="${ label_btn_removedetails }" class="remcomm btn_shape" onClick="fnRemConnection('div1');" style="padding-left:10px;"/><br /></span>
+	    	<inupt type="hidden" id="connectFlag1" name="connectFlag1" value="1"/>
+	    	<inupt type="hidden" id="testConnectionHit1" name="testConnectionHit1" value="1"/>
+    	</div>
+    	</td></tr>
+    	<tr><td>
+    	<div id="communicationDiv2" style="display: none;">
+    	<input type="hidden" id="isDiv2Selected" name="isDiv2Selected" value="1"/>
+	    	<!-- Radio button to choose FTP or UNC -->
+	    	<input type="radio" id="ftpRB2" name="radioButton2" value="ftpConfig" style="margin-left:80px;" class="clsRB2" checked="checked">  <c:out value="${ label_rb_protocol_conf }"></c:out></input>
+	    	<input type="radio" id="uncRB2" name="radioButton2" value="uncConfig" style="margin-left:160px;" class="clsRB2">  <c:out value="${ label_rb_unc_conf }"></c:out></input>
+	    	<br/><br/>
+	    	<!--  ftp fields-->
+	    	<div id="ftpDiv2"> 
+	    		<span id="secureProtocol2"><label for="secure"><c:out value="${ label_protocol_type }"/></label>
+	    			<select name="secureType2" id="secureType2" style="width: 212px;">
+	    				<option value="ftp" selected="selected">FTP</option>
+	    				<option value="sftp">SFTP</option>
+	    				<option value="ftps">FTPS</option>
+	    			</select></span><br/><br/>
+		    	<field:input field="ddpCommFtp[2].cftFtpLocation" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpLocation_2" z="ICiWYpyBGLWOr1u8V9ztA9/fEMo=" label="${ label_ftp_location }" addStar="true"/>
+		    	<field:input field="ftpFolder[2]" id="c_com_agility_ddp_data_domain_DdpCommFtp_ftpfolder_3" z="tIo4WlRonY5XIphh7X4sIUo8pms=" label="${ label_ftp_folder }"/>
+		        <field:input field="ddpCommFtp[2].cftFtpUserName" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpUserName_2" z="J1/MFnVpz7xrg73asEnjkBRmybI=" label="${ label_ftp_username }" addStar="true"/>
+		        <field:input field="ddpCommFtp[2].cftFtpPassword" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPassword_2" type="password" z="U2VqSn+XPnw2rJTiVz7dmdxfHwo=" label="${ label_ftp_password }" addStar="true"/>
+		        <field:input field="ddpCommFtp[2].cftFtpPort" id="c_com_agility_ddp_data_domain_DdpCommFtp_cftFtpPort_2" validationMessageCode="field_invalid_integer" z="9PhgjL7VG0SlI6Pz50H+zyHhEpc=" label="${ label_ftp_port }"/>
+	        </div>
+	    	<!-- UNC Fields -->
+	    	<div id="uncDiv2" style="display:none;">
+	    		<field:input field="ddpCommUnc[2].cunUncPath" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPath_2" z="+y7BX0Ownmp5ahHD6pvjzXGQqjo=" label="${ label_uncpath }" addStar="true"/>
+	       		<field:input field="ddpCommUnc[2].cunUncUserName" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncUserName_2" z="kHLec2iSdT/ZE3Y04+nXLz/a13s=" label="${ label_unc_username }"/>
+	        	<field:input field="ddpCommUnc[2].cunUncPassword" id="c_com_agility_ddp_data_domain_DdpCommUnc_cunUncPassword_2" type="password" z="3nxjt9THBDiZ4GbA1n8aPYNa45c=" label="${ label_unc_password }"/>
+	    	</div>
+<!-- 	    		<input type="button" id="testConnID" value="test connection" onClick="testConnection(0);" style="float:right;top: 50px;"></input> -->
+<!-- 	    		<img src="../userguidev/info.png" width="15px" title="Test Connection" style="position: absolute;bottom: 400px;"/> -->
+			<span id="testConnID" style="margin-left: 380px;"><input type="button" value="${ label_btn_testconnection }" style="margin-right: 5px"  class="btn_shape" onClick="testConnection(2,0);"/>
+			<input type="button" value="${ label_btn_removedetails }" class="remcomm btn_shape" onClick="fnRemConnection('div2');" style="padding-left:10px;"/><br /></span>
+	    	<inupt type="hidden" id="connectFlag2" name="connectFlag2" value="1"/>
+	    	<inupt type="hidden" id="testConnectionHit2" name="testConnectionHit2" value="1"/>
+    	</div>
+    	</td></tr>
+    	</table>
+    	</div>
+    	<select name="divDdpDocType" id="divDdpDocType" style="display:none;">
+    		<c:forEach items="${ddpdoctypes}" var="element" varStatus="loop">
+    			<option value="${element.dtyDocTypeCode}"> ${element.dtyDocTypeCode} </option>
+    		</c:forEach>
+    	</select>	
+    	<select name="divDdpGenSource" id="divDdpGenSource" style="display:none;">
+    		<c:forEach items="${ddpGenSourceLkp}" var="element" varStatus="loop">
+    			<option value="${element.id.gslOption}"> ${element.id.gslDescription} </option>
+    		</c:forEach>
+    	</select>
+    	
+    	<select name="divDdpRate" id="divDdpRate" style="display:none;" >
+	        <c:forEach items="${ddpRatedLkp}" var="element" varStatus="loop">
+	        		<option value="${element.id.rtlOption}">${element.id.rtlDescription}</option>
+		   </c:forEach>
+        </select>
+        
+    	<c:forTokens items="${ratedDocs}" delims="," var="ratedDoc" varStatus="loop">
+			<input type="hidden" value="${ratedDoc}" class="clsratedDoc" id="ratedDoc${loop.index}"/>
+		</c:forTokens>
+		
+		<select name="divVersion" id="divVersion" style="display: none;">
+			<c:forEach items="${ddpExpVersionLkp}" var="element" varStatus="loop">
+				<option value="${element.id.evlOption}">${element.id.evlOption}</option>
+			</c:forEach>
+		</select>
+		
+		<select name="divReqFlag" id="divReqFlag" style="display: none;">
+        	<option value='1'>Mandatory</option>
+        	<option value='0'>Optional</option>
+        	<option value='2'>At least One</option>
+        </select>
+        <select name="divRelType" id="divRelType" style="display: none;"> 
+        	<option value='1'>Primary</option>
+        	<option value='2'>Secondary</option>
+        </select>
+        <select name="divDocSeq" id="divDocSeq" style="display: none;">
+        	<option value="none" selected="selected">None</option>
+        	<c:forEach var="scount" begin="0" end="50">
+				<option value="${scount}">${scount}</option>
+			 </c:forEach>
+        </select>
+        <c:forTokens items="${noncontroldocs}" delims="," var="noncontroldoc" varStatus="loop">
+			<input type="hidden" value="${noncontroldoc}" class="clsnoncontroldoc" id="noncontroldoc${loop.index}"/>
+		</c:forTokens>
+    	<div id="divExportType" style="display: none;">
+    		<br />
+    		<label for="exportAs"> Export As </label>
+    		<select name="selExpCompressionLvl" id="selExpCompressionLvl" style="width:212px;">
+	    		<option value="merge">Single As Pdf</option>
+	    		<option value="multiple" selected="selected">Multiple</option>
+	    		<option value="exportAsZip">Zip (as Single file)</option>
+    		</select>
+    		<br /><br />
+    	</div>
+    	<div>
+			<c:forTokens items="${clientIDsDocSelMap}" delims=";" var="customClientIDwitDocsource">
+						<c:set var="key" value="${fn:split(customClientIDwitDocsource,':')}"/>
+						<input type="hidden" value="${key[1]}" id="${key[0]}" ></input> 
+			</c:forTokens>
+    	</div>
+    	<div id="docSelectionid" style="display: none;">
+    		<label for="docSelection">Documents Selection</label>
+    		<select name="selDocSel" id="selDocSel" style="width:212px;" onload="javascript:changeDocSelction();">
+    			<option value="0" selected="selected">UI Configuration</option>
+    			<option value="1">Properties Configuration</option>
+    		</select>
+    	</div>
+    	<div style="padding: 10px;" id="divDocSelTable">
+       	<table id="tblDoc" class="tblDoc" style="width:100%;">
+       		<tr>
+       				<th><c:out value="${ label_document_type }"></c:out></th>
+		  	 		<th><c:out value="${ label_generation_source }"></c:out></th>
+		  	 		<th><c:out value="${ label_text_ratedornonrated }"></c:out></th>
+		  	 		<th><c:out value="${ lable_text_version }"></c:out></th>
+		  	 		<th style="display: none;"><c:out value="${ lable_text_relavanttype }"></c:out></th>  
+		  	 		<th style="display: none;">Require Flag</th>
+		  	 		<th style="display: none;">Sequence</th>
+		  	 		<th><div class="ancadd btn_shape"><c:out value="${ label_text_add }"></c:out></div></th> 
+<!-- 		  	 		<th><div class="ancadd"><img src="../userguidev/button.png">Add</img></div></th>  -->
+		  	 </tr> 
+	    </table>
+	    </div>
+	    <!--  Notification Part -->
+	    <div id="divNotification" style="padding: 10px;">
+	    	<table id="tblNotification" class="tblNotification" style="width: 100%">
+				<tr><th><c:out value="${ label_text_notification }"></c:out></th></tr>
+	    		<tr><td><field:input field="ddpNotification.notSuccessEmailAddress" id="c_com_agility_ddp_data_domain_DdpNotification_notSuccessEmailAddress" z="ERveL3838KEe73z6mAcYUuKgMTU=" label="${ label_not_success_email_address }" required="true" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" width="40em"/></td></tr>
+	    		<tr><td><field:input field="ddpNotification.notFailureEmailAddress" id="c_com_agility_ddp_data_domain_DdpNotification_notFailureEmailAddress" z="b8GtFOWyMCXYYbYwJb8m+iN0Itg=" label="${ label_not_failure_email_address }" required="true" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,})+\.([.; ])*)+([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+(\\.[ A-Za-z0-9]+)*(\\.[ A-Za-z]{1,}))*" width="40em"/></td></tr>
+	    <!--  Notification Part Ends -->
+	    </table>
+	    </div>
+	     <!--  Frequency Report Part -->
+	    <div id="divFreqReport" style="padding: 10px;"> 
+	    	<script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+ 	    	<div id="_frequenct_reprort_div_id">
+ 	    		<script type="text/javascript"> 
+ 	    		Spring.addDecoration(
+						new Spring.ElementDecoration({elementId : '_frequenct_reprort_div_id',
+						widgetType : 'dijit.TitlePane',
+						widgetAttrs : {title: '${ label_text_frequencyreport }', open: false}}));
+ 	    		</script> 
+		    	<table id="tblFreqReport" class="tblFreqReport" style="width: 100%">
+<!-- 					<tr><th>Frequency Report</th></tr> -->
+					<tr><td>
+						<br/>
+			    		<div id="cronExpressionFreqReport">
+			    		<label for="frequencyFreqReport"><c:out value="${ label_frequency }"/></label>
+			    		Every <!--<input type="text" id="hourspanFreqReport" name="hourspanFreqReport" maxlength="4" size="4" value="0" style="display: none;"/> -->
+								  <select id="hourspanFreqReport" name="hourspanFreqReport" style="display: none;">
+								  	<option hidden="true">0</option>
+			    					<c:forEach var="hourspancount" begin="1" end="23">
+			    						<option value="${hourspancount}">${hourspancount}</option>
+			    					 </c:forEach>
+			    				</select>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+			<!--     			<input type="text" id="minutespanFreqReport" name="minutespanFreqReport" maxlength="4" size="4" value="0" style="display: none;"/> -->
+								<select id="minutespanFreqReport" name="minutespanFreqReport" style="display: none;">
+									<option hidden="true">0</option>
+			    					<c:forEach var="minutespancount" begin="1" end="59">
+			    						<option value="${minutespancount}">${minutespancount}</option>
+			    					 </c:forEach>
+			    				</select>&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;
+			    			<select name='frequencyFreqReport' id='frequencyFreqReport'>
+			    				<option value='none' selected='selected'>None</option>
+			<!--     				<option value='minute' style="display: none;">Minute</option> -->
+			    				<option value='hour'>Hour</option>
+								<option value='day'>Day</option>
+								<option value='week'>Week</option>
+								<option value='month'>Month</option>
+							</select>
+			    			<span id="dayOfMonthspanFreqReport" style="display:none"> on
+			    				<select id="dayOfMonthFreqReport" name="dayOfMonthFreqReport">
+			    					<c:forEach var="counter" begin="1" end="31">
+			    						<option value="${counter}">${counter}</option>
+			    					</c:forEach>
+			    					<option value="L">last</option>
+			    				</select> day
+			    			</span>
+			    			<span id="dayOfWeekspanFreqReport" style="display:none"> on
+			    				<select id="dayOfWeekFreqReport" name="dayOfWeekFreqReport">
+			    					<option value="1">SUNDAY</option>
+			    					<option value="2">MONDAY</option>
+			    					<option value="3">TUESDAY</option>
+			    					<option value="4">WEDNESDAY</option>
+			    					<option value="5">THURSDAY</option>
+			    					<option value="6">FRIDAY</option>
+			    					<option value="7">SATURDAY</option>
+			    				</select>
+			    			</span>
+			    			<span id="timespanFreqReport" style="display:none" title="hours"> at
+			    				<select id="hourFreqReport" name="hourFreqReport">
+			    					<c:forEach var="hcount" begin="0" end="23">
+			    						<option value="${hcount}">${hcount}</option>
+			    					 </c:forEach>
+			    				</select> : 
+			    				<select id="minuteFreqReport" name="minuteFreqReport" title="minutes">
+			    					<c:forEach var="mcount" begin="0" end="59">
+			    						<option value="${mcount}">${mcount}</option>
+			    					 </c:forEach>
+			    				</select>
+			    			</span>
+			    		</div><br /><br />
+			    		<input type="hidden" id="weekflagFreqReport" name="weekflagFreqReport" value="1" />
+	     				<input type="hidden" id="monthflagFreqReport" name="monthflagFreqReport" value="0" />
+	     			<field:input field="schReportEmailTo" id="c_com_agility_ddp_data_domain_DdpScheduler_schReportEmailTo" z="ERveL3838KEe73z6mAcYUuKgMTU=" label="${ label_sch_email_to }" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+\.[a-zA-Z ]{2,4})+([,;]+\.+[ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+\.[a-zA-Z ]{2,4})*" width="40em"/>
+		    		<field:input field="schReportEmailCc" id="c_com_agility_ddp_data_domain_DdpScheduler_schReportEmailCc" z="b8GtFOWyMCXYYbYwJb8m+iN0Itg=" label="${ label_sch_email_cc }" validationRegex="([ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+\.[a-zA-Z ]{2,4})+([,;]+\.+[ a-zA-Z0-9._%+-]+@[ a-zA-Z0-9.-]+\.[a-zA-Z ]{2,4})*" width="40em"/></td></tr>
+		    	</table>
+		    </div>
+	    </div>
+	    <!--  Frequency Report Ends -->
+    	<div style="padding: 10px;">
+    	<!-- ** write Title pane *******  -->
+	    	<script type="text/javascript">dojo.require('dijit.TitlePane');</script>
+	    	<div id="_Naming_convensions_div_id">
+				<script type="text/javascript" style="font-weight: bold; font-size: 16px;" >
+				Spring.addDecoration(
+						new Spring.ElementDecoration({elementId : '_Naming_convensions_div_id',
+						widgetType : 'dijit.TitlePane',
+						widgetAttrs : {title: '${ label_text_namingspec }', open: false}})); 
+				</script>
+    	
+	    	<table id="namConv" class="namConv" style="width:100%">
+<!-- 	    		<th colspan="2">Naming Convention Specifications</th> -->
+	    		<tr>
+	    			<td>
+	    			<div style="float: right;display: inline;" id="helpID"><img src="../../userguidev/info.png" width="15px" title="click to view metadata place holders"/></div>
+	    			<div id="NamConSpecId" style="float:right;align-right: 30px;align-top: 10px; display: none;"><c:out value="${ label_note }"></c:out>:<br/>
+			    			<b>
+		    				- <c:out value="${ label_name_rule_1 }"></c:out> <br/>
+							- <c:out value="${ label_name_rule_2 }"></c:out> <br/>
+							- <c:out value="${ label_name_rule_3 }"></c:out> <br/>
+							- <c:out value="${ label_name_rule_4 }"></c:out>: <br/>
+								<span style="padding-left: 40px;">JOB_NUM </span><br/>
+								<span style="padding-left: 40px;">CONS_ID  </span><br/>
+								<span style="padding-left: 40px;">DOC_TYPE </span><br/>
+								<span style="padding-left: 40px;">COMPANY </span><br/>
+								<span style="padding-left: 40px;">BRANCH </span><br/>
+								<span style="padding-left: 40px;">SHIP_REF </span><br/>
+								<span style="padding-left: 40px;">CONSIGNEE_REF </span><br/>
+ 								<span style="padding-left: 40px;">ENTRY_NUM </span><br/>
+								<span style="padding-left: 40px;">DELIVERY_DOC_NUM </span><br/>
+								<span style="padding-left: 40px;">CONS_LOAD_NUM </span><br/>
+								<span style="padding-left: 40px;">JOB_LOAD_NUM </span><br/>
+								<span style="padding-left: 40px;">DMS_VERSION </span><br/>								
+								<span style="padding-left: 40px;">INVOICE_NUM(only for SALESINV) </span><br/>
+								<span style="padding-left: 40px;">DATE_DDMMYY (e.g. DATE_YYYYDDMM) </span><br /> 
+								<span style="padding-left: 40px;">SEQ (Duplicate document sequence) </span><br />
+								<span style="padding-left: 40px;">SUPP_NAME(only for Vendor documents)</span><br />
+								<span style="padding-left: 40px;">C2C_NUM(only for Vendor documents)</span><br />
+								<span style="padding-left: 40px;">DIV_REF(*DIV reference)</span><br />
+		    				</b>
+    					</div>
+		    			<div id="first"><span style="color:rgb(224,169,27);position:relative;top:1px;left:30px"><input type="checkbox" id="gencheck" name="gencheck" title="Enable Naming Convention" value="1"/><span class="genMess"> ${enableGenNamField}
+		    			</span></span></div><br/>
+		    			<div id="divName">
+		    			<field:textarea field="ddpDocnameConv.dcvGenNamingConv" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvGenNamingConv" z="Xfz7tPt8uwzm5+v5dTOKasbEZ3Y=" label="${ label_docname_generic }" /></div>
+		    			<B> Eg.1.</B><br/><B>%%DATE_DDMMYY%%_%%DOC_TYPE%%_%%CONS_ID%%_%%JOB_NUM%%</B><br/><br/>
+		    			<B> Eg.2.</B><br/><B>AGILITY_%%DATE_DDMMMYY%%_%%JOB_NUM%%</B><br/>
+	    			</td>
+	    		</tr>
+	    		<tr>
+	    			<td>
+		    			<div id="second"><span style="color:rgb(224,169,27);position:relative;top:1px;left:30px"><input type="checkbox" id="dupcheck" name="dupcheck" title="Enable Duplicate Naming Convention" value="2"/><span class="dupMess"> ${enableDupNamField}
+		    			</span></span></div><br/>
+		    			<div id="divDupName">
+		    			<field:textarea field="ddpDocnameConv.dcvDupDocNamingConv" id="c_com_agility_ddp_data_domain_DdpDocnameConv_dcvDupDocNamingConv" z="pG2TXGr49zlT4tCeXKM7xr7zWcM=" label="${ label_docname_dup }" /></div>
+		    			<span style="padding-left: 10px;"><b> Eg.1.</b></span><br/>
+		    			<b>Copy%%SEQ%%_%%DATE_DDMMYY%%_%%DOC_TYPE%%_%%CONS_ID%%_%%JOB_NUM%%</b><br/><br/>
+		    			<b> Eg.2.</b><br/>
+		    			<b>AGILITY_%%DATE_DDMMMYY%%_%%JOB_NUM%%_COPY%%SEQ%%</b><br/>
+	    			</td>
+	    		</tr>
+	    	</table>
+	    	
+	    	<!-- Title pane Ends  -->
+	    	</div>
+    	</div>
+  	
+    	<script type="text/javascript">
+    		$(document).ready(function(){
+    			
+    			changeActiveLinkColor("exprule"); // change the active link background color
+    		 	 
+    			$("#proceed").click(function(){
+    				
+     				var mulreg = /^([ a-zA-Z0-9]+([-+. ]\w+)*@\w+([-. ]\w+)*\.\w+([-. a-zA-Z0-9]+)*([.; ])*)*$/;
+     				if(dojo.byId("frequencyFreqReport").value != 'none')
+   					{
+     					if(dojo.byId("_schReportEmailCc_id").value != '')
+       					{
+         					if(! mulreg.test(dojo.byId("_schReportEmailCc_id").value))
+           					{
+           						dojo.byId("_schReportEmailCc_id").focus();
+           					}
+       					}
+         				if(! mulreg.test(dojo.byId("_schReportEmailTo_id").value))
+       					{
+       						dojo.byId("_schReportEmailTo_id").focus();
+       					}
+       					if(dojo.byId("_schReportEmailTo_id").value == '')
+       					{
+       						dojo.byId("_schReportEmailTo_id").focus();
+       					}
+   					}
+     				if(! mulreg.test(dojo.byId("_ddpNotification.notFailureEmailAddress_id").value))
+   					{
+    					dojo.byId("_ddpNotification.notFailureEmailAddress_id").focus();
+   					}
+     				if(! mulreg.test(dojo.byId("_ddpNotification.notSuccessEmailAddress_id").value))
+   					{
+    					dojo.byId("_ddpNotification.notSuccessEmailAddress_id").focus();
+   					}
+    				if(dojo.byId("_ddpNotification.notFailureEmailAddress_id").value=='')
+					{
+						dojo.byId("_ddpNotification.notFailureEmailAddress_id").focus();
+					}
+    				if(dojo.byId("_ddpNotification.notSuccessEmailAddress_id").value=='')
+					{
+						dojo.byId("_ddpNotification.notSuccessEmailAddress_id").focus();
+					}
+    				var isEmailConfigChecked = $("#emailRB0").prop("checked");
+    				if(isEmailConfigChecked)
+   					{
+    					if(dojo.byId("_ddpCommEmail.cemEmailCc_id").value != '')
+       					{
+         					if(! mulreg.test(dojo.byId("_ddpCommEmail.cemEmailCc_id").value))
+           					{
+           						dojo.byId("_ddpCommEmail.cemEmailCc_id").focus();
+           					}
+       					}
+    					if(! mulreg.test(dojo.byId("_ddpCommEmail.cemEmailTo_id").value))
+       					{
+       						dojo.byId("_ddpCommEmail.cemEmailTo_id").focus();
+       					}
+    					if(dojo.byId("_ddpCommEmail.cemEmailTo_id").value == '')
+       					{
+       						dojo.byId("_ddpCommEmail.cemEmailTo_id").focus();
+       					}
+   					}
+    				if(dojo.byId("isDiv2Selected").value==0){
+	    				var che = $("#ftpRB2").prop("checked");
+	    				if(che)
+	   					{
+	   						if(dojo.byId("_ddpCommFtp[2].cftFtpPassword_id").value=='')
+	   							dojo.byId("_ddpCommFtp[2].cftFtpPassword_id").focus();
+	   						if(dojo.byId("_ddpCommFtp[2].cftFtpUserName_id").value=='')
+	   							dojo.byId("_ddpCommFtp[2].cftFtpUserName_id").focus(); 
+	   						if(dojo.byId("_ddpCommFtp[2].cftFtpLocation_id").value=='')
+	   							dojo.byId("_ddpCommFtp[2].cftFtpLocation_id").focus(); 
+	   					}
+	    				else
+	   					{
+							if(dojo.byId("_ddpCommUnc[2].cunUncPath_id").value=='')
+								dojo.byId("_ddpCommUnc[2].cunUncPath_id").focus();
+	   					}
+    				}
+    				if(dojo.byId("isDiv1Selected").value==0){
+	    				var che = $("#ftpRB1").prop("checked");
+	    				if(che)
+	   					{
+	   						if(dojo.byId("_ddpCommFtp[1].cftFtpPassword_id").value=='')
+	   							dojo.byId("_ddpCommFtp[1].cftFtpPassword_id").focus();
+	   						if(dojo.byId("_ddpCommFtp[1].cftFtpUserName_id").value=='')
+	   							dojo.byId("_ddpCommFtp[1].cftFtpUserName_id").focus(); 
+	   						if(dojo.byId("_ddpCommFtp[1].cftFtpLocation_id").value=='')
+	   							dojo.byId("_ddpCommFtp[1].cftFtpLocation_id").focus(); 
+	   					}
+	    				else
+	   					{
+							if(dojo.byId("_ddpCommUnc[1].cunUncPath_id").value=='')
+								dojo.byId("_ddpCommUnc[1].cunUncPath_id").focus();
+	   					}
+    				}
+    				var che = $("#ftpRB0").prop("checked");
+    				if(che)
+   					{
+   						if(dojo.byId("_ddpCommFtp[0].cftFtpPassword_id").value=='')
+   							dojo.byId("_ddpCommFtp[0].cftFtpPassword_id").focus();
+   						if(dojo.byId("_ddpCommFtp[0].cftFtpUserName_id").value=='')
+   							dojo.byId("_ddpCommFtp[0].cftFtpUserName_id").focus(); 
+   						if(dojo.byId("_ddpCommFtp[0].cftFtpLocation_id").value=='')
+   							dojo.byId("_ddpCommFtp[0].cftFtpLocation_id").focus(); 
+   					}
+    				else
+   					{
+						if(dojo.byId("_ddpCommUnc[0].cunUncPath_id").value=='')
+							dojo.byId("_ddpCommUnc[0].cunUncPath_id").focus();
+   					}
+    				var partyIdIsChecked = $('#byPartyIdRB').prop("checked");
+    				if(partyIdIsChecked &amp;&amp; dojo.byId("_ddpRuleDetail.rdtPartyId_id").value=='')
+   					{
+   						dojo.byId("_ddpRuleDetail.rdtPartyId_id").focus();
+   					}
+    			});
+    		});
+    	</script>
+    	 <script language="javascript">
+    	 var totalRowCount = 0;
+    	 var queryRowCount = 0;
+    	 var noncontroldocsArr = [];
+    	 var ratedDocsArr = [];
+	 	 dojo.query(".clsnoncontroldoc").forEach(function(node){
+	 		noncontroldocsArr.push(node.value);
+		 });
+	 	dojo.query(".clsratedDoc").forEach(function(node){
+	 		ratedDocsArr.push(node.value);
+		 });
+			/******************* onLoad Function Starts *********************/
+    		dojo.addOnLoad(function(){
+    		
+    			
+    			dojo.byId("_ddpCommFtp[0].cftFtpPort_id").value=21;
+    			dojo.byId("_ddpCommFtp[1].cftFtpPort_id").value=21;
+    			dojo.byId("_ddpCommFtp[2].cftFtpPort_id").value=21;
+    			dijit.byId("_ddpDocnameConv.dcvGenNamingConv_id").attr("cols",30);
+//     			dijit.byId("_ddpDocnameConv.dcvGenNamingConv_id").attr("rows",2);
+    			dijit.byId("_ddpDocnameConv.dcvDupDocNamingConv_id").attr("cols",30);
+//     			dijit.byId("_ddpDocnameConv.dcvDupDocNamingConv_id").attr("rows",2);
+    			//make it by Default Disable
+    			dijit.byId("_ddpDocnameConv.dcvGenNamingConv_id").attr("disabled",true);
+    			dijit.byId("_ddpDocnameConv.dcvDupDocNamingConv_id").attr("disabled",true);
+    			
+    			/*********Naming Convention field enabling****/
+    			 $('input[type="checkbox"]').click(function(){
+    				 var che1=$(this).prop("checked");
+    	             var value=$(this).attr("value");
+    	             if(value==1){
+                         if(che1==true){
+                        	 $(".genMess").text(" ${disableGenNamField}");
+                         	 dijit.byId("_ddpDocnameConv.dcvGenNamingConv_id").attr("disabled",false);
+                         }else{
+                        	 $(".genMess").text(" ${enableGenNamField}");
+                         		dijit.byId("_ddpDocnameConv.dcvGenNamingConv_id").attr("disabled",true);
+                         }
+	                 }else if(value==2){
+	                         if(che1==true){
+	                        	 $(".dupMess").text(" ${disableDupNamField}");
+	                        	 dijit.byId("_ddpDocnameConv.dcvDupDocNamingConv_id").attr("disabled",false);
+	                         }else{
+	                        	 $(".dupMess").text(" ${enableDupNamField}");
+	                        	 dijit.byId("_ddpDocnameConv.dcvDupDocNamingConv_id").attr("disabled",true);
+	                         }
+	                 }else if(value==3){
+	                     if(che1==true){
+	                    	 $(".freqRepMess").text(" ${disableReportsFreq}");
+	                    	 dijit.byId("_schReportEmailTo_id").attr("disabled",false);
+	                    	 dijit.byId("_schReportEmailCc_id").attr("disabled",false);
+	                     }else{
+	                    	 $(".freqRepMess").text(" ${enableReportsFreq}");
+	                    	 dijit.byId("_schReportEmailTo_id").attr("disabled",true);
+	                    	 dijit.byId("_schReportEmailCc_id").attr("disabled",true);
+	                     }
+	             	}   
+    			 });
+    			 /*************** OnChange for Secure Type ***************/
+    			 $("#secureType0").change(function(){
+    				 var secureTypeSelection = $(this).attr("value");
+    				 if (secureTypeSelection == "ftp") {
+    					 document.getElementById("_ddpCommFtp[0].cftFtpPort_id").value=21;
+        			} else if (secureTypeSelection == "ftps") {
+   					 	document.getElementById("_ddpCommFtp[0].cftFtpPort_id").value=990;
+    				} else if (secureTypeSelection == "sftp") {
+   					 	document.getElementById("_ddpCommFtp[0].cftFtpPort_id").value=22;
+    				}
+    			 });
+    			 $("#secureType1").change(function(){
+    				 var secureTypeSelection = $(this).attr("value");
+    				 if (secureTypeSelection == "ftp") {
+    					 document.getElementById("_ddpCommFtp[1].cftFtpPort_id").value=21;
+        			} else if (secureTypeSelection == "ftps") {
+   					 	document.getElementById("_ddpCommFtp[1].cftFtpPort_id").value=990;
+    				} else if (secureTypeSelection == "sftp") {
+   					 	document.getElementById("_ddpCommFtp[1].cftFtpPort_id").value=22;
+    				}
+    			 });
+    			 $("#secureType2").change(function(){
+    				 var secureTypeSelection = $(this).attr("value");
+    				 if (secureTypeSelection == "ftp") {
+    					 document.getElementById("_ddpCommFtp[2].cftFtpPort_id").value=21;
+        			} else if (secureTypeSelection == "ftps") {
+   					 	document.getElementById("_ddpCommFtp[2].cftFtpPort_id").value=990;
+    				} else if (secureTypeSelection == "sftp") {
+   					 	document.getElementById("_ddpCommFtp[2].cftFtpPort_id").value=22;
+    				}
+    			 });
+    			/*********************************************/
+    			/******** onchange for custom clientID begin ***********/
+    			$("#customeClientId").change(function(){
+    				var customClientvalue = $(this).attr("value");
+    				var optionValue = $("#"+customClientvalue).val();
+    				$("#selDocSel").val(optionValue);
+    				if(optionValue == 1)
+    				{
+    					dojo.style(dojo.byId("divDocSelTable"),{display:'none'});
+    					$("#selDocSel").empty();
+    					var selB = document.getElementById("selDocSel");
+						var option = document.createElement('option');
+						option.text='Properties';
+						option.value=1;
+						selB.add(option,0);
+    				}
+    				else
+    				{
+    					dojo.style(dojo.byId("divDocSelTable"),{display:'block'});
+    					$("#selDocSel").empty();
+    					var selB = document.getElementById("selDocSel");
+						var option = document.createElement('option');
+						option.text='UI Configuration';
+						option.value=0;
+						selB.add(option,0);
+    				}
+    			});
+    			function changeDocSelection()
+    			{
+    				var customClientvalue = $("#customeClientId").attr("value");
+    				var optionValue = $("#"+customClientvalue).val();
+    				if(optionValue == 1)
+    				{
+    					dojo.style(dojo.byId("divDocSelTable"),{display:'none'});
+    					$("#selDocSel").empty();
+    					var selB = document.getElementById("selDocSel");
+						var option = document.createElement('option');
+						option.text='Properties';
+						option.value=1;
+						selB.add(option,0);
+    				}
+    				else
+    				{
+    					dojo.style(dojo.byId("divDocSelTable"),{display:'block'});
+    					$("#selDocSel").empty();
+    					var selB = document.getElementById("selDocSel");
+						var option = document.createElement('option');
+						option.text='UI Configuration';
+						option.value=0;
+						selB.add(option,0);
+    				}
+    			}
+    			
+    			/******** onchange for custom clientID  Ends ***********/
+    			
+    			/******************choose FTP/UNC***********************/
+    				var tempUnc = "";
+    				var tempUncUsr = "";
+    				var tempUncPas = "";
+    				var tempFtpLoc = "";
+    				var tempFtpFolder = "";
+    				var tempFtpUsr = "";
+    				var tempFtpPas = "";
+    				var tempFtpPort = "";
+    				var tempemailFrom="";
+    				var tempemailTo="";
+    				var tempemailCc="";
+    			$(".clsRB0").change(function(){
+    				
+    				value = $(this).attr("value");
+    				if(value=='ftpConfig')
+    				{
+    					dojo.style(dojo.byId("uncDiv0"),{display:'none'});
+    					dojo.style(dojo.byId("emailDiv0"),{display:'none'});
+    					dojo.style(dojo.byId("testBtn0"),{display:'inline'});
+    					dojo.style(dojo.byId("ftpDiv0"),{display:'inline'});
+    					
+//     					dijit.byId("_ddpCommFtp[0].cftFtpLocation_id").attr("required",true);
+//     					dijit.byId("_ddpCommFtp[0].cftFtpUserName_id").attr("required",true);
+//     					dijit.byId("_ddpCommFtp[0].cftFtpPassword_id").attr("required",true);
+    					dojo.byId("_ddpCommFtp[0].cftFtpLocation_id").value=tempFtpLoc;
+//     					dojo.byId("_ftpFolder_id").value=tempFtpFolder;
+    					dojo.byId("_ddpCommFtp[0].cftFtpUserName_id").value=tempFtpUsr;
+    					dojo.byId("_ddpCommFtp[0].cftFtpPassword_id").value=tempFtpPas;
+    					dojo.byId("_ddpCommFtp[0].cftFtpPort_id").value=tempFtpPort;
+    					
+    					tempUnc = dojo.byId("_ddpCommUnc[0].cunUncPath_id").value;
+    					tempUncUsr = dojo.byId("_ddpCommUnc[0].cunUncUserName_id").value;
+    					tempUncPas  = dojo.byId("_ddpCommUnc[0].cunUncPassword_id").value;
+    					dojo.byId("_ddpCommUnc[0].cunUncPath_id").value="";
+    					dojo.byId("_ddpCommUnc[0].cunUncUserName_id").value="";
+    					dojo.byId("_ddpCommUnc[0].cunUncPassword_id").value="";
+    					dijit.byId("_ddpCommUnc[0].cunUncPath_id").attr("required",false);
+    					
+    					tempemailFrom = dojo.byId("_ddpCommEmail.cemEmailFrom_id").value;
+    					tempemailTo = dojo.byId("_ddpCommEmail.cemEmailTo_id").value;
+    					tempemailCc = dojo.byId("_ddpCommEmail.cemEmailCc_id").value;
+    					dojo.byId("_ddpCommEmail.cemEmailFrom_id").value="";
+    					dojo.byId("_ddpCommEmail.cemEmailTo_id").value="";
+    					dojo.byId("_ddpCommEmail.cemEmailCc_id").value="";
+    					dijit.byId("_ddpCommEmail.cemEmailTo_id").attr("required",false);
+    				}
+    				else if(value=='uncConfig')
+    				{
+    					dojo.style(dojo.byId("ftpDiv0"),{display:'none'});
+    					dojo.style(dojo.byId("emailDiv0"),{display:'none'});
+    					dojo.style(dojo.byId("testBtn0"),{display:'inline'});
+    					dojo.style(dojo.byId("uncDiv0"),{display:'inline'});
+    					
+    					dojo.byId("_ddpCommUnc[0].cunUncPath_id").value=tempUnc;
+    					dojo.byId("_ddpCommUnc[0].cunUncUserName_id").value=tempUncUsr;
+    					dojo.byId("_ddpCommUnc[0].cunUncPassword_id").value=tempUncPas;
+    					dijit.byId("_ddpCommUnc[0].cunUncPath_id").attr("required",true);
+    					
+    					tempFtpLoc = dojo.byId("_ddpCommFtp[0].cftFtpLocation_id").value;
+//     					tempFtpFolder = dojo.byId("_ftpFolder_id").value;
+    					tempFtpUsr = dojo.byId("_ddpCommFtp[0].cftFtpUserName_id").value;
+    					tempFtpPas = dojo.byId("_ddpCommFtp[0].cftFtpPassword_id").value;
+    					tempFtpPort = dojo.byId("_ddpCommFtp[0].cftFtpPort_id").value;
+    					dojo.byId("_ddpCommFtp[0].cftFtpLocation_id").value="";
+//     					dojo.byId("_ftpFolder_id").value="";
+    					dojo.byId("_ddpCommFtp[0].cftFtpUserName_id").value="";
+    					dojo.byId("_ddpCommFtp[0].cftFtpPassword_id").value="";
+    					dojo.byId("_ddpCommFtp[0].cftFtpPort_id").value="";
+    					dijit.byId("_ddpCommFtp[0].cftFtpLocation_id").attr("required",false);
+    					dijit.byId("_ddpCommFtp[0].cftFtpUserName_id").attr("required",false);
+    					dijit.byId("_ddpCommFtp[0].cftFtpPassword_id").attr("required",false);
+    					
+    					tempemailFrom = dojo.byId("_ddpCommEmail.cemEmailFrom_id").value;
+    					tempemailTo = dojo.byId("_ddpCommEmail.cemEmailTo_id").value;
+    					tempemailCc = dojo.byId("_ddpCommEmail.cemEmailCc_id").value;
+    					dojo.byId("_ddpCommEmail.cemEmailFrom_id").value="";
+    					dojo.byId("_ddpCommEmail.cemEmailTo_id").value="";
+    					dojo.byId("_ddpCommEmail.cemEmailCc_id").value="";
+    					dijit.byId("_ddpCommEmail.cemEmailTo_id").attr("required",false);
+    					
+    				}
+    				else if(value=='emailConfig')
+    				{
+    					dijit.byId("_ddpCommEmail.cemEmailTo_id").attr("required",true);
+    					dojo.byId("_ddpCommEmail.cemEmailFrom_id").value=tempemailFrom;
+    					dojo.byId("_ddpCommEmail.cemEmailTo_id").value=tempemailTo;
+    					dojo.byId("_ddpCommEmail.cemEmailCc_id").value=tempemailCc;
+    					
+	   					dijit.byId("_ddpCommFtp[0].cftFtpLocation_id").attr("required",false);
+	   					dijit.byId("_ddpCommFtp[0].cftFtpUserName_id").attr("required",false);
+	   					dijit.byId("_ddpCommFtp[0].cftFtpPassword_id").attr("required",false);
+	   					tempFtpLoc = dojo.byId("_ddpCommFtp[0].cftFtpLocation_id").value;
+//     					dojo.byId("_ftpFolder_id").value=tempFtpFolder;
+    					tempFtpUsr = dojo.byId("_ddpCommFtp[0].cftFtpUserName_id").value;
+    					tempFtpPas = dojo.byId("_ddpCommFtp[0].cftFtpPassword_id").value;
+    					tempFtpPort = dojo.byId("_ddpCommFtp[0].cftFtpPort_id").value;
+    					
+    					dijit.byId("_ddpCommUnc[0].cunUncPath_id").attr("required",false);
+    					tempUnc = dojo.byId("_ddpCommUnc[0].cunUncPath_id").value;
+	   					tempUncUsr = dojo.byId("_ddpCommUnc[0].cunUncUserName_id").value;
+	   					tempUncPas = dojo.byId("_ddpCommUnc[0].cunUncPassword_id").value;
+    					
+    					dojo.style(dojo.byId("ftpDiv0"),{display:'none'});
+    					dojo.style(dojo.byId("uncDiv0"),{display:'none'});
+    					dojo.style(dojo.byId("testBtn0"),{display:'none'});
+    					dojo.style(dojo.byId("emailDiv0"),{display:'inline'});
+    					
+    				}
+    			});
+    				$(".clsRB1").change(function(){
+        				
+        				value = $(this).attr("value");
+        				if(value=='ftpConfig')
+        				{
+        					dijit.byId("_ddpCommUnc[1].cunUncPath_id").attr("required",false);
+        					dojo.byId("_ddpCommFtp[1].cftFtpLocation_id").value=tempFtpLoc;
+        					dojo.byId("_ddpCommFtp[1].cftFtpUserName_id").value=tempFtpUsr;
+        					dojo.byId("_ddpCommFtp[1].cftFtpPassword_id").value=tempFtpPas;
+        					dojo.byId("_ddpCommFtp[1].cftFtpPort_id").value=tempFtpPort;
+        					
+        					dojo.style(dojo.byId("uncDiv1"),{display:'none'});
+        					dojo.style(dojo.byId("ftpDiv1"),{display:'inline'});
+        					
+        					tempUnc = dojo.byId("_ddpCommUnc[1].cunUncPath_id").value;
+        					tempUncUsr = dojo.byId("_ddpCommUnc[1].cunUncUserName_id").value;
+        					tempUncPas  = dojo.byId("_ddpCommUnc[1].cunUncPassword_id").value;
+        					dojo.byId("_ddpCommUnc[1].cunUncPath_id").value="";
+        					dojo.byId("_ddpCommUnc[1].cunUncUserName_id").value="";
+        					dojo.byId("_ddpCommUnc[1].cunUncPassword_id").value="";
+        					 dijit.byId("_ddpCommFtp[1].cftFtpLocation_id").attr("required",true);
+        					 dijit.byId("_ddpCommFtp[1].cftFtpUserName_id").attr("required",true);
+        					 dijit.byId("_ddpCommFtp[1].cftFtpPassword_id").attr("required",true);
+        				}
+        				else if(value=='uncConfig')
+        				{
+        					 dijit.byId("_ddpCommFtp[1].cftFtpLocation_id").attr("required",false);
+        					 dijit.byId("_ddpCommFtp[1].cftFtpUserName_id").attr("required",false);
+        					 dijit.byId("_ddpCommFtp[1].cftFtpPassword_id").attr("required",false);
+        					dojo.byId("_ddpCommUnc[1].cunUncPath_id").value=tempUnc;
+        					dojo.byId("_ddpCommUnc[1].cunUncUserName_id").value=tempUncUsr;
+        					dojo.byId("_ddpCommUnc[1].cunUncPassword_id").value=tempUncPas;
+        					
+        					dojo.style(dojo.byId("ftpDiv1"),{display:'none'});
+        					dojo.style(dojo.byId("uncDiv1"),{display:'inline'});
+        					
+        					tempFtpLoc = dojo.byId("_ddpCommFtp[1].cftFtpLocation_id").value;
+        					tempFtpUsr = dojo.byId("_ddpCommFtp[1].cftFtpUserName_id").value;
+        					tempFtpPas = dojo.byId("_ddpCommFtp[1].cftFtpPassword_id").value;
+        					tempFtpPort = dojo.byId("_ddpCommFtp[1].cftFtpPort_id").value;
+        					dojo.byId("_ddpCommFtp[1].cftFtpLocation_id").value="";
+        					dojo.byId("_ddpCommFtp[1].cftFtpUserName_id").value="";
+        					dojo.byId("_ddpCommFtp[1].cftFtpPassword_id").value="";
+        					dojo.byId("_ddpCommFtp[1].cftFtpPort_id").value="";
+        					dijit.byId("_ddpCommUnc[1].cunUncPath_id").attr("required",true);
+        				}
+    			});
+					$(".clsRB2").change(function(){
+        				
+        				value = $(this).attr("value");
+        				if(value=='ftpConfig')
+        				{
+        					dijit.byId("_ddpCommUnc[2].cunUncPath_id").attr("required",false);
+        					dojo.byId("_ddpCommFtp[2].cftFtpLocation_id").value=tempFtpLoc;
+        					dojo.byId("_ddpCommFtp[2].cftFtpUserName_id").value=tempFtpUsr;
+        					dojo.byId("_ddpCommFtp[2].cftFtpPassword_id").value=tempFtpPas;
+        					dojo.byId("_ddpCommFtp[2].cftFtpPort_id").value=tempFtpPort;
+        					
+        					dojo.style(dojo.byId("uncDiv2"),{display:'none'});
+        					dojo.style(dojo.byId("ftpDiv2"),{display:'inline'});
+        					
+        					tempUnc = dojo.byId("_ddpCommUnc[2].cunUncPath_id").value;
+        					tempUncUsr = dojo.byId("_ddpCommUnc[2].cunUncUserName_id").value;
+        					tempUncPas  = dojo.byId("_ddpCommUnc[2].cunUncPassword_id").value;
+        					dojo.byId("_ddpCommUnc[2].cunUncPath_id").value="";
+        					dojo.byId("_ddpCommUnc[2].cunUncUserName_id").value="";
+        					dojo.byId("_ddpCommUnc[2].cunUncPassword_id").value="";
+        					 dijit.byId("_ddpCommFtp[2].cftFtpLocation_id").attr("required",true);
+        					 dijit.byId("_ddpCommFtp[2].cftFtpUserName_id").attr("required",true);
+        					 dijit.byId("_ddpCommFtp[2].cftFtpPassword_id").attr("required",true);
+        				}
+        				else if(value=='uncConfig')
+        				{
+        					 dijit.byId("_ddpCommFtp[2].cftFtpLocation_id").attr("required",false);
+        					 dijit.byId("_ddpCommFtp[2].cftFtpUserName_id").attr("required",false);
+        					 dijit.byId("_ddpCommFtp[2].cftFtpPassword_id").attr("required",false);
+        					dojo.byId("_ddpCommUnc[2].cunUncPath_id").value=tempUnc;
+        					dojo.byId("_ddpCommUnc[2].cunUncUserName_id").value=tempUncUsr;
+        					dojo.byId("_ddpCommUnc[2].cunUncPassword_id").value=tempUncPas;
+        					
+        					dojo.style(dojo.byId("ftpDiv2"),{display:'none'});
+        					dojo.style(dojo.byId("uncDiv2"),{display:'inline'});
+        					
+        					tempFtpLoc = dojo.byId("_ddpCommFtp[2].cftFtpLocation_id").value;
+        					tempFtpUsr = dojo.byId("_ddpCommFtp[2].cftFtpUserName_id").value;
+        					tempFtpPas = dojo.byId("_ddpCommFtp[2].cftFtpPassword_id").value;
+        					tempFtpPort = dojo.byId("_ddpCommFtp[2].cftFtpPort_id").value;
+        					dojo.byId("_ddpCommFtp[2].cftFtpLocation_id").value="";
+        					dojo.byId("_ddpCommFtp[2].cftFtpUserName_id").value="";
+        					dojo.byId("_ddpCommFtp[2].cftFtpPassword_id").value="";
+        					dojo.byId("_ddpCommFtp[2].cftFtpPort_id").value="";
+        					dijit.byId("_ddpCommUnc[2].cunUncPath_id").attr("required",true);
+        				}
+    			});
+    			
+    			/******************choose FTP/UNC Ends***********************/
+    			/************************choose Rule By PartyId/DqlQuery***********/
+    			$(".clsRuleByType").change(function(){
+    				var value = $(this).val();
+    				if(value == 'byPartyIdRB')
+    				{
+    					dojo.style(dojo.byId("divDocSelTable"),{display:'block'});
+    					dijit.byId("_ddpRuleDetail.rdtPartyId_id").attr("required",true);
+    					dojo.style(dojo.byId("ruleByQuery"),{display:'none'});
+    					dojo.style(dojo.byId("ruleByPartyId"),{display:'inline'});
+    					dojo.style(dojo.byId("divExportType"),{display:'none'});
+    					dojo.style(dojo.byId("docSelectionid"),{display:'none'});
+    					
+    					//disable Manditory 
+    					$('#tblDoc th:nth-child(5)').hide();
+    					$('#tblDoc td:nth-child(5)').hide();
+    					dojo.style(dojo.byId("exportquerysource"),{display:'none'});
+    				}
+    				else
+    				{
+    					//choose only Latest version.
+//      					$('#divVersion').find('option:contains(All)').remove();
+    					dijit.byId("_ddpRuleDetail.rdtPartyId_id").attr("required",false);
+    					dojo.style(dojo.byId("ruleByPartyId"),{display:'none'});
+    					dojo.style(dojo.byId("ruleByQuery"),{display:'inline'});
+    					dojo.style(dojo.byId("divExportType"),{display:'inline'});
+    					dojo.style(dojo.byId("docSelectionid"),{display:'inline'});
+    					$('#tblDoc th:nth-child(5)').show();
+    					$('#tblDoc td:nth-child(5)').show();
+    					changeDocSelection();
+    					dojo.style(dojo.byId("exportquerysource"),{display:'block'});
+    				}
+    			});
+    			/************************choose Rule By PartyId/DqlQuery ends***********/
+    			
+    			/************************choose Query Source Begin ***********/
+    			$(".clsQuerySource").change(function(){
+    				var value=$(this).val();
+    				if(value == '0')
+   					{
+    					dojo.style(dojo.byId("querysourceprop"),{display:'block'});
+    					dojo.style(dojo.byId("querysourceui"),{display:'none'});
+    					dojo.style(dojo.byId("querysourcetxt"),{display:'none'});
+   					}
+    				else if(value == '1')
+   					{
+    					dojo.style(dojo.byId("querysourceprop"),{display:'none'});
+    					dojo.style(dojo.byId("querysourceui"),{display:'block'});
+    					dojo.style(dojo.byId("querysourcetxt"),{display:'none'});
+   					}
+    				else if(value == '2')
+   					{
+    					dojo.style(dojo.byId("querysourceprop"),{display:'none'});
+    					dojo.style(dojo.byId("querysourceui"),{display:'none'});
+    					dojo.style(dojo.byId("querysourcetxt"),{display:'block'});
+   					}
+    			});
+    			
+    			/************************choose Query Source Ends ***********/
+    			
+    			/*****************************************************/
+    			
+    			dojo.connect(dojo.byId("frequency"),"change",function(){
+					var frequency = dojo.byId("frequency").value;
+					
+					if(frequency=='minute')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'inline'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						$("#minutespan").val("1");
+						$("#hourspan").val("0");
+						$("#weekflag").val("0");
+						$("#monthflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+					}
+					if(frequency=='hour')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'inline'});
+						dojo.style(dojo.byId("timespan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						$("#minutespan").val("0");
+						$("#hourspan").val("1");
+						$("#weekflag").val("0");
+						$("#monthflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+						$("#delayID").empty();
+						var options="";
+						var k;
+						for( k =0;k &lt; 24 ; k++)
+						{
+							options+="<option value="+k+">"+k+"</option>";
+						}
+						$("#delayID").append(options);
+						$("#delayIN").html(" hours");
+					}
+					if(frequency=='day')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'inline'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						$("#weekflag").val("0");
+						$("#monthflag").val("0");
+						$("#minutespan").val("0");
+						$("#hourspan").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+						$("#delayID").empty();
+						var options="";
+						var k;
+						for( k =0;k &lt; 31 ; k++)
+						{
+							options+="<option value="+k+">"+k+"</option>";
+						}
+						$("#delayID").append(options);
+						$("#delayIN").html(" days");
+					}
+					if(frequency=='week')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'inline'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'inline'});
+						$("#minutespan").val("0");
+						$("#hourspan").val("0");
+						$("#weekflag").val("1");
+						$("#monthflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+						$("#delayID").empty();
+						var options="";
+						var k;
+						for( k =0;k &lt; 52 ; k++)
+						{
+							options+="<option value="+k+">"+k+"</option>";
+						}
+						$("#delayID").append(options);
+						$("#delayIN").html(" weeks");
+					}
+					if(frequency=='month')
+					{
+						dojo.style(dojo.byId("minutespan"),{display:'none'});
+						dojo.style(dojo.byId("hourspan"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspan"),{display:'inline'});	
+						dojo.style(dojo.byId("dayOfWeekspan"),{display:'none'});
+						dojo.style(dojo.byId("timespan"),{display:'inline'});
+						$("#minutespan").val("0");
+						$("#hourspan").val("0");
+						$("#monthflag").val("1");
+						$("#weekflag").val("0");
+						$("#hour").val("0");
+						$("#minute").val("0");
+						$("#delayID").empty();
+						var options="";
+						var k;
+						for( k =0;k &lt; 12 ; k++)
+						{
+							options+="<option value="+k+">"+k+"</option>";
+						}
+						$("#delayID").append(options);
+						$("#delayIN").html(" months");
+					}
+				});
+    			/*****************************************************/
+    			dojo.connect(dojo.byId("frequencyFreqReport"),"change",function(){
+					var frequency = dojo.byId("frequencyFreqReport").value;
+					
+					if(frequency=='none')
+					{
+						dojo.style(dojo.byId("minutespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("hourspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("timespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspanFreqReport"),{display:'none'});
+						$("#minutespanFreqReport").val("0");
+						$("#hourspanFreqReport").val("0");
+						$("#weekflagFreqReport").val("0");
+						$("#monthflagFreqReport").val("0");
+						$("#hourFreqReport").val("0");
+						$("#minuteFreqReport").val("0");
+						dijit.byId("_schReportEmailTo_id").attr("required",false);
+					}
+					if(frequency=='minute')
+					{
+						dojo.style(dojo.byId("minutespanFreqReport"),{display:'inline'});
+						dojo.style(dojo.byId("hourspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("timespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspanFreqReport"),{display:'none'});
+						$("#minutespanFreqReport").val("1");
+						$("#hourspanFreqReport").val("0");
+						$("#weekflagFreqReport").val("0");
+						$("#monthflagFreqReport").val("0");
+						$("#hourFreqReport").val("0");
+						$("#minuteFreqReport").val("0");
+						dijit.byId("_schReportEmailTo_id").attr("required",true);
+					}
+					if(frequency=='hour')
+					{
+						dojo.style(dojo.byId("minutespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("hourspanFreqReport"),{display:'inline'});
+						dojo.style(dojo.byId("timespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspanFreqReport"),{display:'none'});
+						$("#minutespanFreqReport").val("0");
+						$("#hourspanFreqReport").val("1");
+						$("#weekflagFreqReport").val("0");
+						$("#monthflagFreqReport").val("0");
+						$("#hourFreqReport").val("0");
+						$("#minuteFreqReport").val("0");
+						dijit.byId("_schReportEmailTo_id").attr("required",true);
+					}
+					if(frequency=='day')
+					{
+						dojo.style(dojo.byId("minutespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("hourspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("timespanFreqReport"),{display:'inline'});
+						dojo.style(dojo.byId("dayOfMonthspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspanFreqReport"),{display:'none'});
+						$("#weekflagFreqReport").val("0");
+						$("#monthflagFreqReport").val("0");
+						$("#minutespanFreqReport").val("0");
+						$("#hourspanFreqReport").val("0");
+						$("#hourFreqReport").val("0");
+						$("#minuteFreqReport").val("0");
+						dijit.byId("_schReportEmailTo_id").attr("required",true);
+					}
+					if(frequency=='week')
+					{
+						dojo.style(dojo.byId("minutespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("hourspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfWeekspanFreqReport"),{display:'inline'});
+						dojo.style(dojo.byId("dayOfMonthspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("timespanFreqReport"),{display:'inline'});
+						$("#minutespanFreqReport").val("0");
+						$("#hourspanFreqReport").val("0");
+						$("#weekflagFreqReport").val("1");
+						$("#monthflagFreqReport").val("0");
+						$("#hourFreqReport").val("0");
+						$("#minuteFreqReport").val("0");
+						dijit.byId("_schReportEmailTo_id").attr("required",true);
+					}
+					if(frequency=='month')
+					{
+						dojo.style(dojo.byId("minutespanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("hourspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("dayOfMonthspanFreqReport"),{display:'inline'});	
+						dojo.style(dojo.byId("dayOfWeekspanFreqReport"),{display:'none'});
+						dojo.style(dojo.byId("timespanFreqReport"),{display:'inline'});
+						$("#minutespanFreqReport").val("0");
+						$("#hourspanFreqReport").val("0");
+						$("#monthflagFreqReport").val("1");
+						$("#weekflagFreqReport").val("0");
+						$("#hourFreqReport").val("0");
+						$("#minuteFreqReport").val("0");
+						dijit.byId("_schReportEmailTo_id").attr("required",true);
+					}
+				});
+    			/************* onChange for Documents Selection *****************/
+    			$("#selDocSel").change(function(){
+    				var docSelVal = $("#selDocSel").val();
+    				if(docSelVal == '1')
+    					dojo.style(dojo.byId("divDocSelTable"),{display:'none'});
+    				else
+    					dojo.style(dojo.byId("divDocSelTable"),{display:'block'});
+    			});
+    			
+    			/********* onChange Ends for Documents Selection *****************/
+    			
+//  
+		     	    //select and remove the DocTypes
+		     	 	var cnt = 2;
+			        $(".ancadd").click(function(){
+				        
+				        var rowscount = totalRowCount;
+				        
+				        
+				      //Document Type creation 
+		 		        var doctypeLst = document.getElementById("divDdpDocType");
+		 		        var  selectDdpDoctype= "&lt;select name='selectDdpDoctype"+(parseInt(rowscount)+1)+"' id='selectDdpDoctype"+(parseInt(rowscount)+1)+"' onchange='generalRestriction(this,"+(parseInt(rowscount)+1)+")' style='width:170px;border:1px solid rgb(215, 215, 215);' &gt;";
+// 		 		       selectDdpDoctype+="&lt;option value=\"--selectDoc--\"&gt;--selectDoc--&lt;/option&gt;";
+		 		        for(var i=0; i &lt; doctypeLst.options.length;i++){
+		 					var selectedvalue=doctypeLst.options[i].value;
+		 					var selectedtext=doctypeLst.options[i].text;
+		 					selectDdpDoctype+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+		 			    }
+		 		       selectDdpDoctype+="&lt;/select&gt;";
+		 		        //Document Type creation ends
+		 		        
+				        //Generate Source creation 
+				        var genSourcelkpLst = document.getElementById("divDdpGenSource");
+				        var  selectDdpGenSource= "&lt;select name='selectDdpGenSource"+(parseInt(rowscount)+1)+"' id='selectDdpGenSource"+(parseInt(rowscount)+1)+"'  style='width:170px;border:1px solid rgb(215, 215, 215);' &gt;";
+// 				        selectDdpGenSource+="&lt;option value=\"--selectGen--\"&gt;--selectGen--&lt;/option&gt;";
+				        for(var i=0; i &lt; genSourcelkpLst.options.length;i++){
+							var selectedvalue=genSourcelkpLst.options[i].value;
+							var selectedtext=genSourcelkpLst.options[i].text;
+							selectDdpGenSource+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				        selectDdpGenSource+="&lt;/select&gt;";
+				        //Generate Source creation ends
+						
+					        //Rate creation 
+				        var ratelkpLst = document.getElementById("divDdpRate");
+				        var  selectDdpRate= "&lt;select name='selectDdpRate"+(parseInt(rowscount)+1)+"' id='selectDdpRate"+(parseInt(rowscount)+1)+"' style='width:120px;border:1px solid rgb(215, 215, 215);' &gt;";
+				        for(var i=0; i &lt; ratelkpLst.options.length;i++){
+							var selectedvalue=ratelkpLst.options[i].value;
+							var selectedtext=ratelkpLst.options[i].text;
+							selectDdpRate+="&lt;option value=\""+selectedvalue+"\" &gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				        selectDdpRate+="&lt;/select&gt;";
+				        //Rate ends
+			        
+				        //add vesion select box
+				        var versionLst = document.getElementById("divVersion");
+				        var  selectVersion= "&lt;select name='selectVersion"+(parseInt(rowscount)+1)+"' id='selectVersion"+(parseInt(rowscount)+1)+"'  style='width:130px;border:1px solid rgb(215, 215, 215);' &gt;";
+// 				        selectVersion+="&lt;option value=\"--selectVersion--\"&gt;--selectversion--&lt;/option&gt;";
+				        for(var i=0; i &lt; versionLst.options.length;i++){
+							var selectedvalue=versionLst.options[i].value;
+							var selectedtext=versionLst.options[i].text;
+							selectVersion+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				        selectVersion+="&lt;/select&gt;";
+				        //version select box creation ends
+				      	
+				        //add Relevant Docs Select Box
+				        var relevanTypeLst = document.getElementById("divRelType");
+				        var selectRelType = "&lt;select name='selectRelType"+(parseInt(rowscount)+1)+"' id='selectRelType"+(parseInt(rowscount)+1)+"' style='width:100px;border:1px solid rgb(215, 215, 215);' &gt;";
+				        for(var i=0; i &lt; relevanTypeLst.options.length;i++){
+							var selectedvalue=relevanTypeLst.options[i].value;
+							var selectedtext=relevanTypeLst.options[i].text;
+							selectRelType+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				        selectRelType+="&lt;/select &gt;";
+				        
+				      	//add Require Flag select box
+				        var reqFlagLst = document.getElementById("divReqFlag");
+				        var  selectReqFlag= "&lt;select name='selectReqFlag"+(parseInt(rowscount)+1)+"' id='selectReqFlag"+(parseInt(rowscount)+1)+"'  style='width:100px;border:1px solid rgb(215, 215, 215);' &gt;";
+				        for(var i=0; i &lt; reqFlagLst.options.length;i++){
+							var selectedvalue=reqFlagLst.options[i].value;
+							var selectedtext=reqFlagLst.options[i].text;
+							selectReqFlag+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				        selectReqFlag+="&lt;/select&gt;";
+				        
+				        //add Sequence Select Box
+				        var sequenceLst = document.getElementById("divDocSeq");
+				        var  selectSequence= "&lt;select name='selectSequence"+(parseInt(rowscount)+1)+"' id='selectSequence"+(parseInt(rowscount)+1)+"'  style='width:60px;border:1px solid rgb(215, 215, 215);' &gt;";
+				        for(var i=0; i &lt; sequenceLst.options.length;i++){
+							var selectedvalue=sequenceLst.options[i].value;
+							var selectedtext=sequenceLst.options[i].text;
+							selectSequence+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				        selectSequence+="&lt;/select&gt;";
+					     var out=" &lt;tr id='"+(parseInt(rowscount)+1)+"'&gt;&lt;td&gt; "+selectDdpDoctype+" &lt;/td&gt; ";
+						 out +="&lt;td&gt;"+selectDdpGenSource+" &lt;/td&gt; ";
+						 out +="&lt;td&gt;"+selectDdpRate+" &lt;/td&gt; ";
+						 out +="&lt;td&gt;"+selectVersion+" &lt;/td&gt; ";
+						 out +="&lt;td style='display: none;'&gt;"+selectRelType+" &lt;/td&gt; ";
+						 if($('#byPartyIdRB').prop("checked"))
+							 out +="&lt;td style='display: none;'&gt;"+selectReqFlag+" &lt;/td&gt; ";
+						 else
+							 out +="&lt;td&gt;"+selectReqFlag+" &lt;/td&gt; ";
+						 out +="&lt;td style='display: none;'&gt;"+selectSequence+" &lt;/td&gt; ";
+						 out +=" &lt;td&gt; ";
+						 out +="  &lt;a href='javascript:void(0);' id='anc_rem' class='ancrem btn_shape' &gt; ${ label_text_remove }&lt;/a &gt;&lt;/td&gt;&lt;/tr&gt;";
+				         $('#tblDoc').last().append(out);
+		            	 cnt++;
+			             totalRowCount = parseInt(rowscount)+1 ;
+			             restrictRated("selectDdpRate",(parseInt(rowscount)+1));
+			             restrictRelavantOption(); // call this method to make first document as mandatory
+		    	   });
+			       
+			       $(document).on("click", ".ancrem", function (e) {
+			                 var target = e.target;
+			                 $(target).closest('tr').remove();
+			                 
+			                 restrictRelavantOption(); // call this method to make first document as mandatory
+		
+			       });
+			       /*****************************************************adding new Row to Table Ends***************************************************************/
+		         
+			       
+			       /****************************** Adding new Query Criteria Starts ***************************/
+			       $(document).on("click",".clscriteriaadd", function(e){
+			    	   var rowscount = queryRowCount;
+			    	   //Add Operator
+			    	   //Query Operator Creation 
+				        var operatorLst = document.getElementById("divQueryOperator");
+				        var  selectOperator= "&lt;select name='operator"+(parseInt(rowscount)+1)+"' id='operator"+(parseInt(rowscount)+1)+"' class='clsOperator' &gt;";
+				        for(var i=0; i &lt; operatorLst.options.length;i++){
+							var selectedvalue=operatorLst.options[i].value;
+							var selectedtext=operatorLst.options[i].text;
+							selectOperator+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				        selectOperator+="&lt;/select&gt;";
+			    	   
+				        var operatorout=" &lt;tr class='operator' id='troperator"+(parseInt(rowscount)+1)+"' &gt;";
+				        operatorout +="&lt;td&gt; &lt;/td&gt;";
+				        operatorout +="&lt;td&gt;"+selectOperator+" &lt;/td&gt; ";
+				        operatorout +="&lt;td&gt; ";
+				        operatorout +="&lt;/tr&gt;";
+				        $('#queryTbl').last().append(operatorout);
+				        
+			    	   //Party Code creation 
+				        var partyLst = document.getElementById("divPartyCodes");
+				        var  selectDdpPartyCode= "&lt;select name='partyCode"+(parseInt(rowscount)+1)+"' id='partyCode"+(parseInt(rowscount)+1)+"' class='clsPartyCode' &gt;";
+				        for(var i=0; i &lt; partyLst.options.length;i++){
+							var selectedvalue=partyLst.options[i].value;
+							var selectedtext=partyLst.options[i].text;
+							selectDdpPartyCode+="&lt;option value=\""+selectedvalue+"\"&gt;"+selectedtext+"&lt;/option&gt;";
+					    }
+				       selectDdpPartyCode+="&lt;/select&gt;";
+				        //Party Code creation ends
+				        
+				       var partyValue= "&lt;input name='partyValue"+(parseInt(rowscount)+1)+"' id='partyValue"+(parseInt(rowscount)+1)+"' style=\"border: 1px solid;height:20px;width:98%;\" class='clsPartyValue' onkeypress='return isSingleQuote(event)' &gt;";
+				       
+				       var dojoInput="&lt;div id='_dojoID' &gt;";
+				       dojoInput+="&lt;input id='_dojoID' name='donoID1' type='text' /&gt;";
+				       dojoInput+="Spring.addDecoration(new Spring.ElementDecoration({ elementId: '_dojoID', widgetType : 'dijit.form.ValidationTextBox'}));";
+				       dojoInput +="&lt;/div &gt;";
+				       
+				       var out=" &lt;tr id='party"+(parseInt(rowscount)+1)+"'&gt;";
+				       out +="&lt;td style=\"width: '10%;'\"&gt; &lt;/td&gt;";
+				       out +="&lt;td style=\"width: '10%;'\"&gt;"+selectDdpPartyCode+" &lt;/td&gt; ";	
+				       out +="&lt;td&gt;"+partyValue+" &lt;/td&gt; ";
+				       out +="&lt;td &gt; ";
+					   out +="  &lt;a href='javascript:void(0);' id='"+(parseInt(rowscount)+1)+"' class='clscriteriarem btn_shape' &gt; ${ label_text_remove } &lt;/a &gt;&lt;/td&gt;&lt;/tr&gt;";
+					   
+					   $('#queryTbl').last().append(out);
+					   queryRowCount = parseInt(rowscount) + 1;
+			       });
+			       $(document).on("click", ".clscriteriarem", function (e) {
+		                 var target = e.target;
+		                 console.log(target.id);
+		                 $("#troperator"+parseInt(target.id)).closest('tr').remove();
+		              //   $("#op"+parseInt(target.closest('tr').id)).closest('tr').remove();  --- It is not working in IE
+		                 $(target).closest('tr').remove();
+		      		 });
+			       /*************************** Query Criteria Ends *****************************/
+			       
+			       
+		           /********************************************************************************************************************/
+	          //Method to call on load for branches list according to selected country
+	          $("#_lstBranch_id").empty()
+     	     /********************************************************************************************************************/
+		         
+    			/********************************************************Start Function to listen move event************************************************************/
+        		// listen to the "move items" buttons
+    			dojo.query("button.switch")
+    				.connect("onclick",function(e){
+    					switch(e.target.id.toString()){
+    						case "left" : 
+    						{
+    							var listLength = document.getElementById("_lstBranch_id");
+    							if(listLength != null){
+    								for(var i=0; i &lt; listLength.options.length;i++){
+    									var selectedtext=dijit.byId("_lstBranch_id").containerNode.options[i].text;
+    									var selectedvalue=dijit.byId("_lstBranch_id").containerNode.options[i].value;
+    								    if(listLength.options[i].selected){
+    								    	document.getElementById("_ddpRuleDetail.rdtBranch_id").add(new Option(selectedtext, selectedvalue));
+    								    }
+    							    }  
+    								removeItem(document.getElementById("_lstBranch_id"));
+    							}
+    							else{
+    								alert("Please select atleast one branch to move");
+    							}
+    							break;
+    						}
+    						case "right" : 
+    						{
+    							var listLength = document.getElementById("_ddpRuleDetail.rdtBranch_id");
+    							if(listLength != null){
+    								for(var i=0; i &lt; listLength.options.length;i++){
+    									var selectedtext=dijit.byId("_ddpRuleDetail.rdtBranch_id").containerNode.options[i].text;
+    									var selectedvalue=dijit.byId("_ddpRuleDetail.rdtBranch_id").containerNode.options[i].value;
+    								    if(listLength.options[i].selected){
+    								    	document.getElementById("_lstBranch_id").add(new Option(selectedtext, selectedvalue));
+    								    }
+    							    }  
+    								removeItem(document.getElementById("_ddpRuleDetail.rdtBranch_id"));
+    								addtolist(document.getElementById("_lstBranch_id"));
+    							}
+    							else{
+    								alert("Please select atleast one branch to move");
+    							}
+    							break;
+    						}
+    						e.preventDefault();
+    					}
+    					e.preventDefault();
+    			 });
+    			 function addtolist(listitem){
+    				
+    				var i;
+    				for(i=0;i &lt; listitem.options.length;i++) 
+    				{
+    					listitem[i].selected=true;
+    				}
+    			 }
+    			 function removeItem(selectbox)
+    			 {
+    				var i;
+    				for(i=selectbox.options.length-1;i>=0;i--)
+    				{
+    				if(selectbox.options[i].selected)
+    				selectbox.remove(i);
+    				}
+    			  }
+    			  /*********************************************Listen to Move Items function Ends ***********************************************************************/	
+    		
+    			 /********************************************************************************************************************/
+		         //Call this method on change
+		         var companyID = dijit.byId("_ddpRuleDetail.rdtCompany_id");
+		         dojo.connect(companyID,"onChange",function(evt){
+		         	//Empty the Selected text box on selection change 
+		         	$("#_lstBranch_id").empty();
+		     	 	$.ajax({
+				    	    type: "GET",
+				    	    //url: "list/branchByCompany?companyID="+ dojo.trim(companyID.value),
+				    	    url: "../../ruleutil/valuesByCountryAsList",	
+				    	    data: {
+				    	    		"companyID" : dojo.trim(companyID.value)
+				    	    	  },
+				    	    contentType: "application/HTML; charset=utf-8",
+				    	    async: false,
+				    	    dataType: "HTML",
+				    	    success: function(response) {
+				    	    	$("#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch_id").find('select[id="_ddpRuleDetail.rdtBranch_id"]').empty();
+				    	    	var brnoptions ="";
+				    	    	var parsedJson = JSON.parse(response);
+				    	    	var brnLst = parsedJson.branchLst;
+				    	    	var dtyLst = parsedJson.dtyLst;
+				    	    	for(var j=0;j &lt;brnLst.length;j++)
+				    	    	{
+				    	    		brnoptions +="<option value="+brnLst[j].brnBranchCode+">"+brnLst[j].brnBranchCode+"</option>";
+				    	    	}
+				    	    	$("#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch_id").find('select[id="_ddpRuleDetail.rdtBranch_id"]').append(brnoptions);
+				    	    	$("#divDdpDocType").empty();
+				    	    	var dtyoptions = "";
+				    	    	for(var k=0;k &lt; dtyLst.length ;k++)
+				    	    	{
+				    	    		dtyoptions +="<option value="+dtyLst[k].dtyDocTypeCode+">"+dtyLst[k].dtyDocTypeCode+"</option>";
+		 						}
+				    	    	$("#divDdpDocType").append(dtyoptions);
+				    	    	adjustDocOptions();
+		                         _fragment_item_.innerHTML = "" + $("#_c_com_agility_ddp_data_domain_DdpRuleDetail_rdtBranch_id").find('select[id="_ddpRuleDetail.rdtBranch_id"]');
+		                         Spring.addDecoration(new Spring.ElementDecoration({
+		                                                   elementId : '_ddpRuleDetail.rdtBranch_id',
+		                                                   widgetType: 'dijit.form.MultiSelect',
+		                                                   widgetAttrs : {hasDownArrow : true}
+		                         }));
+				    	    	e.preventDefault(); 
+				    	    },
+				    	    error: function() {
+				    	       alert("Failed to load Braches");
+				    	       e.preventDefault();
+				    	    }
+				    	});
+		       	 });
+		        /********************************************************************************************************************/
+    			
+		    /******************* on click for Help Begin *******************/    
+  				$("#helpID").click(function(){
+  					$("#NamConSpecId").toggle();
+  				});
+  			/******************* on click for Help Ends*******************/
+    			  
+  				/******* on click mechanishm to querydownloadID *****************/
+  				$('#querydownloadID').click(function(){
+  					var objects="";
+  					var url="";
+  					var data="";
+  					var customClientID = "";
+  					var exportQueryFromTxt = "";
+  					var partyCodeArr = [];
+  					var partyValueArr = [];
+  					var operatorArr = [];
+  					var jsonObj={};
+  					var exportqueryrowscount = parseInt(queryRowCount);
+  					var querySourceArr = dojo.query(".clsQuerySource");
+  		    		var querySourcevalue=0;
+  		    		for(var indexI=0; indexI &lt; querySourceArr.length; indexI++)
+  		    		{
+  		    			if(querySourceArr[indexI].checked)
+  		    				querySourcevalue = querySourceArr[indexI].value;
+  		    		}
+  		    		data={  "querySource":querySourcevalue	};
+  		    		if(querySourcevalue == 0)
+	    			{
+  		    			jsonObj[0] = "test";
+	    				customClientID = dojo.byId("customeClientId").value;
+	    			}
+  		    		if(querySourcevalue == 1)
+	    			{
+						var jsonUI = {};  		    			
+  		    			var partyCodeValue ="";
+	    				var partyIDValue="";
+	    				var operatorValue="";
+  		    			
+  		    			operatorArr[0]=null;
+  		    			dojo.query(".clsOperator").forEach(function(node){
+  		    				operatorArr.push(node.value);
+  		    			 });
+  		    			console.log(operatorArr);
+  		    			
+  		    			dojo.query(".clsPartyCode").forEach(function(node){
+  		    				partyCodeArr.push(node.value);
+  		    			 });
+  		    			console.log(partyCodeArr);
+  		    			dojo.query(".clsPartyValue").forEach(function(node){
+  		    				partyValueArr.push(node.value);
+  		    			 });
+  		    			console.log(partyValueArr);
+  		    			var queryUIArr = [];
+  		    			jsonUI = queryUIArr;
+	    				for(var indexI=0; indexI &lt; partyValueArr.length ; indexI++)
+	    				{
+	    					jsonObj[indexI] = partyValueArr[indexI] ;
+	    					queryUIArr.push(jsonObj);
+	    				}
+	    				console.log(JSON.stringify(jsonUI));
+	    				if(! validateQueryTable())
+	    					return false;
+	    			}
+  		    		if(querySourcevalue == 2)
+	    			{
+  		    			exportQueryFromTxt = dojo.byId("exportQueryfromTextarea").value;
+  		    			if(! validateQueryTXT())
+  		    				return false;
+	    			}
+  		    		var objects = data;
+  		    		/**** ajax call *****/
+  		    		 $.ajax({
+ 					    type:"post",
+ 					    url:"./downloadQuery",
+ 					    data:{ "querySourcevalue" : querySourcevalue,
+								"customClientID" : customClientID,
+								"exportqueryrowscount" : exportqueryrowscount,
+								"exportQueryFromTxt" : exportQueryFromTxt,
+								"partyCodeArr" : JSON.stringify(partyCodeArr),
+								"partyValueArr" : JSON.stringify(partyValueArr),
+								"operatorArr" : JSON.stringify(operatorArr),
+								"jsonObj" 	: JSON.stringify(jsonObj)
+ 					    	},
+ 					    async: false,
+ 					    success: function(response){
+ 					    					window.open("./downloadFile?filePath="+response);
+ 					    				},
+ 					    error: function(response){
+ 					    		alert(response);
+ 					    	}
+ 				});
+  		   /************ ajax call Ends *******************/ 		
+  		    	
+  		    		
+  					
+  				});
+  				
+    		});
+    		/******************************* onLoad Function Ends*****************************************/		
+    		
+    		/********************function to Restrict the Relevant Document Option ***************/
+    		function restrictRelavantOption()
+    		{
+    			var firstReqFlagId = $("#tblDoc").children("tr:first").find("select")[4].id;
+    			$("#"+firstReqFlagId).children("option[value=0]").detach();
+    			$("#"+firstReqFlagId).children("option[value=2]").detach();
+//     			var count = $('#tblDoc').children('tr').length;
+//     			var divRelType = document.getElementById("divRelType");
+//     			if(count != 0 )
+//    				{
+//    					 for(var i=0; i &lt; divRelType.options.length;i++)
+//    					 {
+//    	     					var selectedvalue=divRelType.options[i].value;
+//    	     					if(selectedvalue == "1")
+//    	     						divRelType.remove(divRelType.selectedIndex);
+//    	     			 }
+//    				}
+    		}
+    		/********************function to Restrict the Relevant Document Option Ends ***************/
+    		
+    		
+    		function generalRestriction(id,count)
+    		{
+    			$('#selectDdpGenSource'+count).val('Control');
+	        	 var myElem = document.getElementById("selectDdpDoctype"+count).value;
+	       		 //Make Generating System as 3rd party if Document Types are : 
+	       		 if(contains(noncontroldocsArr,myElem)){
+	       			 $('#selectDdpGenSource'+count).val('3rd Party');
+	       		 }
+		         restrictRated(id,count);
+    		}
+    		
+    		
+    		/******** Function to Restrict the Rate option Begin   ****/
+    		function restrictRated(id,count)
+	        {
+	        	 var myElem = document.getElementById("selectDdpDoctype"+count).value;
+	        	 var rateElem = document.getElementById("selectDdpRate"+count);
+	        	 console.log(myElem);
+	        	 console.log(ratedDocsArr);
+	        	 if(contains(ratedDocsArr,myElem))
+	        	 {
+	        		if(rateElem.length == '1')
+	        		{
+	        			removeOptions(rateElem);
+				        var ratelkpLst = document.getElementById("divDdpRate");
+    			        for(var i=0; i &lt; ratelkpLst.options.length;i++){
+    			        	 var option = document.createElement('option');
+    			        	option.value=ratelkpLst.options[i].value;
+    			        	option.text=ratelkpLst.options[i].text;
+    			        	try {
+    			        		rateElem.add(option, null); //Standard 
+   	  			          	}catch(error) {
+   	  			        		rateElem.add(option); // IE only
+   	  			          	}
+    				    }
+	        		}
+	        	 }
+	        	 else
+	        	 {
+	        			removeOptions(rateElem);
+	        			//add Not Applicable 
+	        		  	var option = document.createElement('option');
+			      		option.value='N/A';
+			        	option.text='Not Applicable';
+			        	try {
+			        		rateElem.add(option, null); //Standard 
+  			          	}catch(error) {
+  			        		rateElem.add(option); // IE only
+  			          	}
+	        	 }
+	        }
+    		/******** Function to Restrict the Rate option Ends   ****/
+    		
+    			// contains function
+	        function contains(arr, findValue) {
+	            var i = arr.length;
+	             
+	            while (i--) {
+	                if (arr[i] === findValue) return true;
+	            }
+	            return false;
+	        }
+    		function removeOptions(selectbox)
+			{
+			    var i;
+			    for(i=selectbox.options.length-1;i>=0;i--)
+			    {
+			        selectbox.remove(i);
+			    }
+			}
+    		function testConnection(nth,flag)
+    		{
+    			var url = "";
+    			var data = "" ; 
+    			var loc = $(".clsRB"+nth).attr("checked");
+    			
+   				if(loc == 'checked')
+   				{
+   					url = "../list/testFTPConnection";
+   				 	data = {
+				    	"protorype" : dojo.byId("secureType"+nth).value,
+				    	"ftpserver" : dijit.byId("_ddpCommFtp["+nth+"].cftFtpLocation_id").value,
+				    	"folder" : dijit.byId("_ftpFolder["+nth+"]_id").value,
+				    	"port" : document.getElementById("_ddpCommFtp["+nth+"].cftFtpPort_id").value,
+				    	"username" : dijit.byId("_ddpCommFtp["+nth+"].cftFtpUserName_id").value,
+				    	"password" : dijit.byId("_ddpCommFtp["+nth+"].cftFtpPassword_id").value,
+				    }
+   				}
+   				else
+   				{
+   					url = "../list/testUNCConnection";
+   					data = {
+   					    	"uncpath" : dojo.byId("_ddpCommUnc["+nth+"].cunUncPath_id").value,
+   					    	"username" : dijit.byId("_ddpCommUnc["+nth+"].cunUncUserName_id").value,
+   					    	"password" : dijit.byId("_ddpCommUnc["+nth+"].cunUncPassword_id").value,
+   					    }
+   				}
+   					
+				 $.ajax({
+					    type:"post",
+					    url:url,
+					    data:data,
+					    async: false,
+					    success: function(response){
+					    					if(response== 0 )
+					    					{
+					    						if(flag==0)
+					    							alert("Test Connection Succeeded");
+					    						document.getElementById("connectFlag"+nth).value=0;
+					    					}
+					    					else
+					    					{
+					    						if(flag==0)
+					    							alert("Connection Failed");
+					    						document.getElementById("connectFlag"+nth).value=1;
+					    					}
+					    					
+					    				},
+					    error: function(response){
+					    		alert(response);
+					    	}
+				});
+    		}
+    		function adjustDocOptions()
+    		{
+    			var rowscount = $("#tblDoc tr").length;
+    			for(k=1;k &lt; rowscount ; k++)
+				{
+    				var d = document.getElementById("selectDdpDoctype"+($("#tblDoc tr:eq("+k+")").attr("id")));
+    				var idvalue = "selectDdpDoctype"+($("#tblDoc tr:eq("+k+")").attr("id"));
+    				$('#'+idvalue+' option[value!="'+d.options[d.selectedIndex].value+'"]').remove();
+    				$("#"+idvalue).append($("#divDdpDocType").html());
+    				removeDuplicateOptions(idvalue);
+    				//remove duplicate options
+//     				$("#"+idvalue+" option").val(function(i,v){
+//     					  $(this).siblings("[value='"+ v +"']").remove();
+//     				});
+    				d.selectedIndex = 0;
+				}
+    		}
+    		function removeDuplicateOptions(selectboxname) 
+    	    {
+    	    	var code = {};
+    	    	$("select[name='"+selectboxname+"'] > option").each(function () {
+    	        if(code[this.text]) {
+    	            $(this).remove();
+    	       	 } else {
+    	            code[this.text] = this.value;
+    	        }
+    	    	});
+    	    }
+    		function fnAddConnection(div)
+    		{
+    			if(div == 'div0')
+   				{
+					dojo.style(dojo.byId("communicationDiv1"),{display:'inline'});
+					dojo.byId("isDiv1Selected").value = 0;
+   				}
+    			else if(div == 'div1')
+   				{
+    				dojo.style(dojo.byId("communicationDiv2"),{display:'inline'});
+    				dojo.byId("isDiv2Selected").value = 0;
+   				}
+    		}
+    		function fnRemConnection(div)
+    		{
+    			if(div == 'div1')
+    			{
+    				dojo.style(dojo.byId("communicationDiv1"),{display:'none'});
+    				dojo.byId("isDiv1Selected").value = 1;
+    			}
+    			else if(div == 'div2')
+   				{
+    				dojo.style(dojo.byId("communicationDiv2"),{display:'none'});
+    				dojo.byId("isDiv2Selected").value = 1;
+   				}
+    		}
+    		function checkValidationForComm(nth)
+    		{
+    			var che = $("#ftpRB"+nth).prop("checked");
+				if(che)
+					{
+						if(dojo.byId("_ddpCommFtp["+nth+"].cftFtpPassword_id").value=='')
+							dojo.byId("_ddpCommFtp["+nth+"].cftFtpPassword_id").focus();
+						if(dojo.byId("_ddpCommFtp["+nth+"].cftFtpUserName_id").value=='')
+							dojo.byId("_ddpCommFtp["+nth+"].cftFtpUserName_id").focus(); 
+						if(dojo.byId("_ddpCommFtp["+nth+"].cftFtpLocation_id").value=='')
+							dojo.byId("_ddpCommFtp["+nth+"].cftFtpLocation_id").focus(); 
+					}
+				else
+					{
+					if(dojo.byId("_ddpCommUnc["+nth+"].cunUncPath_id").value=='')
+						dojo.byId("_ddpCommUnc["+nth+"].cunUncPath_id").focus();
+					}
+    		}
+    		function isSingleQuote(evt) {
+ 		        evt = (evt) ? evt : window.event;
+ 		        var charCode = (evt.which) ? evt.which : evt.keyCode;
+ 		        console.log(charCode);
+ 		        if (charCode == 34 || charCode == 39) {
+ 		            return false;
+ 		        }
+ 		        return true;
+ 		    }
+    		function validateQueryTable()
+    		{
+    			var exportqueryrowscountvalue = parseInt(queryRowCount);;
+    			for(var indexI=0; indexI &lt;= exportqueryrowscountvalue ; indexI++)
+				{
+    				var partyElement = document.getElementById("partyValue"+indexI);
+    				if(partyElement != null)
+					{
+    					var partyvalue = partyElement.value;
+    					console.log(partyvalue);
+    					if(partyvalue == '')
+    					{
+    						alert("please enter client ID for "+  document.getElementById("partyCode"+indexI).value);
+    						document.getElementById("partyValue"+indexI).focus();
+    						return false;
+    					}
+					}
+				}
+    			return true;
+    		}
+    		function validateQueryTXT()
+    		{
+    			var exportQueryfromTextareaValue = dojo.byId("exportQueryfromTextarea").value;
+    			if(exportQueryfromTextareaValue == '')
+				{
+					alert("please enter query criteria to export the documents.");
+					dojo.byId("exportQueryfromTextarea").focus();
+					return false;
+				}
+    			return true;
+    		}
+    		function myFunction(){
+				
+	    		var rowscount = $("#tblDoc tr").length;
+	    		document.getElementById("rowscount").value=parseInt(totalRowCount);
+	    		document.getElementById("exportqueryrowscount").value=parseInt(queryRowCount);
+	    		
+	    		$("#rowscount").val(parseInt(totalRowCount));
+	    		var i;
+				
+	    		var elementDocSelection = document.getElementById("selDocSel");
+				var docSelectionValue = elementDocSelection.options[elementDocSelection.selectedIndex].value;
+				//atleast one branch
+				var blbrnflage = false;
+				var listBranchLength = document.getElementById("_lstBranch_id");
+				var i;
+				for(i=0;i &lt; listBranchLength.options.length; i++) 
+				{
+					blbrnflage =true;
+					listBranchLength[i].selected=true;
+				}
+				var isChecked = $("#byPartyIdRB").prop("checked");
+				if(isChecked)
+				{
+					$("#selDocSel").val('0');//make default document source as UI
+					docSelectionValue=0;
+					if(blbrnflage==false){
+						alert("Select atleast one branch");
+						return false;
+					}
+				}
+				var querySourceArr = dojo.query(".clsQuerySource");
+	    		var querySourcevalue=0;
+	    		for(var indexI=0; indexI &lt; querySourceArr.length; indexI++)
+	    		{
+	    			if(querySourceArr[indexI].checked)
+	    				querySourcevalue = querySourceArr[indexI].value;
+	    		}
+	    		if(querySourcevalue == '1')
+    			{
+	    			var retvalue = validateQueryTable();
+	    			return retvalue;
+    			}
+	    		if(querySourcevalue == '2')
+    			{
+	    			return validateQueryTXT();
+   				}
+				if(docSelectionValue == '0')
+				{
+					if(rowscount &lt; 2)
+					{
+						alert("please add doctype row");
+						return false;
+					}
+					//checking duplicate docs
+					for(k=1;k &lt; rowscount-1 ; k++)
+					{
+						var d = document.getElementById("selectDdpDoctype"+($("#tblDoc tr:eq("+k+")").attr("id")));
+						var doctype = d.options[d.selectedIndex].value;
+						for(var m = k+1;m &lt;rowscount+1;m++)
+						{
+							var d1 = document.getElementById("selectDdpDoctype"+($("#tblDoc tr:eq("+m+")").attr("id")));
+							var doctype1 = d1.options[d1.selectedIndex].value;
+							
+							var g1 = document.getElementById("selectDdpGenSource"+($("#tblDoc tr:eq("+k+")").attr("id")));
+							var genSource1 = g1.options[g1.selectedIndex].value;
+							var g2 = document.getElementById("selectDdpGenSource"+($("#tblDoc tr:eq("+m+")").attr("id")));
+							var genSource2 = g2.options[g2.selectedIndex].value;
+							
+							if(doctype==doctype1)
+								{
+									if (genSource1 == genSource2) {
+										alert("Please choose another combination of DocType : "+doctype1+" and Generating Source : "+genSource1);
+										return false;
+									}
+								}
+						}
+					}
+				}
+				var portNum = document.getElementById("_ddpCommFtp[0].cftFtpPort_id").value;				
+				if(portNum=="")
+				{
+						document.getElementById("_ddpCommFtp[0].cftFtpPort_id").value=21;
+				}
+				var isEmailConfigChecked = $("#emailRB0").prop("checked");
+				if(! isEmailConfigChecked)
+				{
+					testConnection(0,1);
+					if(document.getElementById("connectFlag0").value==1)
+					{
+						alert("Please configure correct FTP/UNC protocol details to export documents");	
+						var loc = $(".clsRB0").attr("checked");
+						if(loc=='checked')
+							dojo.byId("_ddpCommFtp[0].cftFtpLocation_id").focus();
+						else
+							dojo.byId("_ddpCommUnc[0].cunUncPath_id").focus();
+						return false;
+					}
+				}
+				if(dojo.byId("isDiv1Selected").value==0)
+				{
+					testConnection(1,1);
+					if(document.getElementById("connectFlag1").value==1)
+					{
+						alert("Please configure correct FTP/UNC protocol details to export documents");	
+						var loc = $(".clsRB1").attr("checked");
+						if(loc=='checked')
+							dojo.byId("_ddpCommFtp[1].cftFtpLocation_id").focus();
+						else
+							dojo.byId("_ddpCommUnc[1].cunUncPath_id").focus();
+						return false;
+					}
+				}
+				if(dojo.byId("isDiv2Selected").value==0)
+				{
+					testConnection(2,1);
+					if(document.getElementById("connectFlag2").value==1)
+					{
+						alert("Please configure correct FTP/UNC protocol details to export documents");	
+						var loc = $(".clsRB2").attr("checked");
+						if(loc=='checked')
+							dojo.byId("_ddpCommFtp[2].cftFtpLocation_id").focus();
+						else
+							dojo.byId("_ddpCommUnc[2].cunUncPath_id").focus();
+						return false;
+					}
+				}
+				if(dojo.byId("selBatchingCriteria").value == 'consignmentID')
+				{
+					var conf = confirm("You have choosen batching criteria as Conslignment ID, make sure confidential documents are not sending to customer.Do you want to continue ?");
+					if(!conf)
+						return false;
+				}
+			}
+    		
+		</script>
+    <input type="hidden" id="rowscount" name="rowscount"  />
+    <input type="hidden" id="exportqueryrowscount" name="exportqueryrowscount"  />
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpExportRule" render="${not empty dependencies}" z="+zcx/4eEUuy9Jxb8grHxjrnB1Rg="/>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_com_agility_ddp_data_domain_DdpGroup" modelAttribute="userWrapper" path="/ddpgroups" render="${empty dependencies}" z="SHmYfvGwdlChLOGz26nW3pOeWHI=">
+        <field:input field="ddpGroup.grpName" id="c_com_agility_ddp_data_domain_DdpGroup_grpName" required="true" z="Os0R9oegKP9eECk6SV1psTR4D0w="/>
+        <field:input field="ddpGroup.grpDisplayName" id="c_com_agility_ddp_data_domain_DdpGroup_grpDisplayName" required="true" z="t4fsP7PI5A78onHNFUtzMHxXvlU="/>
+        <field:input field="ddpGroup.grpDescription" id="c_com_agility_ddp_data_domain_DdpGroup_grpDescription" z="WtoL6WVi9VeGVJmVhawAJwz7xKY="/>
+        <field:input field="ddpGroup.grpStatus" id="c_com_agility_ddp_data_domain_DdpGroup_grpStatus" required="true" validationMessageCode="field_invalid_integer" z="MSfeWQ4a1m4UQKVhIjlnpqe/OwI=" render="false"/>
+        <field:input field="ddpGroup.grpCreatedBy" id="c_com_agility_ddp_data_domain_DdpGroup_grpCreatedBy" required="false" z="56lLKF/FTHbnUCs/hM+SPErn9yg=" render="false" disableFormBinding="false" disabled="false" />
+        <field:datetime dateTimePattern="${ddpGroup_grpcreateddate_date_format}" field="ddpGroup.grpCreatedDate" id="c_com_agility_ddp_data_domain_DdpGroup_grpCreatedDate" required="false" render="false" disableFormBinding="false" disabled="false" z="8FcWBt5QUSeW+YWDeolAnilHK8o="/>
+        <field:input field="ddpGroup.grpModifiedBy" id="c_com_agility_ddp_data_domain_DdpGroup_grpModifiedBy"  required="false" render="false"   z="wGPw1YGs93qkTAQPotVQw9NDQjA=" disableFormBinding="false" disabled="false" />
+        <field:datetime dateTimePattern="${ddpGroup_grpmodifieddate_date_format}" field="ddpGroup.grpModifiedDate" id="c_com_agility_ddp_data_domain_DdpGroup_grpModifiedDate" required="false" render="false"  z="7CepfA0jKxuHv+5lkQaiJKQE5/U=" disableFormBinding="false" disabled="false"  />
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_com_agility_ddp_data_domain_DdpGroup" render="${not empty dependencies}" z="RXgN2ktnkDVaah8RDsodvbr8GXE="/>
+</div>

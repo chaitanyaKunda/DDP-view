@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpcompressionsetups/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcompressionsetups/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcompressionsetups/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcompressionsetups/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcompressionsetups/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcompressionsetups/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpcompressionsetups/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpcompressionsetups/update.jspx"/>
+    </definition>
+</tiles-definitions>

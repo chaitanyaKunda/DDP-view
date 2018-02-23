@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:page="urn:jsptagdir:/WEB-INF/tags/form"
+	xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+	<page:list id="pl_com_agility_ddp_data_domain_DdpDoctype" path="/ddpdoctypes"
+		items="${ddpdoctypes}" z="fO434m9HaEDaXNKbv5mQY56jTrY=">
+		<table:table data="${ddpdoctypes}"
+			id="l_com_agility_ddp_data_domain_DdpDoctype" path="/ddpdoctypes"
+			typeIdFieldName="dtyDocTypeCode" z="PeC9kIV1vieiCoe0ScYDszE6nc8=">
+			<table:column
+				id="c_com_agility_ddp_data_domain_DdpDoctype_dtyDocTypeName"
+				property="dtyDocTypeName" z="SFPUkj9Eh6W7uc/vYyueE1j6OaY=" />
+			<table:column
+				id="c_com_agility_ddp_data_domain_DdpDoctype_dtyDocTypeCode"
+				property="dtyDocTypeCode" z="SFPUkj9Eh6W7uc/vYyueE1j6OaY=" />
+			<table:column id="c_com_agility_ddp_data_domain_DdpDoctype_dtySource"
+				property="dtySource" z="DLccZRoZ8GEOfCtu2xsfwKDuylw=" />
+			<table:column
+				id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCompanyCode"
+				property="dtyCompanyCode" z="RMLq7m32s/LQmoPhBCo+8+Elx9c=" />
+			<table:column id="c_com_agility_ddp_data_domain_DdpDoctype_dtyStatus"
+				property="dtyStatus" z="TzWdB6Qh91QnnYuOphEVF6CFAUY=" render="false"/>
+			<table:column
+				id="c_com_agility_ddp_data_domain_DdpDoctype_dtyCreatedBy"
+				property="dtyCreatedBy" z="A8jfj0xD8geSqxwKo1AmivpZ7ok=" />
+		</table:table>
+	</page:list>
+</div>

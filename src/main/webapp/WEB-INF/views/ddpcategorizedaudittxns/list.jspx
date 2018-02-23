@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCategorizedAuditTxn" items="${ddpcategorizedaudittxns}" z="w4xEl8ljD2TfcsV8HalHbvBmyeM=">
+        <table:table data="${ddpcategorizedaudittxns}" id="l_com_agility_ddp_data_domain_DdpCategorizedAuditTxn" path="/ddpcategorizedaudittxns" typeIdFieldName="caxId" z="9ldZPdYV5LEbH2+cbQ5tzncT60I=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxDcdId" property="caxDcdId" z="VQgDjGKRmpibmL6uUERcLrKBM8w="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmSeq" property="caxPmSeq" z="2TDt0ZJcJbSN5VgFDqg/r5QmULE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmName" property="caxPmName" z="A6yLI2K9TxLfgBswI5Qan+eYZyI="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmLogs" property="caxPmLogs" z="WUh5ZkDz8BSSV/28x461tbGHKjQ="/>
+            <table:column calendar="true" dateTimePattern="${ddpCategorizedAuditTxn_caxpminitiateddate_date_format}" id="c_com_agility_ddp_data_domain_DdpCategorizedAuditTxn_caxPmInitiatedDate" property="caxPmInitiatedDate" z="W1CKObbNE8elVHnxIFluX2wl780="/>
+        </table:table>
+    </page:list>
+</div>

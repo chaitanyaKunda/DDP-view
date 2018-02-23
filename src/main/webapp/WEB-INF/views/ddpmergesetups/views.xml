@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpmergesetups/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpmergesetups/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpmergesetups/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpmergesetups/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpmergesetups/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpmergesetups/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpmergesetups/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpmergesetups/update.jspx"/>
+    </definition>
+</tiles-definitions>

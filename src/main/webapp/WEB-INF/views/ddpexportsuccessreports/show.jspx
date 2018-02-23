@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpExportSuccessReport" object="${ddpexportsuccessreport}" path="/ddpexportsuccessreports" z="70TNYSir9UTjIYuLvjfTEygf9+4=">
+        <field:display field="esrMisId" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrMisId" object="${ddpexportsuccessreport}" z="mIvIngUzvCWqAfHTqdJRWNPs3bM="/>
+        <field:display field="esrRuleId" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrRuleId" object="${ddpexportsuccessreport}" z="1NbIG8MurzxiD9S4avIQhCGJSyw="/>
+        <field:display field="esrJobNumber" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrJobNumber" object="${ddpexportsuccessreport}" z="6wnWNPV0x0uKfo49oLAvf35iXfY="/>
+        <field:display field="esrConsignmentId" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrConsignmentId" object="${ddpexportsuccessreport}" z="tpjF1T86Fo3TxM/LxkHJrmONyDQ="/>
+        <field:display field="esrAppName" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrAppName" object="${ddpexportsuccessreport}" z="CGI1oxJnjWwJ5ofSeGmMZc5+RqQ="/>
+        <field:display field="esrFileName" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrFileName" object="${ddpexportsuccessreport}" z="FcmQ/NgG+z8q0nxMlHBeZdxc/s4="/>
+        <field:display field="esrFileSize" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrFileSize" object="${ddpexportsuccessreport}" z="0I/02UdHlXuWJ55Fatx2pjIdqZM="/>
+        <field:display calendar="true" dateTimePattern="${ddpExportSuccessReport_esrexporttime_date_format}" field="esrExportTime" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrExportTime" object="${ddpexportsuccessreport}" z="ZxdMCzsyf1ZxnUux9dFhkoUS7kg="/>
+        <field:display field="esrTypeOfService" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrTypeOfService" object="${ddpexportsuccessreport}" z="iPNKYLoPojL+GeADrK+sXueTgwA="/>
+        <field:display calendar="true" dateTimePattern="${ddpExportSuccessReport_esrdmscreationdate_date_format}" field="esrDmsCreationDate" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrDmsCreationDate" object="${ddpexportsuccessreport}" z="aRPQzdkZql8qDb6lWA9cPcXfPhc="/>
+        <field:display calendar="true" dateTimePattern="${ddpExportSuccessReport_esrcreationdate_date_format}" field="esrCreationDate" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrCreationDate" object="${ddpexportsuccessreport}" z="1mZD0Zq4aewX6htKOihbv9Jcn4M="/>
+        <field:display field="esrReferenceNumber" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrReferenceNumber" object="${ddpexportsuccessreport}" z="DNayZESB3jciowhEMMlxQvJCPVA="/>
+        <field:display field="esrEntryNumber" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrEntryNumber" object="${ddpexportsuccessreport}" z="LDslsWHKdVddhHnZRSIYR5Cal90="/>
+        <field:display field="esrModeOfExport" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrModeOfExport" object="${ddpexportsuccessreport}" z="/6fJbsT8tGURMbAjrTe+qUKKADg="/>
+        <field:display field="esrExportLocation" id="s_com_agility_ddp_data_domain_DdpExportSuccessReport_esrExportLocation" object="${ddpexportsuccessreport}" z="bcCLQJyNBgW3pxRM+fmDRJ+8hIM="/>
+    </page:show>
+</div>

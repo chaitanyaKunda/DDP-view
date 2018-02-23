@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="default" name="ddpusers/list">
+        <put-attribute name="body" value="/WEB-INF/views/ddpusers/list.jspx"/>
+    </definition>
+<definition extends="default" name="ddpusers/show">
+        <put-attribute name="body" value="/WEB-INF/views/ddpusers/show.jspx"/>
+    </definition>
+<definition extends="default" name="ddpusers/create">
+        <put-attribute name="body" value="/WEB-INF/views/ddpusers/create.jspx"/>
+    </definition>
+<definition extends="default" name="ddpusers/update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpusers/update.jspx"/>
+</definition>
+<definition extends="default" name="ddpusers/custom_update">
+        <put-attribute name="body" value="/WEB-INF/views/ddpusers/custom_update.jspx"/>
+</definition> 
+<definition extends="default" name="ddpusers/searchform">
+        <put-attribute name="body" value="/WEB-INF/views/ddpusers/searchform.jspx"/>
+</definition>
+</tiles-definitions>

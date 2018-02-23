@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_com_agility_ddp_data_domain_DdpCommunicationSetup" object="${ddpcommunicationsetup}" path="/ddpcommunicationsetups" z="m0cqZael5HjkOIjGl6WA+MDl2zQ=">
+        <field:display field="cmsCommunicationProtocol" id="s_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsCommunicationProtocol" object="${ddpcommunicationsetup}" z="/+aXV4EmjGgo5Y0eEH+26Bcuwlc="/>
+        <field:display field="cmsProtocolSettingsId" id="s_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsProtocolSettingsId" object="${ddpcommunicationsetup}" z="qXEZz40Nwtn5nNnGf4QeAg6DYGM="/>
+        <field:display field="cmsStatus" id="s_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsStatus" object="${ddpcommunicationsetup}" z="Dw5t6NK25PFeC61X6mD80Iq/QrI="/>
+        <field:display field="cmsCreatedBy" id="s_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsCreatedBy" object="${ddpcommunicationsetup}" z="qVJGebKUO/UyzXmL+qyakoZHJsQ="/>
+        <field:display calendar="true" dateTimePattern="${ddpCommunicationSetup_cmscreateddate_date_format}" field="cmsCreatedDate" id="s_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsCreatedDate" object="${ddpcommunicationsetup}" z="LtozhVbZypC2qz7HolvbiC0NbO4="/>
+        <field:display field="cmsModifiedBy" id="s_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsModifiedBy" object="${ddpcommunicationsetup}" z="IvTNRioojk7SeifdcdiBrqBBnY4="/>
+        <field:display calendar="true" dateTimePattern="${ddpCommunicationSetup_cmsmodifieddate_date_format}" field="cmsModifiedDate" id="s_com_agility_ddp_data_domain_DdpCommunicationSetup_cmsModifiedDate" object="${ddpcommunicationsetup}" z="dQ7D+8wtx/gZlBmXjmDFf0nJg+s="/>
+    </page:show>
+</div>

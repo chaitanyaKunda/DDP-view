@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpMultiEmails" items="${ddpmultiemailses}" z="reqy79J4h/IrWGSDRpkuga7CLEA=">
+        <table:table data="${ddpmultiemailses}" id="l_com_agility_ddp_data_domain_DdpMultiEmails" path="/ddpmultiemailses" typeIdFieldName="mesEmailId" z="9GKIdpEbPlJulzt+DbGR8+IUiDw=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpMultiEmails_mesCmsId" property="mesCmsId" z="e0hxU3xRQ1WuH+Dt49J9C01NvzU="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailFrom" property="mesEmailFrom" z="h0tJuu0dJyaKyQXVN0SYLanjAtg="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailTo" property="mesEmailTo" z="PVZreEWERJ/LWnxmTmeWGHKkEy8="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailCc" property="mesEmailCc" z="Z/dPd5FLoAAeWAh3rgPDvLr8u4Y="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailSubject" property="mesEmailSubject" z="l2LYRiEcYnHOlNcfw6g9H4+fuic="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpMultiEmails_mesEmailBody" property="mesEmailBody" z="JVR5A+ATBTEw+aNjUL4nD8d6xtg="/>
+        </table:table>
+    </page:list>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_com_agility_ddp_data_domain_DdpCompressionLkp" items="${ddpcompressionlkps}" z="x73NCnIJzlGLbFi/uqlPIwmy3hA=">
+        <table:table data="${ddpcompressionlkps}" id="l_com_agility_ddp_data_domain_DdpCompressionLkp" path="/ddpcompressionlkps" typeIdFieldName="cmlCopmressionLkpId" z="6F+DWzLEQHVURlZmM6fhfNT1A4g=">
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompressionLkp_cmlCopmressionLevel" property="cmlCopmressionLevel" z="UsPHXsJiXIzmhTZhuDFiPuqyzhE="/>
+            <table:column id="c_com_agility_ddp_data_domain_DdpCompressionLkp_cmlCompressionSize" property="cmlCompressionSize" z="FEZDtWlMOPx3V21RAHl8mKIfsws="/>
+        </table:table>
+    </page:list>
+</div>
